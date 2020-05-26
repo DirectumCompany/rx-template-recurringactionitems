@@ -38,39 +38,19 @@
   ],
   "ExplorerTreeOrder": [
     {
-      "IsVisible": false,
-      "ItemId": "1487718a-2c2d-4474-b95e-ccd9df607458",
-      "PreviousItemId": "d4f17453-51a0-43a2-bac9-692229636a9f"
-    },
-    {
-      "IsVisible": false,
-      "ItemId": "bbfa4f37-b282-400e-a60c-5b91afc379d7",
-      "PreviousItemId": "1487718a-2c2d-4474-b95e-ccd9df607458"
-    },
-    {
       "ItemId": "c290b098-12c7-487d-bb38-73e2c98f9789",
       "PreviousItemId": "bbfa4f37-b282-400e-a60c-5b91afc379d7"
     },
     {
-      "ItemId": "bc30b88b-4ee4-4288-a1c0-50ed78402b6d",
-      "PreviousItemId": "c290b098-12c7-487d-bb38-73e2c98f9789"
-    },
-    {
-      "ItemId": "2b556429-b1d6-4b5c-b73f-fadb203d60d2",
-      "PreviousItemId": "bc30b88b-4ee4-4288-a1c0-50ed78402b6d"
-    },
-    {
       "ItemId": "fe981103-d7c9-4c93-9a93-c40ce2dca103",
-      "PreviousItemId": "2b556429-b1d6-4b5c-b73f-fadb203d60d2"
+      "PreviousItemId": "c290b098-12c7-487d-bb38-73e2c98f9789"
     }
-  ],
-  "HandledEvents": [
-    "InitializingServer"
   ],
   "IconResourcesKeys": [],
   "Importance": "High",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.PeriodicActionItemsTemplate",
+  "IsVisible": false,
   "Jobs": [
     {
       "NameGuid": "99f12576-553b-4a57-9c1c-8c57e4d3e77a",
@@ -82,7 +62,8 @@
     }
   ],
   "Overridden": [
-    "Importance"
+    "Importance",
+    "IsVisible"
   ],
   "PublicConstants": [
     {
@@ -92,277 +73,6 @@
       ],
       "TypeName": "System.Guid",
       "Value": "new System.Guid(\"C947DEBC-CC7F-4CD9-80F0-A0852C8281C8\")"
-    }
-  ],
-  "PublicFunctions": [
-    {
-      "Name": "AbortSubTasksByAssignment",
-      "IsRemote": true,
-      "Parameters": [
-        {
-          "Name": "assignment",
-          "ParameterType": "DirRX.Solution.IActionItemExecutionAssignment"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "void",
-      "ReturnTypeFullName": "System.Void"
-    },
-    {
-      "Name": "CalculateTimeInWork",
-      "Parameters": [
-        {
-          "Name": "actionItemID",
-          "ParameterType": "global::System.Int32",
-          "ParameterTypeFullName": "System.Int32"
-        }
-      ],
-      "ReturnType": "global::System.Int32",
-      "ReturnTypeFullName": "System.Int32"
-    },
-    {
-      "Name": "CanChangedSettings",
-      "Parameters": [
-        {
-          "Name": "recipient",
-          "ParameterType": "global::Sungero.CoreEntities.IRecipient",
-          "ParameterTypeFullName": "Sungero.CoreEntities.IRecipient, Sungero.Domain.Shared"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "global::System.Boolean",
-      "ReturnTypeFullName": "System.Boolean"
-    },
-    {
-      "Name": "EscalateActionItemTask",
-      "Parameters": [
-        {
-          "Name": "task",
-          "ParameterType": "Solution.IActionItemExecutionTask"
-        },
-        {
-          "Name": "reason",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        },
-        {
-          "Name": "assignee",
-          "ParameterType": "DirRX.Solution.IEmployee"
-        }
-      ],
-      "ReturnType": "global::System.Boolean",
-      "ReturnTypeFullName": "System.Boolean"
-    },
-    {
-      "Name": "GetActionItemTaskWithMainTask",
-      "IsRemote": true,
-      "Parameters": [
-        {
-          "Name": "task",
-          "ParameterType": "global::Sungero.Workflow.ITask",
-          "ParameterTypeFullName": "Sungero.Workflow.ITask, Sungero.Workflow.Interfaces"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "global::System.Linq.IQueryable<DirRX.Solution.IActionItemExecutionTask>",
-      "ReturnTypeFullName": "System.Linq.IQueryable"
-    },
-    {
-      "Name": "GetAllAssignmentsReportData",
-      "Parameters": [
-        {
-          "Name": "task",
-          "ParameterType": "Solution.IActionItemExecutionTask"
-        }
-      ],
-      "ReturnType": "global::System.Collections.Generic.List<Structures.PrintActionItemTask.ResponsibilitiesReportTableLine>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
-    },
-    {
-      "Name": "GetAssignmentSettingResponsiblesRole",
-      "IsRemote": true,
-      "Placement": "Shared",
-      "ReturnType": "global::Sungero.CoreEntities.IRole",
-      "ReturnTypeFullName": "Sungero.CoreEntities.IRole, Sungero.Domain.Shared"
-    },
-    {
-      "Name": "GetControlSettings",
-      "IsRemote": true,
-      "Parameters": [
-        {
-          "Name": "category",
-          "ParameterType": "global::DirRX.ActionItems.ICategory",
-          "ParameterTypeFullName": "DirRX.ActionItems.ICategory, Sungero.Domain.Interfaces"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "global::System.Collections.Generic.List<DirRX.ActionItems.IControlSetting>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
-    },
-    {
-      "Name": "GetDepartmentHierarchyDown",
-      "IsRemote": true,
-      "Parameters": [
-        {
-          "Name": "depatments",
-          "ParameterType": "global::System.Collections.Generic.List<global::Sungero.Company.IDepartment>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
-        },
-        {
-          "Name": "depatmentsAll",
-          "ParameterType": "global::System.Collections.Generic.List<global::Sungero.Company.IDepartment>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "global::System.Collections.Generic.List<global::Sungero.Company.IDepartment>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
-    },
-    {
-      "Name": "GetDepartmentHierarchyDown",
-      "IsRemote": true,
-      "Parameters": [
-        {
-          "Name": "depatments",
-          "ParameterType": "global::System.Collections.Generic.List<global::Sungero.Company.IDepartment>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
-        },
-        {
-          "Name": "depatmentsAll",
-          "ParameterType": "global::System.Collections.Generic.List<global::Sungero.Company.IDepartment>",
-          "ParameterTypeFullName": "System.Collections.Generic.List"
-        },
-        {
-          "Name": "steps",
-          "ParameterType": "global::System.Int32",
-          "ParameterTypeFullName": "System.Int32"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "global::System.Collections.Generic.List<global::Sungero.Company.IDepartment>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
-    },
-    {
-      "Name": "GetEscalatedManager",
-      "IsRemote": true,
-      "Parameters": [
-        {
-          "Name": "task",
-          "ParameterType": "Solution.IActionItemExecutionTask"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "Solution.IEmployee"
-    },
-    {
-      "Name": "GetEscalationReason",
-      "Parameters": [
-        {
-          "Name": "task",
-          "ParameterType": "Solution.IActionItemExecutionTask"
-        }
-      ],
-      "ReturnType": "global::System.String",
-      "ReturnTypeFullName": "System.String"
-    },
-    {
-      "Name": "GetSubTasksByAssignment",
-      "IsRemote": true,
-      "Parameters": [
-        {
-          "Name": "assignment",
-          "ParameterType": "DirRX.Solution.IActionItemExecutionAssignment"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "global::System.Collections.Generic.List<global::Sungero.Workflow.ITask>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
-    },
-    {
-      "Name": "GetSubTasksByCompoundTask",
-      "IsRemote": true,
-      "Parameters": [
-        {
-          "Name": "task",
-          "ParameterType": "DirRX.Solution.IActionItemExecutionTask"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "global::System.Collections.Generic.List<DirRX.Solution.IActionItemExecutionTask>",
-      "ReturnTypeFullName": "System.Collections.Generic.List"
-    },
-    {
-      "Name": "GetSupervisor",
-      "IsRemote": true,
-      "Parameters": [
-        {
-          "Name": "initiator",
-          "ParameterType": "DirRX.Solution.IEmployee"
-        },
-        {
-          "Name": "category",
-          "ParameterType": "global::DirRX.ActionItems.ICategory",
-          "ParameterTypeFullName": "DirRX.ActionItems.ICategory, Sungero.Domain.Interfaces"
-        },
-        {
-          "Name": "assignee",
-          "ParameterType": "DirRX.Solution.IEmployee"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "DirRX.Solution.IEmployee"
-    },
-    {
-      "Name": "GrantAccessRightToTask",
-      "Parameters": [
-        {
-          "Name": "targetTask",
-          "ParameterType": "global::Sungero.Domain.Shared.IEntity",
-          "ParameterTypeFullName": "Sungero.Domain.Shared.IEntity, Sungero.Domain.Shared"
-        },
-        {
-          "Name": "sourceTask",
-          "ParameterType": "global::Sungero.Workflow.ITask",
-          "ParameterTypeFullName": "Sungero.Workflow.ITask, Sungero.Workflow.Interfaces"
-        }
-      ],
-      "ReturnType": "global::Sungero.Domain.Shared.IEntity",
-      "ReturnTypeFullName": "Sungero.Domain.Shared.IEntity, Sungero.Domain.Shared"
-    },
-    {
-      "Name": "RejectionTaskCreated",
-      "IsRemote": true,
-      "Parameters": [
-        {
-          "Name": "actionItemExecutionAssignment",
-          "ParameterType": "DirRX.Solution.IActionItemExecutionAssignment"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "global::System.Boolean",
-      "ReturnTypeFullName": "System.Boolean"
-    },
-    {
-      "Name": "SendRejectionTask",
-      "IsRemote": true,
-      "Parameters": [
-        {
-          "Name": "actionItemExecutionMainTask",
-          "ParameterType": "DirRX.Solution.IActionItemExecutionTask"
-        },
-        {
-          "Name": "actionItemExecutionTask",
-          "ParameterType": "DirRX.Solution.IActionItemExecutionTask"
-        },
-        {
-          "Name": "reason",
-          "ParameterType": "global::System.String",
-          "ParameterTypeFullName": "System.String"
-        }
-      ],
-      "Placement": "Shared",
-      "ReturnType": "void",
-      "ReturnTypeFullName": "System.Void"
     }
   ],
   "PublicStructures": [],
@@ -408,70 +118,7 @@
   "SharedNamespace": "DirRX.PeriodicActionItemsTemplate.Shared",
   "SpecialFolders": [],
   "Version": "0.0.1.58",
-  "Widgets": [
-    {
-      "NameGuid": "f9c07173-c4e8-4b29-901e-edabc9556f21",
-      "Name": "ActionItemExecutionStatus",
-      "Color": "WidgetColor1",
-      "ColumnSpan": 24,
-      "WidgetItems": [
-        {
-          "$type": "Sungero.Metadata.WidgetChartMetadata, Sungero.Metadata",
-          "NameGuid": "39abd72c-2f95-4d8f-ad09-d3ab4c1b6ae2",
-          "Name": "Chart",
-          "ChartHeight": 14,
-          "ChartType": "HorizontalBar",
-          "EntityGuid": "336dcf2c-56f7-4500-9a48-6ec3e4700937",
-          "HandledEvents": [
-            "GetValueServer",
-            "ExecuteClient"
-          ],
-          "SpecificationType": "Custom"
-        }
-      ],
-      "WidgetParameters": [
-        {
-          "$type": "Sungero.Metadata.WidgetEnumParameterMetadata, Sungero.Metadata",
-          "NameGuid": "2e6bfeba-e55b-4fe8-a5ed-7298369a627f",
-          "Name": "Roles",
-          "DefaultValue": {
-            "NameGuid": "2e164a40-08d1-4bf6-bec4-acd382d36c38",
-            "Name": "Author",
-            "Code": "Author"
-          },
-          "DirectValues": [
-            {
-              "NameGuid": "2e164a40-08d1-4bf6-bec4-acd382d36c38",
-              "Name": "Author",
-              "Code": "Author"
-            },
-            {
-              "NameGuid": "90df867c-8c41-4a21-8091-6c91e2cef10d",
-              "Name": "Initiator",
-              "Code": "Initiator"
-            },
-            {
-              "NameGuid": "16a1f76d-2412-44b1-9dbf-3e7507cc506f",
-              "Name": "Performer",
-              "Code": "Performer"
-            },
-            {
-              "NameGuid": "8f0e772a-b9e9-4ba5-b056-9da4dfecafff",
-              "Name": "Manager",
-              "Code": "Manager"
-            }
-          ]
-        },
-        {
-          "$type": "Sungero.Metadata.WidgetBoolParameterMetadata, Sungero.Metadata",
-          "NameGuid": "d98bc955-0a6a-4926-94d7-d0b5927d0fea",
-          "Name": "WithSubstitution",
-          "DefaultValue": false,
-          "PreviousGuid": "2e6bfeba-e55b-4fe8-a5ed-7298369a627f"
-        }
-      ]
-    }
-  ],
+  "Widgets": [],
   "Versions": [
     {
       "Type": "ModuleMetadata",

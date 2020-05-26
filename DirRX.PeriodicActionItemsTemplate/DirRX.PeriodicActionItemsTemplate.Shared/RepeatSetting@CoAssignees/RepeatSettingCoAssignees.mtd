@@ -25,7 +25,7 @@
       "Name": "Assignee",
       "CanBeSearch": false,
       "Code": "Assignee",
-      "EntityGuid": "1f6a7f4c-165e-485d-bcfb-431f0f5fff35",
+      "EntityGuid": "b7905516-2be5-4931-961c-cb38d5677565",
       "IsRequired": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
       "PreviousPropertyGuid": "f504512a-156d-41bc-a7a0-c16955a1aae7"

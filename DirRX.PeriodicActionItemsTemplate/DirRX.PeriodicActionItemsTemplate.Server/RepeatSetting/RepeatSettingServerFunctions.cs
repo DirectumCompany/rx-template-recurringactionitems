@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -29,7 +29,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
       employees = employees.Except(currentPerformers).ToList();
       
       foreach (var employee in employees)
-        _obj.ActionItemsParts.AddNew().Assignee = DirRX.Solution.Employees.As(employee);
+        _obj.ActionItemsParts.AddNew().Assignee = employee;
       
       return error;
     }

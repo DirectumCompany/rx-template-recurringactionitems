@@ -123,9 +123,6 @@
   <data name="CoverTitle" xml:space="preserve">
     <value>Action Items</value>
   </data>
-  <data name="WidgetTitle_ActionItemExecutionStatus" xml:space="preserve">
-    <value>Action Item Execution Status</value>
-  </data>
   <data name="CoverDescription" xml:space="preserve">
     <value>Module is designed to automate action item management.</value>
   </data>
@@ -134,15 +131,6 @@
   </data>
   <data name="JobDescription_b9d79dacdc8149c391995d246dc1439d" xml:space="preserve">
     <value>When the time comes to escalate an action item, a manager receives a notice with the action item that must be escalated.</value>
-  </data>
-  <data name="WidgetParameter_ActionItemExecutionStatus_Roles" xml:space="preserve">
-    <value>Role</value>
-  </data>
-  <data name="WidgetParameter_ActionItemExecutionStatus_WithSubstitution" xml:space="preserve">
-    <value>Take Substitution Into Account</value>
-  </data>
-  <data name="Enum_ActionItemExecutionStatus_Roles_Author" xml:space="preserve">
-    <value>Author</value>
   </data>
   <data name="JobDisplayName_edc71162d00843029af86ff317a23f92" xml:space="preserve">
     <value>TODO</value>
@@ -155,17 +143,5 @@
   </data>
   <data name="JobDisplayName_99f12576553b4a579c1c8c57e4d3e77a" xml:space="preserve">
     <value>Send Repeating Action Items</value>
-  </data>
-  <data name="Enum_ActionItemExecutionStatus_Roles_Initiator" xml:space="preserve">
-    <value>Creator</value>
-  </data>
-  <data name="Enum_ActionItemExecutionStatus_Roles_Performer" xml:space="preserve">
-    <value>Assignee</value>
-  </data>
-  <data name="Enum_ActionItemExecutionStatus_Roles_Manager" xml:space="preserve">
-    <value>Manager of assignee</value>
-  </data>
-  <data name="WidgetDescription_ActionItemExecutionStatus" xml:space="preserve">
-    <value>Columns with priorities contain information about all tasks and assignments. The "Escalated" column contains information only about escalated tasks and assignments.</value>
   </data>
 </root>

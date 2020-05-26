@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -9,22 +9,18 @@ namespace DirRX.PeriodicActionItemsTemplate.Client
 {
 	partial class RepeatSettingActions
 	{
-	  
 		public virtual void AddPerformer(Sungero.Domain.Client.ExecuteActionArgs e)
 		{
-		  #region Скопировано из стандартной.
-		  
-			var recipients = Functions.Module.Remote.GetAllRecipients()
-				.Where(x => x.Status == Sungero.CoreEntities.DatabookEntry.Status.Active &&
-				       x.Sid != Sungero.Domain.Shared.SystemRoleSid.Administrators &&
-				       x.Sid != Sungero.Domain.Shared.SystemRoleSid.Auditors &&
-				       x.Sid != Sungero.Domain.Shared.SystemRoleSid.ConfigurationManagers &&
-				       x.Sid != Sungero.Domain.Shared.SystemRoleSid.ServiceUsers &&
-				       x.Sid != Sungero.Domain.Shared.SystemRoleSid.SoloUsers &&
-				       x.Sid != Sungero.Domain.Shared.SystemRoleSid.DeliveryUsersSid &&
-				       x.Sid != Sungero.Domain.Shared.SystemRoleSid.AllUsers &&
-				       x.Sid != Sungero.Projects.PublicConstants.Module.RoleGuid.ParentProjectTeam &&
-				       Groups.Is(x));
+			var recipients = Sungero.CoreEntities.Recipients.GetAll().Where(x => x.Status == Sungero.CoreEntities.DatabookEntry.Status.Active &&
+			                                                                x.Sid != Sungero.Domain.Shared.SystemRoleSid.Administrators &&
+			                                                                x.Sid != Sungero.Domain.Shared.SystemRoleSid.Auditors &&
+			                                                                x.Sid != Sungero.Domain.Shared.SystemRoleSid.ConfigurationManagers &&
+			                                                                x.Sid != Sungero.Domain.Shared.SystemRoleSid.ServiceUsers &&
+			                                                                x.Sid != Sungero.Domain.Shared.SystemRoleSid.SoloUsers &&
+			                                                                x.Sid != Sungero.Domain.Shared.SystemRoleSid.DeliveryUsersSid &&
+			                                                                x.Sid != Sungero.Domain.Shared.SystemRoleSid.AllUsers &&
+			                                                                x.Sid != Sungero.Projects.PublicConstants.Module.RoleGuid.ParentProjectTeam &&
+			                                                                Groups.Is(x));
 			var performer = recipients.ShowSelect();
 			if (performer != null)
 			{
@@ -32,8 +28,6 @@ namespace DirRX.PeriodicActionItemsTemplate.Client
 				if (error == Sungero.RecordManagement.ActionItemExecutionTasks.Resources.BigGroupWarningFormat(Sungero.RecordManagement.PublicConstants.ActionItemExecutionTask.MaxCompoundGroup))
 					Dialogs.NotifyMessage(error);
 			}
-			
-			#endregion
 		}
 
 		public virtual bool CanAddPerformer(Sungero.Domain.Client.CanExecuteActionArgs e)

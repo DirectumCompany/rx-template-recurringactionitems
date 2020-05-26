@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -333,12 +333,6 @@
   <data name="Property_Subject" xml:space="preserve">
     <value>Subject</value>
   </data>
-  <data name="Property_Category" xml:space="preserve">
-    <value>Category</value>
-  </data>
-  <data name="Property_Priority" xml:space="preserve">
-    <value>Priority</value>
-  </data>
   <data name="Property_AssignedBy" xml:space="preserve">
     <value>Assigned by</value>
   </data>
@@ -353,9 +347,6 @@
   </data>
   <data name="Property_Assignee" xml:space="preserve">
     <value>Assignee</value>
-  </data>
-  <data name="Property_Mark" xml:space="preserve">
-    <value>Kind</value>
   </data>
   <data name="Property_Deadline" xml:space="preserve">
     <value>Deadline</value>

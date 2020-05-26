@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -13,7 +13,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
     {
       #region Ежегодно.
       
-      var isYear = _obj.Type == ActionItems.RepeatSetting.Type.Year;
+      var isYear = _obj.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Year;
       
       _obj.State.Properties.YearTypeDay.IsVisible = isYear;
       _obj.State.Properties.YearTypeDayOfWeek.IsVisible = isYear;
@@ -23,10 +23,10 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
       _obj.State.Properties.BeginningYear.IsVisible = isYear;
       _obj.State.Properties.EndYear.IsVisible = isYear;
       
-      var isDateYearType = isYear && _obj.YearTypeDay == ActionItems.RepeatSetting.YearTypeDay.Date;
+      var isDateYearType = isYear && _obj.YearTypeDay == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDay.Date;
       _obj.State.Properties.YearTypeDayValue.IsVisible = isDateYearType;
       
-      var isDayOfWeekYearType = isYear && _obj.YearTypeDay == ActionItems.RepeatSetting.YearTypeDay.DayOfWeek;
+      var isDayOfWeekYearType = isYear && _obj.YearTypeDay == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDay.DayOfWeek;
       _obj.State.Properties.YearTypeDayOfWeek.IsVisible = isDayOfWeekYearType;
       _obj.State.Properties.YearTypeDayOfWeekNumber.IsVisible = isDayOfWeekYearType;
       
@@ -34,7 +34,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
       
       #region Ежемесячно.
       
-      var isMonth = _obj.Type == ActionItems.RepeatSetting.Type.Month;
+      var isMonth = _obj.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Month;
       
       _obj.State.Properties.MonthTypeDay.IsVisible = isMonth;
       _obj.State.Properties.MonthTypeDayOfWeek.IsVisible = isMonth;
@@ -43,11 +43,11 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
       _obj.State.Properties.BeginningMonth.IsVisible = isMonth;
       _obj.State.Properties.EndMonth.IsVisible = isMonth;
       
-      var isDateMonthType = isMonth && _obj.MonthTypeDay == ActionItems.RepeatSetting.MonthTypeDay.Date;
+      var isDateMonthType = isMonth && _obj.MonthTypeDay == PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDay.Date;
       _obj.State.Properties.MonthTypeDayValue.IsVisible = isDateMonthType;
       _obj.State.Properties.LabelDayValue.IsVisible = isDateMonthType;
       
-      var isDayOfWeekMonthType = isMonth && _obj.MonthTypeDay == ActionItems.RepeatSetting.MonthTypeDay.DayOfWeek;
+      var isDayOfWeekMonthType = isMonth && _obj.MonthTypeDay == PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDay.DayOfWeek;
       _obj.State.Properties.MonthTypeDayOfWeek.IsVisible = isDayOfWeekMonthType;
       _obj.State.Properties.MonthTypeDayOfWeekNumber.IsVisible = isDayOfWeekMonthType;
       
@@ -55,7 +55,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
       
       #region Еженедельно.
       
-      var isWeek = _obj.Type == ActionItems.RepeatSetting.Type.Week;
+      var isWeek = _obj.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Week;
 
       _obj.State.Properties.WeekTypeFriday.IsVisible = isWeek;
       _obj.State.Properties.WeekTypeMonday.IsVisible = isWeek;
@@ -67,7 +67,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
       
       #region Ежедневно.
       
-      var isDay = _obj.Type == ActionItems.RepeatSetting.Type.Day;
+      var isDay = _obj.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Day;
 
       #endregion
       
@@ -76,9 +76,6 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
       
       _obj.State.Properties.CreationDays.IsEnabled = _obj.Type != DirRX.PeriodicActionItemsTemplate.RepeatSetting.Type.Day || !(!_obj.RepeatValue.HasValue || _obj.RepeatValue.Value == 1);
       
-      #region Поручение.
-      _obj.State.Properties.ReportDeadline.IsEnabled = _obj.Category != null && _obj.Category.NeedsReportDeadline.GetValueOrDefault();
-      
       var isComponentResolution = _obj.IsCompoundActionItem ?? false;
 
       _obj.State.Properties.Assignee.IsRequired = _obj.Info.Properties.Assignee.IsRequired || !isComponentResolution;
@@ -86,8 +83,6 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
       
       // Проверить заполненность контролера, если поручение на контроле.
       _obj.State.Properties.Supervisor.IsRequired = _obj.Info.Properties.Supervisor.IsRequired || _obj.IsUnderControl == true;
-      
-      #endregion
     }
     
     /// <summary>

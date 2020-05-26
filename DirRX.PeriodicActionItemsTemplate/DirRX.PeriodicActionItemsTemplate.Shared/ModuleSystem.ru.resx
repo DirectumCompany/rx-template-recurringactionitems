@@ -123,9 +123,6 @@
   <data name="CoverTitle" xml:space="preserve">
     <value>Поручения</value>
   </data>
-  <data name="WidgetTitle_ActionItemExecutionStatus" xml:space="preserve">
-    <value>Статус выполнения поручений</value>
-  </data>
   <data name="CoverDescription" xml:space="preserve">
     <value>Модуль предназначен для автоматизации работы с поручениями.</value>
   </data>
@@ -135,31 +132,10 @@
   <data name="JobDescription_b9d79dacdc8149c391995d246dc1439d" xml:space="preserve">
     <value>При наступлении срока эскалации руководителю направляется уведомление с вложенным эскалируемым поручением.</value>
   </data>
-  <data name="WidgetParameter_ActionItemExecutionStatus_Roles" xml:space="preserve">
-    <value>Роль</value>
-  </data>
-  <data name="WidgetParameter_ActionItemExecutionStatus_WithSubstitution" xml:space="preserve">
-    <value>Учитывать замещение</value>
-  </data>
-  <data name="Enum_ActionItemExecutionStatus_Roles_Author" xml:space="preserve">
-    <value>Автор</value>
-  </data>
   <data name="JobDescription_99f12576553b4a579c1c8c57e4d3e77a" xml:space="preserve">
     <value>Отправка повторяющихся поручений</value>
   </data>
   <data name="JobDisplayName_99f12576553b4a579c1c8c57e4d3e77a" xml:space="preserve">
     <value>Отправка повторяющихся поручений</value>
-  </data>
-  <data name="Enum_ActionItemExecutionStatus_Roles_Initiator" xml:space="preserve">
-    <value>Постановщик</value>
-  </data>
-  <data name="Enum_ActionItemExecutionStatus_Roles_Performer" xml:space="preserve">
-    <value>Исполнитель</value>
-  </data>
-  <data name="Enum_ActionItemExecutionStatus_Roles_Manager" xml:space="preserve">
-    <value>Руководитель исполнителя</value>
-  </data>
-  <data name="WidgetDescription_ActionItemExecutionStatus" xml:space="preserve">
-    <value>В колонках с приоритетами отображается информация по всем задачам или заданиям. В колонке «Эскалированы» отображается информация только по эскалированым задачам или заданиям.</value>
   </data>
 </root>

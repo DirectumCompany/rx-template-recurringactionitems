@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Data;
@@ -12,232 +12,6 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
   public class ModuleJobs
   {
     
-    #region Скопировано из разработки платформы.
-    /// <summary>
-    /// Удалить старые ссылки на сущности из папки.
-    /// </summary>
-    /// <param name="specialFolderId">Идентификатор спецпапки.</param>
-    /// <param name="folderContentTypeInfo">Инфошка типа содержимого спецпапки.</param>
-    /// <param name="itemsFilter">Фильтр сущностей.</param>
-    /// <param name="overdueDate">Дата начиная с которой ссылка считается старой.</param>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:Review SQL queries for security vulnerabilities", Justification = "Формирование запроса безопасное.")]
-    private static void DeleteOldLinksFromFolder(Guid specialFolderId, IEntityInfo folderContentTypeInfo, string itemsFilter, DateTime overdueDate)
-    {
-      using (var command = SQL.GetCurrentConnection().CreateCommand())
-      {
-        command.CommandText = string.Format(DirRX.ActionItems.Queries.Module.DeleteMarkedFolderItems, folderContentTypeInfo.DBTableName, specialFolderId, itemsFilter);
-        SQL.AddParameter(command, "@date", overdueDate, DbType.DateTime);
-        command.ExecuteNonQuery();
-      }
-      
-      using (var command = SQL.GetCurrentConnection().CreateCommand())
-      {
-        command.CommandText = string.Format(DirRX.ActionItems.Queries.Module.DeleteOldLinksFromFolder, folderContentTypeInfo.DBTableName, specialFolderId, itemsFilter);
-        SQL.AddParameter(command, "@date", overdueDate, DbType.DateTime);
-        command.ExecuteNonQuery();
-      }
-    }
-
-    /// <summary>
-    /// Выполнить очистку тегов спецпапки.
-    /// </summary>
-    /// <param name="specialFolderId">Идентификатор спецпапки.</param>
-    /// <param name="folderContentTypeInfo">Инфошка типа содержимого спецпапки.</param>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:Review SQL queries for security vulnerabilities", Justification = "Формирование запроса безопасное.")]
-    private static void CleanSpecialFolderTags(Guid specialFolderId, IEntityInfo folderContentTypeInfo)
-    {
-      var childFolders = MetadataService.Instance.AllSpecialFolders.Where(sf => sf.ParentFolderId == specialFolderId).ToList();
-      if (!childFolders.Any())
-        return;
-
-      var childFoldersString = string.Join(", ", childFolders.Select(f => string.Format("'{0}'", f.NameGuid)));
-      using (var command = SQL.GetCurrentConnection().CreateCommand())
-      {
-        command.CommandText = string.Format(DirRX.ActionItems.Queries.Module.CleanSpecialFolderTags, folderContentTypeInfo.DBTableName, childFoldersString, specialFolderId);
-        command.ExecuteNonQuery();
-      }
-    }
-    
-    /// <summary>
-    /// Проверка заблокированности рисков задачи.
-    /// </summary>
-    /// <param name="task">Задача на согласование.</param>
-    /// <returns>True - есть заблокированные риски. False - нет заблокированных рисков.</returns>
-    private bool CheckLockedRisk(Solution.IApprovalTask task)
-    {
-      foreach (var risk in task.RiskAttachmentGroup.Risks)
-      {
-        if (Locks.GetLockInfo(risk).IsLocked)
-          return true;
-      }
-      return false;
-    }
-    
-    private void SetResult(bool generate, ActionItems.ISendNoticeQueueItem queueItem)
-    {
-      // При выполнении операции удаляем элемент очереди, иначе увеличиваем счётчик попыток и записываем ошибку.
-      if (generate)
-      {
-        Transactions.Execute(
-          () =>
-          {
-            DirRX.ActionItems.SendNoticeQueueItems.Delete(queueItem);
-          });
-      }
-      else
-      {
-        Transactions.Execute(
-          () =>
-          {
-            Sungero.ExchangeCore.PublicFunctions.QueueItemBase.QueueItemOnError(queueItem, DirRX.ActionItems.Resources.AddSubscriberInJobError);
-          });
-        if (queueItem.Assignment != null)
-          Logger.DebugFormat("{0} Id = '{1}'.", DirRX.ActionItems.Resources.AddSubscriberInJobError, queueItem.Assignment.Id);
-        
-        if (queueItem.Task != null)
-          Logger.DebugFormat("{0} Id = '{1}'.", DirRX.ActionItems.Resources.AddSubscriberInJobError, queueItem.Task.Id);
-      }
-    }
-    
-    /// <summary>
-    /// Отправка уведомления.
-    /// </summary>
-    /// <param name="queueItem">Элемент очереди.</param>
-    private void SendNotice(ActionItems.ISendNoticeQueueItem queueItem)
-    {
-      var notice = Sungero.Workflow.SimpleTasks.Null;
-      if (queueItem.SendAsSubTask.GetValueOrDefault() && queueItem.Task != null)
-        notice = Sungero.Workflow.SimpleTasks.CreateAsSubtask(queueItem.Task);
-      else
-        notice = Sungero.Workflow.SimpleTasks.Create();
-
-      var task = Sungero.Workflow.Tasks.Null;
-      
-      if (queueItem.Task != null)
-        task = queueItem.Task;
-
-      if (queueItem.Assignment != null)
-        task = queueItem.Assignment.Task;
-      
-      notice.Attachments.Add(task);
-      notice.Subject = string.Format(queueItem.Subject);
-      notice.NeedsReview = false;
-
-      foreach (var performer in queueItem.Assignees)
-      {
-        if (performer.Subscriber == null)
-          continue;
-        var routeStep = notice.RouteSteps.AddNew();
-        routeStep.AssignmentType = Sungero.Workflow.SimpleTaskRouteSteps.AssignmentType.Notice;
-        routeStep.Performer = performer.Subscriber;
-        routeStep.Deadline = null;
-        
-        if (task != null)
-        {
-          task.AccessRights.Grant(performer.Subscriber, DefaultAccessRightsTypes.Read);
-          task.AccessRights.Save();
-        }
-      }
-      if (notice.RouteSteps.Count == 0)
-        return;
-      
-      if (notice.Subject.Length > Sungero.Workflow.Tasks.Info.Properties.Subject.Length)
-        notice.Subject = notice.Subject.Substring(0, Sungero.Workflow.Tasks.Info.Properties.Subject.Length);
-      notice.Start();
-      
-
-    }
-    
-    #endregion
-
-    #region Уведомления.
-
-    /// <summary>
-    /// Проверить время в работе в процентах.
-    /// </summary>
-    /// <param name="task">Поручение.</param>
-    /// <param name="percent">Процент.</param>
-    /// <returns>True, если прошло указанное количество времени в процентах.</returns>
-    public static bool IsCorrectPercent(DirRX.Solution.IActionItemExecutionTask task, double percent)
-    {
-      var deadline = Sungero.Docflow.PublicFunctions.Module.GetDateWithTime(task.Deadline.Value, task.Initiator);
-      var allHours = WorkingTime.GetDurationInWorkingHours(task.Started.Value, deadline, task.Initiator);
-      var hoursLeft = WorkingTime.GetDurationInWorkingHours(Calendar.Now, deadline, task.Initiator);
-      var leftPercent = (double)hoursLeft / allHours;
-
-      Logger.DebugFormat("Is correct for {0} percent = {1}. All hours = {2}. Hours left = {3}. Left percent = {4}",
-                         percent, leftPercent < percent, allHours, hoursLeft, leftPercent);
-      
-      return leftPercent < percent;
-    }
-    
-    /// <summary>
-    /// Проверить на наличие уведомлений.
-    /// </summary>
-    /// <param name="task">Поручение.</param>
-    /// <param name="previousRunDate">Время предыдущего запуска.</param>
-    /// <param name="percent">Процент.</param>
-    /// <returns>True, если уведомление отправленно ранее.</returns>
-    public static bool IsSend(DirRX.Solution.IActionItemExecutionTask task, DateTime previousRunDate, double percent)
-    {
-      var deadline = Sungero.Docflow.PublicFunctions.Module.GetDateWithTime(task.Deadline.Value, task.Initiator);
-      var allHours = WorkingTime.GetDurationInWorkingHours(task.Started.Value, deadline, task.Initiator);
-      var previousRunHours = WorkingTime.GetDurationInWorkingHours(previousRunDate, deadline, task.Initiator);
-      var previousRunPercent = (double)previousRunHours / allHours;
-      
-      Logger.DebugFormat("Is send for {0} percent = {1}. All hours = {2}. Previous run hours = {3}. previous run percent = {4}",
-                         percent, previousRunPercent < percent, allHours, previousRunHours, previousRunPercent);
-      
-      return  previousRunPercent < percent;
-    }
-    
-    #region Скопировано из стандартной разработки рассылки о новых заданиях.
-
-    /// <summary>
-    /// Получить дату последней рассылки уведомлений.
-    /// </summary>
-    /// <returns>Дата последней рассылки.</returns>
-    public static DateTime GetLastNotificationDate()
-    {
-      var key = Constants.Module.LastNotificationDateTimeDocflowParamName;
-      var command = string.Format(Queries.Module.SelectDocflowParamsValue, key);
-      try
-      {
-        var executionResult = Sungero.Docflow.PublicFunctions.Module.ExecuteScalarSQLCommand(command);
-        var date = string.Empty;
-        if (!(executionResult is DBNull) && executionResult != null)
-          date = executionResult.ToString();
-        Logger.DebugFormat("Last notification by assignment date in DB is {0} (UTC)", date);
-        
-        DateTime result = Calendar.FromUtcTime(DateTime.Parse(date, null, System.Globalization.DateTimeStyles.AdjustToUniversal));
-
-        if ((result - Calendar.Now).TotalDays > 1)
-          return Calendar.Today;
-        else
-          return result;
-      }
-      catch (Exception ex)
-      {
-        Logger.Error("Error while getting last notification by assignment date", ex);
-        return Calendar.Today;
-      }
-    }
-    
-    /// <summary>
-    /// Обновить дату последней рассылки уведомлений.
-    /// </summary>
-    /// <param name="notificationDate">Дата рассылки уведомлений.</param>
-    public static void UpdateLastNotificationDate(DateTime notificationDate)
-    {
-      var key = Constants.Module.LastNotificationDateTimeDocflowParamName;
-      
-      var newDate = notificationDate.Add(-Calendar.UtcOffset).ToString("yyyy-MM-ddTHH:mm:ss.ffff+0");
-      Sungero.Docflow.PublicFunctions.Module.ExecuteSQLCommandFormat(Queries.Module.InsertOrUpdateDocflowParamsValue, new[] { key, newDate });
-      Logger.DebugFormat("Last notification by assignment date is set to {0} (UTC)", newDate);
-    }
-    
-    #endregion
-    
     #region Повторяющиеся поручения.
     
     /// <summary>
@@ -245,19 +19,13 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
     /// </summary>
     public virtual void RepeatActionItemExecutionTasks()
     {
-      var repeatSettings = DirRX.ActionItems.RepeatSettings.GetAll(s => s.Status == DirRX.ActionItems.RepeatSetting.Status.Active);
-      var createdTask = DirRX.Solution.ActionItemExecutionTasks.GetAll(t => t.Started.HasValue && t.Started.Value.Date == Calendar.Today.Date);
+      var repeatSettings = RepeatSettings.GetAll(s => s.Status == PeriodicActionItemsTemplate.RepeatSetting.Status.Active);
+      var createdTask = Sungero.RecordManagement.ActionItemExecutionTasks.GetAll(t => t.Started.HasValue && t.Started.Value.Date == Calendar.Today.Date);
       
       foreach (var setting in repeatSettings)
       {
         if (setting.Type == null || setting.CreationDays == null)
           continue;
-        
-        if (createdTask.Any(t => DirRX.ActionItems.RepeatSettings.Equals(t.RepeatSetting, setting)))
-        {
-          Logger.DebugFormat("Action item sent.");
-          continue;
-        }
         
         Logger.Debug(string.Format("Setting with id = {0} processed. Type = {1}", setting.Id, setting.Type.Value.Value));
         var date = Calendar.Today;
@@ -265,7 +33,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         
         #region Ежегодно.
         
-        if (setting.Type == DirRX.ActionItems.RepeatSetting.Type.Year)
+        if (setting.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Year)
         {
           var beginningDate = setting.BeginningYear.Value;
           var endDate = setting.EndYear.HasValue ? setting.EndYear.Value : Calendar.SqlMaxValue;
@@ -293,7 +61,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
             continue;
           }
           
-          if (setting.YearTypeDay == DirRX.ActionItems.RepeatSetting.YearTypeDay.Date)
+          if (setting.YearTypeDay == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDay.Date)
           {
             try
             {
@@ -349,7 +117,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         
         #region Ежемесячно.
         
-        if (setting.Type == DirRX.ActionItems.RepeatSetting.Type.Month)
+        if (setting.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Month)
         {
           var beginningDate = setting.BeginningMonth.Value;
           var period = setting.RepeatValue.HasValue ? setting.RepeatValue.Value : 1;
@@ -368,7 +136,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
             continue;
           }
           
-          if (setting.MonthTypeDay == DirRX.ActionItems.RepeatSetting.MonthTypeDay.Date)
+          if (setting.MonthTypeDay == PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDay.Date)
           {
             try
             {
@@ -436,7 +204,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         
         #region Еженедельно.
         
-        if (setting.Type == DirRX.ActionItems.RepeatSetting.Type.Week)
+        if (setting.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Week)
         {
           var beginningDate = setting.BeginningDate.Value;
           var endDate = setting.EndDate.HasValue ? setting.EndDate.Value.EndOfDay() : Calendar.SqlMaxValue;
@@ -480,7 +248,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         
         #region Ежедневно.
         
-        if (setting.Type == DirRX.ActionItems.RepeatSetting.Type.Day)
+        if (setting.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Day)
         {
           var beginningDate = setting.BeginningDate.Value;
           var endDate = setting.EndDate.HasValue ? setting.EndDate.Value.EndOfDay() : Calendar.SqlMaxValue;
@@ -529,33 +297,33 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
     {
       var dayOfWeek = DayOfWeek.Monday;
       
-      if (dayOfWeekSetting == DirRX.ActionItems.RepeatSetting.YearTypeDayOfWeek.Monday || dayOfWeekSetting == DirRX.ActionItems.RepeatSetting.MonthTypeDayOfWeek.Monday)
+      if (dayOfWeekSetting == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeek.Monday || dayOfWeekSetting == PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeek.Monday)
         dayOfWeek = DayOfWeek.Monday;
-      if (dayOfWeekSetting == DirRX.ActionItems.RepeatSetting.YearTypeDayOfWeek.Tuesday || dayOfWeekSetting == DirRX.ActionItems.RepeatSetting.MonthTypeDayOfWeek.Tuesday)
+      if (dayOfWeekSetting == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeek.Tuesday || dayOfWeekSetting ==PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeek.Tuesday)
         dayOfWeek = DayOfWeek.Tuesday;
-      if (dayOfWeekSetting == DirRX.ActionItems.RepeatSetting.YearTypeDayOfWeek.Wednesday || dayOfWeekSetting == DirRX.ActionItems.RepeatSetting.MonthTypeDayOfWeek.Wednesday)
+      if (dayOfWeekSetting == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeek.Wednesday || dayOfWeekSetting ==PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeek.Wednesday)
         dayOfWeek = DayOfWeek.Wednesday;
-      if (dayOfWeekSetting == DirRX.ActionItems.RepeatSetting.YearTypeDayOfWeek.Thursday || dayOfWeekSetting == DirRX.ActionItems.RepeatSetting.MonthTypeDayOfWeek.Thursday)
+      if (dayOfWeekSetting == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeek.Thursday || dayOfWeekSetting == PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeek.Thursday)
         dayOfWeek = DayOfWeek.Thursday;
-      if (dayOfWeekSetting == DirRX.ActionItems.RepeatSetting.YearTypeDayOfWeek.Friday || dayOfWeekSetting == DirRX.ActionItems.RepeatSetting.MonthTypeDayOfWeek.Friday)
+      if (dayOfWeekSetting == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeek.Friday || dayOfWeekSetting == PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeek.Friday)
         dayOfWeek = DayOfWeek.Friday;
       
       while (date.DayOfWeek != dayOfWeek)
         date = date.NextDay();
       
       var month = date.Month;
-      if (dayOfWeekNumberSetting == DirRX.ActionItems.RepeatSetting.YearTypeDayOfWeekNumber.Last || dayOfWeekNumberSetting == DirRX.ActionItems.RepeatSetting.MonthTypeDayOfWeekNumber.Last)
+      if (dayOfWeekNumberSetting == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeekNumber.Last || dayOfWeekNumberSetting == PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeekNumber.Last)
       {
         while (date.AddDays(7).Month == month)
           date = date.AddDays(7);
       }
       else
       {
-        if (dayOfWeekNumberSetting == DirRX.ActionItems.RepeatSetting.YearTypeDayOfWeekNumber.Second || dayOfWeekNumberSetting == DirRX.ActionItems.RepeatSetting.MonthTypeDayOfWeekNumber.Second)
+        if (dayOfWeekNumberSetting == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeekNumber.Second || dayOfWeekNumberSetting == PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeekNumber.Second)
           date = date.AddDays(7);
-        if (dayOfWeekNumberSetting == DirRX.ActionItems.RepeatSetting.YearTypeDayOfWeekNumber.Third || dayOfWeekNumberSetting == DirRX.ActionItems.RepeatSetting.MonthTypeDayOfWeekNumber.Third)
+        if (dayOfWeekNumberSetting == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeekNumber.Third || dayOfWeekNumberSetting == PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeekNumber.Third)
           date = date.AddDays(14);
-        if (dayOfWeekNumberSetting == DirRX.ActionItems.RepeatSetting.YearTypeDayOfWeekNumber.Fourth || dayOfWeekNumberSetting == DirRX.ActionItems.RepeatSetting.MonthTypeDayOfWeekNumber.Fourth)
+        if (dayOfWeekNumberSetting == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeekNumber.Fourth || dayOfWeekNumberSetting == PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeekNumber.Fourth)
           date = date.AddDays(21);
       }
       
@@ -573,29 +341,29 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
     /// <returns>Число от 1 до 12.</returns>
     private int GetMonthValue(Sungero.Core.Enumeration month)
     {
-      if (month == DirRX.ActionItems.RepeatSetting.YearTypeMonth.January)
+      if (month == PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.January)
         return 1;
-      if (month == DirRX.ActionItems.RepeatSetting.YearTypeMonth.February)
+      if (month == PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.February)
         return 2;
-      if (month == DirRX.ActionItems.RepeatSetting.YearTypeMonth.March)
+      if (month == PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.March)
         return 3;
-      if (month == DirRX.ActionItems.RepeatSetting.YearTypeMonth.April)
+      if (month == PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.April)
         return 4;
-      if (month == DirRX.ActionItems.RepeatSetting.YearTypeMonth.May)
+      if (month == PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.May)
         return 5;
-      if (month == DirRX.ActionItems.RepeatSetting.YearTypeMonth.June)
+      if (month == PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.June)
         return 6;
-      if (month == DirRX.ActionItems.RepeatSetting.YearTypeMonth.July)
+      if (month == PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.July)
         return 7;
-      if (month == DirRX.ActionItems.RepeatSetting.YearTypeMonth.August)
+      if (month == PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.August)
         return 8;
-      if (month == DirRX.ActionItems.RepeatSetting.YearTypeMonth.September)
+      if (month == PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.September)
         return 9;
-      if (month == DirRX.ActionItems.RepeatSetting.YearTypeMonth.October)
+      if (month == PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.October)
         return 10;
-      if (month == DirRX.ActionItems.RepeatSetting.YearTypeMonth.November)
+      if (month == PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.November)
         return 11;
-      if (month == DirRX.ActionItems.RepeatSetting.YearTypeMonth.December)
+      if (month == PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.December)
         return 12;
       
       return 1;
@@ -653,21 +421,9 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
     /// <param name="setting">Настройки.</param>
     /// <param name="deadline">Срок.</param>
     /// <returns></returns>
-    private void SendActionItem(DirRX.ActionItems.IRepeatSetting setting, DateTime deadline)
+    private void SendActionItem(IRepeatSetting setting, DateTime deadline)
     {
-      var task = DirRX.Solution.ActionItemExecutionTasks.Create();
-      
-      task.Category = setting.Category;
-      task.AssignedBy = setting.AssignedBy;
-      task.Initiator = setting.Initiator;
-      task.Mark = setting.Mark;
-      task.ReportDeadline = setting.ReportDeadline;
-      
-      foreach (var subscriberSetting in setting.Subscribers)
-      {
-        var subscriber = task.Subscribers.AddNew();
-        subscriber.Subscriber = subscriberSetting.Subscriber;
-      }
+      var task = Sungero.RecordManagement.ActionItemExecutionTasks.Create();
       
       if (setting.IsCompoundActionItem.GetValueOrDefault())
       {
@@ -698,8 +454,6 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         task.ActionItem = setting.ActionItem;
       }
       
-      task.RepeatSetting = setting;
-      
       task.Start();
     }
 
@@ -707,10 +461,10 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
     /// Отправить уведомление об актуализации расписания.
     /// </summary>
     /// <param name="setting">Настройка повторения поручений.</param>
-    private void SendNotice(DirRX.ActionItems.IRepeatSetting setting)
+    private void SendNotice(IRepeatSetting setting)
     {
       var notice = Sungero.Workflow.SimpleTasks.Create();
-      notice.Subject = DirRX.ActionItems.Resources.LastActionItemText;
+      notice.Subject = Resources.LastActionItemText;
       notice.NeedsReview = false;
 
       var routeStep = notice.RouteSteps.AddNew();
@@ -725,22 +479,5 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
       
       notice.Start();
     }
-    
-    #endregion
-    
-    #region Синхронизация настроек уведомлений.
-    
-    private bool IsEqualsPriorityCollection(IEnumerable<IPriority> priorities, IEnumerable<IPriority> allPriorities)
-    {
-      foreach (var priority in priorities)
-      {
-        if (!allPriorities.Contains(priority))
-          return false;
-      }
-      
-      return true;
-    }
-    
-    #endregion
   }
 }

@@ -25,7 +25,7 @@
       "Name": "Subscriber",
       "CanBeSearch": false,
       "Code": "Subscriber",
-      "EntityGuid": "1f6a7f4c-165e-485d-bcfb-431f0f5fff35",
+      "EntityGuid": "b7905516-2be5-4931-961c-cb38d5677565",
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
       "PreviousPropertyGuid": "9739f210-f9d6-47c4-94ff-b8a3c8f1a266"
     }
