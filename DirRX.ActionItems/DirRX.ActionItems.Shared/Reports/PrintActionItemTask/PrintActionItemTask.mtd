@@ -1,0 +1,134 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "eed3ee47-5e01-4aef-9633-2edec58a70ef",
+  "Name": "PrintActionItemTask",
+  "AssociatedGuid": "361e1a1d-0bce-41ea-b507-f4dbed1cc173",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Word",
+  "ExportFormats": [
+    "Word"
+  ],
+  "HandledEvents": [
+    "BeforeExecuteServer",
+    "AfterExecuteServer"
+  ],
+  "IconResourcesKeys": [],
+  "Overridden": [
+    "PublicConstants",
+    "PublicStructures",
+    "HandledEvents",
+    "ExportFormats",
+    "DefaultExportFormat",
+    "Parameters",
+    "DisplayName",
+    "Description"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "434ac707-3a43-4198-ae02-c58e1481b468",
+      "Name": "Author",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "2bcce323-2bad-4468-baa8-71095d02b044",
+      "Name": "Initiator",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "9c3b7d43-79d7-41af-abf8-0a5d842487a0",
+      "Name": "Category",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "effdbe4c-b692-42b4-a37f-b265e62ceff1",
+      "Name": "Priority",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "1dc1aa5a-c297-4763-8b74-936258e4f8ea",
+      "Name": "Supervisor",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "699d4812-50d9-4dd7-8045-e8116f5e1139",
+      "Name": "Document",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "6a06fc09-01ba-4e63-871c-a79651fd2f31",
+      "Name": "Printed",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "82d2502e-1d85-4e0c-bdd8-806938c5377f",
+      "Name": "Task",
+      "EntityType": "336dcf2c-56f7-4500-9a48-6ec3e4700937",
+      "InternalDataTypeName": "DirRX.Solution.IActionItemExecutionTask, Sungero.Domain.Interfaces"
+    },
+    {
+      "NameGuid": "c1f29d5e-c0c3-4808-99c0-1dfb294cd2e5",
+      "Name": "ReportSessionId",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "64e72ed8-e593-412b-9c65-d997caf30cbc",
+      "Name": "Resolution",
+      "InternalDataTypeName": "System.String"
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "ResponsibilitiesReportTableLine",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Assignee",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ActionItem",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Deadline",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Status",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ReportSessionId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.ActionItems.Structures.PrintActionItemTask"
+    }
+  ],
+  "ResourcesKeys": [
+    "ReportTitle",
+    "Printed",
+    "Author",
+    "Initiator",
+    "Category",
+    "Priority",
+    "Supervisor",
+    "Document",
+    "Assignee",
+    "ActionItem",
+    "Deadline",
+    "Status",
+    "Number",
+    "AdditionalType",
+    "ID",
+    "Resolution",
+    "DefaultActionItemResolution"
+  ],
+  "Versions": []
+}

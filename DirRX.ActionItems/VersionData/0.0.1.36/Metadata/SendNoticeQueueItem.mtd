@@ -1,0 +1,137 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "6fd5e104-edb7-4f04-a57f-4f3da23aa20e",
+  "Name": "SendNoticeQueueItem",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "4e09273f-8b3a-489e-814e-a4ebfbba3e6c",
+  "CanBeNavigationPropertyType": true,
+  "CreationAreaMetadata": {
+    "NameGuid": "f7766750-eee2-4fcd-8003-5c06a90d1f44",
+    "Name": "CreationArea",
+    "Buttons": [],
+    "IsAncestorMetadata": true
+  },
+  "ExtraSearchProperties": [],
+  "FilterPanel": {
+    "NameGuid": "b0125fbd-3b91-4dbb-914a-689276216404",
+    "Name": "FilterPanel",
+    "Controls": [],
+    "IsAncestorMetadata": true
+  },
+  "HandledEvents": [
+    "CreatedServer"
+  ],
+  "IconResourcesKeys": [],
+  "OperationsClass": "",
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.StringPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "e01a7d8a-5bc4-4268-b8cc-34a5f863b260",
+      "Name": "Subject",
+      "Code": "Subject",
+      "Length": 1000,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
+      "PreviousPropertyGuid": "86dd7602-3ca0-45fc-b623-52ebb1efc92e"
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "fde5732b-4814-444f-a4b2-de4fca33a885",
+      "Name": "Task",
+      "Code": "Task",
+      "EntityGuid": "d795d1f6-45c1-4e5e-9677-b53fb7280c7e",
+      "FlatListInStandaloneLookup": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "e01a7d8a-5bc4-4268-b8cc-34a5f863b260"
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "4d5b15b0-fdd3-4156-a38f-a0f8de3ef087",
+      "Name": "Assignment",
+      "Code": "Assignment",
+      "EntityGuid": "91cbfdc8-5d5d-465e-95a4-3235b8c01d5b",
+      "FlatListInStandaloneLookup": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "fde5732b-4814-444f-a4b2-de4fca33a885"
+    },
+    {
+      "$type": "Sungero.Metadata.CollectionPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "1b7c8fff-0950-4fb8-92c7-8d2794e9380e",
+      "Name": "Assignees",
+      "Code": "SendNoticeQueu",
+      "EntityGuid": "0b317d1c-f649-40a3-8aed-509187667202",
+      "IsShowedInList": false,
+      "PreviousPropertyGuid": "4d5b15b0-fdd3-4156-a38f-a0f8de3ef087"
+    },
+    {
+      "$type": "Sungero.Metadata.BooleanPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "2e56e70b-618d-4410-86b1-13a3a42f4686",
+      "Name": "SendAsSubTask",
+      "Code": "SendAsSubTask",
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+      "PreviousPropertyGuid": "1b7c8fff-0950-4fb8-92c7-8d2794e9380e"
+    },
+    {
+      "$type": "Sungero.Metadata.BooleanPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "dba2ee99-efda-49f5-af94-3fcc96dfc3ef",
+      "Name": "NoticeIsSend",
+      "Code": "NoticeIsSend",
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+      "PreviousPropertyGuid": "2e56e70b-618d-4410-86b1-13a3a42f4686"
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "CreateSendNoticeQueueItem",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "subscribers",
+          "ParameterType": "global::System.Collections.Generic.List<global::DirRX.Solution.IEmployee>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "task",
+          "ParameterType": "global::Sungero.Workflow.ITask",
+          "ParameterTypeFullName": "Sungero.Workflow.ITask, Sungero.Workflow.Interfaces"
+        },
+        {
+          "Name": "assignment",
+          "ParameterType": "global::Sungero.Workflow.IAssignment",
+          "ParameterTypeFullName": "Sungero.Workflow.IAssignment, Sungero.Workflow.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [
+    "NewSubscriber"
+  ],
+  "RibbonCardMetadata": {
+    "NameGuid": "7381b035-e13c-45c7-9e49-10ea0ced3c01",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "53a3e033-98f1-456c-9471-4d7e8cc9eaad",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 9
+    }
+  ]
+}

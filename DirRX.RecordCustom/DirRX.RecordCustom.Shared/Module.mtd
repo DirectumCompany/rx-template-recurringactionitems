@@ -1,0 +1,86 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "326ff917-49cd-4425-9a6c-5c0ac791d60b",
+  "Name": "RecordCustom",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "DirRX.RecordCustom.Client",
+  "ClientBaseAssemblyName": "DirRX.RecordCustom.ClientBase",
+  "ClientBaseNamespace": "DirRX.RecordCustom.ClientBase",
+  "ClientNamespace": "DirRX.RecordCustom.Client",
+  "Code": "RecordC",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "a35f3d7f-b027-4395-b704-6ee587702e09",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "10f76735-9959-4395-bf5a-9dc05a25cbdb",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "a587456a-84a5-4712-b47c-c99080e91e71",
+      "BackgroundPosition": "Stretch"
+    }
+  },
+  "Dependencies": [
+    {
+      "Id": "d67b58ac-520d-424c-87b1-6b6778c2030a",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "e8363a84-7650-470e-90db-696db0507f13",
+      "PreviousItemId": "91ac9d4b-427b-44bb-8f98-7eeb8f035b45"
+    },
+    {
+      "ItemId": "e0b080d7-d3b7-49d4-be34-8ae84288b937",
+      "PreviousItemId": "e8363a84-7650-470e-90db-696db0507f13"
+    },
+    {
+      "ItemId": "91ac9d4b-427b-44bb-8f98-7eeb8f035b45",
+      "PreviousItemId": "e0b080d7-d3b7-49d4-be34-8ae84288b937"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.RecordCustom",
+  "IsVisible": false,
+  "Overridden": [
+    "IsVisible"
+  ],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.RecordCustom",
+  "ResourcesKeys": [
+    "InitCEOManagerRoleName",
+    "MemoAddresseeRoleName",
+    "MemoAssigneeRoleName",
+    "AssigneeManagerRoleName",
+    "ApproberPrvStRoleName"
+  ],
+  "ServerAssemblyName": "DirRX.RecordCustom.Server",
+  "ServerNamespace": "DirRX.RecordCustom.Server",
+  "SharedAssemblyName": "DirRX.RecordCustom.Shared",
+  "SharedNamespace": "DirRX.RecordCustom.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.16",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

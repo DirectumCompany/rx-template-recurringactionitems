@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Action_Recycling" xml:space="preserve">
+    <value>For Major Rework</value>
+  </data>
+  <data name="Action_RecyclingDescription" xml:space="preserve">
+    <value>Send the document for major rework and full approval cycle.</value>
+  </data>
+  <data name="Action_RecyclingHint" xml:space="preserve">
+    <value>Send Document for Major Rework</value>
+  </data>
+  <data name="Action_RecyclingConfirmationMessage" xml:space="preserve">
+    <value>Are you sure you want to send the document for major rework?</value>
+  </data>
+  <data name="Action_RecyclingConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_ForRecycle" xml:space="preserve">
+    <value>For major rework</value>
+  </data>
+  <data name="Action_AddSubscribers" xml:space="preserve">
+    <value>Add Subscriber</value>
+  </data>
+  <data name="Action_AddSubscribersDescription" xml:space="preserve">
+    <value>The subscribers will receive notices that they are added. Within this notice, they will have access to the task and attached documents.</value>
+  </data>
+  <data name="Action_AddSubscribersHint" xml:space="preserve">
+    <value>Add Subscriber to Task in Process</value>
+  </data>
+  <data name="Action_AddSubscribersConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_AddSubscribersConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_Subscribers" xml:space="preserve">
+    <value>Subscribers</value>
+  </data>
+  <data name="Resource_6a70b554152949b5acf605ed8fc18345" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_6a70b554152949b5acf605ed8fc18345_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_55989cac86a340d3876891728f431ef7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_55989cac86a340d3876891728f431ef7_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_6f9dacb7c315492084c8c270f9f043be" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_6f9dacb7c315492084c8c270f9f043be_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_e32d862518c14cb4b80dacab2b7b669c" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_d0882c8932a1419a9113443cf77ee8d9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_eec7fddc3ab5421ba3a14ccc8fb61347" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_a079a6a43e614b4d8b3c9f0f557a67ab" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_f4dc23ef826d42a292b86ab9893f7f74" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_417e5555a2bd4494ac3f8fcc11ddd14c" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_6d03b7de120248d9986e271ea534dfd6" xml:space="preserve">
+    <value>Approval Form</value>
+  </data>
+  <data name="Resource_c3e3d5c0d794438aa4947fcc1426ae0b" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_43edb78565d44e739ab8183252a37735" xml:space="preserve">
+    <value>Delivery Method</value>
+  </data>
+  <data name="Resource_1dcb97065aec4c30a18c2f2fdef0acec" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_323ce45888934d359d03aaa7ac692379" xml:space="preserve">
+    <value>Document Requisites</value>
+  </data>
+  <data name="Resource_03cb0cf69032445280df86391e16ba1f" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_79a97bc231e6418a85ecd95ae8c2a405_EmptyText" xml:space="preserve">
+    <value>Specify subscribers...</value>
+  </data>
+  <data name="Action_CreateInitiatorTaskAction" xml:space="preserve">
+    <value>Request to Initiator</value>
+  </data>
+  <data name="Action_CreateInitiatorTaskActionDescription" xml:space="preserve">
+    <value>The initiator of the approval will receive an assignment to answer the request.</value>
+  </data>
+  <data name="Action_CreateInitiatorTaskActionHint" xml:space="preserve">
+    <value>Send Request to Initiator of Approval</value>
+  </data>
+  <data name="Action_CreateInitiatorTaskActionConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateInitiatorTaskActionConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_29cd5cae498c4de19305ba6f286db7b2" xml:space="preserve">
+    <value>Signing Settings</value>
+  </data>
+  <data name="Property_SignedDirRX" xml:space="preserve">
+    <value>Signed by</value>
+  </data>
+  <data name="Property_ForWhomDirRX" xml:space="preserve">
+    <value>On behalf of</value>
+  </data>
+</root>

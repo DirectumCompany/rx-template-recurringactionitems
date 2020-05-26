@@ -1,0 +1,236 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "51498156-5426-4d6a-8fa9-e14604325d1e",
+  "Name": "Brands",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "DirRX.Brands.Client",
+  "ClientBaseAssemblyName": "DirRX.Brands.ClientBase",
+  "ClientBaseNamespace": "DirRX.Brands.ClientBase",
+  "ClientNamespace": "DirRX.Brands.Client",
+  "Code": "Brands",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "585f56eb-4063-4b1c-9c08-0e3e67575ac0",
+    "Actions": [
+      {
+        "$type": "Sungero.Metadata.CoverEntityListActionMetadata, Sungero.Metadata",
+        "NameGuid": "1075868f-d5fa-48ab-a4bb-abb39f7e3d99",
+        "Name": "ProductName",
+        "EntityTypeId": "923d8051-70e3-4c4f-abf1-a8931a0b7cf4",
+        "GroupId": "d2ffc484-1b4c-4307-a2ea-5ea76c50c9bc"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverEntityListActionMetadata, Sungero.Metadata",
+        "NameGuid": "1a70ac0c-d2bd-46a4-b9d9-7cce375b3163",
+        "Name": "BrandRegistrations",
+        "EntityTypeId": "b22f4b3c-f3f7-4444-a2b7-2f70561e562a",
+        "GroupId": "2da744cc-d817-42fb-9ecc-b1850749e839"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverFunctionActionMetadata, Sungero.Metadata",
+        "NameGuid": "252b1572-e41b-4673-b266-48aa50ebb49c",
+        "Name": "BrandRegistrImportXlsx",
+        "FunctionName": "BrandRegistrImport",
+        "GroupId": "2da744cc-d817-42fb-9ecc-b1850749e839",
+        "PreviousItemGuid": "1a70ac0c-d2bd-46a4-b9d9-7cce375b3163"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverEntityListActionMetadata, Sungero.Metadata",
+        "NameGuid": "32cc0a04-3154-4693-b2c3-7267a477000f",
+        "Name": "Countries",
+        "EntityTypeId": "fdfca235-0c8a-4805-8001-edab974b3bfe",
+        "GroupId": "5688bd8e-3557-48cb-82a5-c5f79e60e0ed",
+        "PreviousItemGuid": "9c7441df-cec5-4b11-b1e1-49baec93cdd5"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverEntityListActionMetadata, Sungero.Metadata",
+        "NameGuid": "9c7441df-cec5-4b11-b1e1-49baec93cdd5",
+        "Name": "ProductGroup",
+        "EntityTypeId": "83c58b70-0995-485c-92c4-006ffe6ebc03",
+        "GroupId": "5688bd8e-3557-48cb-82a5-c5f79e60e0ed",
+        "PreviousItemGuid": "f2e48711-6519-4501-92a5-079df1f915de"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverEntityListActionMetadata, Sungero.Metadata",
+        "NameGuid": "e9718e82-e08c-4e94-a83c-64775622d1c1",
+        "Name": "WordMark",
+        "EntityTypeId": "8d90b296-1a4d-4d32-8eb8-41b73395fdfa",
+        "GroupId": "d2ffc484-1b4c-4307-a2ea-5ea76c50c9bc",
+        "PreviousItemGuid": "1075868f-d5fa-48ab-a4bb-abb39f7e3d99"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverEntityListActionMetadata, Sungero.Metadata",
+        "NameGuid": "f2e48711-6519-4501-92a5-079df1f915de",
+        "Name": "ProductKind",
+        "EntityTypeId": "9dd2bbbe-90a3-4736-97a4-204f9b1edea2",
+        "GroupId": "5688bd8e-3557-48cb-82a5-c5f79e60e0ed"
+      }
+    ],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "b276bdae-462f-47df-b94e-792128d9c9e4",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [
+      {
+        "NameGuid": "2da744cc-d817-42fb-9ecc-b1850749e839",
+        "Name": "Brands",
+        "BackgroundPosition": "Stretch",
+        "IconName": "GroupIconBrands_2da744ccd81742fb9eccb1850749e839.png"
+      },
+      {
+        "NameGuid": "5688bd8e-3557-48cb-82a5-c5f79e60e0ed",
+        "Name": "LinkedInformation",
+        "BackgroundPosition": "Stretch",
+        "IconName": "GroupIconLinkedInformation_5688bd8e355748cb82a5c5f79e60e0ed.png",
+        "PreviousItemGuid": "2da744cc-d817-42fb-9ecc-b1850749e839"
+      },
+      {
+        "NameGuid": "d2ffc484-1b4c-4307-a2ea-5ea76c50c9bc",
+        "Name": "ProductName",
+        "BackgroundPosition": "Stretch",
+        "IconName": "GroupIconProductName_d2ffc4841b4c4307a2ea5ea76c50c9bc.png",
+        "PreviousItemGuid": "5688bd8e-3557-48cb-82a5-c5f79e60e0ed"
+      }
+    ],
+    "Header": {
+      "NameGuid": "fbf01fee-0e9a-4016-87dd-3e2953f7c6af",
+      "BackgroundPosition": "Stretch"
+    }
+  },
+  "Dependencies": [
+    {
+      "Id": "d67b58ac-520d-424c-87b1-6b6778c2030a",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    },
+    {
+      "Id": "df83a2ea-8d43-4ec4-a34a-2e61863014df",
+      "MaxVersion": "",
+      "MinVersion": "3.0.28.1"
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "923d8051-70e3-4c4f-abf1-a8931a0b7cf4"
+    },
+    {
+      "ItemId": "8d90b296-1a4d-4d32-8eb8-41b73395fdfa",
+      "PreviousItemId": "923d8051-70e3-4c4f-abf1-a8931a0b7cf4"
+    },
+    {
+      "ItemId": "9dd2bbbe-90a3-4736-97a4-204f9b1edea2",
+      "PreviousItemId": "8d90b296-1a4d-4d32-8eb8-41b73395fdfa"
+    },
+    {
+      "ItemId": "83c58b70-0995-485c-92c4-006ffe6ebc03",
+      "PreviousItemId": "9dd2bbbe-90a3-4736-97a4-204f9b1edea2"
+    },
+    {
+      "ItemId": "b22f4b3c-f3f7-4444-a2b7-2f70561e562a",
+      "PreviousItemId": "83c58b70-0995-485c-92c4-006ffe6ebc03"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "High",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.Brands",
+  "Jobs": [
+    {
+      "NameGuid": "5ad47ed0-c763-4685-9823-0c3ae3ad9724",
+      "Name": "NewDesignationSendTaskJob",
+      "GenerateHandler": true,
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T08:30:00"
+    },
+    {
+      "NameGuid": "abfa9a5f-55c3-4863-8188-76c8c0af427e",
+      "Name": "SetRegistrationExpiredStatus",
+      "GenerateHandler": true,
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T01:00:00"
+    },
+    {
+      "NameGuid": "1d97a0e9-ee00-456f-8fb8-ee634cbd3852",
+      "Name": "SendExpiredRegistrationsNoticeJob",
+      "GenerateHandler": true,
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T01:10:00"
+    }
+  ],
+  "Libraries": [
+    {
+      "NameGuid": "2b883fe2-8d15-46d4-ac24-36b5b066311c",
+      "Name": "OpenXML",
+      "Scope": "Both"
+    }
+  ],
+  "Overridden": [
+    "Importance",
+    "IsVisible"
+  ],
+  "PublicConstants": [
+    {
+      "Name": "CountriesManagersRoleGuid",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.Guid",
+      "Value": "new System.Guid(\"B27FFB34-0B56-41FD-827B-D643DD0AEF5F\")"
+    },
+    {
+      "Name": "IntellectualPropertySpecialistRoleGuid",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.Guid",
+      "Value": "new System.Guid(\"A34F09FE-A2B4-4B03-B462-E00A65ECF706\")"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.Brands",
+  "ResourcesKeys": [
+    "DesignationTaskSubject",
+    "IntellectualPropertySpecialistRoleName",
+    "IntellectualPropertySpecialistRoleDescription",
+    "DesignationTaskActiveText",
+    "BrandsRegistrationDocumentName",
+    "BrandsManagersRoleName",
+    "ProductNameManagersRoleName",
+    "ProductKindAndGroupManagersRoleName",
+    "CountriesManagersRoleName",
+    "BrandsImportDialogTitle",
+    "BrandsImportFileSelectTitle",
+    "BrandsImportButtonTitle",
+    "BrandsImportErrorSubject",
+    "BrandsImportIncorrectColumnCount",
+    "BrandsImportSuccessful",
+    "BrandsImportIncorrectSheetNotFound",
+    "ExpiredRegistrationsNoticeSubject",
+    "ExpiredRegistrationsNoticeText",
+    "AccessErrorName",
+    "BrandImportAccessError"
+  ],
+  "ServerAssemblyName": "DirRX.Brands.Server",
+  "ServerNamespace": "DirRX.Brands.Server",
+  "SharedAssemblyName": "DirRX.Brands.Shared",
+  "SharedNamespace": "DirRX.Brands.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.43",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

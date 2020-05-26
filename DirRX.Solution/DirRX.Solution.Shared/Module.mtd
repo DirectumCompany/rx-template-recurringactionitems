@@ -1,0 +1,971 @@
+{
+  "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
+  "NameGuid": "d67b58ac-520d-424c-87b1-6b6778c2030a",
+  "Name": "Solution",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "DirRX.Solution.Client",
+  "ClientBaseAssemblyName": "DirRX.Solution.ClientBase",
+  "ClientBaseNamespace": "DirRX.Solution.ClientBase",
+  "ClientNamespace": "DirRX.Solution.Client",
+  "Code": "Solutio",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "e5ef7de2-0e1e-4ad8-8659-2d5b065afd5c",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "ffef0eb4-7a02-4558-874f-cebbb049ff57",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "a3120ba8-3e7d-4ee1-8a4a-19b82a4e71b8",
+      "BackgroundPosition": "Stretch"
+    }
+  },
+  "Dependencies": [
+    {
+      "Id": "f9d15b1c-2784-4c84-8348-1e162d70b988",
+      "MaxVersion": "",
+      "MinVersion": "3.1.43.1"
+    }
+  ],
+  "DesktopViews": [],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "1f6a7f4c-165e-485d-bcfb-431f0f5fff35"
+    },
+    {
+      "ItemId": "336dcf2c-56f7-4500-9a48-6ec3e4700937",
+      "PreviousItemId": "1f6a7f4c-165e-485d-bcfb-431f0f5fff35"
+    },
+    {
+      "ItemId": "fc39a337-b55e-418d-b965-f18070f90245",
+      "PreviousItemId": "336dcf2c-56f7-4500-9a48-6ec3e4700937"
+    },
+    {
+      "ItemId": "3d4be18e-4088-4a57-9fff-202afda652f6",
+      "PreviousItemId": "fc39a337-b55e-418d-b965-f18070f90245"
+    },
+    {
+      "ItemId": "8311f368-e735-4bc8-b8cc-5d51e4685863",
+      "PreviousItemId": "3d4be18e-4088-4a57-9fff-202afda652f6"
+    },
+    {
+      "ItemId": "36b15438-c6d3-411e-bbe7-158e39d60c40",
+      "PreviousItemId": "8311f368-e735-4bc8-b8cc-5d51e4685863"
+    },
+    {
+      "ItemId": "ad109d9b-15b4-4a28-82d6-9df12f81a597",
+      "PreviousItemId": "36b15438-c6d3-411e-bbe7-158e39d60c40"
+    },
+    {
+      "ItemId": "d3039236-205c-4c6c-bbc8-a6b1e5bdc570",
+      "PreviousItemId": "ad109d9b-15b4-4a28-82d6-9df12f81a597"
+    },
+    {
+      "ItemId": "20d65fab-55d0-499b-9d68-585f23b5304a",
+      "PreviousItemId": "d3039236-205c-4c6c-bbc8-a6b1e5bdc570"
+    },
+    {
+      "ItemId": "5958ef83-89de-4330-a9cd-1fdbb1d50f46",
+      "PreviousItemId": "20d65fab-55d0-499b-9d68-585f23b5304a"
+    },
+    {
+      "ItemId": "d4ed08d8-1337-47d6-8500-8df7bd747024",
+      "PreviousItemId": "5958ef83-89de-4330-a9cd-1fdbb1d50f46"
+    },
+    {
+      "ItemId": "c580c591-dc4d-4e60-beb7-defb9399ca02",
+      "PreviousItemId": "d4ed08d8-1337-47d6-8500-8df7bd747024"
+    },
+    {
+      "ItemId": "60045c4c-8778-4a50-94d0-4b50b01429ea",
+      "PreviousItemId": "c580c591-dc4d-4e60-beb7-defb9399ca02"
+    },
+    {
+      "ItemId": "88de5190-9c3d-4636-a94c-ec5d93228838",
+      "PreviousItemId": "60045c4c-8778-4a50-94d0-4b50b01429ea"
+    },
+    {
+      "ItemId": "098350e4-f0b4-4d3f-96d8-46ab76681bf2",
+      "PreviousItemId": "88de5190-9c3d-4636-a94c-ec5d93228838"
+    },
+    {
+      "ItemId": "1886c433-8188-4116-b994-66841d02fe44",
+      "PreviousItemId": "098350e4-f0b4-4d3f-96d8-46ab76681bf2"
+    },
+    {
+      "ItemId": "a969a7c4-1c09-481a-ba3a-0d0c63dff0fc",
+      "PreviousItemId": "1886c433-8188-4116-b994-66841d02fe44"
+    },
+    {
+      "ItemId": "40fe0324-4942-4bfb-8974-a61e637947e0",
+      "PreviousItemId": "a969a7c4-1c09-481a-ba3a-0d0c63dff0fc"
+    },
+    {
+      "ItemId": "85be6af6-1384-473c-abd4-2036ed227530",
+      "PreviousItemId": "40fe0324-4942-4bfb-8974-a61e637947e0"
+    },
+    {
+      "ItemId": "fce433d7-63ef-40ff-acaa-66d5529a172f",
+      "PreviousItemId": "85be6af6-1384-473c-abd4-2036ed227530"
+    },
+    {
+      "ItemId": "edf16ae2-7d92-4b69-8f1c-a4c6da1a9be9",
+      "PreviousItemId": "fce433d7-63ef-40ff-acaa-66d5529a172f"
+    },
+    {
+      "ItemId": "840a0442-2c58-4f6e-ac5d-fe0a47af71da",
+      "PreviousItemId": "edf16ae2-7d92-4b69-8f1c-a4c6da1a9be9"
+    },
+    {
+      "ItemId": "b9b974d5-c210-44fb-bcd5-dc847de6f91c",
+      "PreviousItemId": "840a0442-2c58-4f6e-ac5d-fe0a47af71da"
+    },
+    {
+      "ItemId": "40ce68f9-a0f7-44ca-901a-2ebc968b2999",
+      "PreviousItemId": "b9b974d5-c210-44fb-bcd5-dc847de6f91c"
+    },
+    {
+      "ItemId": "10506d7c-8fa8-4d87-84ef-3faf6b7972b6",
+      "PreviousItemId": "40ce68f9-a0f7-44ca-901a-2ebc968b2999"
+    },
+    {
+      "ItemId": "30c68ee2-4928-4e8a-9015-4ab02a3aff08",
+      "PreviousItemId": "10506d7c-8fa8-4d87-84ef-3faf6b7972b6"
+    },
+    {
+      "ItemId": "5d90b11e-6e26-434c-aed9-8c8fd55c1ae2",
+      "PreviousItemId": "30c68ee2-4928-4e8a-9015-4ab02a3aff08"
+    },
+    {
+      "ItemId": "db602e7b-983a-423e-87eb-cdc0d67085f3",
+      "PreviousItemId": "5d90b11e-6e26-434c-aed9-8c8fd55c1ae2"
+    },
+    {
+      "ItemId": "39bd25b1-2e3d-496f-b4d0-08ddd0891bae",
+      "PreviousItemId": "db602e7b-983a-423e-87eb-cdc0d67085f3"
+    },
+    {
+      "ItemId": "92479d11-71e8-4bde-99b4-66707037873f",
+      "PreviousItemId": "39bd25b1-2e3d-496f-b4d0-08ddd0891bae"
+    },
+    {
+      "ItemId": "1d73a785-0c4f-4242-b84f-8a04e5a8331c",
+      "PreviousItemId": "92479d11-71e8-4bde-99b4-66707037873f"
+    },
+    {
+      "ItemId": "8391b03a-f5e1-46de-933e-1130016c9731",
+      "PreviousItemId": "1d73a785-0c4f-4242-b84f-8a04e5a8331c"
+    },
+    {
+      "ItemId": "3356605d-d927-40b1-853a-1e6d83101cb7",
+      "PreviousItemId": "8391b03a-f5e1-46de-933e-1130016c9731"
+    },
+    {
+      "ItemId": "8d7de981-0283-4e6f-ae73-63e6b551029f",
+      "PreviousItemId": "3356605d-d927-40b1-853a-1e6d83101cb7"
+    },
+    {
+      "ItemId": "5ac15a33-fc94-481a-86e8-dc4a00391c1e",
+      "PreviousItemId": "8d7de981-0283-4e6f-ae73-63e6b551029f"
+    },
+    {
+      "ItemId": "4b162b69-1f9d-42cd-b8f5-5b1df47d3cfa",
+      "PreviousItemId": "5ac15a33-fc94-481a-86e8-dc4a00391c1e"
+    },
+    {
+      "ItemId": "62f355f6-7906-4e1a-bcf0-a23b0158d2b7",
+      "PreviousItemId": "4b162b69-1f9d-42cd-b8f5-5b1df47d3cfa"
+    },
+    {
+      "ItemId": "43f58440-0d01-468f-9aa2-deabaad9d5ee",
+      "PreviousItemId": "62f355f6-7906-4e1a-bcf0-a23b0158d2b7"
+    },
+    {
+      "ItemId": "28bd5e3a-843c-471c-94bf-00a85d2b9fce",
+      "PreviousItemId": "43f58440-0d01-468f-9aa2-deabaad9d5ee"
+    },
+    {
+      "ItemId": "fdfca235-0c8a-4805-8001-edab974b3bfe",
+      "PreviousItemId": "28bd5e3a-843c-471c-94bf-00a85d2b9fce"
+    },
+    {
+      "ItemId": "3e7c44f5-98ed-44ef-a2ba-28d6f328731b",
+      "PreviousItemId": "fdfca235-0c8a-4805-8001-edab974b3bfe"
+    },
+    {
+      "ItemId": "67be76f0-e21c-494b-a7fd-d3be738f7016",
+      "PreviousItemId": "3e7c44f5-98ed-44ef-a2ba-28d6f328731b"
+    },
+    {
+      "ItemId": "8798e92e-d53a-4867-918c-80c67b9698d9",
+      "PreviousItemId": "67be76f0-e21c-494b-a7fd-d3be738f7016"
+    },
+    {
+      "ItemId": "8503c9f2-a67b-49c4-82a0-0af555bc953b",
+      "PreviousItemId": "8798e92e-d53a-4867-918c-80c67b9698d9"
+    },
+    {
+      "ItemId": "cb27ba09-db8e-48b7-877e-34e67afe4df4",
+      "PreviousItemId": "8503c9f2-a67b-49c4-82a0-0af555bc953b"
+    },
+    {
+      "ItemId": "3f5ba912-bb4e-4421-b7a5-47db836fcc01",
+      "PreviousItemId": "cb27ba09-db8e-48b7-877e-34e67afe4df4"
+    },
+    {
+      "ItemId": "687241f1-bc81-4c63-9868-3feb2c799556",
+      "PreviousItemId": "3f5ba912-bb4e-4421-b7a5-47db836fcc01"
+    },
+    {
+      "ItemId": "f60a165b-5165-46dd-b0fb-e909b6969e9c",
+      "PreviousItemId": "687241f1-bc81-4c63-9868-3feb2c799556"
+    },
+    {
+      "ItemId": "14496c50-91e3-482e-80cb-37e68b78c810",
+      "PreviousItemId": "f60a165b-5165-46dd-b0fb-e909b6969e9c"
+    },
+    {
+      "ItemId": "eeb3b8f0-f1d8-411a-8fad-8d76fb750614",
+      "PreviousItemId": "14496c50-91e3-482e-80cb-37e68b78c810"
+    },
+    {
+      "ItemId": "58cae585-5f8e-4b87-a6d1-87c4e85d2559",
+      "PreviousItemId": "eeb3b8f0-f1d8-411a-8fad-8d76fb750614"
+    },
+    {
+      "ItemId": "4a6ddcca-2f91-4939-8791-675f9cf70083",
+      "PreviousItemId": "58cae585-5f8e-4b87-a6d1-87c4e85d2559"
+    },
+    {
+      "ItemId": "b7a34ee7-9724-43d8-a82a-fe311fb8e51b",
+      "PreviousItemId": "4a6ddcca-2f91-4939-8791-675f9cf70083"
+    },
+    {
+      "ItemId": "77b0ca60-5fa4-43ef-981a-5640d78a12bb",
+      "PreviousItemId": "b7a34ee7-9724-43d8-a82a-fe311fb8e51b"
+    },
+    {
+      "ItemId": "326279ed-7c66-4a64-84e6-238faae593fc",
+      "PreviousItemId": "77b0ca60-5fa4-43ef-981a-5640d78a12bb"
+    },
+    {
+      "ItemId": "23612edf-42f0-43f1-9072-390bed1364c6",
+      "PreviousItemId": "326279ed-7c66-4a64-84e6-238faae593fc"
+    },
+    {
+      "ItemId": "70122e4d-5227-4e78-a7ee-607a007034e9",
+      "PreviousItemId": "23612edf-42f0-43f1-9072-390bed1364c6"
+    },
+    {
+      "ItemId": "799c35df-d630-40d0-aafb-641a343398df",
+      "PreviousItemId": "70122e4d-5227-4e78-a7ee-607a007034e9"
+    },
+    {
+      "ItemId": "5ad394d9-add6-4b1d-b1b3-eb771717c572",
+      "PreviousItemId": "799c35df-d630-40d0-aafb-641a343398df"
+    },
+    {
+      "ItemId": "590e7ee4-34b0-49da-8fef-5a30b5b00b2b",
+      "PreviousItemId": "5ad394d9-add6-4b1d-b1b3-eb771717c572"
+    },
+    {
+      "ItemId": "491689f6-565a-473a-84dc-b435b09cdb74",
+      "PreviousItemId": "590e7ee4-34b0-49da-8fef-5a30b5b00b2b"
+    },
+    {
+      "ItemId": "d3db4705-6746-476c-a518-af358ea16833",
+      "PreviousItemId": "491689f6-565a-473a-84dc-b435b09cdb74"
+    },
+    {
+      "ItemId": "cb1ad29f-26bc-48b2-91d1-f91faacf437b",
+      "PreviousItemId": "d3db4705-6746-476c-a518-af358ea16833"
+    },
+    {
+      "ItemId": "bb7eb957-c2dd-4488-b1ca-ac21cc2a0b25",
+      "PreviousItemId": "cb1ad29f-26bc-48b2-91d1-f91faacf437b"
+    },
+    {
+      "ItemId": "604feae0-f947-4773-b13a-8d50b1e0d2d6",
+      "PreviousItemId": "bb7eb957-c2dd-4488-b1ca-ac21cc2a0b25"
+    },
+    {
+      "ItemId": "046528fb-e9c5-4fa7-ac7a-d04a3fac8265",
+      "PreviousItemId": "604feae0-f947-4773-b13a-8d50b1e0d2d6"
+    },
+    {
+      "ItemId": "4c407e4c-e6c9-4627-b21d-449668bc3ad1",
+      "PreviousItemId": "046528fb-e9c5-4fa7-ac7a-d04a3fac8265"
+    },
+    {
+      "ItemId": "6dc124c1-154a-4912-85bd-6655fb795675",
+      "PreviousItemId": "4c407e4c-e6c9-4627-b21d-449668bc3ad1"
+    }
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.Solution",
+  "Libraries": [
+    {
+      "NameGuid": "1dc34a66-89fb-481d-afa5-75459b6718d0",
+      "Name": "AsposeHelper",
+      "Scope": "Both"
+    },
+    {
+      "NameGuid": "242c459f-59df-4545-a62a-1247d9486ac5",
+      "Name": "AsposeExtensions",
+      "Scope": "Both"
+    },
+    {
+      "NameGuid": "8f24934b-8d34-4dcc-8058-b2736968d70a",
+      "Name": "KSSSConnector",
+      "Scope": "Both"
+    },
+    {
+      "NameGuid": "5defaad8-974a-4768-8f61-77b8b590c80e",
+      "Name": "CSBConnector",
+      "Scope": "Server"
+    }
+  ],
+  "OrderedSpecialFolders": [
+    {
+      "NameGuid": "f7872e81-0bcf-4368-9cb8-6c20b84c15fa",
+      "ParentFolderId": "eb72a985-606c-4647-ba0c-1389928a4e17"
+    },
+    {
+      "NameGuid": "45eecc6f-64db-413a-9bc8-9804e2a6397c",
+      "ParentFolderId": "eb72a985-606c-4647-ba0c-1389928a4e17",
+      "PreviousGuid": "f7872e81-0bcf-4368-9cb8-6c20b84c15fa"
+    },
+    {
+      "NameGuid": "75c83331-255d-4e71-9d1d-fee311d47517",
+      "ParentFolderId": "eb72a985-606c-4647-ba0c-1389928a4e17",
+      "PreviousGuid": "45eecc6f-64db-413a-9bc8-9804e2a6397c"
+    }
+  ],
+  "PublicConstants": [
+    {
+      "Name": "AddendumRelationName",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Addendum\""
+    },
+    {
+      "Name": "AnalysisDocKind",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Анализ договора на предмет признаков аренды по МСФО 16\""
+    },
+    {
+      "Name": "Contract",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"f37c7e63-b134-4446-9b5b-f8811f6c9666\""
+    },
+    {
+      "Name": "DeliverHelpCode",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Sungero_DeliverDialog\""
+    },
+    {
+      "Name": "Memo",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"95af409b-83fe-4697-a805-5a86ceec33f5\""
+    },
+    {
+      "Name": "MemoForPayment",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"d465f226-3962-4e39-8f21-93abbf7b3182\""
+    },
+    {
+      "Name": "Order",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"9570e517-7ab7-4f23-a959-3652715efad3\""
+    },
+    {
+      "Name": "PurchaseDocKind",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Заключение об экономической оправданности сделки\""
+    },
+    {
+      "Name": "RevisionRequest",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"3ec49d0f-9c4d-4d48-a56d-b267fb8ba644\""
+    },
+    {
+      "Name": "SimpleRelationRelationName",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Simple relation\""
+    },
+    {
+      "Name": "SupAgreement",
+      "ParentClasses": [
+        "Module",
+        "DocumentTypeGuid"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"265f2c57-6a8a-4a15-833b-ca00e8047fa5\""
+    },
+    {
+      "Name": "TrademarkDocKind",
+      "ParentClasses": [
+        "Module"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"Анкета по товарному знаку третьего лица\""
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "AbortTask",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "taskId",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "CreateAuthorNotice",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "assignment",
+          "ParameterType": "global::Sungero.Workflow.IAssignment",
+          "ParameterTypeFullName": "Sungero.Workflow.IAssignment, Sungero.Workflow.Interfaces"
+        },
+        {
+          "Name": "subject",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "GetDeadlineConstantValue",
+      "IsRemote": true,
+      "Placement": "Shared",
+      "ReturnType": "global::System.Int32",
+      "ReturnTypeFullName": "System.Int32"
+    },
+    {
+      "Name": "GetManagers",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "employee",
+          "ParameterType": "global::DirRX.Solution.IEmployee",
+          "ParameterTypeFullName": "DirRX.Solution.IEmployee, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "recipients",
+          "ParameterType": "global::System.Collections.Generic.List<global::Sungero.CoreEntities.IRecipient>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        },
+        {
+          "Name": "iteration",
+          "ParameterType": "global::System.Int32",
+          "ParameterTypeFullName": "System.Int32"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "GetSelectedEmployees",
+      "Parameters": [
+        {
+          "Name": "currentSubscribers",
+          "ParameterType": "global::System.Collections.Generic.List<global::DirRX.Solution.IEmployee>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "global::System.Linq.IQueryable<global::DirRX.Solution.IEmployee>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
+    },
+    {
+      "Name": "IncludedInRoleWithSubsitute",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "roleSid",
+          "ParameterType": "global::System.Guid",
+          "ParameterTypeFullName": "System.Guid"
+        },
+        {
+          "Name": "processes",
+          "ParameterType": "global::System.Collections.Generic.List<global::Sungero.Core.Enumeration>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "IsProcessSubstitute",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "user",
+          "ParameterType": "global::Sungero.CoreEntities.IUser",
+          "ParameterTypeFullName": "Sungero.CoreEntities.IUser, Sungero.Domain.Shared"
+        },
+        {
+          "Name": "withDefaultSubstitution",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        },
+        {
+          "Name": "processes",
+          "ParameterType": "global::System.Collections.Generic.List<global::Sungero.Core.Enumeration>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "IsSubordinateCEOManager",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "employee",
+          "ParameterType": "global::DirRX.Solution.IEmployee",
+          "ParameterTypeFullName": "DirRX.Solution.IEmployee, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "IsSubsitute",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "responsible",
+          "ParameterType": "global::Sungero.CoreEntities.IUser",
+          "ParameterTypeFullName": "Sungero.CoreEntities.IUser, Sungero.Domain.Shared"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "SendSAPContractToCSB",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "json",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Int32",
+      "ReturnTypeFullName": "System.Int32"
+    },
+    {
+      "Name": "SendStoplistToCSB",
+      "Parameters": [
+        {
+          "Name": "json",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::System.Int32",
+      "ReturnTypeFullName": "System.Int32"
+    },
+    {
+      "Name": "SerializeObjectToJSON",
+      "Parameters": [
+        {
+          "Name": "entity",
+          "ParameterType": "System.Object"
+        }
+      ],
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "SerializeObjectToJSONClient",
+      "Parameters": [
+        {
+          "Name": "entity",
+          "ParameterType": "System.Object"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    },
+    {
+      "Name": "SetRiskStatusClosed",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "risk",
+          "ParameterType": "global::DirRX.LocalActs.IRisk",
+          "ParameterTypeFullName": "DirRX.LocalActs.IRisk, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SetWinAuthentication",
+      "Placement": "Client",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "ShowPackagesActionResultDialog",
+      "Parameters": [
+        {
+          "Name": "message",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "packages",
+          "ParameterType": "global::System.Collections.Generic.List<global::DirRX.ContractsCustom.IShippingPackage>",
+          "ParameterTypeFullName": "System.Collections.Generic.List"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SubstringStringPropertyText",
+      "Parameters": [
+        {
+          "Name": "text",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "property",
+          "ParameterType": "Sungero.Domain.Shared.IStringPropertyInfo"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "SAPContract",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Id",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "KSSSContragentId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "BalanceUnit",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ContractFunctionality",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ContractKind",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ValidFrom",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ValidTill",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "DocumentDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "RegNumber",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "RegNumberContract",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "DocumentType",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "TotalAmount",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Currency",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "LifeCycleState",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ResponsibleEmployee",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "OurSignatory",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Supervisor",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Territory",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "EmployeeEmail",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ContractName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "CountSignName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "OurSignName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "DeliveryMethod",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ContactName",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.Solution.Structures.Module"
+    },
+    {
+      "Name": "SAPContractKindFunctionality",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ContractKind",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ContractFunctionality",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.Solution.Structures.Module"
+    },
+    {
+      "Name": "SAPStoplistEvent",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "KSSSContragentId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "StopListState",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "GUIDEvent",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "EventState",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "EventDate",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "IDReason",
+          "TypeFullName": "global::System.Int32"
+        },
+        {
+          "Name": "Reason",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Comment",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Employee",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.Solution.Structures.Module"
+    },
+    {
+      "Name": "Signatory",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Employee",
+          "IsEntity": true,
+          "IsNullable": true,
+          "TypeFullName": "global::Sungero.Company.IEmployee"
+        },
+        {
+          "Name": "Priority",
+          "TypeFullName": "global::System.Int32"
+        }
+      ],
+      "StructureNamespace": "DirRX.Solution.Structures.Module"
+    }
+  ],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.Solution",
+  "ResourcesKeys": [
+    "ActiveTextEmpty",
+    "DocSignAssigmentNotFound",
+    "DocSignAssigmentIsLockedMessage",
+    "ShowButtonTitle",
+    "DocApprovalCheckReturnAssignmentNotFound",
+    "NotFoundApprovalTask",
+    "NotFoundCheckReturnAssignment",
+    "CreatePackageDocsNotFound",
+    "CreatePackageDialogTitle",
+    "CreatePackageDialogText",
+    "CreatePackageDialogCompanyTitle",
+    "CreatePackageDialogDeliveryMethodTitle",
+    "CreatePackagesSuccessfully",
+    "ShowPackagesButtonTitle",
+    "DocCounterpartySigningErrorMessage",
+    "DocSignIsLockedMessage",
+    "DocSetSignStateErrorMessage",
+    "DocSetSignCopyStateErrorMessage",
+    "DocSetSignCopyRemoveStateErrorMessage",
+    "DocSetSignedCopyStateErrorMessage",
+    "CantCreatePackages",
+    "SelectCounterpartyToCreatePackageDialogTitle",
+    "SelectCounterpartyToCreatePackageDialogText",
+    "CounterpartyNotSigned",
+    "SubjectNoticeDeniedSign"
+  ],
+  "ServerAssemblyName": "DirRX.Solution.Server",
+  "ServerNamespace": "DirRX.Solution.Server",
+  "SharedAssemblyName": "DirRX.Solution.Shared",
+  "SharedNamespace": "DirRX.Solution.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.57",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "SolutionMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

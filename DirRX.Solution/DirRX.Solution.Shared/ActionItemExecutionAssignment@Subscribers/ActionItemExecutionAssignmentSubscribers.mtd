@@ -1,0 +1,59 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "cb90b1a9-ad1b-4eb0-9fa7-187f25550589",
+  "Name": "ActionItemExecutionAssignmentSubscribers",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "a3d38bf5-0414-41f6-bb33-a4621d2e5a60",
+  "CanBeNavigationPropertyType": true,
+  "Code": "ActionItemExe2",
+  "ExtraSearchProperties": [],
+  "IsChildEntity": true,
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "33790f91-2a3d-43b5-ad2c-d3bcffab7955",
+      "Name": "ActionItemExecutionAssignment",
+      "CanBeSearch": false,
+      "Code": "Assignment",
+      "EntityGuid": "fc39a337-b55e-418d-b965-f18070f90245",
+      "IsReferenceToRootEntity": true,
+      "IsShowedInList": false
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "badd4557-8186-4277-932e-75712dae62e3",
+      "Name": "Subscriber",
+      "CanBeSearch": false,
+      "Code": "Subscriber",
+      "EntityGuid": "1f6a7f4c-165e-485d-bcfb-431f0f5fff35",
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "33790f91-2a3d-43b5-ad2c-d3bcffab7955"
+    }
+  ],
+  "PublicStructures": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "35abaccc-2da5-4ea6-822d-5c243397ad27",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "3b55c7d2-c2e7-47d4-a69d-56d3ab983e97",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 9
+    }
+  ]
+}

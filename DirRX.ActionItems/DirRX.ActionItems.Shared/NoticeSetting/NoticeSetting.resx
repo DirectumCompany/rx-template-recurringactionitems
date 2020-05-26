@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LabelInformation" xml:space="preserve">
+    <value>In the list, select events, on which you want to receive notices. Specify priority for the events.Notice settings are made for the events that cannot be changed. To change them, contact your system administrator.</value>
+  </data>
+  <data name="NoticeSettingNameTemplate" xml:space="preserve">
+    <value>Set notices for {0} as the performer of role {1}</value>
+  </data>
+  <data name="NoticeSettingAllUsersName" xml:space="preserve">
+    <value>"All users"</value>
+  </data>
+  <data name="SameSettingExists" xml:space="preserve">
+    <value>Setting for the selected role already exists. Select another role.</value>
+  </data>
+  <data name="ProbablySameSettingExists" xml:space="preserve">
+    <value>Сurrent role setting might already exist. We recommend that you create settings by using the link on the module cover.</value>
+  </data>
+  <data name="AssignmentNoticeStartsDescription" xml:space="preserve">
+    <value>Creator initiated and sent the action item in the system</value>
+  </data>
+  <data name="AssignmentNoticeAbortsDescription" xml:space="preserve">
+    <value>Creator aborted execution of the action item</value>
+  </data>
+  <data name="AssignmentNoticeSixtyPercentDescription" xml:space="preserve">
+    <value>60% of time left before the deadline</value>
+  </data>
+  <data name="AssignmentNoticeDeadlineExpiredDescription" xml:space="preserve">
+    <value>Action item deadline has expired</value>
+  </data>
+  <data name="AssignmentNoticeEightyPercentDescription" xml:space="preserve">
+    <value>80% of time left before the deadline</value>
+  </data>
+  <data name="AssignmentNoticeFortyPercentDescription" xml:space="preserve">
+    <value>40% of time left before the deadline</value>
+  </data>
+  <data name="AssignmentNoticeTodayExpiredDescription" xml:space="preserve">
+    <value>Action item deadline has come</value>
+  </data>
+  <data name="AssignmentNoticeTwentyPercentDescription" xml:space="preserve">
+    <value>20% of time left before the deadline</value>
+  </data>
+  <data name="AssignmentNoticeOnControlDescription" xml:space="preserve">
+    <value>Action item executed by the assignee and awaits confirmation by the controller</value>
+  </data>
+  <data name="AssignmentNoticeControlerAcceptDescription" xml:space="preserve">
+    <value>Execution of the action item is confirmed</value>
+  </data>
+  <data name="AssignmentNoticeControlerReworkDescription" xml:space="preserve">
+    <value>Controller sent the Action Item for correction</value>
+  </data>
+  <data name="AssignmentNoticePerformDescription" xml:space="preserve">
+    <value>Assignee executed the action item that is not under control</value>
+  </data>
+  <data name="AssignmentNoticeEscalatedDescription" xml:space="preserve">
+    <value>Action item was escalated</value>
+  </data>
+  <data name="AssignmentNoticeAddTimeRequestDescription" xml:space="preserve">
+    <value>Action item assignee requested to extend the deadline</value>
+  </data>
+  <data name="AssignmentNoticeTimeAcceptDescription" xml:space="preserve">
+    <value>Action item controller extended the deadline</value>
+  </data>
+  <data name="AssignmentNoticeRejectionDescription" xml:space="preserve">
+    <value>Assignee rejected the action item</value>
+  </data>
+  <data name="AssignmentNoticeAssigneeChangedDescription" xml:space="preserve">
+    <value>New action item assignee was designated</value>
+  </data>
+  <data name="AssignmentNoticeDeadlineChangedDescription" xml:space="preserve">
+    <value>Action item deadline changed</value>
+  </data>
+  <data name="AssignmentNoticeActionItemChangedDescription" xml:space="preserve">
+    <value>Action item parameters changed</value>
+  </data>
+  <data name="AssignmentNoticeReturnDescription" xml:space="preserve">
+    <value>Creator returned the action item to the assignee without changes</value>
+  </data>
+  <data name="EscalatedTo" xml:space="preserve">
+    <value>Action item escalated to {0}</value>
+  </data>
+  <data name="AssignmentPercentForSubcriberDescription" xml:space="preserve">
+    <value>{0}% of time left before the deadline for the action item, which you are subscribed to</value>
+  </data>
+  <data name="AssignmentPercentForSupervisorDescription" xml:space="preserve">
+    <value>{0}% of time left before the deadline for the action item, which you control</value>
+  </data>
+  <data name="AssignmentPercentForManagerDescription" xml:space="preserve">
+    <value>{0}% of time left before the deadline for the action item to be executed by your subordinate</value>
+  </data>
+  <data name="AssignmentPercentForCEODescription" xml:space="preserve">
+    <value>{0}% of time left before the deadline for the action item of priority 1</value>
+  </data>
+  <data name="DeadlineForFirstPriority" xml:space="preserve">
+    <value>Deadline for the action item of priority 1 has come</value>
+  </data>
+  <data name="ExpiredForSubscriber" xml:space="preserve">
+    <value>Deadline for the action item you are subscribed to has expired</value>
+  </data>
+  <data name="ExpiredForSupervisor" xml:space="preserve">
+    <value>Deadline for the action item that you control has expired</value>
+  </data>
+  <data name="DeadlineForSubscriber" xml:space="preserve">
+    <value>Deadline for the action item you are subscribed to has come</value>
+  </data>
+  <data name="DeadlineForSupervisor" xml:space="preserve">
+    <value>Deadline for the action item that you control has come</value>
+  </data>
+  <data name="YouAreSubscriber" xml:space="preserve">
+    <value>You are subscribed</value>
+  </data>
+  <data name="AssignmentNoticeTimeDeclineDescription" xml:space="preserve">
+    <value>Controller did not extend the action item deadline</value>
+  </data>
+</root>

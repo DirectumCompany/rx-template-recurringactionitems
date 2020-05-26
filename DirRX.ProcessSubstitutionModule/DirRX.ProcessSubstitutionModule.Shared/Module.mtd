@@ -1,0 +1,268 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "a8c62613-e38e-436e-82ba-83a32a8765fb",
+  "Name": "ProcessSubstitutionModule",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "DirRX.ProcessSubstitutionModule.Client",
+  "ClientBaseAssemblyName": "DirRX.ProcessSubstitutionModule.ClientBase",
+  "ClientBaseNamespace": "DirRX.ProcessSubstitutionModule.ClientBase",
+  "ClientNamespace": "DirRX.ProcessSubstitutionModule.Client",
+  "Code": "Process",
+  "CompanyCode": "DirRX",
+  "Cover": {
+    "NameGuid": "2a098eb4-51fd-4cfb-9538-5c722deb6d01",
+    "Actions": [],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "ceb9fa46-dc43-482b-9768-eeaf85cd569a",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [],
+    "Header": {
+      "NameGuid": "de02a5f0-ab2a-485e-8a2b-5e5bf4afb1eb",
+      "BackgroundPosition": "Stretch"
+    }
+  },
+  "Dependencies": [
+    {
+      "Id": "d67b58ac-520d-424c-87b1-6b6778c2030a",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "10ab7c7d-970a-4537-8b92-7dc970826805"
+    },
+    {
+      "ItemId": "fac940cd-d07e-480b-a714-51ea79cb593f",
+      "PreviousItemId": "10ab7c7d-970a-4537-8b92-7dc970826805"
+    },
+    {
+      "ItemId": "45eecc6f-64db-413a-9bc8-9804e2a6397c",
+      "PreviousItemId": "fac940cd-d07e-480b-a714-51ea79cb593f"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "High",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "DirRX.ProcessSubstitutionModule",
+  "IsVisible": false,
+  "Jobs": [
+    {
+      "NameGuid": "f7f01d6d-63c6-4614-8d86-bb09581a4848",
+      "Name": "CreateSystemSubstitutions",
+      "GenerateHandler": true,
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T08:30:00"
+    },
+    {
+      "NameGuid": "d6f45d5f-3cd1-4d9d-a268-fa388f7ce728",
+      "Name": "SendSubstitutionReminderJob",
+      "GenerateHandler": true,
+      "Monthly": "WorkingDays",
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T08:30:00"
+    },
+    {
+      "NameGuid": "d6a753a1-4fc7-49f9-b1f6-d6909a540b04",
+      "Name": "SendNoticeJob",
+      "GenerateHandler": true,
+      "Monthly": "WorkingDays",
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T08:30:00"
+    },
+    {
+      "NameGuid": "79b8ab04-67ed-4d23-add8-eba8658b19fc",
+      "Name": "SubstitutionsClear",
+      "DaysOfMonthSchedule": "1",
+      "GenerateHandler": true,
+      "Monthly": "DaysOfMonth",
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T08:30:00"
+    }
+  ],
+  "Overridden": [
+    "Importance",
+    "IsVisible"
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "GetActiveSubstitutionList",
+      "ReturnType": "global::System.Collections.Generic.List<global::DirRX.ProcessSubstitutionModule.IProcessSubstitution>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetAssignmentProcess",
+      "Parameters": [
+        {
+          "Name": "assignment",
+          "ParameterType": "global::Sungero.Workflow.IAssignmentBase",
+          "ParameterTypeFullName": "Sungero.Workflow.IAssignmentBase, Sungero.Workflow.Interfaces"
+        },
+        {
+          "Name": "task",
+          "ParameterType": "global::Sungero.Workflow.ITask",
+          "ParameterTypeFullName": "Sungero.Workflow.ITask, Sungero.Workflow.Interfaces"
+        }
+      ],
+      "ReturnType": "global::Sungero.Core.Enumeration",
+      "ReturnTypeFullName": "Sungero.Core.Enumeration, Sungero.Domain.Shared"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.ProcessSubstitutionModule",
+  "ResourcesKeys": [
+    "ActiveTextTemplate",
+    "Termless",
+    "BeginDateAdditionalText",
+    "EndDateAdditionalText",
+    "NoticeTaskSubject",
+    "NoticeTaskSubjectMulti",
+    "JobReminderSubject",
+    "JobReminderActiveText"
+  ],
+  "ServerAssemblyName": "DirRX.ProcessSubstitutionModule.Server",
+  "ServerNamespace": "DirRX.ProcessSubstitutionModule.Server",
+  "SharedAssemblyName": "DirRX.ProcessSubstitutionModule.Shared",
+  "SharedNamespace": "DirRX.ProcessSubstitutionModule.Shared",
+  "SpecialFolders": [
+    {
+      "NameGuid": "45eecc6f-64db-413a-9bc8-9804e2a6397c",
+      "Name": "ProcessSubstitutionFolder",
+      "DefaultContentType": "ea683a63-273e-43ae-bcf1-7a443698008a",
+      "DisplayType": "Inbox",
+      "FilterPanel": {
+        "NameGuid": "c664938d-4d37-4ae2-bb4c-4e2fc3fb1a3c",
+        "Name": "FilterPanel",
+        "Controls": [
+          {
+            "$type": "Sungero.Metadata.FilterGroupMetadata, Sungero.Metadata",
+            "NameGuid": "a8a9173c-c294-40cc-ba3a-75e7771bf65a",
+            "Name": "InboxGroup"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListMetadata, Sungero.Metadata",
+            "NameGuid": "49d204a4-57f0-4a00-a77d-07e545eb7172",
+            "Name": "FlagsList",
+            "IsMultiSelect": true,
+            "ParentGuid": "a8a9173c-c294-40cc-ba3a-75e7771bf65a"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "9c846819-2717-407a-85cc-38a154bdff72",
+            "Name": "Assignments",
+            "IsSelected": true,
+            "ParentGuid": "49d204a4-57f0-4a00-a77d-07e545eb7172"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "7c166558-677f-40e2-ac0a-98064b8ef243",
+            "Name": "Notice",
+            "ParentGuid": "49d204a4-57f0-4a00-a77d-07e545eb7172",
+            "PreviousGuid": "9c846819-2717-407a-85cc-38a154bdff72"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterGroupMetadata, Sungero.Metadata",
+            "NameGuid": "6aa6d76d-4560-49f8-b9d4-cc2a26a859a8",
+            "Name": "EmployeeGroup",
+            "PreviousGuid": "a8a9173c-c294-40cc-ba3a-75e7771bf65a"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterNavigationMetadata, Sungero.Metadata",
+            "NameGuid": "adb1aa2c-07a7-4b9f-b4fd-4c66f4ce4f53",
+            "Name": "Employee",
+            "EntityGuid": "1f6a7f4c-165e-485d-bcfb-431f0f5fff35",
+            "HandledEvents": [
+              "FilteringServer"
+            ],
+            "ParentGuid": "6aa6d76d-4560-49f8-b9d4-cc2a26a859a8"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterGroupMetadata, Sungero.Metadata",
+            "NameGuid": "91f6e0dc-2336-4e47-8560-6fc6dc5d8639",
+            "Name": "DateGroup",
+            "PreviousGuid": "6aa6d76d-4560-49f8-b9d4-cc2a26a859a8"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListMetadata, Sungero.Metadata",
+            "NameGuid": "a84d0ed0-c4c0-4e40-9f11-fb6dd514ff80",
+            "Name": "DateList",
+            "ParentGuid": "91f6e0dc-2336-4e47-8560-6fc6dc5d8639"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "0585631d-faac-4783-bf5d-6acf7e4d09a7",
+            "Name": "Days30Flag",
+            "ParentGuid": "a84d0ed0-c4c0-4e40-9f11-fb6dd514ff80"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "3b25b815-aee3-499c-8a52-ac9f1dee65cc",
+            "Name": "Days90Flag",
+            "ParentGuid": "a84d0ed0-c4c0-4e40-9f11-fb6dd514ff80",
+            "PreviousGuid": "0585631d-faac-4783-bf5d-6acf7e4d09a7"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "71c34b2b-c5f8-4bfa-bd36-ff59b712a543",
+            "Name": "Days180Flag",
+            "IsSelected": true,
+            "ParentGuid": "a84d0ed0-c4c0-4e40-9f11-fb6dd514ff80",
+            "PreviousGuid": "3b25b815-aee3-499c-8a52-ac9f1dee65cc"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterGroupMetadata, Sungero.Metadata",
+            "NameGuid": "a944b1f9-6a79-41e6-85f7-1d44aca5343b",
+            "Name": "StatusGroup",
+            "PreviousGuid": "91f6e0dc-2336-4e47-8560-6fc6dc5d8639"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListMetadata, Sungero.Metadata",
+            "NameGuid": "a61286e4-23cb-416c-a1a8-0a0533f4995c",
+            "Name": "StatusList",
+            "IsMultiSelect": true,
+            "ParentGuid": "a944b1f9-6a79-41e6-85f7-1d44aca5343b"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "e574d5ed-c788-4b65-aecf-59476fea5453",
+            "Name": "InWork",
+            "ParentGuid": "a61286e4-23cb-416c-a1a8-0a0533f4995c"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "bf9c8dfc-d4be-4f8f-827b-816132aaa067",
+            "Name": "Completed",
+            "ParentGuid": "a61286e4-23cb-416c-a1a8-0a0533f4995c",
+            "PreviousGuid": "e574d5ed-c788-4b65-aecf-59476fea5453"
+          }
+        ]
+      },
+      "HandledEvents": [
+        "DataQueryServer"
+      ],
+      "IsShow": true,
+      "Kind": "Computable",
+      "NeedShowMarkedCount": false,
+      "ParentFolderId": "eb72a985-606c-4647-ba0c-1389928a4e17"
+    }
+  ],
+  "Version": "0.0.1.23",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

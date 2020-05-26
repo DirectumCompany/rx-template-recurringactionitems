@@ -1,0 +1,60 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "778c39a6-0187-4cd7-9190-4b09ed42cbb0",
+  "Name": "CountryRecommendDeliveryForCompanies",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "a3d38bf5-0414-41f6-bb33-a4621d2e5a60",
+  "CanBeNavigationPropertyType": true,
+  "Code": "CountryRecomme",
+  "ExtraSearchProperties": [],
+  "IsChildEntity": true,
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "810bd768-b206-40d3-869a-54124d4f025b",
+      "Name": "Country",
+      "CanBeSearch": false,
+      "Code": "Country",
+      "EntityGuid": "fdfca235-0c8a-4805-8001-edab974b3bfe",
+      "IsReferenceToRootEntity": true,
+      "IsShowedInList": false
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "c91e60da-e7b0-41e5-a57c-37331c5ce461",
+      "Name": "Organization",
+      "CanBeSearch": false,
+      "Code": "Organization",
+      "EntityGuid": "098350e4-f0b4-4d3f-96d8-46ab76681bf2",
+      "FlatListInStandaloneLookup": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "810bd768-b206-40d3-869a-54124d4f025b"
+    }
+  ],
+  "PublicStructures": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "695d0f90-a935-4e16-a025-bd55fadbadfe",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "ac240725-d45c-4634-96d1-6db316f60089",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 9
+    }
+  ]
+}

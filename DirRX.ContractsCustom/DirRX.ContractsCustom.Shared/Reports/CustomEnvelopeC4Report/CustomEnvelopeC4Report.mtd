@@ -1,0 +1,41 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "75661f83-c2c4-435a-82bd-658776e07d16",
+  "Name": "CustomEnvelopeC4Report",
+  "AssociatedGuid": "1e10180b-a316-459b-8b59-192ff9ded6b9",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Pdf",
+  "ExportFormats": [
+    "Pdf"
+  ],
+  "HandledEvents": [
+    "BeforeExecuteServer",
+    "AfterExecuteServer"
+  ],
+  "IconResourcesKeys": [],
+  "Overridden": [
+    "PublicConstants",
+    "PublicStructures",
+    "DisplayName",
+    "HandledEvents",
+    "Parameters"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "e5985b53-b0ff-43b3-b0c8-00fcd6ce3100",
+      "Name": "ReportSessionId",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "cc0d80de-a718-435b-ab9e-c03acfbc7ac9",
+      "Name": "ShippingPackages",
+      "EntityType": "5080443e-179e-441d-b485-7a18dbf63466",
+      "InternalDataTypeName": "DirRX.ContractsCustom.IShippingPackage, Sungero.Domain.Interfaces",
+      "IsCollection": true
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [],
+  "Versions": []
+}

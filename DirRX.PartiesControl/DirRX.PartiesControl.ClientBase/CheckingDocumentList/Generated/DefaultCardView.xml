@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <ViewName>Default</ViewName>
+  <Collectionf124afd1df154c43acefab37505098f4 FormGuid="b5614421-b295-4e6b-bc55-89214f92761e">
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="View" isnull="true" iskey="true">
+          <property name="ShowTotalSummary">false</property>
+          <property name="AllowMoveColumnToDropArea">false</property>
+          <property name="AllowColumnMoving">true</property>
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">905,48</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="AutoWidth">false</property>
+          <property name="AllowGrouping">false</property>
+          <property name="AllowSorting">true</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="LinesPerRowMode">None</property>
+          <property name="IsRowCellMenuEnabled">false</property>
+        </property>
+        <property name="GroupCount">0</property>
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="Columns" iskey="true" value="4">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="FieldName">DocumentKind</property>
+            <property name="Visible">true</property>
+            <property name="Name">CheckingDocumentList_Documents_DocumentKind</property>
+            <property name="VisibleIndex">0</property>
+            <property name="Width">646</property>
+            <property name="ActualWidth">60*</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="FieldName">Comment</property>
+            <property name="Visible">true</property>
+            <property name="Name">CheckingDocumentList_Documents_Comment</property>
+            <property name="VisibleIndex">1</property>
+            <property name="Width">248</property>
+            <property name="ActualWidth">23*</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="FieldName">DocFormat</property>
+            <property name="Visible">true</property>
+            <property name="Name">CheckingDocumentList_Documents_DocFormat</property>
+            <property name="VisibleIndex">2</property>
+            <property name="Width">75</property>
+            <property name="ActualWidth">7*</property>
+          </property>
+          <property name="Item4" isnull="true" iskey="true">
+            <property name="FieldName">IsRequired</property>
+            <property name="Visible">true</property>
+            <property name="Name">CheckingDocumentList_Documents_IsRequired</property>
+            <property name="VisibleIndex">3</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+        </property>
+        <property name="SortInfo" iskey="true" value="0" />
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Collectionf124afd1df154c43acefab37505098f4>
+</settings>

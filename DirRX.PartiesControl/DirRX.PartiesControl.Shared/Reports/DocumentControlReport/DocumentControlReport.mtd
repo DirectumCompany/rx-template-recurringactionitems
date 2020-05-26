@@ -1,0 +1,92 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "1bd8522a-ec6d-49c8-a198-6f82bb2bd957",
+  "Name": "DocumentControlReport",
+  "AssociatedGuid": "75442e78-2fd8-4ad0-89e2-342117cd5010",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Pdf",
+  "ExportFormats": [
+    "Pdf"
+  ],
+  "HandledEvents": [
+    "BeforeExecuteServer",
+    "AfterExecuteServer"
+  ],
+  "IconResourcesKeys": [],
+  "Overridden": [
+    "PublicConstants",
+    "PublicStructures",
+    "HandledEvents",
+    "Parameters",
+    "DisplayName",
+    "Description"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "bf2eb258-323d-47c4-b030-efc8bd622095",
+      "Name": "ReportSessionId",
+      "InternalDataTypeName": "System.String"
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "DocumentControlReportTableLine",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "ReportSessionId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Responsible",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "DepartmentResponsible",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Supervisor",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Counterparty",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Date",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Days",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Documents",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.PartiesControl.Structures.DocumentControlReport"
+    }
+  ],
+  "ResourcesKeys": [
+    "ReportTitle",
+    "Responsible",
+    "DepartmentResponsible",
+    "Supervisor",
+    "Counterparty",
+    "Date",
+    "Days",
+    "Documents"
+  ],
+  "Versions": []
+}

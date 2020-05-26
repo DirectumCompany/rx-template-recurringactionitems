@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;PresentationCore.dll&#13;&#10;WindowsBase.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Company.Server&#13;&#10;Sungero.CoreEntities.Server&#13;&#10;Sungero.Domain&#13;&#10;Sungero.Company.Shared&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;DirRX.Solution.Shared&#13;&#10;DirRX.Solution.Server&#13;&#10;DirRX.ActionItems.Shared&#13;&#10;DirRX.ActionItems.Server" ReportInfo.CreatorVersion="2013.3.2.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using DirRX.Solution;
+using DirRX.ActionItems;
+using Sungero.Domain.Shared;
+using Sungero.CoreEntities;
+using Sungero.Core;
+using Resources = DirRX.ActionItems.Reports.Resources;
+
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+  }
+}
+  </ScriptText>
+  <Dictionary>
+    <SungeroSqlDataConnection Name="Sungero_Connection" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties" ConnectionStringExpression="[SungeroConnectionString]">
+      <TableDataSource Name="Table" Alias="task" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectDataFromTable}">
+        <Column Name="Mark" DataType="System.String" PropName="Column"/>
+        <Column Name="Id" DataType="System.Int32" PropName="Column"/>
+        <Column Name="Hyperlink" DataType="System.String" PropName="Column"/>
+        <Column Name="DocumentInfo" DataType="System.String" PropName="Column"/>
+        <Column Name="ActionItemText" DataType="System.String" PropName="Column"/>
+        <Column Name="Status" DataType="System.String" PropName="Column"/>
+        <Column Name="Supervisor" DataType="System.String" PropName="Column"/>
+        <Column Name="NewPlanDate" DataType="System.String" PropName="Column"/>
+        <Column Name="PlanDate" DataType="System.String" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+    </SungeroSqlDataConnection>
+    <SungeroParameter Name="SungeroConnectionString" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties, DontShow" Id="310e4281-05e0-41b2-ba84-88683838fd8a" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportDate" Id="ab45ab3f-0158-4a3a-83ec-1daf92193f22" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="BeginDate" Id="ba2bfced-a3dd-4efa-9abb-0d73395e00b3" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="EndDate" Id="45ab7882-9cdb-4ff2-93c5-839f4cf806fd" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="BusinessUnit" Id="b6a06501-52e1-401b-aa74-529417babdbe" IsRequired="false" IsCollection="false" InternalDataType="DirRX.Solution.IBusinessUnit, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="098350e4-f0b4-4d3f-96d8-46ab76681bf2"/>
+    <SungeroParameter Name="Mark" Id="98a42cd7-a4b8-4640-9d8d-90a823572623" IsRequired="false" IsCollection="false" InternalDataType="DirRX.ActionItems.IMark, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="bc30b88b-4ee4-4288-a1c0-50ed78402b6d"/>
+    <SungeroParameter Name="ReportSessionId" Id="c0c472ed-3734-45e1-9652-e7988ae43c01" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="PeriodText" Id="21c629c1-4934-4fd7-9775-eb5fec709ab2" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="BusinessUnitText" Id="4943ac58-2bde-4925-bc21-0da88d59b540" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="297" PaperHeight="210" FirstPageSource="15" OtherPagesSource="15" Guides="0,718.2,538.65,330.75,189,132.3,37.8,841.05,1039.5,633.15">
+    <ReportTitleBand Name="ReportTitle1" Width="1047.06" Height="151.2" CanGrow="true" CanShrink="true" Guides="18.9,37.8,56.7,75.6,94.5,151.2">
+      <TextObject Name="Text19" Width="330.75" Height="18.9" Text="[DirRX.ActionItems.Reports.Resources.AssistantCEOReport.ReportDate] [ReportDate]"/>
+      <TextObject Name="Text20" Top="37.8" Width="330.75" Height="18.9" Text="[DirRX.ActionItems.Reports.Resources.AssistantCEOReport.Tasks]" VertAlign="Center" Font="Arial, 10pt, style=Bold, Underline"/>
+      <TextObject Name="Text21" Top="56.7" Width="330.75" Height="18.9" Text="[PeriodText]" VertAlign="Center"/>
+      <TextObject Name="Text22" Top="75.6" Width="330.75" Height="18.9" CanShrink="true" Text="[BusinessUnitText]" VertAlign="Center"/>
+      <TextObject Name="Text2" Top="94.5" Width="37.8" Height="56.7" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.AssistantCEOReport.HeadNum]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text3" Left="37.8" Top="94.5" Width="94.5" Height="56.7" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.AssistantCEOReport.HeadMark]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text4" Left="132.3" Top="94.5" Width="56.7" Height="56.7" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.AssistantCEOReport.HeadId]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text5" Left="189" Top="94.5" Width="141.75" Height="56.7" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.AssistantCEOReport.HeadDoc]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text6" Left="330.75" Top="94.5" Width="207.9" Height="56.7" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.AssistantCEOReport.HeadTask]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text7" Left="538.65" Top="94.5" Width="94.5" Height="56.7" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.AssistantCEOReport.HeadPlanDate]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text8" Left="633.15" Top="94.5" Width="85.05" Height="56.7" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.AssistantCEOReport.HeadStatus]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text9" Left="718.2" Top="94.5" Width="122.85" Height="56.7" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.AssistantCEOReport.HeadSupervisor]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text10" Left="841.05" Top="94.5" Width="198.45" Height="56.7" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.AssistantCEOReport.HeadNewPlanDate]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="155.2" Width="1047.06" Height="18.9" CanGrow="true" DataSource="Table">
+      <TextObject Name="Text1" Width="37.8" Height="18.9" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[Row#]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text11" Left="37.8" Width="94.5" Height="18.9" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[task.Mark]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text12" Left="132.3" Width="56.7" Height="18.9" Border.Lines="All" Hyperlink.Expression="[task.Hyperlink]" CanGrow="true" GrowToBottom="true" Text="[task.Id]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Underline" TextFill.Color="Blue"/>
+      <TextObject Name="Text13" Left="189" Width="141.75" Height="18.9" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[task.DocumentInfo]" VertAlign="Center"/>
+      <TextObject Name="Text14" Left="330.75" Width="207.9" Height="18.9" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[task.ActionItemText]" VertAlign="Center"/>
+      <TextObject Name="Text15" Left="538.65" Width="94.5" Height="18.9" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[task.PlanDate]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text16" Left="633.15" Width="85.05" Height="18.9" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[task.Status]" VertAlign="Center"/>
+      <TextObject Name="Text17" Left="718.2" Width="122.85" Height="18.9" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[task.Supervisor]" VertAlign="Center"/>
+      <TextObject Name="Text18" Left="841.05" Width="198.45" Height="18.9" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[task.NewPlanDate]" VertAlign="Center"/>
+    </DataBand>
+  </ReportPage>
+</Report>

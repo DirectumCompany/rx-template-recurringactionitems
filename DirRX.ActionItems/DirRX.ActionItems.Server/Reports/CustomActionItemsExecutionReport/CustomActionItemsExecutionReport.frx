@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;PresentationCore.dll&#13;&#10;WindowsBase.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Domain&#13;&#10;Sungero.CoreEntities.Server&#13;&#10;Sungero.Company.Server&#13;&#10;Sungero.Company.Shared&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;DirRX.Solution.Shared&#13;&#10;DirRX.Solution.Server&#13;&#10;DirRX.MailAdapterSolution.Server&#13;&#10;DirRX.MailAdapterSolution.Shared&#13;&#10;Sungero.Content&#13;&#10;Sungero.Content.Shared&#13;&#10;Sungero.Workflow.Interfaces&#13;&#10;Sungero.Docflow.Shared&#13;&#10;Sungero.Docflow.Server&#13;&#10;Sungero.Meetings.Shared&#13;&#10;Sungero.Meetings.Server&#13;&#10;DirRX.ActionItems.Shared&#13;&#10;DirRX.ActionItems.Server" DoublePass="true" ReportInfo.CreatorVersion="2013.3.2.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using Sungero.CoreEntities;
+using DirRX.Solution;
+using Sungero.Docflow;
+using Sungero.Meetings;
+using DirRX.ActionItems;
+using Sungero.Domain.Shared;
+using Sungero.Core;
+using Resources = DirRX.ActionItems.Reports.Resources;
+
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+  }
+}
+  </ScriptText>
+  <Dictionary>
+    <SungeroSqlDataConnection Name="Sungero_Connection" Restrictions="DontModify, DontDelete, HideAllProperties" ConnectionStringExpression="[SungeroConnectionString]">
+      <TableDataSource Name="Table" Alias="SourceTable" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectDataFromTable}">
+        <Column Name="Id" DataType="System.Int32" PropName="Column"/>
+        <Column Name="ActionItemText" DataType="System.String" PropName="Column"/>
+        <Column Name="Author" DataType="System.String" PropName="Column"/>
+        <Column Name="State" DataType="System.String" PropName="Column"/>
+        <Column Name="PlanDate" DataType="System.String" PropName="Column"/>
+        <Column Name="ActualDate" DataType="System.String" PropName="Column"/>
+        <Column Name="TimeInWork" DataType="System.Int32" PropName="Column"/>
+        <Column Name="Assignee" DataType="System.String" PropName="Column"/>
+        <Column Name="CoAssignees" DataType="System.String" PropName="Column"/>
+        <Column Name="DocumentInfo" DataType="System.String" PropName="Column"/>
+        <Column Name="Hyperlink" DataType="System.String" PropName="Column"/>
+        <Column Name="PlanDateSort" DataType="System.DateTime" PropName="Column"/>
+        <Column Name="Priority" DataType="System.String" PropName="Column"/>
+        <Column Name="Initiator" DataType="System.String" PropName="Column"/>
+        <Column Name="Category" DataType="System.String" PropName="Column"/>
+        <Column Name="IsOverdue" DataType="System.Boolean" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+    </SungeroSqlDataConnection>
+    <SungeroParameter Name="SungeroConnectionString" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties, DontShow" Id="12dda7b2-bcbb-423c-add0-d1c887f1769a" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="BeginDate" Id="e9411cd2-0339-44e0-a25e-98dd1259e112" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="EndDate" Id="0ad1723a-6ea5-44db-8c3d-5a2907131adc" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ExecutiveDisciplineLevel" Id="2a5d4ed3-99b3-42a2-9f1d-65232c2ded3d" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ClientEndDate" Id="d70901c7-8ba3-40b8-b62d-b462300c064a" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportDate" Id="3dc3cc3c-bfde-41b1-b2ce-39112e758c0e" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Performer" Id="ac36e512-22e8-4334-926f-cba231a5b1a6" IsRequired="false" IsCollection="false" InternalDataType="Sungero.CoreEntities.IUser, Sungero.Domain.Shared" IsSimpleDataType="false" EntityTypeId="243c2d26-f5f7-495f-9faf-951d91215c77"/>
+    <SungeroParameter Name="Department" Id="647f8305-c49b-4534-8a9e-acda2972cc51" IsRequired="false" IsCollection="false" InternalDataType="DirRX.Solution.IDepartment, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="1886c433-8188-4116-b994-66841d02fe44"/>
+    <SungeroParameter Name="Author" Id="21340b99-8f1a-40df-ab29-e4006eadf992" IsRequired="false" IsCollection="false" InternalDataType="DirRX.Solution.IEmployee, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="1f6a7f4c-165e-485d-bcfb-431f0f5fff35"/>
+    <SungeroParameter Name="BusinessUnit" Id="9e6c8157-51c2-4d7b-b0ea-d1d54d838268" IsRequired="false" IsCollection="false" InternalDataType="DirRX.Solution.IBusinessUnit, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="098350e4-f0b4-4d3f-96d8-46ab76681bf2"/>
+    <SungeroParameter Name="TotalCount" Id="b1c110a6-92eb-4bcd-a53c-02865c32b856" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Completed" Id="584eca40-bcce-4583-9d3c-884d5b57529e" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="CompletedInTime" Id="0ed84fc1-35a4-41d9-82a0-3435773a6368" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="CompletedOverdue" Id="705bbede-b0e2-47d7-8818-d3922d3c873c" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="InProcess" Id="e30f7a6e-593e-454c-a044-c4c72375a9ed" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="InProcessOverdue" Id="6ad56418-60ab-4689-82c0-920b33f316e9" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ParamsDescriprion" Id="ee258574-de81-4eec-9cb2-bbfc81db708e" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportSessionId" Id="bdbf8979-5d6d-43e9-8d47-cadf1cb04f20" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Document" Id="0befb560-c78f-4478-995d-d975fdba0535" IsRequired="false" IsCollection="false" InternalDataType="Sungero.Docflow.IOfficialDocument, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="58cca102-1e97-4f07-b6ac-fd866a8b7cb1"/>
+    <SungeroParameter Name="Subheader" Id="e6c669d6-f1d8-4862-b4f6-29e259e93f9d" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Meeting" Id="cb37754e-bf1d-4cf6-9f68-6d65bc98e518" IsRequired="false" IsCollection="false" InternalDataType="Sungero.Meetings.IMeeting, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="dbc0dd63-4d23-4f41-92ae-cab59bb70c8c"/>
+    <SungeroParameter Name="IsMeetingsCoverContext" Id="349c37ba-f99f-4271-9e85-cf429311c03c" IsRequired="false" IsCollection="false" InternalDataType="System.Boolean" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Header" Id="60379fb0-02b8-4171-8b75-e30863535d92" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="DocumentType" Id="9e0013e7-88bf-41ec-9049-d95fc24ac47b" IsRequired="false" IsCollection="false" InternalDataType="Sungero.Docflow.IDocumentType, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="0896aa80-e1da-4a1e-9485-d172f8e242bc"/>
+    <SungeroParameter Name="Initiator" Id="6786f4fe-42fa-435d-8ce7-a5ec4afc9514" IsRequired="false" IsCollection="false" InternalDataType="DirRX.Solution.IEmployee, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="1f6a7f4c-165e-485d-bcfb-431f0f5fff35"/>
+    <SungeroParameter Name="Priority" Id="8b969c1f-a0f2-42a1-affd-1c704a1263a0" IsRequired="false" IsCollection="false" InternalDataType="DirRX.ActionItems.IPriority, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="1487718a-2c2d-4474-b95e-ccd9df607458"/>
+    <SungeroParameter Name="Category" Id="304697fb-03b4-43ee-9237-37522272f374" IsRequired="false" IsCollection="false" InternalDataType="DirRX.ActionItems.ICategory, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="bbfa4f37-b282-400e-a60c-5b91afc379d7"/>
+    <SungeroParameter Name="IsEscalated" Id="89d37d3a-c3b1-4031-89c0-4be775a72e1e" IsRequired="false" IsCollection="false" InternalDataType="System.Boolean" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Printed" Id="a30410b7-a7b2-4e15-a73a-46eb0cb60047" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="OnControl" Id="903e0a32-a8fe-4c72-bde1-0c3d7f1e30d3" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="430" PaperHeight="210" RawPaperSize="0" TopMargin="25" BottomMargin="15" MirrorMargins="true" FirstPageSource="15" OtherPagesSource="15" PrintOnPreviousPage="true">
+    <ReportTitleBand Name="ReportTitle1" Width="1549.8" Height="217.35" CanGrow="true">
+      <TextObject Name="Text24" Width="529.2" Height="18.9" CanGrow="true" Text="[ParamsDescriprion]"/>
+      <TextObject Name="Text25" Left="529.2" Width="519.75" Height="18.9" Text="[Sungero.RecordManagement.Reports.Resources.ActionItemsExecutionReport.ReportDate] [ReportDate]" Format="Date" Format.Format="d" HorzAlign="Right"/>
+      <TextObject Name="Text26" Top="18.9" Width="1048.95" Height="28.35" Text="[DirRX.ActionItems.Reports.Resources.CustomActionItemsExecutionReport.CustomActionItemsExecutionReport]" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text27" Top="47.25" Width="1048.95" Height="18.9" CanGrow="true" Text="[Subheader]" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold">
+        <Formats>
+          <DateFormat/>
+          <DateFormat/>
+        </Formats>
+      </TextObject>
+      <TextObject Name="Text28" Top="66.15" Width="236.25" Height="113.4" CanBreak="false" Text="[DirRX.ActionItems.Reports.Resources.CustomActionItemsExecutionReport.Statistics]" VertAlign="Bottom"/>
+      <TextObject Name="Text2" Left="236.25" Top="66.15" Width="47.25" Height="113.4" CanBreak="false" Text="[TotalCount]&#13;&#10;[Completed]&#13;&#10;[CompletedOverdue]&#13;&#10;[OnControl]&#13;&#10;[InProcess]&#13;&#10;[InProcessOverdue]" HorzAlign="Right" VertAlign="Bottom"/>
+      <TextObject Name="Text3" Top="179.55" Width="529.2" Height="28.35" CanBreak="false" Text="[Sungero.RecordManagement.Reports.Resources.ActionItemsExecutionReport.DisciplinePercent] : [ExecutiveDisciplineLevel]"/>
+    </ReportTitleBand>
+    <DataBand Name="Data3" Top="263.15" Width="1549.8" Height="37.8" CanGrow="true" DataSource="Table">
+      <TextObject Name="Text40" Width="37.8" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[Row#]" HorzAlign="Center">
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text41" Left="37.8" Width="47.25" Height="37.8" Border.Lines="All" Cursor="Hand" Hyperlink.Expression="[SourceTable.Hyperlink]" CanGrow="true" GrowToBottom="true" Text="[SourceTable.Id]" HorzAlign="Center" Font="Arial, 10pt, style=Underline" TextFill.Color="Blue"/>
+      <TextObject Name="Text42" Left="85.05" Width="198.45" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.ActionItemText]">
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text43" Left="557.55" Width="122.85" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.Author]">
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text44" Left="793.8" Width="85.05" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.State]">
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text45" Left="878.85" Width="113.4" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.PlanDate]" Format="Date" Format.Format="d" HorzAlign="Center">
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text46" Left="992.25" Width="113.4" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.ActualDate]" HorzAlign="Center">
+        <Formats>
+          <DateFormat/>
+          <GeneralFormat/>
+        </Formats>
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text47" Left="1105.65" Width="75.6" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.TimeInWork][&quot; &quot;][Sungero.RecordManagement.Reports.Resources.ActionItemsExecutionReport.WorkingDay]" HorzAlign="Center">
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text48" Left="1181.25" Width="122.85" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.Assignee]">
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text50" Left="1408.05" Width="132.3" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.DocumentInfo]">
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text49" Left="1304.1" Width="103.95" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.CoAssignees]">
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text5" Left="283.5" Width="75.6" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.Priority]">
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text8" Left="359.1" Width="198.45" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.Category]">
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text9" Left="680.4" Width="113.4" Height="37.8" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.Initiator]">
+        <Highlight>
+          <Condition Expression="[SourceTable.IsOverdue] == true"/>
+        </Highlight>
+      </TextObject>
+      <DataHeaderBand Name="DataHeader1" Top="221.35" Width="1549.8" Height="37.8">
+        <TextObject Name="Text29" Width="37.8" Height="37.8" Border.Lines="All" Text="[Sungero.RecordManagement.Reports.Resources.ActionItemsExecutionReport.RowNumber]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text30" Left="37.8" Width="47.25" Height="37.8" Border.Lines="All" Text="[Sungero.RecordManagement.Reports.Resources.ActionItemsExecutionReport.Id]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text31" Left="85.05" Width="198.45" Height="37.8" Border.Lines="All" Text="[Sungero.RecordManagement.Reports.Resources.ActionItemsExecutionReport.ActionItem]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text52" Left="283.5" Width="75.6" Height="37.8" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.CustomActionItemsExecutionReport.Priority]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text53" Left="359.1" Width="198.45" Height="37.8" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.CustomActionItemsExecutionReport.Category]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text32" Left="557.55" Width="122.85" Height="37.8" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.CustomActionItemsExecutionReport.AssignedBy]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text54" Left="680.4" Width="113.4" Height="37.8" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.CustomActionItemsExecutionReport.Initiator]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text33" Left="793.8" Width="85.05" Height="37.8" Border.Lines="All" Text="[Sungero.RecordManagement.Reports.Resources.ActionItemsExecutionReport.Status]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text34" Left="878.85" Width="113.4" Height="37.8" Border.Lines="All" Text="[Sungero.RecordManagement.Reports.Resources.ActionItemsExecutionReport.Deadline]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text35" Left="992.25" Width="113.4" Height="37.8" Border.Lines="All" Text="[Sungero.RecordManagement.Reports.Resources.ActionItemsExecutionReport.ActualDate]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text36" Left="1105.65" Width="75.6" Height="37.8" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.CustomActionItemsExecutionReport.TimeInWork]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text37" Left="1181.25" Width="122.85" Height="37.8" Border.Lines="All" Text="[DirRX.ActionItems.Reports.Resources.CustomActionItemsExecutionReport.Assignee]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text38" Left="1304.1" Width="103.95" Height="37.8" Border.Lines="All" Text="[Sungero.RecordManagement.Reports.Resources.ActionItemsExecutionReport.CoAssignees]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text39" Left="1408.05" Width="132.3" Height="37.8" Border.Lines="All" Text="[Sungero.RecordManagement.Reports.Resources.ActionItemsExecutionReport.Document]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      </DataHeaderBand>
+      <DataFooterBand Name="DataFooter1" Top="304.95" Width="1549.8" Height="37.8">
+        <TextObject Name="Text6" Top="18.9" Width="85.05" Height="18.9" Text="[DirRX.ActionItems.Reports.Resources.PrintActionItemTask.Printed]"/>
+        <TextObject Name="Text51" Left="75.6" Top="18.9" Width="94.5" Height="18.9" Border.Lines="Bottom"/>
+        <TextObject Name="Text7" Left="170.1" Top="18.9" Width="236.25" Height="18.9" Text="[Printed]"/>
+      </DataFooterBand>
+      <Sort>
+        <Sort Expression="[SourceTable.PlanDateSort]"/>
+      </Sort>
+    </DataBand>
+  </ReportPage>
+</Report>

@@ -1,0 +1,60 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "8cb8c73f-34e1-4a5b-bf3b-29938816f34a",
+  "Name": "SupAgreementOriginalMoveStatuses",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "a3d38bf5-0414-41f6-bb33-a4621d2e5a60",
+  "CanBeNavigationPropertyType": true,
+  "Code": "SupAgreementOr",
+  "ExtraSearchProperties": [],
+  "IsChildEntity": true,
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "ffb200f9-1217-4916-989e-03f344309039",
+      "Name": "SupAgreement",
+      "CanBeSearch": false,
+      "Code": "EDoc",
+      "EntityGuid": "3f5ba912-bb4e-4421-b7a5-47db836fcc01",
+      "IsReferenceToRootEntity": true,
+      "IsShowedInList": false
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "97dcbba1-a9c6-467c-9b2d-adcf4774c5d5",
+      "Name": "Status",
+      "CanBeSearch": false,
+      "Code": "Status",
+      "EntityGuid": "6e565304-dfe3-4c07-9b76-e452ac6f70c4",
+      "FlatListInStandaloneLookup": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "ffb200f9-1217-4916-989e-03f344309039"
+    }
+  ],
+  "PublicStructures": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "2d828d09-6d41-4345-990e-54063cddac93",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "82be003f-deb7-4f4d-8825-c74118391704",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 9
+    }
+  ]
+}

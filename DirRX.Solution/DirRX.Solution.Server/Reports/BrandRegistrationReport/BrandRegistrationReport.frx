@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;PresentationCore.dll&#13;&#10;WindowsBase.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.RecordManagement.Server&#13;&#10;Sungero.Docflow.Server&#13;&#10;Sungero.Content&#13;&#10;Sungero.Domain&#13;&#10;Sungero.RecordManagement.Shared&#13;&#10;Sungero.Docflow.Shared&#13;&#10;Sungero.Content.Shared&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;Sungero.Workflow.Interfaces&#13;&#10;DirRX.Solution.Shared&#13;&#10;DirRX.Solution.Server" ReportInfo.CreatorVersion="2013.3.2.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using DirRX.Solution;
+using Sungero.Domain.Shared;
+using Sungero.CoreEntities;
+using Sungero.Core;
+using Resources = DirRX.Solution.Reports.Resources;
+
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+  }
+}
+  </ScriptText>
+  <Dictionary>
+    <SungeroSqlDataConnection Name="Sungero_Connection" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties" ConnectionStringExpression="[SungeroConnectionString]">
+      <TableDataSource Name="Table" Alias="SourceTable" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectDataFromTable}">
+        <Column Name="RegistrationNumber" DataType="System.String" PropName="Column"/>
+        <Column Name="Country" DataType="System.String" PropName="Column1"/>
+        <Column Name="IsAppeal" DataType="System.String" PropName="Column2"/>
+        <Column Name="Brand" DataType="System.String" PropName="Column3"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+    </SungeroSqlDataConnection>
+    <SungeroParameter Name="SungeroConnectionString" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties, DontShow" Id="e5757759-63d0-48a0-9791-0df0c212fce4" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportSessionId" Id="27fd513c-6544-40f4-ad91-c7643eca8464" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Order" Id="afaf3675-cfd9-4d40-a554-7b3812d0618d" IsRequired="false" IsCollection="false" InternalDataType="DirRX.Solution.IOrder, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="85be6af6-1384-473c-abd4-2036ed227530"/>
+    <SungeroParameter Name="ProductKind" Id="e131cf42-e0a8-4374-ba2b-2a15cff2d282" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="103.95">
+      <TextObject Name="Text8" Top="28.35" Width="718.2" Height="18.9" Text="[DirRX.Solution.Reports.Resources.BrandRegistrationReport.BrandRegistrationReportHead]" HorzAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text9" Left="-56.7" Top="47.25" Width="774.9" Height="18.9" Text="[DirRX.Solution.Reports.Resources.BrandRegistrationReport.BrandRegistrationReportTitle] [Order]" HorzAlign="Center"/>
+      <TextObject Name="Text4" Left="94.5" Top="75.6" Width="623.7" Height="18.9" CanGrow="true" CanShrink="true" Text="[ProductKind]"/>
+      <TextObject Name="Text5" Top="75.6" Width="94.5" Height="18.9" CanShrink="true" Text="[DirRX.Solution.Reports.Resources.BrandRegistrationReport.ProductKind]" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text6" Left="585.9" Width="132.3" Height="18.9" Text="[Date]" Format="Custom" Format.Format="dd.MM.yyyy HH:mm:ss"/>
+      <TextObject Name="Text10" Left="-9450" Top="-9450" Width="94.5" Height="28.35" Text="Товарный знак" Font="Arial, 10pt, style=Bold"/>
+    </ReportTitleBand>
+    <GroupHeaderBand Name="GroupHeader1" Top="130.85" Width="718.2" Height="18.9" CanGrow="true" KeepWithData="true" Condition="[SourceTable.IsAppeal]" SortOrder="Descending">
+      <TextObject Name="Text13" Width="718.2" Height="18.9" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.IsAppeal]" Font="Arial, 10pt, style=Bold"/>
+      <DataHeaderBand Name="DataHeader1" Top="107.95" Width="718.2" Height="18.9">
+        <TextObject Name="Text7" Width="226.8" Height="18.9" Border.Lines="All" Fill.Color="LightGray" CanGrow="true" Text="Товарный знак" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text11" Left="226.8" Width="255.15" Height="18.9" Border.Lines="All" Fill.Color="LightGray" CanGrow="true" Text="№ регистрации" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text12" Left="481.95" Width="236.25" Height="18.9" Border.Lines="All" Fill.Color="LightGray" CanGrow="true" Text="Страна" Font="Arial, 10pt, style=Bold"/>
+      </DataHeaderBand>
+      <DataBand Name="Data1" Top="153.75" Width="718.2" Height="18.9" CanGrow="true" DataSource="Table">
+        <TextObject Name="Text1" Width="226.8" Height="18.9" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.Brand]"/>
+        <TextObject Name="Text2" Left="226.8" Width="255.15" Height="18.9" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.RegistrationNumber]"/>
+        <TextObject Name="Text3" Left="481.95" Width="236.25" Height="18.9" Border.Lines="All" CanGrow="true" GrowToBottom="true" Text="[SourceTable.Country]"/>
+        <Sort>
+          <Sort Expression="[SourceTable.Brand]"/>
+        </Sort>
+      </DataBand>
+    </GroupHeaderBand>
+    <PageFooterBand Name="PageFooter1" Top="176.65" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

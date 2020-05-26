@@ -1,0 +1,336 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "d4f17453-51a0-43a2-bac9-692229636a9f",
+  "Name": "ActionItemsRole",
+  "Actions": [
+    {
+      "NameGuid": "3f334f1e-d7a4-4ca5-bd1a-f26b35ccfae8",
+      "Name": "DeleteChildEntity",
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "GenerateHandler"
+      ]
+    }
+  ],
+  "BaseGuid": "04581d26-0780-4cfd-b3cd-c2cafc5798b0",
+  "CanBeNavigationPropertyType": true,
+  "Code": "ActionItemsRol",
+  "CreationAreaMetadata": {
+    "NameGuid": "f7766750-eee2-4fcd-8003-5c06a90d1f44",
+    "Name": "CreationArea",
+    "Buttons": [],
+    "IsAncestorMetadata": true
+  },
+  "ExtraSearchProperties": [],
+  "FilterPanel": {
+    "NameGuid": "b0125fbd-3b91-4dbb-914a-689276216404",
+    "Name": "FilterPanel",
+    "Controls": [],
+    "IsAncestorMetadata": true
+  },
+  "Forms": [
+    {
+      "$type": "Sungero.Metadata.StandaloneFormMetadata, Sungero.Metadata",
+      "NameGuid": "a7e39251-c25c-4c72-abc1-d10094f9c345",
+      "Name": "Card",
+      "Controls": [
+        {
+          "$type": "Sungero.Metadata.ControlGroupMetadata, Sungero.Metadata",
+          "NameGuid": "4d72aa79-6777-4ef3-b873-7fcd8aacfc2d",
+          "Name": "ControlGroup"
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "3b0d1641-2d32-449d-bb6b-d8457776dba4",
+          "Name": "Control",
+          "ColumnNumber": 0,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
+          "ParentGuid": "4d72aa79-6777-4ef3-b873-7fcd8aacfc2d",
+          "PropertyGuid": "d95d2c77-cf24-423e-bd66-ac2adedb9d9e",
+          "RowNumber": 0,
+          "RowSpan": 1,
+          "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "a374b112-2c8b-448c-8937-866a71a854d9",
+          "Name": "Type",
+          "ColumnNumber": 0,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToEnumerationBinder",
+          "ParentGuid": "4d72aa79-6777-4ef3-b873-7fcd8aacfc2d",
+          "PropertyGuid": "243ccb93-1312-4884-bf15-90bb7c122c73",
+          "RowNumber": 1,
+          "RowSpan": 1,
+          "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "9f90ad6a-56eb-4137-b58a-791181f902f3",
+          "Name": "Description",
+          "ColumnNumber": 0,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.TextEditorToTextBinder",
+          "ParentGuid": "4d72aa79-6777-4ef3-b873-7fcd8aacfc2d",
+          "PropertyGuid": "1250dd73-b5d2-4111-aff2-4d8fe7eb6663",
+          "RowNumber": 2,
+          "RowSpan": 1,
+          "Settings": [
+            {
+              "Name": "NeedExpand",
+              "Value": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "HandledEvents": [
+    "BeforeSaveServer"
+  ],
+  "HideFromNavigationEditorCreationArea": true,
+  "IconResourcesKeys": [],
+  "IsAutoCreated": true,
+  "IsCacheable": true,
+  "IsStatusEnabled": true,
+  "IsVisible": false,
+  "OperationsClass": "",
+  "Overridden": [
+    "IsVisible",
+    "IsCacheable",
+    "HideFromNavigationEditorCreationArea",
+    "IsAutoCreated",
+    "IsStatusEnabled"
+  ],
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.StringPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "d95d2c77-cf24-423e-bd66-ac2adedb9d9e",
+      "Name": "Name",
+      "Code": "Name",
+      "IsDisplayValue": true,
+      "IsQuickSearchAllowed": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
+      "PreviousPropertyGuid": "1dcedc29-5140-4770-ac92-eabc212326a1"
+    },
+    {
+      "$type": "Sungero.Metadata.EnumPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "243ccb93-1312-4884-bf15-90bb7c122c73",
+      "Name": "Type",
+      "Code": "Type",
+      "DirectValues": [
+        {
+          "NameGuid": "5d4ef239-6374-4d3b-a1b4-193c18ff3680",
+          "Name": "InitManager",
+          "Code": "InitManager"
+        },
+        {
+          "NameGuid": "2f94d91d-6629-4fc5-856d-c44c59822851",
+          "Name": "Secretary",
+          "Code": "Secretary"
+        },
+        {
+          "NameGuid": "207f0ad1-7044-4bf6-acad-8665eb038caa",
+          "Name": "CEOAssistant",
+          "Code": "CEOAssistant"
+        },
+        {
+          "NameGuid": "163bd377-c0f9-4d16-8a03-286c6b350a83",
+          "Name": "CEO",
+          "Code": "CEO"
+        },
+        {
+          "NameGuid": "4fe8d9cc-f8c9-4214-8b6a-9973b5047208",
+          "Name": "InitCEOManager",
+          "Code": "InitCEOManager"
+        },
+        {
+          "NameGuid": "f35b0b1f-11a3-44ff-85ab-91f9f4c12a0c",
+          "Name": "Commissioner",
+          "Code": "Commissioner"
+        },
+        {
+          "NameGuid": "a142aa32-6e4e-49f6-acb5-76ae018161e7",
+          "Name": "Performer",
+          "Code": "Performer"
+        },
+        {
+          "NameGuid": "e2b71599-1435-43e8-8fe7-f3c4ec2975d8",
+          "Name": "Controler",
+          "Code": "Controler"
+        },
+        {
+          "NameGuid": "62f29797-b2d3-4c95-b652-bc71b3b73daa",
+          "Name": "Subscriber",
+          "Code": "Subscriber"
+        },
+        {
+          "NameGuid": "72915f10-8a63-495a-b89e-8fb62a81c58a",
+          "Name": "EscalateManager",
+          "Code": "EscalateManager"
+        }
+      ],
+      "IsEnabled": false,
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToEnumerationBinder",
+      "PreviousPropertyGuid": "d95d2c77-cf24-423e-bd66-ac2adedb9d9e"
+    },
+    {
+      "$type": "Sungero.Metadata.StringPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "1250dd73-b5d2-4111-aff2-4d8fe7eb6663",
+      "Name": "Description",
+      "Code": "Description",
+      "Length": 500,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
+      "PreviousPropertyGuid": "243ccb93-1312-4884-bf15-90bb7c122c73"
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "GetCEO",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "employee",
+          "ParameterType": "global::DirRX.Solution.IEmployee",
+          "ParameterTypeFullName": "DirRX.Solution.IEmployee, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::DirRX.Solution.IEmployee",
+      "ReturnTypeFullName": "DirRX.Solution.IEmployee, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GetInitCEOManager",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "employee",
+          "ParameterType": "global::DirRX.Solution.IEmployee",
+          "ParameterTypeFullName": "DirRX.Solution.IEmployee, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::DirRX.Solution.IEmployee",
+      "ReturnTypeFullName": "DirRX.Solution.IEmployee, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GetPossibleRoles",
+      "Parameters": [
+        {
+          "Name": "info",
+          "ParameterType": "Sungero.Domain.Shared.IEntityInfo"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Collections.Generic.List<global::System.Nullable<global::Sungero.Core.Enumeration>>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetPossibleRolesForNotices",
+      "IsRemote": true,
+      "Placement": "Shared",
+      "ReturnType": "global::System.Collections.Generic.List<global::DirRX.ActionItems.IActionItemsRole>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    },
+    {
+      "Name": "GetRolePerformer",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "actionItemsRole",
+          "ParameterType": "global::DirRX.ActionItems.IActionItemsRole",
+          "ParameterTypeFullName": "DirRX.ActionItems.IActionItemsRole, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "employee",
+          "ParameterType": "global::DirRX.Solution.IEmployee",
+          "ParameterTypeFullName": "DirRX.Solution.IEmployee, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::DirRX.Solution.IEmployee",
+      "ReturnTypeFullName": "DirRX.Solution.IEmployee, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "IsCEO",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "employee",
+          "ParameterType": "global::DirRX.Solution.IEmployee",
+          "ParameterTypeFullName": "DirRX.Solution.IEmployee, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "IsInitCEOManager",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "employee",
+          "ParameterType": "global::DirRX.Solution.IEmployee",
+          "ParameterTypeFullName": "DirRX.Solution.IEmployee, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "IsPerformerRole",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "actionItemsRole",
+          "ParameterType": "global::DirRX.ActionItems.IActionItemsRole",
+          "ParameterTypeFullName": "DirRX.ActionItems.IActionItemsRole, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "employee",
+          "ParameterType": "global::DirRX.Solution.IEmployee",
+          "ParameterTypeFullName": "DirRX.Solution.IEmployee, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "withSubstitutions",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "49218f3f-b8ec-4c9b-904f-16f29018e177",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "b2f46da7-eb05-4ece-ab94-6f38bc1eb927",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 9
+    }
+  ]
+}

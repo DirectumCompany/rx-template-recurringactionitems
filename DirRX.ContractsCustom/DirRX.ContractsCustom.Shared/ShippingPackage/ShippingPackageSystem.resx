@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Package for Sending</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Package for Sending</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Packages for Sending</value>
+  </data>
+  <data name="Property_Counterparty" xml:space="preserve">
+    <value>Counterparty</value>
+  </data>
+  <data name="Property_DeliveryMethod" xml:space="preserve">
+    <value>Delivery method</value>
+  </data>
+  <data name="Property_ShippingAddress" xml:space="preserve">
+    <value>Delivery address</value>
+  </data>
+  <data name="Property_Contact" xml:space="preserve">
+    <value>Counterparty contact person</value>
+  </data>
+  <data name="Property_ContactPhone" xml:space="preserve">
+    <value>Counterparty contact person phone</value>
+  </data>
+  <data name="Property_Employee" xml:space="preserve">
+    <value>Our contact person</value>
+  </data>
+  <data name="Property_EmployeePhone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Property_Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Property_Date" xml:space="preserve">
+    <value>Document package generation date</value>
+  </data>
+  <data name="Property_AcceptedDate" xml:space="preserve">
+    <value>Accepted for sending at</value>
+  </data>
+  <data name="Property_SendedDate" xml:space="preserve">
+    <value>Document package sent at</value>
+  </data>
+  <data name="Property_PackageStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Enum_PackageStatus_Init" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Enum_PackageStatus_Accepted" xml:space="preserve">
+    <value>Accepted for sending</value>
+  </data>
+  <data name="Enum_PackageStatus_Sent" xml:space="preserve">
+    <value>Sent</value>
+  </data>
+  <data name="Property_Documents" xml:space="preserve">
+    <value>Document package list</value>
+  </data>
+  <data name="ControlGroup_c71796ee904646faa44dd5db4ab017c2" xml:space="preserve">
+    <value>Document Package List</value>
+  </data>
+  <data name="Action_Print" xml:space="preserve">
+    <value>Print Envelope</value>
+  </data>
+  <data name="Action_PrintDescription" xml:space="preserve">
+    <value>Print an envelope for the document package.</value>
+  </data>
+  <data name="Action_PrintHint" xml:space="preserve">
+    <value>Print Document Package Envelope</value>
+  </data>
+  <data name="Action_PrintConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_PrintConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_Accepted" xml:space="preserve">
+    <value>Accepted for Sending</value>
+  </data>
+  <data name="Action_AcceptedDescription" xml:space="preserve">
+    <value>The "Accepted for Sending" status and the date of acceptance for sending will be set for all selected document packages.</value>
+  </data>
+  <data name="Action_AcceptedHint" xml:space="preserve">
+    <value>Set "Accepted for Sending" Status</value>
+  </data>
+  <data name="Action_AcceptedConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_AcceptedConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_Sent" xml:space="preserve">
+    <value>Sent</value>
+  </data>
+  <data name="Action_SentDescription" xml:space="preserve">
+    <value>Status "Sent" and the send date will be set for all selected document packages.</value>
+  </data>
+  <data name="Action_SentHint" xml:space="preserve">
+    <value>Set "Sent" Status</value>
+  </data>
+  <data name="Action_SentConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_SentConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_Group_69897e0f5e7d4e91aa43859424667e9b" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="Ribbon_PackageGroup_dcd0b96458f94a58af452971933ddbc1" xml:space="preserve">
+    <value>Manage Document Packages</value>
+  </data>
+  <data name="FilterPanel_StatusGroup_fd2034186a714d768454a0da8271dfd9" xml:space="preserve">
+    <value>Document Package Status</value>
+  </data>
+  <data name="FilterPanel_DeliveryMethodGroup_708c9aed498f447b9990683ed248df9a" xml:space="preserve">
+    <value>Delivery Method</value>
+  </data>
+  <data name="FilterPanel_CounterpartyGroup_633d077155ce4e18a51af2244ef4a1fe" xml:space="preserve">
+    <value>Counterparty</value>
+  </data>
+  <data name="FilterPanel_DateGroup_12f1273b0813402db6eb23bcc4cb7368" xml:space="preserve">
+    <value>Date of Document Package Creation</value>
+  </data>
+  <data name="FilterPanel_InitFlag_e9ae1b3c1df64d928c7c56398e0222cd" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="FilterPanel_Flag1_8cbce2d9f35e44c6ad4cca7596e73d21" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FilterPanel_AcceptedFlag_8cbce2d9f35e44c6ad4cca7596e73d21" xml:space="preserve">
+    <value>Accepted for Sending</value>
+  </data>
+  <data name="FilterPanel_SentFlag_c8f5a393acb64106ae2b2ed796e8b5a5" xml:space="preserve">
+    <value>Sent</value>
+  </data>
+  <data name="FilterPanel_7Flag_17d278a275c647319d434e1b18d426b7" xml:space="preserve">
+    <value>Last 7 Days</value>
+  </data>
+  <data name="FilterPanel_30Flag_fafdbbef9704447f883ceb9e529c16a2" xml:space="preserve">
+    <value>Last 30 Days</value>
+  </data>
+  <data name="FilterPanel_90Flag_432bc02e64f94a06ba5a55c1b72f3546" xml:space="preserve">
+    <value>Last 90 Days</value>
+  </data>
+  <data name="FilterPanel_PeriodFlag_3bd834cc1e4943f79321fd6ca74c91ad" xml:space="preserve">
+    <value>User-defined Period</value>
+  </data>
+  <data name="FilterPanel_QuarterFlag_432bc02e64f94a06ba5a55c1b72f3546" xml:space="preserve">
+    <value>Last 90 Days</value>
+  </data>
+  <data name="FilterPanel_WeekFlag_17d278a275c647319d434e1b18d426b7" xml:space="preserve">
+    <value>Last 7 Days</value>
+  </data>
+  <data name="FilterPanel_MonthFlag_fafdbbef9704447f883ceb9e529c16a2" xml:space="preserve">
+    <value>Last 30 Days</value>
+  </data>
+  <data name="Property_SendedEmployee" xml:space="preserve">
+    <value>Sent By</value>
+  </data>
+  <data name="Action_CancelAccepted" xml:space="preserve">
+    <value>Abort "Accepted for Sending" Action</value>
+  </data>
+  <data name="Action_CancelAcceptedDescription" xml:space="preserve">
+    <value>Abort the "Accepted for Sending" action.</value>
+  </data>
+  <data name="Action_CancelAcceptedHint" xml:space="preserve">
+    <value>Abort "Accepted for Sending" Action</value>
+  </data>
+  <data name="Action_CancelAcceptedConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CancelAcceptedConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+</root>

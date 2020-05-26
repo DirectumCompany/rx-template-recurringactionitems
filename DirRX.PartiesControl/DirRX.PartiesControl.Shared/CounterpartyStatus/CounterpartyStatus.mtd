@@ -1,0 +1,256 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "50e65f9e-cbc0-46be-a79d-cbb2ee77fd9e",
+  "Name": "CounterpartyStatus",
+  "Actions": [
+    {
+      "NameGuid": "18cdb157-e89a-488b-8cea-bce6a63d0a13",
+      "Name": "DeleteEntity",
+      "GenerateHandler": true,
+      "IsAncestorMetadata": true,
+      "NeedConfirmation": true,
+      "Overridden": [
+        "GenerateHandler"
+      ]
+    }
+  ],
+  "BaseGuid": "04581d26-0780-4cfd-b3cd-c2cafc5798b0",
+  "CanBeNavigationPropertyType": true,
+  "Code": "CounterpartySt",
+  "CreationAreaMetadata": {
+    "NameGuid": "f7766750-eee2-4fcd-8003-5c06a90d1f44",
+    "Name": "CreationArea",
+    "Buttons": [],
+    "IsAncestorMetadata": true
+  },
+  "ExtraSearchProperties": [],
+  "FilterPanel": {
+    "NameGuid": "b0125fbd-3b91-4dbb-914a-689276216404",
+    "Name": "FilterPanel",
+    "Controls": [],
+    "IsAncestorMetadata": true
+  },
+  "Forms": [
+    {
+      "$type": "Sungero.Metadata.StandaloneFormMetadata, Sungero.Metadata",
+      "NameGuid": "cd967b81-4c4f-457f-b515-ef40308a373a",
+      "Name": "Card",
+      "Controls": [
+        {
+          "$type": "Sungero.Metadata.ControlGroupMetadata, Sungero.Metadata",
+          "NameGuid": "913fa40c-1936-4a24-b507-92ede0b07bb7",
+          "Name": "MainGroup",
+          "ColumnDefinitions": [
+            {
+              "Percentage": 50.0
+            },
+            {
+              "Percentage": 50.0
+            }
+          ]
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "46b3e535-b69e-4f40-8e8c-22f715aea5c3",
+          "Name": "Name",
+          "ColumnNumber": 0,
+          "ColumnSpan": 2,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.TextEditorToTextBinder",
+          "ParentGuid": "913fa40c-1936-4a24-b507-92ede0b07bb7",
+          "PropertyGuid": "b52998d8-062e-4b09-a751-cb527f62d900",
+          "RowNumber": 0,
+          "RowSpan": 1,
+          "Settings": [
+            {
+              "Name": "Height",
+              "Value": 40
+            }
+          ]
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "8fe8b08e-4a2f-42ba-b0d1-5dc60c6832bd",
+          "Name": "Status",
+          "ColumnNumber": 0,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToEnumerationBinder",
+          "ParentGuid": "913fa40c-1936-4a24-b507-92ede0b07bb7",
+          "PropertyGuid": "1dcedc29-5140-4770-ac92-eabc212326a1",
+          "RowNumber": 1,
+          "RowSpan": 1,
+          "Settings": []
+        }
+      ]
+    }
+  ],
+  "IconResourcesKeys": [],
+  "IsAutoCreated": true,
+  "IsStatusEnabled": true,
+  "OperationsClass": "",
+  "Overridden": [
+    "IsStatusEnabled",
+    "IsAutoCreated"
+  ],
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.EnumPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "1dcedc29-5140-4770-ac92-eabc212326a1",
+      "Name": "Status",
+      "IsAncestorMetadata": true,
+      "IsEnabled": false,
+      "Overridden": [
+        "IsVisibility",
+        "IsShowedInList",
+        "IsEnabled"
+      ]
+    },
+    {
+      "$type": "Sungero.Metadata.StringPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "b52998d8-062e-4b09-a751-cb527f62d900",
+      "Name": "Name",
+      "Code": "Name",
+      "IsDisplayValue": true,
+      "IsEnabled": false,
+      "IsQuickSearchAllowed": true,
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
+      "PreviousPropertyGuid": "1dcedc29-5140-4770-ac92-eabc212326a1"
+    },
+    {
+      "$type": "Sungero.Metadata.StringPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "ec8314d5-ecd6-412d-b826-2d8ac60785ee",
+      "Name": "Sid",
+      "CanBeSearch": false,
+      "Code": "Sid",
+      "IsEnabled": false,
+      "IsShowedInList": false,
+      "IsVisibility": false,
+      "Length": 36,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
+      "PreviousPropertyGuid": "b52998d8-062e-4b09-a751-cb527f62d900"
+    },
+    {
+      "$type": "Sungero.Metadata.BooleanPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "64e7335b-a7a3-47df-ab2b-343c21b66726",
+      "Name": "ForOneDeal",
+      "Code": "ForOneDeal",
+      "IsEnabled": false,
+      "IsVisibility": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+      "PreviousPropertyGuid": "ec8314d5-ecd6-412d-b826-2d8ac60785ee"
+    }
+  ],
+  "PublicConstants": [
+    {
+      "Name": "CheckingRequiredSid",
+      "ParentClasses": [
+        "CounterpartyStatus",
+        "DefaultStatus"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"998D5EB6-4C79-4755-9073-D5AE54FE6FED\""
+    },
+    {
+      "Name": "StopListSid",
+      "ParentClasses": [
+        "CounterpartyStatus",
+        "DefaultStatus"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"E2F45AA0-EA0D-4CB2-9410-7CE98A93C9FC\""
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "CreateCounterpartyStatus",
+      "Parameters": [
+        {
+          "Name": "sid",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "ReturnType": "global::DirRX.PartiesControl.ICounterpartyStatus",
+      "ReturnTypeFullName": "DirRX.PartiesControl.ICounterpartyStatus, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "CreateCounterpartyStatus",
+      "Parameters": [
+        {
+          "Name": "name",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        },
+        {
+          "Name": "forOneDeal",
+          "ParameterType": "global::System.Boolean",
+          "ParameterTypeFullName": "System.Boolean"
+        }
+      ],
+      "ReturnType": "global::DirRX.PartiesControl.ICounterpartyStatus",
+      "ReturnTypeFullName": "DirRX.PartiesControl.ICounterpartyStatus, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GetCounterpartyStatus",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "sid",
+          "ParameterType": "global::System.String",
+          "ParameterTypeFullName": "System.String"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::DirRX.PartiesControl.ICounterpartyStatus",
+      "ReturnTypeFullName": "DirRX.PartiesControl.ICounterpartyStatus, Sungero.Domain.Interfaces"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [
+    "DefaultStatusStopList",
+    "DefaultStatusCheckingRequired",
+    "DefaultStatusApprovedForImplementation",
+    "DefaultStatusApprovedForAllDeals",
+    "DefaultStatusApprovedForOneTimeDeal",
+    "DefaultStatusNotApproved",
+    "SendApprovalDialogTitleStoplistStatus",
+    "SendApprovalDialogMessageStoplistStatus",
+    "SendApprovalDialogInitiatorComment",
+    "SendApprovalDialogMessageCheckingRequiredStatus",
+    "SendApprovalDialogTitleCheckingRequiredStatus",
+    "SendApprovalDialogSendButtonTitle",
+    "SendApprovalDialogTitleNotAllowedStatus",
+    "SendApprovalDialogMessageNotAllowedStatus",
+    "DefaultStatusAllDealsApproved"
+  ],
+  "RibbonCardMetadata": {
+    "NameGuid": "52daa664-4724-4e6e-b420-4555fde27a21",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "cef50fa5-af03-4ca3-8f33-b07c83fe79ed",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 9
+    }
+  ]
+}

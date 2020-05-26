@@ -1,0 +1,338 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "70734e64-09c3-4247-9a8c-5c10fd33106e",
+  "Name": "CurrencyRate",
+  "BaseGuid": "04581d26-0780-4cfd-b3cd-c2cafc5798b0",
+  "CanBeNavigationPropertyType": true,
+  "Code": "CurrencyRate",
+  "CreationAreaMetadata": {
+    "NameGuid": "f7766750-eee2-4fcd-8003-5c06a90d1f44",
+    "Name": "CreationArea",
+    "Buttons": [],
+    "IsAncestorMetadata": true
+  },
+  "ExtraSearchProperties": [],
+  "FilterPanel": {
+    "NameGuid": "b0125fbd-3b91-4dbb-914a-689276216404",
+    "Name": "FilterPanel",
+    "Controls": [],
+    "IsAncestorMetadata": true
+  },
+  "Forms": [
+    {
+      "$type": "Sungero.Metadata.StandaloneFormMetadata, Sungero.Metadata",
+      "NameGuid": "0c5597f6-c629-40e5-88a1-7ed8e3a0257f",
+      "Name": "Card",
+      "Controls": [
+        {
+          "$type": "Sungero.Metadata.ControlGroupMetadata, Sungero.Metadata",
+          "NameGuid": "c344016c-32fd-4706-a94b-6c84e1262f3d",
+          "Name": "ControlGroup",
+          "ColumnDefinitions": [
+            {
+              "Percentage": 50.0
+            },
+            {
+              "Percentage": 50.0
+            }
+          ]
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "8416e128-2d19-44af-9763-7662fe2bcb03",
+          "Name": "Control",
+          "ColumnNumber": 0,
+          "ColumnSpan": 2,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
+          "ParentGuid": "c344016c-32fd-4706-a94b-6c84e1262f3d",
+          "PropertyGuid": "adf516d9-f769-424a-8e53-85c1841bc3d5",
+          "RowNumber": 0,
+          "RowSpan": 1,
+          "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "7032495a-cbba-45b4-b34a-557f7ce1d8a9",
+          "Name": "Currency",
+          "ColumnNumber": 0,
+          "ColumnSpan": 2,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+          "ParentGuid": "c344016c-32fd-4706-a94b-6c84e1262f3d",
+          "PropertyGuid": "245229c8-da85-47fe-a3dd-f893698e1dd4",
+          "RowNumber": 1,
+          "RowSpan": 1,
+          "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "52e3cbda-d49e-4f97-a486-0852414a737e",
+          "Name": "Rate",
+          "ColumnNumber": 0,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+          "ParentGuid": "c344016c-32fd-4706-a94b-6c84e1262f3d",
+          "PropertyGuid": "cf59266d-4e69-49b5-bfd9-fa3e0c2a0d72",
+          "RowNumber": 2,
+          "RowSpan": 1,
+          "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "684004ac-dbef-4c9d-bd96-5e5c0dcc13d0",
+          "Name": "RateDate",
+          "ColumnNumber": 1,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
+          "ParentGuid": "c344016c-32fd-4706-a94b-6c84e1262f3d",
+          "PropertyGuid": "012c6e58-f874-40cc-9e0e-b13be30d0e1f",
+          "RowNumber": 2,
+          "RowSpan": 1,
+          "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "73f77fef-a8bf-471c-a67b-63156590de7d",
+          "Name": "Status",
+          "ColumnNumber": 0,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToEnumerationBinder",
+          "ParentGuid": "c344016c-32fd-4706-a94b-6c84e1262f3d",
+          "PropertyGuid": "1dcedc29-5140-4770-ac92-eabc212326a1",
+          "RowNumber": 3,
+          "RowSpan": 1,
+          "Settings": []
+        }
+      ]
+    }
+  ],
+  "HandledEvents": [
+    "BeforeSaveServer"
+  ],
+  "IconResourcesKeys": [],
+  "IsAutoCreated": true,
+  "IsStatusEnabled": true,
+  "OperationsClass": "",
+  "Overridden": [
+    "IsAutoCreated",
+    "IsStatusEnabled"
+  ],
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.EnumPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "1dcedc29-5140-4770-ac92-eabc212326a1",
+      "Name": "Status",
+      "IsAncestorMetadata": true,
+      "IsEnabled": false,
+      "Overridden": [
+        "IsEnabled"
+      ]
+    },
+    {
+      "$type": "Sungero.Metadata.StringPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "adf516d9-f769-424a-8e53-85c1841bc3d5",
+      "Name": "Name",
+      "Code": "Name",
+      "IsDisplayValue": true,
+      "IsEnabled": false,
+      "IsQuickSearchAllowed": true,
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
+      "PreviousPropertyGuid": "1dcedc29-5140-4770-ac92-eabc212326a1"
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "245229c8-da85-47fe-a3dd-f893698e1dd4",
+      "Name": "Currency",
+      "Code": "Currency",
+      "EntityGuid": "ffc2629f-dc30-4106-a3ce-c402ae7d32b9",
+      "FlatListInStandaloneLookup": true,
+      "IsEnabled": false,
+      "IsRequired": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "adf516d9-f769-424a-8e53-85c1841bc3d5"
+    },
+    {
+      "$type": "Sungero.Metadata.DoublePropertyMetadata, Sungero.Metadata",
+      "NameGuid": "cf59266d-4e69-49b5-bfd9-fa3e0c2a0d72",
+      "Name": "Rate",
+      "Code": "Rate",
+      "IsEnabled": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
+      "PreviousPropertyGuid": "245229c8-da85-47fe-a3dd-f893698e1dd4"
+    },
+    {
+      "$type": "Sungero.Metadata.DateTimePropertyMetadata, Sungero.Metadata",
+      "NameGuid": "012c6e58-f874-40cc-9e0e-b13be30d0e1f",
+      "Name": "Date",
+      "Code": "Date",
+      "IsEnabled": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DateTimeEditorToDateTimeBinder",
+      "PreviousPropertyGuid": "cf59266d-4e69-49b5-bfd9-fa3e0c2a0d72"
+    }
+  ],
+  "PublicConstants": [
+    {
+      "Name": "RubAlphaCode",
+      "ParentClasses": [
+        "CurrencyRate"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"RUB\""
+    },
+    {
+      "Name": "UsdAlphaCode",
+      "ParentClasses": [
+        "CurrencyRate"
+      ],
+      "TypeName": "System.String",
+      "Value": "\"USD\""
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "GetAllCurrencies",
+      "IsRemote": true,
+      "Placement": "Shared",
+      "ReturnType": "global::System.Linq.IQueryable<global::Sungero.Commons.ICurrency>",
+      "ReturnTypeFullName": "System.Linq.IQueryable"
+    },
+    {
+      "Name": "GetCurrencyRateForDate",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "currency",
+          "ParameterType": "global::Sungero.Commons.ICurrency",
+          "ParameterTypeFullName": "Sungero.Commons.ICurrency, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "date",
+          "ParameterType": "global::System.DateTime",
+          "ParameterTypeFullName": "System.DateTime"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Nullable<global::System.Double>",
+      "ReturnTypeFullName": "System.Nullable"
+    },
+    {
+      "Name": "GetCurrencyRUB",
+      "IsRemote": true,
+      "Placement": "Shared",
+      "ReturnType": "global::Sungero.Commons.ICurrency",
+      "ReturnTypeFullName": "Sungero.Commons.ICurrency, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GetCurrencyUSD",
+      "IsRemote": true,
+      "Placement": "Shared",
+      "ReturnType": "global::Sungero.Commons.ICurrency",
+      "ReturnTypeFullName": "Sungero.Commons.ICurrency, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GetRatesForCurrencyOnDate",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "currency",
+          "ParameterType": "global::Sungero.Commons.ICurrency",
+          "ParameterTypeFullName": "Sungero.Commons.ICurrency, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "date",
+          "ParameterType": "global::System.DateTime",
+          "ParameterTypeFullName": "System.DateTime"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::DirRX.ContractsCustom.ICurrencyRate",
+      "ReturnTypeFullName": "DirRX.ContractsCustom.ICurrencyRate, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GetRatesForCurrencyOnDateOrLast",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "currency",
+          "ParameterType": "global::Sungero.Commons.ICurrency",
+          "ParameterTypeFullName": "Sungero.Commons.ICurrency, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "date",
+          "ParameterType": "global::System.DateTime",
+          "ParameterTypeFullName": "System.DateTime"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::DirRX.ContractsCustom.ICurrencyRate",
+      "ReturnTypeFullName": "DirRX.ContractsCustom.ICurrencyRate, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "GetSummInRUB",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "summ",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "currency",
+          "ParameterType": "global::Sungero.Commons.ICurrency",
+          "ParameterTypeFullName": "Sungero.Commons.ICurrency, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Double",
+      "ReturnTypeFullName": "System.Double"
+    },
+    {
+      "Name": "GetSummInUSD",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "summ",
+          "ParameterType": "global::System.Double",
+          "ParameterTypeFullName": "System.Double"
+        },
+        {
+          "Name": "currency",
+          "ParameterType": "global::Sungero.Commons.ICurrency",
+          "ParameterTypeFullName": "Sungero.Commons.ICurrency, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Double",
+      "ReturnTypeFullName": "System.Double"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [
+    "CurrencyRateFormatName"
+  ],
+  "RibbonCardMetadata": {
+    "NameGuid": "82bb7e0e-1b1e-4a80-b721-65be0632febd",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "b06aec0f-f7a3-403b-a427-577388cbc112",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 9
+    }
+  ]
+}

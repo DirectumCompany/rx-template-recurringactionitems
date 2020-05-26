@@ -1,0 +1,59 @@
+{
+  "$type": "Sungero.Metadata.LayerModuleMetadata, Sungero.Metadata",
+  "NameGuid": "ac2b5cd1-cf94-452d-806a-7fd8014a07fc",
+  "Name": "Contracts",
+  "AssociatedGuid": "d67b58ac-520d-424c-87b1-6b6778c2030a",
+  "AsyncHandlers": [],
+  "BaseGuid": "f9d15b1c-2784-4c84-8348-1e162d70b988",
+  "ClientBaseAssemblyName": "DirRX.Solution.ClientBase",
+  "ClientBaseNamespace": "DirRX.Solution.Module.Contracts.ClientBase",
+  "Code": "Contrac",
+  "CompanyCode": "Sungero",
+  "ExplorerTreeOrder": [],
+  "IconResourcesKeys": [],
+  "Importance": "High",
+  "IsVisible": false,
+  "Jobs": [
+    {
+      "NameGuid": "86eb396d-180f-428b-aa35-241ca1a1d4ee",
+      "Name": "SendNotificationForExpiringContracts",
+      "GenerateHandler": true,
+      "IsAncestorMetadata": true,
+      "MonthSchedule": "Monthly",
+      "Overridden": [
+        "GenerateHandler",
+        "StartAt"
+      ],
+      "StartAt": "1753-01-01T06:00:00"
+    },
+    {
+      "NameGuid": "ef1fbe43-58c9-4f41-999e-bb4ae5024e5e",
+      "Name": "SendTaskForContractMilestones",
+      "IsAncestorMetadata": true,
+      "MonthSchedule": "Monthly",
+      "StartAt": "1753-01-01T06:00:00"
+    }
+  ],
+  "LayeredFromGuid": "f9d15b1c-2784-4c84-8348-1e162d70b988",
+  "NeedResetAppliedCache": true,
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.Solution.Module.Contracts",
+  "ResourcesKeys": [
+    "ExpiringSupAgreementSubject",
+    "ExpiringSupAgreementText"
+  ],
+  "SpecialFolders": [],
+  "Version": "3.3.25.1",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "LayerModuleMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 6
+    }
+  ]
+}

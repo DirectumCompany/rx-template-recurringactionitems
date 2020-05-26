@@ -1,0 +1,161 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "d1ef725d-0ee6-44cc-aa0a-ad55b42f3fd5",
+  "Name": "ApproversWorkStatisticsReport",
+  "AssociatedGuid": "94e4b038-335a-4e79-b81a-fa9d8c0be0b6",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Excel",
+  "ExportFormats": [
+    "Excel"
+  ],
+  "HandledEvents": [
+    "BeforeExecuteClient",
+    "BeforeExecuteServer",
+    "AfterExecuteServer"
+  ],
+  "IconResourcesKeys": [],
+  "Overridden": [
+    "PublicConstants",
+    "PublicStructures",
+    "DisplayName",
+    "HandledEvents",
+    "Parameters",
+    "ExportFormats",
+    "DefaultExportFormat"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "244d7eed-7399-41ac-b9a5-4e907e10016a",
+      "Name": "ReportSessionId",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "f081ae62-d40d-4e82-ab6f-fe8b9733ec08",
+      "Name": "BusinessUnit",
+      "EntityType": "eff95720-181f-4f7d-892d-dec034c7b2ab",
+      "InternalDataTypeName": "Sungero.Company.IBusinessUnit, Sungero.Domain.Interfaces"
+    },
+    {
+      "NameGuid": "0ff3ed19-9e3b-4394-a027-59da33dc3d41",
+      "Name": "BeginDate",
+      "InternalDataTypeName": "System.DateTime",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "e26c69bc-6c43-4e37-bafa-f432ef7598ed",
+      "Name": "EndDate",
+      "InternalDataTypeName": "System.DateTime",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "abb9d974-473b-479f-a43f-1bb933e3687b",
+      "Name": "DocKinds",
+      "EntityType": "14a59623-89a2-4ea8-b6e9-2ad4365f358c",
+      "InternalDataTypeName": "Sungero.Docflow.IDocumentKind, Sungero.Domain.Interfaces",
+      "IsCollection": true
+    },
+    {
+      "NameGuid": "84465436-a0b1-4bef-a2c1-41770d7a9f5d",
+      "Name": "Period",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "bbfb718f-2f64-4a81-ab84-3e89dc0fdd81",
+      "Name": "Print",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "fe1f75ee-0996-454e-83e3-89f942c4f582",
+      "Name": "Approver",
+      "EntityType": "b7905516-2be5-4931-961c-cb38d5677565",
+      "InternalDataTypeName": "Sungero.Company.IEmployee, Sungero.Domain.Interfaces"
+    },
+    {
+      "NameGuid": "b34dcfdb-c554-4d85-ae0b-70126c0d05d7",
+      "Name": "Manager",
+      "EntityType": "b7905516-2be5-4931-961c-cb38d5677565",
+      "InternalDataTypeName": "Sungero.Company.IEmployee, Sungero.Domain.Interfaces"
+    },
+    {
+      "NameGuid": "d712bdef-4f40-441b-951c-6c1f9b21ed84",
+      "Name": "Departments",
+      "EntityType": "61b1c19f-26e2-49a5-b3d3-0d3618151e12",
+      "InternalDataTypeName": "Sungero.Company.IDepartment, Sungero.Domain.Interfaces",
+      "IsCollection": true
+    },
+    {
+      "NameGuid": "50864d54-dd18-4aec-a0c6-4330b581c0c7",
+      "Name": "DocType",
+      "EntityType": "0896aa80-e1da-4a1e-9485-d172f8e242bc",
+      "InternalDataTypeName": "Sungero.Docflow.IDocumentType, Sungero.Domain.Interfaces"
+    },
+    {
+      "NameGuid": "6594604f-68eb-4e87-b1bd-de833f42981d",
+      "Name": "Subjects",
+      "EntityType": "82ad6485-0c59-4836-a207-a915f2f1b4e6",
+      "InternalDataTypeName": "DirRX.LocalActs.IOrderSubject, Sungero.Domain.Interfaces",
+      "IsCollection": true
+    },
+    {
+      "NameGuid": "66f84386-cfa4-46fa-9581-1f0b7ef5e217",
+      "Name": "StandardForms",
+      "EntityType": "166bae63-9747-43b3-8ad9-387777531081",
+      "InternalDataTypeName": "DirRX.LocalActs.IStandardForm, Sungero.Domain.Interfaces",
+      "IsCollection": true
+    },
+    {
+      "NameGuid": "c9c8984b-7542-440a-8752-d9fbd558ebd9",
+      "Name": "HeadText",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "e31983bb-d346-4c46-a4db-990bafb3df62",
+      "Name": "CurrentDate",
+      "InternalDataTypeName": "System.String"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [
+    "DocumentApprovalStatisticsReport",
+    "BusinessUnit",
+    "Department",
+    "PreparedBy",
+    "BeginDate",
+    "EndDate",
+    "DocKinds",
+    "Period",
+    "TotalCount",
+    "PercentTitle",
+    "OutOfTime",
+    "HeadNum",
+    "HeadId",
+    "Document",
+    "HeadPlanDate",
+    "HeadActualDate",
+    "SubjectTemplate",
+    "PeriodFrom",
+    "PeriodTill",
+    "Print",
+    "ApproversWorkStatisticsReport",
+    "Approver",
+    "Manager",
+    "DocType",
+    "Subject",
+    "StandardForm",
+    "DocumentsRecieved",
+    "AverageApproveTime",
+    "OverdueCount",
+    "OverdueAverageValue",
+    "Total",
+    "RecievedAssignmentsCount",
+    "Including",
+    "Reviewed",
+    "InProcess",
+    "StandardFormTemplate",
+    "DocKindTemplate",
+    "SelectDepartments",
+    "SelectDocKind"
+  ],
+  "Versions": []
+}

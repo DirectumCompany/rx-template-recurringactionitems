@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Property_Priority" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="Property_AssignedBy" xml:space="preserve">
+    <value>Assigned by</value>
+  </data>
+  <data name="Property_Initiator" xml:space="preserve">
+    <value>Creator</value>
+  </data>
+  <data name="Property_ReportDeadline" xml:space="preserve">
+    <value>Report deadline</value>
+  </data>
+  <data name="Property_Subscribers" xml:space="preserve">
+    <value>Subscribers</value>
+  </data>
+  <data name="Resource_b7fdf314105d448795e50d73e9b1dd54" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_b7fdf314105d448795e50d73e9b1dd54_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_737819299ac84aa08feb4f9daf6d093b" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_737819299ac84aa08feb4f9daf6d093b_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_f5723f2218ff4015b9a4fcb6c5165d82" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_f5723f2218ff4015b9a4fcb6c5165d82_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_e9a3535401354b798bc5ed66f76e8c98" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_6a18edc7814b41ebb67822399ba94b74" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_6a18edc7814b41ebb67822399ba94b74_EmptyText" xml:space="preserve">
+    <value>Specify co-assignees of the action item...</value>
+  </data>
+  <data name="Resource_2f904bfc2608442bb136fafa445cf119" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_2f904bfc2608442bb136fafa445cf119_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_838fb0be8b2245e5a063ba4e88eb3890" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_ec23002f36734e149e52abfa3ed86a30" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_ec23002f36734e149e52abfa3ed86a30_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_487f3300511c42328f4e7e26adb51307" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_487f3300511c42328f4e7e26adb51307_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_502cbd3b8e1f404aac92dd0da2651d5e" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_ae98972b4d8649b4b20b0e940962659b" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="ControlGroup_98a172a9a570491997904531d4d2a0b1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_271b6cd2e08b496499e1b000129b04e6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_10fe4c39fce04669b73266e53f481a2e" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_e1db87baea3949bf934a7768427cb801" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_77dcfa8fab3d4a7f99af8ec68844eae4_EmptyText" xml:space="preserve">
+    <value>Specify subscribers…</value>
+  </data>
+  <data name="Resource_ab7485f5c6234582bb681e83cf50c9f6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_IsEscalated" xml:space="preserve">
+    <value>Escalated</value>
+  </data>
+  <data name="Property_EscalatedText" xml:space="preserve">
+    <value>Escalated</value>
+  </data>
+  <data name="Property_Mark" xml:space="preserve">
+    <value>Kind</value>
+  </data>
+  <data name="FilterPanel_OnControl_94347c4552ef46bd9bebaf8a785092a0" xml:space="preserve">
+    <value>Under Control</value>
+  </data>
+  <data name="FilterPanel_Assignment_3c12bca849454bfc8ac372a6924b3a44" xml:space="preserve">
+    <value>Indicators in Cards</value>
+  </data>
+  <data name="FilterPanel_Escalated_41b546e9c476430c9ac988726aedbe80" xml:space="preserve">
+    <value>Escalated</value>
+  </data>
+  <data name="FilterPanel_Category_7ebc99f40e844d6bad6d44394402be56" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="FilterPanel_Priority_70de2921963141b6936f8d957bfbad30" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="FilterPanel_WithMeList_4df4b371db5141d3ba85c2e15477e7d0" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FilterPanel_JobsWithMe_981c8097792a49be97656725f8ff9f21" xml:space="preserve">
+    <value>Action Items where I am</value>
+  </data>
+  <data name="FilterPanel_IAmAuthor_26446a0715894d6a845bac1e3ef17827" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="FilterPanel_IAmСommissioner_d71291027f3b4466807d9346879e3206" xml:space="preserve">
+    <value>Creator</value>
+  </data>
+  <data name="FilterPanel_IAmPerformer_8e96d8174e7d4d04a9e637bad178479d" xml:space="preserve">
+    <value>Performer</value>
+  </data>
+  <data name="FilterPanel_IAmControler_53d799cc4cff4ab7abb4f65bada077f2" xml:space="preserve">
+    <value>Controler</value>
+  </data>
+  <data name="FilterPanel_IAmSubscriber_207e470304014162b0ad3684a94555e1" xml:space="preserve">
+    <value>Subscriber</value>
+  </data>
+  <data name="FilterPanel_AssignmentsWithMe_38e06ae24e2e4b6f8872093a989cacb8" xml:space="preserve">
+    <value>Action Items where I am</value>
+  </data>
+  <data name="FilterPanel_PerformerDept_6b6174b402a74d418e4b88093c5721be" xml:space="preserve">
+    <value>By Division of Assignee</value>
+  </data>
+  <data name="FilterPanel_DeadlineDisc_938bf255ab654affa9a56e5e0c1de175" xml:space="preserve">
+    <value>Compliance with Deadline</value>
+  </data>
+  <data name="FilterPanel_DeadlinePlan_2ad8dddc9e1e4b1b93ca042faf955db6" xml:space="preserve">
+    <value>Planned Deadline</value>
+  </data>
+  <data name="FilterPanel_IAmCommis_d71291027f3b4466807d9346879e3206" xml:space="preserve">
+    <value>Creator</value>
+  </data>
+  <data name="FilterPanel_AllTime_e71e725a7ec640b584383b57f303e489" xml:space="preserve">
+    <value>All time</value>
+  </data>
+  <data name="FilterPanel_AllTime_cd63fcc550f64fbc9da7460028104253" xml:space="preserve">
+    <value>All time</value>
+  </data>
+  <data name="FilterPanel_LastMonth_50331cf4eaed48ed8c471d8ed3bf3c42" xml:space="preserve">
+    <value>Last 30 days</value>
+  </data>
+  <data name="FilterPanel_LastMonthPlan_1bfe3a5b0fbd4531922c34241917b67e" xml:space="preserve">
+    <value>Last 30 days</value>
+  </data>
+  <data name="FilterPanel_Manual_e17858cf189146f4a455e269c809b45d" xml:space="preserve">
+    <value>User-defined period:</value>
+  </data>
+  <data name="FilterPanel_ManualPeriod_d0f28b79b39345e198989f2f56dbdcca" xml:space="preserve">
+    <value>User-defined period:</value>
+  </data>
+  <data name="FilterPanel_AllTimePlan_e71e725a7ec640b584383b57f303e489" xml:space="preserve">
+    <value>All time</value>
+  </data>
+  <data name="FilterPanel_DisciplineOverdue_90bc503b339d4334ac32aba73570c0f7" xml:space="preserve">
+    <value>Overdue</value>
+  </data>
+  <data name="FilterPanel_Overdue_a1597a3f32b6417188f2114639b2b3cf" xml:space="preserve">
+    <value>Overdue</value>
+  </data>
+  <data name="FilterPanel_DisciplineAll_356bf728e38d49ccb634be0988885a76" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="FilterPanel_AllDeadlines_bf7aa92ea508463dbf68bf9b9c6c529c" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Property_Assignee" xml:space="preserve">
+    <value>Assignee</value>
+  </data>
+  <data name="Property_ActionItemParts" xml:space="preserve">
+    <value>Action item parts</value>
+  </data>
+  <data name="Action_AddPerformerDescription" xml:space="preserve">
+    <value>Bulk filling in of action item performers from roles, departments, business units and other groups.
+
+Employees already specified as performers will not be added.</value>
+  </data>
+  <data name="Action_AddPerformerHint" xml:space="preserve">
+    <value>Add Action Item Performers</value>
+  </data>
+  <data name="Action_AddPerformer" xml:space="preserve">
+    <value>Add Performers</value>
+  </data>
+  <data name="Action_ChangeCompoundModeDescription" xml:space="preserve">
+    <value>Change the action item type to compound, which allows you to specify the equal assignees with individual action items and deadlines.</value>
+  </data>
+  <data name="Action_ChangeCompoundModeHint" xml:space="preserve">
+    <value>Switch Between Simple And Compound Action Item</value>
+  </data>
+  <data name="Action_ChangeCompoundMode" xml:space="preserve">
+    <value>Equal Assignees</value>
+  </data>
+  <data name="Property_IsCompoundActionItem" xml:space="preserve">
+    <value>Compound action item</value>
+  </data>
+  <data name="Ribbon_ComponentResolution_977f7789881e4b50b1dba56b360e4f24" xml:space="preserve">
+    <value>Equal Assignees</value>
+  </data>
+  <data name="Ribbon_ComponentResolutionHint_977f7789881e4b50b1dba56b360e4f24" xml:space="preserve">
+    <value>Switch Between Simple And Compound Action Item</value>
+  </data>
+  <data name="Ribbon_ComponentResolutionDescription_977f7789881e4b50b1dba56b360e4f24" xml:space="preserve">
+    <value>Change the action item type to compound, which allows you to specify the equal assignees with individual action items and deadlines.
+Click again to bring the card back to the simple action mode.</value>
+  </data>
+  <data name="Ribbon_JobView_5a79eb10149e456ba4674e8010afdc07" xml:space="preserve">
+    <value>Compound action item</value>
+  </data>
+  <data name="Action_SetRepeat" xml:space="preserve">
+    <value>Repeating Action Item</value>
+  </data>
+  <data name="Action_SetRepeatDescription" xml:space="preserve">
+    <value>Action item will be sent automatically according to the repeat settings.</value>
+  </data>
+  <data name="Action_SetRepeatHint" xml:space="preserve">
+    <value>Make Action Item Repeating</value>
+  </data>
+  <data name="Action_SetRepeatConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_SetRepeatConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_RepeatSetting" xml:space="preserve">
+    <value>Set action item periodicity.</value>
+  </data>
+  <data name="Ribbon_StateToggleButton_1df1477922ce47eb99ab89d8323afefd" xml:space="preserve">
+    <value>StateToggleButton</value>
+  </data>
+  <data name="Property_IsRepeating" xml:space="preserve">
+    <value>TODO</value>
+  </data>
+  <data name="Ribbon_SetRepeat_1df1477922ce47eb99ab89d8323afefd" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="Action_AddChildEntity" xml:space="preserve">
+    <value>Add row</value>
+  </data>
+  <data name="Property_FinalDeadline" xml:space="preserve">
+    <value>Final deadline</value>
+  </data>
+  <data name="Property_Deadline" xml:space="preserve">
+    <value>Deadline</value>
+  </data>
+  <data name="Action_AddSubscriber" xml:space="preserve">
+    <value>Add Subscribers</value>
+  </data>
+  <data name="Action_AddSubscriberDescription" xml:space="preserve">
+    <value>Add new subscribers for the action item.Employees that are already specified as subscribers will not be added.</value>
+  </data>
+  <data name="Action_AddSubscriberHint" xml:space="preserve">
+    <value>Add Action Item Subscribers</value>
+  </data>
+  <data name="Action_AddSubscriberConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_AddSubscriberConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Enum_ActionItemType_Component" xml:space="preserve">
+    <value>Compound</value>
+  </data>
+  <data name="Property_NeedsReview" xml:space="preserve">
+    <value>Assignment for review</value>
+  </data>
+  <data name="Property_Supervisor" xml:space="preserve">
+    <value>Supervisor</value>
+  </data>
+  <data name="Enum_ActionItemType_Additional" xml:space="preserve">
+    <value>To co-assignee</value>
+  </data>
+  <data name="Enum_Status_Suspended" xml:space="preserve">
+    <value>Suspended</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Task to execute action item</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Action Items</value>
+  </data>
+  <data name="Property_ActionItem" xml:space="preserve">
+    <value>Action item</value>
+  </data>
+  <data name="Ribbon_SetRepeatHint_1df1477922ce47eb99ab89d8323afefd" xml:space="preserve">
+    <value>Make Action Item Repeating</value>
+  </data>
+  <data name="Ribbon_SetRepeatDescription_1df1477922ce47eb99ab89d8323afefd" xml:space="preserve">
+    <value>Action item will be automatically sent according to the repeat settings.</value>
+  </data>
+  <data name="Form_88924e9483aa401794749ec1f27e5188" xml:space="preserve">
+    <value>Action item</value>
+  </data>
+  <data name="Action_ChangeSupervisor" xml:space="preserve">
+    <value>Change Controller</value>
+  </data>
+  <data name="Action_ChangeSupervisorDescription" xml:space="preserve">
+    <value>Change the controller of the action item.</value>
+  </data>
+  <data name="Action_ChangeSupervisorHint" xml:space="preserve">
+    <value>Change Action Item Controller</value>
+  </data>
+  <data name="Action_ChangeSupervisorConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ChangeSupervisorConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_PrintActionItem" xml:space="preserve">
+    <value>Print Action Item</value>
+  </data>
+  <data name="Action_PrintActionItemDescription" xml:space="preserve">
+    <value>Generate the action item printout form, which contains information about the work to do, assignees, and deadlines.</value>
+  </data>
+  <data name="Action_PrintActionItemHint" xml:space="preserve">
+    <value>Print Action Item</value>
+  </data>
+  <data name="Action_PrintActionItemConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_PrintActionItemConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_StateToggleButton_bc9344e5b85f4402bf7b5d1f854299e5" xml:space="preserve">
+    <value>StateToggleButton</value>
+  </data>
+  <data name="Ribbon_StateToggleButton_8f8cde75620f4cb2896aabd6beb5fef8" xml:space="preserve">
+    <value>StateToggleButton</value>
+  </data>
+  <data name="Property_Author" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Property_InitialDeadline" xml:space="preserve">
+    <value>Initial deadline</value>
+  </data>
+  <data name="Enum_Status_Draft" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="Enum_Status_UnderReview" xml:space="preserve">
+    <value>Under review</value>
+  </data>
+  <data name="Action_FollowUpExecution" xml:space="preserve">
+    <value>Follow Up Action Item Execution</value>
+  </data>
+  <data name="Action_FollowUpExecutionHint" xml:space="preserve">
+    <value>Follow Up Execution of Action Items</value>
+  </data>
+  <data name="Action_FollowUpExecutionDescription" xml:space="preserve">
+    <value>Open list of all action items within the specified period</value>
+  </data>
+  <data name="Property_InitialDeadline" xml:space="preserve">
+    <value>Initial deadline</value>
+  </data>
+  <data name="Enum_Status_Draft" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+</root>

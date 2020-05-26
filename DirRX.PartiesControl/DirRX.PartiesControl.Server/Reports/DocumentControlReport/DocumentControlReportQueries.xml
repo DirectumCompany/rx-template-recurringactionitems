@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="CreateDataTable">
+    <mssql><![CDATA[create table {0}
+ ([ReportSessionId] varchar(256) NOT NULL,
+  [Responsible] nvarchar(max) NULL,
+  [DepartmentResponsible] nvarchar(max) NULL,
+  [Supervisor] nvarchar(max) NULL,
+  [Counterparty] nvarchar(max) NULL,
+  [Date] nvarchar(max) NULL,
+  [Days] nvarchar(max) NULL,
+  [Documents] nvarchar(max) NULL)]]></mssql>
+    <postgres><![CDATA[create table {0}
+ ([ReportSessionId] citext NOT NULL,
+  [Responsible] citext NULL,
+  [DepartmentResponsible] citext NULL,
+  [Supervisor] citext NULL,
+  [Counterparty] citext NULL,
+  [Date] citext NULL,
+  [Days] citext NULL,
+  [Documents] citext NULL)]]></postgres>
+  </query>
+  <query key="SelectDataTable">
+    <default><![CDATA[select *
+from Sungero_Reports_DocControlReport temp
+where ReportSessionId = @ReportSessionId]]></default>
+  </query>
+</queries>

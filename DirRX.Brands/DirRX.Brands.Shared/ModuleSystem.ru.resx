@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Продукты и товарные знаки</value>
+  </data>
+  <data name="CoverTitle" xml:space="preserve">
+    <value>Продукты и товарные знаки</value>
+  </data>
+  <data name="JobDisplayName_5ad47ed0c763468598230c3ae3ad9724" xml:space="preserve">
+    <value>Рассылка заданий-оповещений о новых наименованиях продуктов</value>
+  </data>
+  <data name="JobDescription_5ad47ed0c763468598230c3ae3ad9724" xml:space="preserve">
+    <value>Рассылка заданий-оповещений о появлении новых записей в справочнике "Словесные обозначения".</value>
+  </data>
+  <data name="CoverGroup_Brands" xml:space="preserve">
+    <value>Товарные знаки</value>
+  </data>
+  <data name="CoverDescription" xml:space="preserve">
+    <value>Модуль предназначен для хранения информации о регистрации товарных знаков.</value>
+  </data>
+  <data name="CoverAction_BrandRegistrations" xml:space="preserve">
+    <value>Реестр товарных знаков</value>
+  </data>
+  <data name="CoverDescription_BrandRegistrations" xml:space="preserve">
+    <value>Реестр содержит список зарегистрированных товарных знаков.</value>
+  </data>
+  <data name="CoverGroup_ProductName" xml:space="preserve">
+    <value>Наименования продуктов</value>
+  </data>
+  <data name="CoverAction_ProductName" xml:space="preserve">
+    <value>Наименования продуктов</value>
+  </data>
+  <data name="CoverDescription_ProductName" xml:space="preserve">
+    <value>Хранит информацию о наименованиях продуктов.</value>
+  </data>
+  <data name="CoverAction_WordMark" xml:space="preserve">
+    <value>Словесные обозначения</value>
+  </data>
+  <data name="CoverDescription_WordMark" xml:space="preserve">
+    <value>Хранит информацию о словесных и буквенных обозначениях в наименованиях продуктов.</value>
+  </data>
+  <data name="CoverGroup_LinkedInformation" xml:space="preserve">
+    <value>Связанная информация</value>
+  </data>
+  <data name="CoverAction_ProductKind" xml:space="preserve">
+    <value>Виды товаров</value>
+  </data>
+  <data name="CoverDescription_ProductKind" xml:space="preserve">
+    <value>Хранит информацию о видах товаров.</value>
+  </data>
+  <data name="CoverAction_ProductGroup" xml:space="preserve">
+    <value>Товарные группы</value>
+  </data>
+  <data name="CoverDescription_ProductGroup" xml:space="preserve">
+    <value>Хранит информацию о товарных группах.</value>
+  </data>
+  <data name="CoverAction_Countries" xml:space="preserve">
+    <value>Страны</value>
+  </data>
+  <data name="CoverDescription_Countries" xml:space="preserve">
+    <value>Хранит информацию о списке стран.</value>
+  </data>
+  <data name="CoverAction_BrandRegistrImportXlsx" xml:space="preserve">
+    <value>Загрузить данные о регистрации товарных знаков</value>
+  </data>
+  <data name="CoverDescription_BrandRegistrImportXlsx" xml:space="preserve">
+    <value>Массовое занесение данных о регистрации товарных знаков из файла Microsoft Excel.</value>
+  </data>
+  <data name="JobDisplayName_abfa9a5f55c34863818876c8c0af427e" xml:space="preserve">
+    <value>Изменение статуса у истекших регистраций товарных знаков</value>
+  </data>
+  <data name="JobDescription_abfa9a5f55c34863818876c8c0af427e" xml:space="preserve">
+    <value>При наступлении срока окончания действия регистрации изменить статус регистрации на "Истек срок".</value>
+  </data>
+  <data name="JobDisplayName_1d97a0e9ee00456f8fb8ee634cbd3852" xml:space="preserve">
+    <value>Рассылка уведомлений о приближении срока окончания регистраций</value>
+  </data>
+  <data name="JobDescription_1d97a0e9ee00456f8fb8ee634cbd3852" xml:space="preserve">
+    <value>Рассылка уведомлений о приближении срока окончания регистраций товарных знаков.</value>
+  </data>
+</root>

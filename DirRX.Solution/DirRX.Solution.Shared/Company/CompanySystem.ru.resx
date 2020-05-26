@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_KSSSBalanceUnitId" xml:space="preserve">
+    <value>Код БЕ в КССС</value>
+  </data>
+  <data name="Property_KSSSContragentId" xml:space="preserve">
+    <value>Код КССС</value>
+  </data>
+  <data name="Property_CounterpartyType" xml:space="preserve">
+    <value>Тип контрагента</value>
+  </data>
+  <data name="Enum_CounterpartyType_Individual" xml:space="preserve">
+    <value>Физ. лицо</value>
+  </data>
+  <data name="Enum_CounterpartyType_Legal" xml:space="preserve">
+    <value>Юр. лицо, в т.ч. РФ, субъекты РФ и муниципальные образования</value>
+  </data>
+  <data name="Enum_CounterpartyType_Entrepreneur" xml:space="preserve">
+    <value>ИП</value>
+  </data>
+  <data name="Property_Country" xml:space="preserve">
+    <value>Страна</value>
+  </data>
+  <data name="Property_DeliveryMethod" xml:space="preserve">
+    <value>Способ доставки</value>
+  </data>
+  <data name="Property_CheckingType" xml:space="preserve">
+    <value>Тип проверки</value>
+  </data>
+  <data name="Property_IsStrategicPartner" xml:space="preserve">
+    <value>Стратегический партнер</value>
+  </data>
+  <data name="Property_IsLUKOILGroup" xml:space="preserve">
+    <value>Организация Группы "ЛУКОЙЛ"</value>
+  </data>
+  <data name="Property_IsSanctions" xml:space="preserve">
+    <value>Санкции</value>
+  </data>
+  <data name="Property_CounterpartyStatus" xml:space="preserve">
+    <value>Статус контрагента</value>
+  </data>
+  <data name="Property_CheckingResult" xml:space="preserve">
+    <value>Результат проверки</value>
+  </data>
+  <data name="Property_CheckingDate" xml:space="preserve">
+    <value>Дата проверки</value>
+  </data>
+  <data name="Property_CheckingValidDate" xml:space="preserve">
+    <value>Срок действия проверки</value>
+  </data>
+  <data name="Property_IsDocumentsProvided" xml:space="preserve">
+    <value>Документы предоставлены</value>
+  </data>
+  <data name="Action_UnapprovedCounterpartyContracts" xml:space="preserve">
+    <value>Договоры с неодобренным контрагентом</value>
+  </data>
+  <data name="ControlGroup_9e3df66a01e8408aaa4ca5c92a1227fb" xml:space="preserve">
+    <value>Контактная информация</value>
+  </data>
+  <data name="ControlGroup_4b9defe5f46d4581b50a5c0be4a80a50" xml:space="preserve">
+    <value>Банковские реквизиты</value>
+  </data>
+  <data name="ControlGroup_69a4139490424b338d9ce5253d0a8c27" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="Action_UnapprovedCounterpartyContractsHint" xml:space="preserve">
+    <value>Список договоров, которые были заключены с неодобренным контрагентом</value>
+  </data>
+  <data name="Action_UnapprovedCounterpartyContractsDescription" xml:space="preserve">
+    <value>Список договоров, которые были заключены с данным контрагентом, пока он находился в статусе "Стоп-лист" или "Не одобрен".</value>
+  </data>
+  <data name="ControlGroup_a3f8050dc7d942949b6194f9b4d8c350" xml:space="preserve">
+    <value>Специальные признаки контрагента</value>
+  </data>
+  <data name="ControlGroup_c4313d6731eb4c1a8c481fdd22f0f685" xml:space="preserve">
+    <value>Статус контрагента</value>
+  </data>
+  <data name="ControlGroup_2cda7b9416304e4a84164e10cde4f1f7" xml:space="preserve">
+    <value>Результат проверки</value>
+  </data>
+  <data name="Action_SearchInKSSSByINN" xml:space="preserve">
+    <value>Поиск по ИНН</value>
+  </data>
+  <data name="Action_SearchInKSSSByINNDescription" xml:space="preserve">
+    <value>Поиск контрагента в КССС по ИНН.</value>
+  </data>
+  <data name="Action_SearchInKSSSByINNHint" xml:space="preserve">
+    <value>Поиск контрагента в КССС по ИНН</value>
+  </data>
+  <data name="Action_CheckingList" xml:space="preserve">
+    <value>Реестр проверок</value>
+  </data>
+  <data name="Action_CheckingListDescription" xml:space="preserve">
+    <value>Переход в реестр всех проверок контрагента.</value>
+  </data>
+  <data name="Action_CheckingListHint" xml:space="preserve">
+    <value>Перейти в реестр всех проверок контрагента</value>
+  </data>
+  <data name="Action_AddressList" xml:space="preserve">
+    <value>Список адресов</value>
+  </data>
+  <data name="Action_AddressListDescription" xml:space="preserve">
+    <value>Список адресов отправки для данного контрагента.</value>
+  </data>
+  <data name="Action_AddressListHint" xml:space="preserve">
+    <value>Список адресов отправки для данного контрагента</value>
+  </data>
+  <data name="Action_ExportToKSSS" xml:space="preserve">
+    <value>Выгрузить в КССС</value>
+  </data>
+  <data name="Action_ExportToKSSSDescription" xml:space="preserve">
+    <value>Выгрузка контрагента в КССС.</value>
+  </data>
+  <data name="Action_ExportToKSSSHint" xml:space="preserve">
+    <value>Выгрузка контрагента в КССС</value>
+  </data>
+  <data name="Action_ImportFromKSSSByCode" xml:space="preserve">
+    <value>Загрузить по коду КССС</value>
+  </data>
+  <data name="Action_ImportFromKSSSByCodeDescription" xml:space="preserve">
+    <value>Поиск в КССС контрагента с указанным кодом КССС и загрузка его данных в текущую карточку.</value>
+  </data>
+  <data name="Action_ImportFromKSSSByCodeHint" xml:space="preserve">
+    <value>Поиск в КССС контрагента с указанным кодом КССС и загрузка его данных в текущую карточку</value>
+  </data>
+  <data name="Ribbon_KSSSGroup_44f97828569e46e1a6a451799b027a20" xml:space="preserve">
+    <value>КССС</value>
+  </data>
+  <data name="Ribbon_SearchInKSSS_0fd77fc3d3234086bf3f955164e629e4" xml:space="preserve">
+    <value>Поиск в КССС</value>
+  </data>
+  <data name="FilterPanel_Type_c5904d250a804dc6b5667dcc6a4333c1" xml:space="preserve">
+    <value>Тип контрагента</value>
+  </data>
+  <data name="FilterPanel_Entrepreneur_c77adf6d6d064fcba7083b981e97087f" xml:space="preserve">
+    <value>ИП</value>
+  </data>
+  <data name="FilterPanel_Legal_a5c097deb09b4b759e8f8cd3c35ffcdd" xml:space="preserve">
+    <value>Юр. лицо</value>
+  </data>
+  <data name="FilterPanel_Individual_b57b8be2d7434ad9a2b63f0b285180e9" xml:space="preserve">
+    <value>Физ. лицо</value>
+  </data>
+  <data name="FilterPanel_StatusGroup_375245946ae048af8d8ab1cf26083c64" xml:space="preserve">
+    <value>Статус контрагента</value>
+  </data>
+  <data name="FilterPanel_ResidentGroup_49ce5049cd8d4be7a5ae2279203d0032" xml:space="preserve">
+    <value>Признак резидента</value>
+  </data>
+  <data name="FilterPanel_Resigent_5960cfb4b0284c27b510d615923ed5ad" xml:space="preserve">
+    <value>Резидент</value>
+  </data>
+  <data name="FilterPanel_NonResident_acb2294b2805496698a94baa7d1bf5c0" xml:space="preserve">
+    <value>Нерезидент</value>
+  </data>
+  <data name="FilterPanel_StrategicGroup_ddb06f59a2e94e8d925459d135836d53" xml:space="preserve">
+    <value>Стратегический партнер</value>
+  </data>
+  <data name="FilterPanel_ValidGroup_c195502cb6324ef4b302716439cf0184" xml:space="preserve">
+    <value>Срок действия проверки</value>
+  </data>
+  <data name="FilterPanel_NinetyDays_49294c1507854f038cf1e44d6b36ba32" xml:space="preserve">
+    <value>Осталось 90 дней</value>
+  </data>
+  <data name="FilterPanel_ThirtyDays_b62925718ad447589be95f20d560a61d" xml:space="preserve">
+    <value>Осталось 30 дней</value>
+  </data>
+  <data name="FilterPanel_SevenDays_414df235930347a38580746b90726485" xml:space="preserve">
+    <value>Осталось 7 дней</value>
+  </data>
+  <data name="FilterPanel_Yes_4ce50460267d44b6a4201045b5c2d010" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="FilterPanel_No_6af1b5c71fb149e4a2cbe5a60b112896" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="FilterPanel_Yes_e540291ccf6549828ce0949605cdbfcd" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="FilterPanel_No_ece6e0f0a8cd44479b8aa0ca6925b4bd" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="FilterPanel_StrategicYes_4ce50460267d44b6a4201045b5c2d010" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="FilterPanel_StrategicNo_6af1b5c71fb149e4a2cbe5a60b112896" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="FilterPanel_ManualPeriod_551eebd3f93e46bc9baaacb3083ad284" xml:space="preserve">
+    <value>Произвольный период:</value>
+  </data>
+  <data name="FilterPanel_TypeGroup_c5904d250a804dc6b5667dcc6a4333c1" xml:space="preserve">
+    <value>Тип контрагента</value>
+  </data>
+  <data name="FilterPanel_PicksGroup_49ce5049cd8d4be7a5ae2279203d0032" xml:space="preserve">
+    <value>Признаки контрагента</value>
+  </data>
+  <data name="FilterPanel_PicksGroup_ddb06f59a2e94e8d925459d135836d53" xml:space="preserve">
+    <value>Признаки контрагента</value>
+  </data>
+  <data name="FilterPanel_StrategicFlag_4ce50460267d44b6a4201045b5c2d010" xml:space="preserve">
+    <value>Стратегический партнер</value>
+  </data>
+  <data name="FilterPanel_LukoilFlag_6af1b5c71fb149e4a2cbe5a60b112896" xml:space="preserve">
+    <value>Организация Группы "ЛУКОЙЛ"</value>
+  </data>
+  <data name="Form_71f2d1c1e87a481d9f93a6ea32b78252" xml:space="preserve">
+    <value>СТОП-ЛИСТ</value>
+  </data>
+  <data name="Ribbon_StoplistPage_6a4783c961d642f29db74a4ed90a1f5a" xml:space="preserve">
+    <value>СТОП-ЛИСТ</value>
+  </data>
+  <data name="Ribbon_StoplistGroup_efbdbfd3734344b0b4c7a77d79039917" xml:space="preserve">
+    <value>Работа со стоп-листом</value>
+  </data>
+  <data name="ControlGroup_70eebb4b7459429dbd3879f310dfe39f" xml:space="preserve">
+    <value>История включения в стоп-лист</value>
+  </data>
+  <data name="Action_AddToStoplist" xml:space="preserve">
+    <value>Включить в стоп-лист</value>
+  </data>
+  <data name="Action_AddToStoplistDescription" xml:space="preserve">
+    <value>Включение контрагента в стоп-лист.</value>
+  </data>
+  <data name="Action_AddToStoplistHint" xml:space="preserve">
+    <value>Включить в стоп-лист</value>
+  </data>
+  <data name="Property_StoplistHistory" xml:space="preserve">
+    <value>История включения в стоп-лист</value>
+  </data>
+  <data name="Action_RemoveFromStoplist" xml:space="preserve">
+    <value>Исключить из стоп-листа</value>
+  </data>
+  <data name="Action_RemoveFromStoplistDescription" xml:space="preserve">
+    <value>Исключение контрагента из стоп-листа.</value>
+  </data>
+  <data name="Action_RemoveFromStoplistHint" xml:space="preserve">
+    <value>Исключить из стоп-листа</value>
+  </data>
+  <data name="Property_IsStoplistIncluded" xml:space="preserve">
+    <value>Включен в стоп-лист</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Организация</value>
+  </data>
+  <data name="Property_ActiveCodeKsss" xml:space="preserve">
+    <value>Код КССС действующей записи</value>
+  </data>
+  <data name="Property_LegalShippingAddress" xml:space="preserve">
+    <value>Юридический адрес</value>
+  </data>
+  <data name="Property_LegalAddress" xml:space="preserve">
+    <value>Юридический адрес</value>
+  </data>
+  <data name="Property_PostalShippingAddress" xml:space="preserve">
+    <value>Почтовый адрес</value>
+  </data>
+  <data name="Property_PostalAddress" xml:space="preserve">
+    <value>Почтовый адрес</value>
+  </data>
+  <data name="Property_TRRC" xml:space="preserve">
+    <value>КПП</value>
+  </data>
+  <data name="Property_PSRN" xml:space="preserve">
+    <value>ОГРН</value>
+  </data>
+</root>

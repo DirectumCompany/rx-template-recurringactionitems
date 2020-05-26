@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Настройка уведомлений</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Настройку уведомлений</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Настройки уведомлений</value>
+  </data>
+  <data name="Property_Employee" xml:space="preserve">
+    <value>Сотрудник</value>
+  </data>
+  <data name="Property_AssgnRole" xml:space="preserve">
+    <value>Роль в поручении</value>
+  </data>
+  <data name="Property_IsAssignmentStarts" xml:space="preserve">
+    <value>Постановщик сформировал и отправил поручение в системе</value>
+  </data>
+  <data name="Property_AllUsersFlag" xml:space="preserve">
+    <value>Для всех сотрудников</value>
+  </data>
+  <data name="Property_IsAStartsRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="ControlGroup_8a8d94a26efa403094a9ccb322fdeccc" xml:space="preserve">
+    <value>Постановка поручения</value>
+  </data>
+  <data name="Property_Information" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="Property_IsAssignmentAborts" xml:space="preserve">
+    <value>Постановщик прекратил исполнение поручения в системе</value>
+  </data>
+  <data name="Property_IsAAbortsRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentDeclined" xml:space="preserve">
+    <value>Исполнитель отклонил исполнение поручения</value>
+  </data>
+  <data name="Property_IsADeclinedRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentNewSubj" xml:space="preserve">
+    <value>Параметры поручения изменены</value>
+  </data>
+  <data name="Property_IsANewSubjRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentRevision" xml:space="preserve">
+    <value>Постановщик вернул поручение исполнителю без изменений</value>
+  </data>
+  <data name="Property_IsARevisionRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentOnControl" xml:space="preserve">
+    <value>Поручение выполнено Исполнителем и ожидает подтверждения Контролером</value>
+  </data>
+  <data name="Property_IsAOnControlRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_AOnControlPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_IsAssignmentRework" xml:space="preserve">
+    <value>Исполнение поручения отправлено на доработку</value>
+  </data>
+  <data name="Property_IsAReworkRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentPerform" xml:space="preserve">
+    <value>Поручение, не поставленное на контроль, выполнено Исполнителем</value>
+  </data>
+  <data name="Property_IsAPerformRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentEscalated" xml:space="preserve">
+    <value>Поручение эскалировано</value>
+  </data>
+  <data name="Property_IsAEscalatedRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentAddTime" xml:space="preserve">
+    <value>Исполнитель запросил продление срока исполнения поручения</value>
+  </data>
+  <data name="Property_IsAAddTimeRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentTimeAccept" xml:space="preserve">
+    <value>Принято решение по запросу продления срока исполнения поручения</value>
+  </data>
+  <data name="Property_IsATimeAcceptRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentEighty" xml:space="preserve">
+    <value>До срока исполнения поручения осталось 80%</value>
+  </data>
+  <data name="Property_IsAEightyRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentSixty" xml:space="preserve">
+    <value>До срока исполнения поручения осталось 60%</value>
+  </data>
+  <data name="Property_IsASixtyRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentForty" xml:space="preserve">
+    <value>До срока исполнения поручения осталось 40%</value>
+  </data>
+  <data name="Property_IsAFortyRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentTwenty" xml:space="preserve">
+    <value>До срока исполнения поручения осталось 20%</value>
+  </data>
+  <data name="Property_IsATwentyRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentDeadline" xml:space="preserve">
+    <value>Наступил срок исполнения поручения</value>
+  </data>
+  <data name="Property_IsADeadlineRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="Property_IsAssignmentExpired" xml:space="preserve">
+    <value>Исполнение поручения просрочено</value>
+  </data>
+  <data name="Property_IsAExpiredRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="ControlGroup_7bc953933cb645e9a129692072faaa18" xml:space="preserve">
+    <value>Исполнение поручения</value>
+  </data>
+  <data name="Property_IsAssignmentAccept" xml:space="preserve">
+    <value>Исполнение поручения подтверждено Контролером</value>
+  </data>
+  <data name="Property_IsAAcceptRequired" xml:space="preserve">
+    <value>Неотключаемое</value>
+  </data>
+  <data name="ControlGroup_bebc5f8a926c4f30b229cf54c2eca354" xml:space="preserve">
+    <value>Соблюдение сроков исполнения поручения</value>
+  </data>
+  <data name="Property_AStartsPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_AAbortsPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_ADeclinedPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_ANewSubjPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_ARevisionPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_AAcceptPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_AReworkPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_APerformPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_AEscalatedPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_AAddTimePriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_ATimeAcceptPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_AEightyPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_ASixtyPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_AFortyPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_ATwentyPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_ADeadlinePriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Property_AExpiredPriority" xml:space="preserve">
+    <value>Приоритет</value>
+  </data>
+  <data name="Action_GetSameSetting" xml:space="preserve">
+    <value>Показать настройку</value>
+  </data>
+  <data name="Action_GetSameSettingDescription" xml:space="preserve">
+    <value>Показать настройку</value>
+  </data>
+  <data name="Action_GetSameSettingHint" xml:space="preserve">
+    <value>Показать настройку</value>
+  </data>
+  <data name="Action_Cancel" xml:space="preserve">
+    <value>Отменить изменения</value>
+  </data>
+</root>

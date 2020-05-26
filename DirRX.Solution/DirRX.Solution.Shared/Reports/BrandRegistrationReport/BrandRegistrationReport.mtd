@@ -1,0 +1,85 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "67be76f0-e21c-494b-a7fd-d3be738f7016",
+  "Name": "BrandRegistrationReport",
+  "AssociatedGuid": "85be6af6-1384-473c-abd4-2036ed227530",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Pdf",
+  "ExportFormats": [
+    "Pdf"
+  ],
+  "HandledEvents": [
+    "BeforeExecuteServer",
+    "AfterExecuteServer"
+  ],
+  "IconResourcesKeys": [],
+  "Overridden": [
+    "PublicConstants",
+    "PublicStructures",
+    "DisplayName",
+    "Description",
+    "HandledEvents",
+    "Parameters"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "27fd513c-6544-40f4-ad91-c7643eca8464",
+      "Name": "ReportSessionId",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "afaf3675-cfd9-4d40-a554-7b3812d0618d",
+      "Name": "Order",
+      "EntityType": "85be6af6-1384-473c-abd4-2036ed227530",
+      "InternalDataTypeName": "DirRX.Solution.IOrder, Sungero.Domain.Interfaces"
+    },
+    {
+      "NameGuid": "e131cf42-e0a8-4374-ba2b-2a15cff2d282",
+      "Name": "ProductKind",
+      "InternalDataTypeName": "System.String"
+    }
+  ],
+  "PublicStructures": [
+    {
+      "Name": "BrandRegistrationReportTableLine",
+      "IsPublic": true,
+      "Properties": [
+        {
+          "Name": "Brand",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "RegistrationNumber",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "Country",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "IsAppeal",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        },
+        {
+          "Name": "ReportSessionId",
+          "IsNullable": true,
+          "TypeFullName": "global::System.String"
+        }
+      ],
+      "StructureNamespace": "DirRX.Solution.Structures.BrandRegistrationReport"
+    }
+  ],
+  "ResourcesKeys": [
+    "IsAppealDescription",
+    "IsNotAppealDescription",
+    "BrandRegistrationReportHead",
+    "BrandRegistrationReportTitle",
+    "ProductKind"
+  ],
+  "Versions": []
+}

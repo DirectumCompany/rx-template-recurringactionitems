@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <ViewName>Default</ViewName>
+  <Collectionbb7f350005544e9fb4cfc190cba40519 FormGuid="692012c3-8540-43d7-86c5-752bb0a2185c">
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="View" isnull="true" iskey="true">
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">953,-2</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="AutoWidth">false</property>
+          <property name="AllowGrouping">false</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="AllowSorting">true</property>
+          <property name="ShowTotalSummary">false</property>
+          <property name="AllowMoveColumnToDropArea">false</property>
+          <property name="AllowColumnMoving">true</property>
+          <property name="IsRowCellMenuEnabled">false</property>
+          <property name="LinesPerRowMode">None</property>
+        </property>
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="GroupCount">0</property>
+        <property name="Columns" iskey="true" value="3">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="FieldName">DocumentKind</property>
+            <property name="Name">SupAgreement_RequiredDocuments_DocumentKind</property>
+            <property name="VisibleIndex">0</property>
+            <property name="Width">202</property>
+            <property name="ActualWidth">18*</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="FieldName">Document</property>
+            <property name="Name">SupAgreement_RequiredDocuments_Document</property>
+            <property name="VisibleIndex">1</property>
+            <property name="Width">281</property>
+            <property name="ActualWidth">25*</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="FieldName">Comment</property>
+            <property name="Name">SupAgreement_RequiredDocuments_Comment</property>
+            <property name="VisibleIndex">2</property>
+            <property name="Width">67</property>
+            <property name="ActualWidth">17*</property>
+          </property>
+        </property>
+        <property name="SortInfo" iskey="true" value="0" />
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Collectionbb7f350005544e9fb4cfc190cba40519>
+  <Collection4bbeb7e1c848412eaf6536970c6e2e1d FormGuid="692012c3-8540-43d7-86c5-752bb0a2185c">
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="View" isnull="true" iskey="true">
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">935,-2</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="AutoWidth">false</property>
+          <property name="AllowGrouping">false</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="AllowSorting">true</property>
+          <property name="ShowTotalSummary">false</property>
+          <property name="AllowMoveColumnToDropArea">false</property>
+          <property name="AllowColumnMoving">true</property>
+          <property name="IsRowCellMenuEnabled">true</property>
+          <property name="LinesPerRowMode">None</property>
+        </property>
+        <property name="Columns" iskey="true" value="3">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="FieldName">DocumentKind</property>
+            <property name="Name">SupAgreement_OtherDocuments_DocumentKind</property>
+            <property name="VisibleIndex">0</property>
+            <property name="Width">202</property>
+            <property name="ActualWidth">18*</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="FieldName">Document</property>
+            <property name="Name">SupAgreement_OtherDocuments_Document</property>
+            <property name="VisibleIndex">1</property>
+            <property name="Width">292</property>
+            <property name="ActualWidth">26*</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="Visible">true</property>
+            <property name="FieldName">Comment</property>
+            <property name="Name">SupAgreement_OtherDocuments_Comment</property>
+            <property name="VisibleIndex">2</property>
+            <property name="Width">67</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+        </property>
+        <property name="SortInfo" iskey="true" value="1">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="FieldName">DocumentKind</property>
+            <property name="SortOrder">Descending</property>
+          </property>
+        </property>
+        <property name="GroupCount">0</property>
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Collection4bbeb7e1c848412eaf6536970c6e2e1d>
+  <Collection718fba10d366469bbbbe211b72d7a33e FormGuid="77ab1459-a359-441f-9225-4d510a52f4fb">
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="View" isnull="true" iskey="true">
+          <property name="ShowTotalSummary">false</property>
+          <property name="AutoWidth">false</property>
+          <property name="AllowGrouping">false</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">942,-2</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="AllowSorting">true</property>
+          <property name="AllowColumnMoving">true</property>
+          <property name="AllowMoveColumnToDropArea">false</property>
+          <property name="IsRowCellMenuEnabled">false</property>
+          <property name="LinesPerRowMode">None</property>
+        </property>
+        <property name="GroupCount">0</property>
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="Columns" iskey="true" value="7">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="FieldName">Number</property>
+            <property name="Visible">true</property>
+            <property name="Name">SupAgreement_Counterparties_Number</property>
+            <property name="VisibleIndex">0</property>
+            <property name="Width">47</property>
+            <property name="ActualWidth">4*</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="FieldName">Counterparty</property>
+            <property name="Visible">true</property>
+            <property name="Name">SupAgreement_Counterparties_Counterparty</property>
+            <property name="VisibleIndex">1</property>
+            <property name="Width">225</property>
+            <property name="ActualWidth">19*</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="FieldName">Signatory</property>
+            <property name="Visible">true</property>
+            <property name="Name">SupAgreement_Counterparties_Signatory</property>
+            <property name="VisibleIndex">2</property>
+            <property name="Width">201</property>
+            <property name="ActualWidth">17*</property>
+          </property>
+          <property name="Item4" isnull="true" iskey="true">
+            <property name="FieldName">DeliveryMethod</property>
+            <property name="Visible">true</property>
+            <property name="Name">SupAgreement_Counterparties_DeliveryMethod</property>
+            <property name="VisibleIndex">3</property>
+            <property name="Width">130</property>
+            <property name="ActualWidth">11*</property>
+          </property>
+          <property name="Item5" isnull="true" iskey="true">
+            <property name="FieldName">Address</property>
+            <property name="Visible">true</property>
+            <property name="Name">SupAgreement_Counterparties_Address</property>
+            <property name="VisibleIndex">4</property>
+            <property name="Width">308</property>
+            <property name="ActualWidth">26*</property>
+          </property>
+          <property name="Item6" isnull="true" iskey="true">
+            <property name="FieldName">Contact</property>
+            <property name="Visible">true</property>
+            <property name="Name">SupAgreement_Counterparties_Contact</property>
+            <property name="VisibleIndex">5</property>
+            <property name="Width">142</property>
+            <property name="ActualWidth">12*</property>
+          </property>
+          <property name="Item7" isnull="true" iskey="true">
+            <property name="FieldName">IDSap</property>
+            <property name="Visible">true</property>
+            <property name="Name">SupAgreement_Counterparties_IDSap</property>
+            <property name="VisibleIndex">6</property>
+            <property name="Width">118</property>
+            <property name="ActualWidth">10*</property>
+          </property>
+        </property>
+        <property name="SortInfo" iskey="true" value="1">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="FieldName">Address</property>
+            <property name="SortOrder">Ascending</property>
+          </property>
+        </property>
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Collection718fba10d366469bbbbe211b72d7a33e>
+  <AccessRightsAccessRightEntryCardGrid_38106a151b4548f2900c4f02ff9fa8b2>
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="\$GridControl" iskey="true" value="GridControl">
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="View" isnull="true" iskey="true">
+          <property name="AutoWidth">true</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="ShowTotalSummary">false</property>
+          <property name="LinesPerRowMode">None</property>
+        </property>
+      </property>
+    </XtraSerializer>
+  </AccessRightsAccessRightEntryCardGrid_38106a151b4548f2900c4f02ff9fa8b2>
+  <collapsableTree>
+    <Layout>
+      <IsDocked>true</IsDocked>
+      <Width>230</Width>
+    </Layout>
+  </collapsableTree>
+  <treeListLayout>
+    <GridViewSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <ColumnWidths>
+        <string>230</string>
+        <string>Auto</string>
+        <string>*</string>
+      </ColumnWidths>
+    </GridViewSettings>
+  </treeListLayout>
+</settings>

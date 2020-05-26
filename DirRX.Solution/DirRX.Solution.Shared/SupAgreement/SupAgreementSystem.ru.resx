@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_Supervisor" xml:space="preserve">
+    <value>Куратор</value>
+  </data>
+  <data name="Property_UrgencyReason" xml:space="preserve">
+    <value>Причина срочности</value>
+  </data>
+  <data name="Property_IsHighUrgency" xml:space="preserve">
+    <value>Высокая срочность</value>
+  </data>
+  <data name="Property_IsScannedImageSign" xml:space="preserve">
+    <value>Контрагент подписывает скан-копию</value>
+  </data>
+  <data name="Property_ShippingAddress" xml:space="preserve">
+    <value>Адрес отправки</value>
+  </data>
+  <data name="Property_DeliveryMethod" xml:space="preserve">
+    <value>Способ доставки договора</value>
+  </data>
+  <data name="Property_ChangingShippingReason" xml:space="preserve">
+    <value>Причина смены способа доставки</value>
+  </data>
+  <data name="Property_SentNote" xml:space="preserve">
+    <value>Примечание к отправке</value>
+  </data>
+  <data name="Property_IsContractorSignsFirst" xml:space="preserve">
+    <value>Контрагент подписывает первым</value>
+  </data>
+  <data name="Property_ResponsibleEmployee" xml:space="preserve">
+    <value>Исполнитель</value>
+  </data>
+  <data name="Property_CoExecutor" xml:space="preserve">
+    <value>Соисполнитель</value>
+  </data>
+  <data name="Property_Territory" xml:space="preserve">
+    <value>Территория</value>
+  </data>
+  <data name="Enum_Territory_LlkInt" xml:space="preserve">
+    <value>0L. ЛЛК-Интернешнл</value>
+  </data>
+  <data name="Enum_Territory_LlkIntTyumen" xml:space="preserve">
+    <value>0T. Тюменский филиал ООО ЛЛК-Интернешнл</value>
+  </data>
+  <data name="Enum_Territory_TppPerm" xml:space="preserve">
+    <value>0P. ТПП в Перми</value>
+  </data>
+  <data name="Enum_Territory_TppVolgograd" xml:space="preserve">
+    <value>0V. ТПП в Волгограде</value>
+  </data>
+  <data name="Property_RegistrationDate" xml:space="preserve">
+    <value>Дата регистрации</value>
+  </data>
+  <data name="Property_OriginalSigning" xml:space="preserve">
+    <value>Подписание оригиналов</value>
+  </data>
+  <data name="Enum_OriginalSigning_OnSigning" xml:space="preserve">
+    <value>На подписании</value>
+  </data>
+  <data name="Enum_OriginalSigning_Signed" xml:space="preserve">
+    <value>Подписан</value>
+  </data>
+  <data name="Enum_OriginalSigning_NotSigned" xml:space="preserve">
+    <value>Не подписан</value>
+  </data>
+  <data name="Property_ContractorOriginalSigning" xml:space="preserve">
+    <value>Подписание оригиналов к/а</value>
+  </data>
+  <data name="Enum_ContractorOriginalSigning_Signed" xml:space="preserve">
+    <value>Подписан</value>
+  </data>
+  <data name="Enum_ContractorOriginalSigning_NotSigned" xml:space="preserve">
+    <value>Не подписан</value>
+  </data>
+  <data name="ControlGroup_406e14dc17444a7f85d8f6eef8abaa3f" xml:space="preserve">
+    <value>Основное</value>
+  </data>
+  <data name="ControlGroup_b8017e2288d643da8d6d8d11917b1dd6" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="ControlGroup_4e1d78fc6f6c4c81bf9aa1fa2031a46b" xml:space="preserve">
+    <value>Дата и номер</value>
+  </data>
+  <data name="ControlGroup_696a8bb83e1244c8927a37d955cfbf0f" xml:space="preserve">
+    <value>Хранение</value>
+  </data>
+  <data name="Property_CounterpartyStatus" xml:space="preserve">
+    <value>Статус контрагента</value>
+  </data>
+  <data name="ControlGroup_dcd9d00938274c5fb6a43092193e765c" xml:space="preserve">
+    <value>Движение оригиналов</value>
+  </data>
+  <data name="ControlGroup_1b194ce3c44048879f0d1cdc4303c583" xml:space="preserve">
+    <value>Жизненный цикл</value>
+  </data>
+  <data name="ControlGroup_42612188cf984a66a4cc5c674787d208" xml:space="preserve">
+    <value>Примечание</value>
+  </data>
+  <data name="ControlGroup_72e492251e834e65bb33ea838a458e43" xml:space="preserve">
+    <value>Местонахождение</value>
+  </data>
+  <data name="ControlGroup_2a9b759d673b4a94bb3b3d6bdcae0d5d" xml:space="preserve">
+    <value>Контрагент</value>
+  </data>
+  <data name="ControlGroup_519f2394febe4501adcaa34ee883d986" xml:space="preserve">
+    <value>Наша сторона</value>
+  </data>
+  <data name="Form_96b9750c04034bb486c8cf320156f362" xml:space="preserve">
+    <value>Условия</value>
+  </data>
+  <data name="Property_ActualDate" xml:space="preserve">
+    <value>Дата документа</value>
+  </data>
+  <data name="Property_BackdatingReason" xml:space="preserve">
+    <value>Причина позднего направления на согласование</value>
+  </data>
+  <data name="Property_TransactionAmount" xml:space="preserve">
+    <value>Сумма согласуемого документа (без НДС)</value>
+  </data>
+  <data name="Property_ContractActivate" xml:space="preserve">
+    <value>Способ активации</value>
+  </data>
+  <data name="Enum_ContractActivate_Copy" xml:space="preserve">
+    <value>Скан-копия</value>
+  </data>
+  <data name="Enum_ContractActivate_Original" xml:space="preserve">
+    <value>Оригинал</value>
+  </data>
+  <data name="Property_ActivateDate" xml:space="preserve">
+    <value>Дата активации</value>
+  </data>
+  <data name="Property_DestinationCountries" xml:space="preserve">
+    <value>Страна назначения/поставки </value>
+  </data>
+  <data name="Property_IsCorporateApprovalRequired" xml:space="preserve">
+    <value>Требуется корпоративное одобрение</value>
+  </data>
+  <data name="Property_StartConditions" xml:space="preserve">
+    <value>Условия начала действия доп. соглашения</value>
+  </data>
+  <data name="Property_AreConditionsCompleted" xml:space="preserve">
+    <value>Условия выполнены</value>
+  </data>
+  <data name="Property_IsAnalysisRequired" xml:space="preserve">
+    <value>Требуется анализ на признак МСФО 16</value>
+  </data>
+  <data name="Property_UsedTrademark" xml:space="preserve">
+    <value>Используется Товарный знак 3-го лица</value>
+  </data>
+  <data name="Property_IsControl" xml:space="preserve">
+    <value>Признак сделки</value>
+  </data>
+  <data name="Enum_IsControl_Controlled" xml:space="preserve">
+    <value>Контролируемая</value>
+  </data>
+  <data name="Enum_IsControl_PotentiallyCtrl" xml:space="preserve">
+    <value>Потенциально Контролируемая </value>
+  </data>
+  <data name="Enum_IsControl_Uncontrollable" xml:space="preserve">
+    <value>Неконтролируемая</value>
+  </data>
+  <data name="Property_YearRCS" xml:space="preserve">
+    <value>Год признака сделки</value>
+  </data>
+  <data name="Property_DateRCS" xml:space="preserve">
+    <value>Дата РКС</value>
+  </data>
+  <data name="Property_CodRCS" xml:space="preserve">
+    <value>Код РКС</value>
+  </data>
+  <data name="Property_IsAcceptedForShipment" xml:space="preserve">
+    <value>Принят к отправке</value>
+  </data>
+  <data name="Property_Amount" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
+  <data name="ControlGroup_683e9ef613d84d1eb3c1b37c340241a4" xml:space="preserve">
+    <value>Условия</value>
+  </data>
+  <data name="Property_StartConditionsExists" xml:space="preserve">
+    <value>Существуют условия начала действия договора</value>
+  </data>
+  <data name="Action_FromTemplate" xml:space="preserve">
+    <value>Из шаблона</value>
+  </data>
+  <data name="Action_FromTemplateDescription" xml:space="preserve">
+    <value>Создать версию из шаблона.</value>
+  </data>
+  <data name="Action_FromTemplateHint" xml:space="preserve">
+    <value>Создание версии документа из шаблона</value>
+  </data>
+  <data name="Property_DaysToFinishWorks" xml:space="preserve">
+    <value>Напоминать об окончании за, мес.</value>
+  </data>
+  <data name="Action_SubmitToSign" xml:space="preserve">
+    <value>Передать на подписание</value>
+  </data>
+  <data name="Action_SubmitToSignDescription" xml:space="preserve">
+    <value>В карточках выбранных документах будет зафиксирован факт передачи оригиналов на подписание.</value>
+  </data>
+  <data name="Action_SubmitToSignHint" xml:space="preserve">
+    <value>Передача документов на подписание подписанту</value>
+  </data>
+  <data name="Action_Signed" xml:space="preserve">
+    <value>Подписан</value>
+  </data>
+  <data name="Action_SignedDescription" xml:space="preserve">
+    <value>В карточках выбранных документах будет зафиксирован результат подписания оригиналов "Подписан".</value>
+  </data>
+  <data name="Action_SignedHint" xml:space="preserve">
+    <value>Установить результат подписания оригиналов "Подписан"</value>
+  </data>
+  <data name="Action_NotSigned" xml:space="preserve">
+    <value>Не подписан</value>
+  </data>
+  <data name="Action_NotSignedDescription" xml:space="preserve">
+    <value>В карточках выбранных документов будет зафиксирован результат подписания оригиналов "Не подписан".</value>
+  </data>
+  <data name="Action_NotSignedHint" xml:space="preserve">
+    <value>Установить результат подписания оригиналов "Не подписан"</value>
+  </data>
+  <data name="Ribbon_SignCommand_6657aed8ba604996972bb1dc17821fe6" xml:space="preserve">
+    <value>Подписание</value>
+  </data>
+  <data name="Property_DpoUser" xml:space="preserve">
+    <value>Сотрудник ДПО</value>
+  </data>
+  <data name="Action_DocumentReturned" xml:space="preserve">
+    <value>Не подписан контрагентом</value>
+  </data>
+  <data name="Enum_LifeCycleState_Obsolete" xml:space="preserve">
+    <value>Неактуальный</value>
+  </data>
+  <data name="Action_DocumentReturnedDescription" xml:space="preserve">
+    <value>Автоматическое выполнение задания на контроль возврата с результатом "Не подписан контрагентом".</value>
+  </data>
+  <data name="Action_DocumentReturnedHint" xml:space="preserve">
+    <value>Выполнить с результатом "Не подписан контрагентом"</value>
+  </data>
+  <data name="ControlGroup_7157d7c9b4524b3fa0fee1f57858bb3d" xml:space="preserve">
+    <value>Признак контролируемости сделки</value>
+  </data>
+  <data name="ControlGroup_ff13499173ac40eba96ad98e6c42b7f0" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
+  <data name="Property_IsMainActivity" xml:space="preserve">
+    <value>Основная хозяйственная деятельность</value>
+  </data>
+  <data name="Property_HolderTZ" xml:space="preserve">
+    <value>Правообладатель ТЗ</value>
+  </data>
+  <data name="Enum_HolderTZ_Llc" xml:space="preserve">
+    <value>ПАО «ЛУКОЙЛ»</value>
+  </data>
+  <data name="Enum_HolderTZ_Third" xml:space="preserve">
+    <value>Третье лицо, включая TEBOIL</value>
+  </data>
+  <data name="Enum_HolderTZ_NotKnow" xml:space="preserve">
+    <value>Не знаю</value>
+  </data>
+  <data name="Enum_LifeCycleState_Draft" xml:space="preserve">
+    <value>В разработке</value>
+  </data>
+  <data name="Enum_LifeCycleState_Active" xml:space="preserve">
+    <value>Действующий</value>
+  </data>
+  <data name="Enum_LifeCycleState_Closed" xml:space="preserve">
+    <value>Недействующий. Закрыт в SAP</value>
+  </data>
+  <data name="Property_RequiredDocuments" xml:space="preserve">
+    <value>Обязательные документы</value>
+  </data>
+  <data name="Property_OtherDocuments" xml:space="preserve">
+    <value>Прочие документы</value>
+  </data>
+  <data name="Form_692012c3854043d786c5752bb0a2185c" xml:space="preserve">
+    <value>Документы</value>
+  </data>
+  <data name="ControlGroup_9a68855fad234994b2af8d96f80810af" xml:space="preserve">
+    <value>Обязательные документы</value>
+  </data>
+  <data name="ControlGroup_adb3f64d74e4488fb4d5f0ad097d3dff" xml:space="preserve">
+    <value>Прочие документы</value>
+  </data>
+  <data name="Property_CSBExportDate" xml:space="preserve">
+    <value>Дата экспорта в SAP</value>
+  </data>
+  <data name="Property_ContractValidTill" xml:space="preserve">
+    <value>Срок действия договора</value>
+  </data>
+  <data name="Action_FormPackages" xml:space="preserve">
+    <value>Сформировать пакеты документов</value>
+  </data>
+  <data name="Action_FormPackagesDescription" xml:space="preserve">
+    <value>Группировка документов и создание записей справочника "Пакеты на отправку".</value>
+  </data>
+  <data name="Action_FormPackagesHint" xml:space="preserve">
+    <value>Сформировать пакеты на отправку контрагенту</value>
+  </data>
+  <data name="Property_Subject" xml:space="preserve">
+    <value>Содержание (для подписанта)</value>
+  </data>
+  <data name="Property_Resending" xml:space="preserve">
+    <value>Повторная отправка</value>
+  </data>
+  <data name="Property_BrandedProducts" xml:space="preserve">
+    <value>Фирменная продукция</value>
+  </data>
+  <data name="Property_DocumentValidity" xml:space="preserve">
+    <value>Срок действия документа в мес.</value>
+  </data>
+  <data name="Property_LukoilApproving" xml:space="preserve">
+    <value>Согласование с ПАО "ЛУКОЙЛ"</value>
+  </data>
+  <data name="ControlGroup_807dfcc39f6f4e389ce5d352567fcabc" xml:space="preserve">
+    <value>Согласование с ПАО «ЛУКОЙЛ»</value>
+  </data>
+  <data name="Enum_LukoilApproving_Required" xml:space="preserve">
+    <value>Требуется</value>
+  </data>
+  <data name="Enum_LukoilApproving_NotRequired" xml:space="preserve">
+    <value>Не требуется</value>
+  </data>
+  <data name="Enum_LukoilApproving_Received" xml:space="preserve">
+    <value>Согласование получено</value>
+  </data>
+  <data name="Property_OnRegistration" xml:space="preserve">
+    <value>На регистрации</value>
+  </data>
+  <data name="Action_OriginalSigned" xml:space="preserve">
+    <value>Подписан контрагентом</value>
+  </data>
+  <data name="Action_OriginalSignedDescription" xml:space="preserve">
+    <value>В карточках выбранных документов будет зафиксирован результат подписания контрагентом "Подписан".</value>
+  </data>
+  <data name="Action_OriginalSignedHint" xml:space="preserve">
+    <value>Установить результат подписания контрагентом "Подписан"</value>
+  </data>
+  <data name="Enum_LifeCycleState_OpenSAP" xml:space="preserve">
+    <value>Недействующий. Открыт в SAP</value>
+  </data>
+  <data name="Enum_LifeCycleState_Deleted" xml:space="preserve">
+    <value>Уничтоженный</value>
+  </data>
+  <data name="Enum_LifeCycleState_Terminated" xml:space="preserve">
+    <value>Расторгнут</value>
+  </data>
+  <data name="Property_StandartForm" xml:space="preserve">
+    <value>Типовая форма</value>
+  </data>
+  <data name="Enum_Operation_SetToClosed" xml:space="preserve">
+    <value>Установлен статус: Недействующий. Закрыт в SAP</value>
+  </data>
+  <data name="Enum_Operation_SetToObsolete" xml:space="preserve">
+    <value>Согласование отменено</value>
+  </data>
+  <data name="Enum_Operation_SetToOpenSAP" xml:space="preserve">
+    <value>Установлен статус: Недействующий. Открыт в SAP </value>
+  </data>
+  <data name="Enum_Operation_SetToDeleted" xml:space="preserve">
+    <value>Отметка об уничтожении</value>
+  </data>
+  <data name="Action_SubmitToSignCopy" xml:space="preserve">
+    <value>Передано на подписание</value>
+  </data>
+  <data name="Action_SubmitToSignCopyDescription" xml:space="preserve">
+    <value>В карточках выбранных документов будет зафиксирован факт передачи скан-копий на подписание.</value>
+  </data>
+  <data name="Action_SubmitToSignCopyHint" xml:space="preserve">
+    <value>Передано на подписание</value>
+  </data>
+  <data name="Action_SignedCopy" xml:space="preserve">
+    <value>Подписан</value>
+  </data>
+  <data name="Action_SignedCopyDescription" xml:space="preserve">
+    <value>В карточках выбранных документов будет зафиксирован результат подписания скан-копий "Подписан".</value>
+  </data>
+  <data name="Action_SignedCopyHint" xml:space="preserve">
+    <value>Установить результат подписания скан-копий "Подписан"</value>
+  </data>
+  <data name="Action_NotSignedCopy" xml:space="preserve">
+    <value>Не подписан</value>
+  </data>
+  <data name="Action_NotSignedCopyDescription" xml:space="preserve">
+    <value>В карточках выбранных документов будет зафиксирован результат подписания скан-копий "Не подписан".</value>
+  </data>
+  <data name="Action_NotSignedCopyHint" xml:space="preserve">
+    <value>Установить результат подписания скан-копий "Не подписан"</value>
+  </data>
+  <data name="Action_CancelSignTransferCopy" xml:space="preserve">
+    <value>Отмена передачи на подписание</value>
+  </data>
+  <data name="Action_CancelSignTransferCopyDescription" xml:space="preserve">
+    <value>Отмена передачи документа на подписание.</value>
+  </data>
+  <data name="Action_CancelSignTransferCopyHint" xml:space="preserve">
+    <value>Отменить передачу документа на подписание</value>
+  </data>
+  <data name="Property_ApproveLabel" xml:space="preserve">
+    <value>Согласование документа</value>
+  </data>
+  <data name="Property_ScanMoveLabel" xml:space="preserve">
+    <value>Движение скан-копий</value>
+  </data>
+  <data name="Property_OriginalMoveLabel" xml:space="preserve">
+    <value>Движение оригиналов</value>
+  </data>
+  <data name="Property_ApproveStatuses" xml:space="preserve">
+    <value>Согласование</value>
+  </data>
+  <data name="Property_ScanMoveStatuses" xml:space="preserve">
+    <value>Движение скан-копий</value>
+  </data>
+  <data name="Property_OriginalMoveStatuses" xml:space="preserve">
+    <value>Движение оригиналов</value>
+  </data>
+  <data name="ControlGroup_c0bb1629ab7a4d0b89f4aca3ae213161" xml:space="preserve">
+    <value>Согласование</value>
+  </data>
+  <data name="ControlGroup_6e392bee8e594668af806eda6e35eda7" xml:space="preserve">
+    <value>Движение скан-копий</value>
+  </data>
+  <data name="ControlGroup_a999e98cd6da4cb697ce734e1be1db9c" xml:space="preserve">
+    <value>Движение оригиналов</value>
+  </data>
+  <data name="Action_CancelSignTransfer" xml:space="preserve">
+    <value>Отменить передачу на подписание</value>
+  </data>
+  <data name="Action_CancelSignTransferDescription" xml:space="preserve">
+    <value>Отмена передачи документов на подписание.</value>
+  </data>
+  <data name="Action_CancelSignTransferHint" xml:space="preserve">
+    <value>Отменить передачу на подписание</value>
+  </data>
+  <data name="Action_SetPostReturnStatus" xml:space="preserve">
+    <value>Оригинал возвращен почтовой службой</value>
+  </data>
+  <data name="Action_SetPostReturnStatusDescription" xml:space="preserve">
+    <value>Установка статуса движения оригинала "Оригинал возвращен почтовой службой".</value>
+  </data>
+  <data name="Action_SetPostReturnStatusHint" xml:space="preserve">
+    <value>Установить статус движения оригинала "Оригинал возвращен почтовой службой"</value>
+  </data>
+  <data name="Ribbon_ActionCommands_78211ca05a0a4fd09cacd9a289a0772f" xml:space="preserve">
+    <value>Действия</value>
+  </data>
+  <data name="Property_DestructionDate" xml:space="preserve">
+    <value>Дата уничтожения оригинала</value>
+  </data>
+  <data name="Form_77ab1459a359441f92254d510a52f4fb" xml:space="preserve">
+    <value>Контрагенты</value>
+  </data>
+  <data name="Property_Counterparties" xml:space="preserve">
+    <value>Контрагенты</value>
+  </data>
+  <data name="Action_SendWithResposible" xml:space="preserve">
+    <value>Отправить с нарочным</value>
+  </data>
+  <data name="Action_SendWithResposibleDescription" xml:space="preserve">
+    <value>Отправка документа с ответственным сотрудником.</value>
+  </data>
+  <data name="Action_SendWithResposibleHint" xml:space="preserve">
+    <value>Отправить документ с нарочным</value>
+  </data>
+  <data name="Ribbon_SendCommands_e51371a6aaa3405ba190c9ee58d67c99" xml:space="preserve">
+    <value>Отправка</value>
+  </data>
+  <data name="ControlGroup_7c6cdf7fbfd841a28932889b11799da5" xml:space="preserve">
+    <value>Список контрагентов</value>
+  </data>
+  <data name="Action_MultipleCounterparties" xml:space="preserve">
+    <value>Несколько контрагентов</value>
+  </data>
+  <data name="Action_MultipleCounterpartiesDescription" xml:space="preserve">
+    <value>Режим указания нескольких контрагентов.
+Заполнить список контрагентов необходимо на закладке "Контрагенты".
+
+Повторное нажатие вернет документ в режим одного контрагента.</value>
+  </data>
+  <data name="Action_MultipleCounterpartiesHint" xml:space="preserve">
+    <value>Включить режим нескольких контрагентов</value>
+  </data>
+  <data name="Ribbon_Counterparties_e75e8e89d8454cf49e1ca2a1b16b6565" xml:space="preserve">
+    <value>Контрагенты</value>
+  </data>
+  <data name="Property_IsManyCounterparties" xml:space="preserve">
+    <value>Несколько контрагентов</value>
+  </data>
+  <data name="Ribbon_SelectCompanyToggleButton_b1daef446192474d9bd142c8effdb72a" xml:space="preserve">
+    <value>Несколько контрагентов</value>
+  </data>
+  <data name="Ribbon_SelectCompanyToggleButtonHint_b1daef446192474d9bd142c8effdb72a" xml:space="preserve">
+    <value>Включить режим нескольких контрагентов</value>
+  </data>
+  <data name="Ribbon_SelectCompanyToggleButtonDescription_b1daef446192474d9bd142c8effdb72a" xml:space="preserve">
+    <value>Режим указания нескольких контрагентов.
+Заполнить список контрагентов необходимо на закладке "Контрагенты".
+
+Повторное нажатие вернет документ в режим одного контрагента.</value>
+  </data>
+  <data name="Property_InternalApprovalState" xml:space="preserve">
+    <value>Согласование с обществом</value>
+  </data>
+  <data name="Property_AnalysisRequiredExclude" xml:space="preserve">
+    <value>Исключен из анализа на признак МСФО</value>
+  </data>
+  <data name="Property_CounterpartyApprovalState" xml:space="preserve">
+    <value>Согласование с контрагентом</value>
+  </data>
+  <data name="Enum_CounterpartyApprovalState_Unsigned" xml:space="preserve">
+    <value>Не подписан</value>
+  </data>
+  <data name="Enum_CounterpartyApprovalState_Signed" xml:space="preserve">
+    <value>Подписан</value>
+  </data>
+  <data name="Action_SendToIMS" xml:space="preserve">
+    <value>Отправить в ИСУ ЛЛК</value>
+  </data>
+  <data name="Action_SendToIMSHint" xml:space="preserve">
+    <value>Отправить документ в ИСУ ЛЛК.</value>
+  </data>
+  <data name="Action_SendToIMSDescription" xml:space="preserve">
+    <value>Отправить документ в ИСУ ЛЛК.</value>
+  </data>
+</root>

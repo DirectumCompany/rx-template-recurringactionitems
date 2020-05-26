@@ -1,0 +1,109 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "d1fb871b-00aa-48be-8e71-484d578d4a8d",
+  "Name": "ContractsRole",
+  "BaseGuid": "3445f357-1435-4444-9f24-a56a752fc471",
+  "CanBeNavigationPropertyType": true,
+  "CreationAreaMetadata": {
+    "NameGuid": "f7766750-eee2-4fcd-8003-5c06a90d1f44",
+    "Name": "CreationArea",
+    "Buttons": [],
+    "IsAncestorMetadata": true
+  },
+  "ExtraSearchProperties": [],
+  "FilterPanel": {
+    "NameGuid": "b0125fbd-3b91-4dbb-914a-689276216404",
+    "Name": "FilterPanel",
+    "Controls": [],
+    "IsAncestorMetadata": true
+  },
+  "IconResourcesKeys": [],
+  "OperationsClass": "",
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.EnumPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "644bffad-c8fe-4ef4-90fc-15bc9176a728",
+      "Name": "Type",
+      "DirectValues": [
+        {
+          "NameGuid": "826b53ec-6c20-4aab-a661-e42422a67d5b",
+          "Name": "CoExecutor",
+          "Code": "CoExecutor"
+        },
+        {
+          "NameGuid": "f3898c8c-a7a9-42a0-8af7-a727bbbc2e28",
+          "Name": "Stage2Approvers",
+          "Code": "Stage2Approvers"
+        },
+        {
+          "NameGuid": "a1a1ba93-d667-450b-b02b-cff1c5a2b710",
+          "Name": "NonLukoil",
+          "Code": "NonLukoil"
+        },
+        {
+          "NameGuid": "28992b70-d6ee-4577-9d2e-ad01ce1b6a8b",
+          "Name": "NonStandart",
+          "Code": "NonStandart"
+        }
+      ],
+      "IsAncestorMetadata": true,
+      "Overridden": [
+        "Values"
+      ]
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "GetRolePerformers",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "contractsRole",
+          "ParameterType": "global::DirRX.ContractsCustom.IContractsRole",
+          "ParameterTypeFullName": "DirRX.ContractsCustom.IContractsRole, Sungero.Domain.Interfaces"
+        },
+        {
+          "Name": "task",
+          "ParameterType": "global::Sungero.Docflow.IApprovalTask",
+          "ParameterTypeFullName": "Sungero.Docflow.IApprovalTask, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Collections.Generic.List<global::Sungero.CoreEntities.IRecipient>",
+      "ReturnTypeFullName": "System.Collections.Generic.List"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [
+    "Performer",
+    "CoExecutor",
+    "Stage2Approvers",
+    "NonLukoil",
+    "NonStandart"
+  ],
+  "RibbonCardMetadata": {
+    "NameGuid": "4eeb163c-4935-4f47-bc50-06ecd55981f7",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "35e01696-08a8-4684-b9a1-e4562156ac29",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 9
+    }
+  ]
+}

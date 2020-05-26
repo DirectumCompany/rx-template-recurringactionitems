@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Property_ContractFunctionality" xml:space="preserve">
+    <value>Contract feature (LLK IMS)</value>
+  </data>
+  <data name="Enum_ContractFunctionality_Purchase" xml:space="preserve">
+    <value>Purchase</value>
+  </data>
+  <data name="Enum_ContractFunctionality_Sale" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="Enum_ContractFunctionality_Mixed" xml:space="preserve">
+    <value>Mixed</value>
+  </data>
+  <data name="Property_CounterpartyCheckingResult" xml:space="preserve">
+    <value>Counterparty check result</value>
+  </data>
+  <data name="Property_Supervisor" xml:space="preserve">
+    <value>Supervisor</value>
+  </data>
+  <data name="Property_IsSupervisorFunctionManager" xml:space="preserve">
+    <value>Supervisor is function manager associated with performer</value>
+  </data>
+  <data name="Property_CheckingReason" xml:space="preserve">
+    <value>Reason for checking</value>
+  </data>
+  <data name="Property_CounterpartySubcategories" xml:space="preserve">
+    <value>Additional contract conditions</value>
+  </data>
+  <data name="Resource_e5a57f7765c74aa59dec69b872334886" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_e5a57f7765c74aa59dec69b872334886_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_07a46bdf084d4613893aac98b638838c" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_cac152583969417e98526e0a9e12b1db" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_2eb733e0f3364ecda957f6bceb9222ec" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_2eb733e0f3364ecda957f6bceb9222ec_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_593404d97d25441eb5c88e8677b63e30" xml:space="preserve">
+    <value>Settings for Automatic Start of Counterparty Check</value>
+  </data>
+  <data name="ControlGroup_7b2329ccde6f48f4852091b2d6162778" xml:space="preserve">
+    <value>Additional Contract Conditions</value>
+  </data>
+  <data name="Property_IMSCode" xml:space="preserve">
+    <value>LLK IMS contract kind code</value>
+  </data>
+  <data name="Property_IsMainActivity" xml:space="preserve">
+    <value>Main activity</value>
+  </data>
+  <data name="Property_IsShowRightsHolder" xml:space="preserve">
+    <value>Display "Trademark right holder" attribute</value>
+  </data>
+  <data name="Property_IsShowBranded" xml:space="preserve">
+    <value>Display "Branded products" attribute</value>
+  </data>
+  <data name="Property_WorkWithOriginals" xml:space="preserve">
+    <value>Original document management</value>
+  </data>
+  <data name="Enum_WorkWithOriginals_Standart" xml:space="preserve">
+    <value>Standard procedure</value>
+  </data>
+  <data name="Enum_WorkWithOriginals_NotSign" xml:space="preserve">
+    <value>Original document signing not required</value>
+  </data>
+  <data name="Enum_WorkWithOriginals_NotReturn" xml:space="preserve">
+    <value>Original document return not required</value>
+  </data>
+  <data name="Property_FileRetentionPeriod" xml:space="preserve">
+    <value>Retention period</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Contract category</value>
+  </data>
+  <data name="ControlGroup_09134ea88c904b25b128158e0b9d894f" xml:space="preserve">
+    <value>Special attributes</value>
+  </data>
+  <data name="Property_DestinationCountry" xml:space="preserve">
+    <value>Destination/delivery country</value>
+  </data>
+  <data name="Enum_DestinationCountry_RF" xml:space="preserve">
+    <value>Russian Federation</value>
+  </data>
+  <data name="Enum_DestinationCountry_Select" xml:space="preserve">
+    <value>TODO</value>
+  </data>
+  <data name="Enum_DestinationCountry_NotRequired" xml:space="preserve">
+    <value>TODO</value>
+  </data>
+</root>

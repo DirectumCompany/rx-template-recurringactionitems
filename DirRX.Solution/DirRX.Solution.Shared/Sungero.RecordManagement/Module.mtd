@@ -1,0 +1,139 @@
+{
+  "$type": "Sungero.Metadata.LayerModuleMetadata, Sungero.Metadata",
+  "NameGuid": "77aecec3-011c-41e4-bb9c-ac3d438993c5",
+  "Name": "RecordManagement",
+  "AssociatedGuid": "d67b58ac-520d-424c-87b1-6b6778c2030a",
+  "AsyncHandlers": [],
+  "BaseGuid": "4e25caec-c722-4740-bcfd-c4f803840ac6",
+  "ClientBaseAssemblyName": "DirRX.Solution.ClientBase",
+  "ClientBaseNamespace": "DirRX.Solution.Module.RecordManagement.ClientBase",
+  "Code": "RecMan",
+  "CompanyCode": "Sungero",
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "75c83331-255d-4e71-9d1d-fee311d47517",
+      "PreviousItemId": "264ada4e-b272-4ecc-a115-1246c9556bfa"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "High",
+  "IsVisible": false,
+  "LayeredFromGuid": "4e25caec-c722-4740-bcfd-c4f803840ac6",
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.Solution.Module.RecordManagement",
+  "ResourcesKeys": [],
+  "SpecialFolders": [
+    {
+      "NameGuid": "c21fa108-1570-4155-8a0c-0d04957bc72b",
+      "Name": "ForExecution",
+      "DisplayType": "Inbox",
+      "IconPath": "ForExecution_c21fa108157041558a0c0d04957bc72b.ico",
+      "IsAncestorMetadata": true,
+      "IsShow": true,
+      "NeedShowMarkedCount": true,
+      "Overridden": [
+        "IsViewSettingsByFolder",
+        "SupportedDescendantsTypes"
+      ],
+      "SupportedDescendantsTypes": [
+        "fc39a337-b55e-418d-b965-f18070f90245",
+        "d238ef51-607e-46a5-b86a-ede4482f7f19"
+      ]
+    },
+    {
+      "NameGuid": "75c83331-255d-4e71-9d1d-fee311d47517",
+      "Name": "OnResolutionProcessing",
+      "DefaultContentType": "018e582e-5b0e-4e4f-af57-be1e0a468efa",
+      "DisplayType": "Inbox",
+      "FilterPanel": {
+        "NameGuid": "868d831a-856f-41e3-af1f-19f27f2aeaca",
+        "Name": "FilterPanel",
+        "Controls": [
+          {
+            "$type": "Sungero.Metadata.FilterGroupMetadata, Sungero.Metadata",
+            "NameGuid": "e78a1cf0-47dc-4c89-8a48-22ea9b2a4cbd",
+            "Name": "StateGroup"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListMetadata, Sungero.Metadata",
+            "NameGuid": "7dae9676-2524-45d3-81ad-ba569207b0e0",
+            "Name": "State",
+            "ParentGuid": "e78a1cf0-47dc-4c89-8a48-22ea9b2a4cbd"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "d4ba65c3-6552-43af-a8a1-8aaea992de29",
+            "Name": "InProcess",
+            "IsSelected": true,
+            "ParentGuid": "7dae9676-2524-45d3-81ad-ba569207b0e0"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "973d5b16-df7e-4eda-bd94-d6776b168ac6",
+            "Name": "All",
+            "ParentGuid": "7dae9676-2524-45d3-81ad-ba569207b0e0",
+            "PreviousGuid": "d4ba65c3-6552-43af-a8a1-8aaea992de29"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterGroupMetadata, Sungero.Metadata",
+            "NameGuid": "60fd4280-325c-4cb6-b49e-ff9f455c5ace",
+            "Name": "PeriodGroup",
+            "PreviousGuid": "e78a1cf0-47dc-4c89-8a48-22ea9b2a4cbd"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListMetadata, Sungero.Metadata",
+            "NameGuid": "6cca76de-3d18-42db-9d0a-f37c10042516",
+            "Name": "Period",
+            "ParentGuid": "60fd4280-325c-4cb6-b49e-ff9f455c5ace"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "2e80531d-683f-49aa-9d24-0e26b42f674b",
+            "Name": "Last30Days",
+            "ParentGuid": "6cca76de-3d18-42db-9d0a-f37c10042516"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "cd8c5b29-f268-44ca-8bfe-61921c4a3dd5",
+            "Name": "Last90Days",
+            "IsSelected": true,
+            "ParentGuid": "6cca76de-3d18-42db-9d0a-f37c10042516",
+            "PreviousGuid": "2e80531d-683f-49aa-9d24-0e26b42f674b"
+          },
+          {
+            "$type": "Sungero.Metadata.FilterListItemMetadata, Sungero.Metadata",
+            "NameGuid": "84e8e29e-1d48-475e-becd-50aa7cbdd62e",
+            "Name": "Last180Days",
+            "ParentGuid": "6cca76de-3d18-42db-9d0a-f37c10042516",
+            "PreviousGuid": "cd8c5b29-f268-44ca-8bfe-61921c4a3dd5"
+          }
+        ]
+      },
+      "HandledEvents": [
+        "DataQueryServer",
+        "VisibilityHandlerServer"
+      ],
+      "IsShow": true,
+      "IsViewSettingsByFolder": true,
+      "Kind": "Computable",
+      "NeedShowMarkedCount": true,
+      "ParentFolderId": "eb72a985-606c-4647-ba0c-1389928a4e17"
+    }
+  ],
+  "Version": "3.3.25.1",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "LayerModuleMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 6
+    }
+  ]
+}

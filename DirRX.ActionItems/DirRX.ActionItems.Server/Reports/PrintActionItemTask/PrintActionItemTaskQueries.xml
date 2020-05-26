@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="SelectDataFromTable">
+    <default><![CDATA[select *
+from  Sungero_Reports_PrintActionItemExecutionTask temp
+where ReportSessionId = @ReportSessionId]]></default>
+  </query>
+  <query key="CreateActionItemTaskTable">
+    <mssql><![CDATA[create table {0}
+  ([ReportSessionId] varchar(256) NOT NULL,
+   [Assignee] varchar(256),
+   [ActionItem] nvarchar(max),
+   [Deadline] varchar(20),
+   [Status] nvarchar(max))]]></mssql>
+    <postgres><![CDATA[create table {0}
+  (ReportSessionId citext NOT NULL,
+   Assignee citext,
+   ActionItem citext,
+   Deadline citext,
+   Status citext)]]></postgres>
+  </query>
+</queries>

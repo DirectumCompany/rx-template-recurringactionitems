@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <ViewName>Default</ViewName>
+  <Folder>
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="View" isnull="true" iskey="true">
+          <property name="ShowTotalSummary">false</property>
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">735,-176</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="AutoWidth">true</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="LinesPerRowMode">OneLineMode</property>
+          <property name="WaitIndicatorType">Panel</property>
+        </property>
+        <property name="Columns" iskey="true" value="47">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="MinWidth">32</property>
+            <property name="FieldName">T</property>
+            <property name="SortMode">Custom</property>
+            <property name="FixedWidth">true</property>
+            <property name="Visible">true</property>
+            <property name="VisibleIndex">0</property>
+            <property name="Width">32</property>
+            <property name="ActualWidth">3*</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="FieldName">Integer_ID</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Integer_ID</property>
+            <property name="VisibleIndex">1</property>
+            <property name="ActualWidth">5*</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="FieldName">String_Name</property>
+            <property name="AutoFilterCondition">Contains</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">true</property>
+            <property name="Name">String_Name</property>
+            <property name="VisibleIndex">1</property>
+            <property name="ActualWidth">6*</property>
+          </property>
+          <property name="Item4" isnull="true" iskey="true">
+            <property name="FieldName">Navigation_Employee_c612fc4144a3428ba97c433c333d78e9</property>
+            <property name="AutoFilterCondition">Contains</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">true</property>
+            <property name="Name">Navigation_Employee_c612fc4144a3428ba97c433c333d78e9</property>
+            <property name="VisibleIndex">2</property>
+            <property name="ActualWidth">10*</property>
+          </property>
+          <property name="Item5" isnull="true" iskey="true">
+            <property name="FieldName">Navigation_TODO_d4f1745351a043a2bac9692229636a9f</property>
+            <property name="AutoFilterCondition">Contains</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">true</property>
+            <property name="Name">Navigation_TODO_d4f1745351a043a2bac9692229636a9f</property>
+            <property name="VisibleIndex">3</property>
+            <property name="ActualWidth">15*</property>
+          </property>
+          <property name="Item6" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO</property>
+            <property name="VisibleIndex">4</property>
+            <property name="ActualWidth">45*</property>
+          </property>
+          <property name="Item7" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_1</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_1</property>
+            <property name="VisibleIndex">4</property>
+            <property name="ActualWidth">18*</property>
+          </property>
+          <property name="Item8" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_2</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_2</property>
+            <property name="VisibleIndex">4</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item9" isnull="true" iskey="true">
+            <property name="FieldName">String_Information</property>
+            <property name="AutoFilterCondition">Contains</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">String_Information</property>
+            <property name="VisibleIndex">4</property>
+            <property name="ActualWidth">12*</property>
+          </property>
+          <property name="Item10" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_3</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_3</property>
+            <property name="VisibleIndex">4</property>
+            <property name="ActualWidth">43*</property>
+          </property>
+          <property name="Item11" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_4</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_4</property>
+            <property name="VisibleIndex">4</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item12" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_5</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_5</property>
+            <property name="VisibleIndex">4</property>
+            <property name="ActualWidth">35*</property>
+          </property>
+          <property name="Item13" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_6</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_6</property>
+            <property name="VisibleIndex">4</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item14" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_7</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_7</property>
+            <property name="VisibleIndex">4</property>
+            <property name="ActualWidth">34*</property>
+          </property>
+          <property name="Item15" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_8</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_8</property>
+            <property name="VisibleIndex">4</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item16" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_9</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_9</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">34*</property>
+          </property>
+          <property name="Item17" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_10</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_10</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item18" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_11</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_11</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">30*</property>
+          </property>
+          <property name="Item19" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_12</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_12</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item20" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_13</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_13</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">45*</property>
+          </property>
+          <property name="Item21" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_14</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_14</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item22" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_15</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_15</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">57*</property>
+          </property>
+          <property name="Item23" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_16</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_16</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item24" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_17</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_17</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">37*</property>
+          </property>
+          <property name="Item25" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_18</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_18</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item26" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_19</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_19</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">50*</property>
+          </property>
+          <property name="Item27" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_20</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_20</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item28" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_21</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_21</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">20*</property>
+          </property>
+          <property name="Item29" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_22</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_22</property>
+            <property name="VisibleIndex">6</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item30" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_23</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_23</property>
+            <property name="VisibleIndex">6</property>
+            <property name="ActualWidth">47*</property>
+          </property>
+          <property name="Item31" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_24</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_24</property>
+            <property name="VisibleIndex">6</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item32" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_25</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_25</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">51*</property>
+          </property>
+          <property name="Item33" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_26</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_26</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item34" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_27</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_27</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">35*</property>
+          </property>
+          <property name="Item35" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_28</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_28</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item36" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_29</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_29</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">35*</property>
+          </property>
+          <property name="Item37" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_30</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_30</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item38" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_31</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_31</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">35*</property>
+          </property>
+          <property name="Item39" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_32</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_32</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item40" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_33</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_33</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">35*</property>
+          </property>
+          <property name="Item41" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_34</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_34</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item42" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_35</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_35</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">29*</property>
+          </property>
+          <property name="Item43" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_36</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_36</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item44" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_37</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_37</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">28*</property>
+          </property>
+          <property name="Item45" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_38</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_38</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+          <property name="Item46" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_39</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_39</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">39*</property>
+          </property>
+          <property name="Item47" isnull="true" iskey="true">
+            <property name="FieldName">Boolean_TODO_40</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="SortMode">Custom</property>
+            <property name="Visible">false</property>
+            <property name="Name">Boolean_TODO_40</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">32*</property>
+          </property>
+        </property>
+        <property name="SortInfo" iskey="true" value="0" />
+        <property name="GroupCount">0</property>
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Folder>
+</settings>

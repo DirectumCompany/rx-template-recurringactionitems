@@ -1,0 +1,63 @@
+{
+  "$type": "Sungero.Metadata.LayerModuleMetadata, Sungero.Metadata",
+  "NameGuid": "c6a38161-834e-4195-8656-736b5b72d3bd",
+  "Name": "Company",
+  "AssociatedGuid": "d67b58ac-520d-424c-87b1-6b6778c2030a",
+  "AsyncHandlers": [],
+  "BaseGuid": "d534e107-a54d-48ec-85ff-bc44d731a82f",
+  "ClientBaseAssemblyName": "DirRX.Solution.ClientBase",
+  "ClientBaseNamespace": "DirRX.Solution.Module.Company.ClientBase",
+  "Code": "Company",
+  "CompanyCode": "Sungero",
+  "Cover": {
+    "NameGuid": "a52a7382-131e-4cb5-9a18-28898b8b1f49",
+    "Actions": [
+      {
+        "$type": "Sungero.Metadata.CoverEntityListActionMetadata, Sungero.Metadata",
+        "NameGuid": "4ff112bd-f721-4c3c-9ac5-94f8dc8c153d",
+        "Name": "Absence",
+        "EntityTypeId": "6ff02a37-0f07-4f83-88b2-9e1b342ebfab",
+        "GroupId": "81281d6c-7b93-42fa-bf28-103d0e3419e3",
+        "PreviousItemGuid": "98d80342-5bdb-4e88-9608-02ece218ea40"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverEntityListActionMetadata, Sungero.Metadata",
+        "NameGuid": "98d80342-5bdb-4e88-9608-02ece218ea40",
+        "Name": "Substitution",
+        "EntityTypeId": "10ab7c7d-970a-4537-8b92-7dc970826805",
+        "GroupId": "81281d6c-7b93-42fa-bf28-103d0e3419e3",
+        "IsAncestorMetadata": true,
+        "Overridden": [
+          "EntityTypeId"
+        ],
+        "PreviousItemGuid": "1796ee3b-33c1-4ac8-a634-f8dda72b6600"
+      }
+    ],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Overridden": [
+      "Actions"
+    ]
+  },
+  "ExplorerTreeOrder": [],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "LayeredFromGuid": "d534e107-a54d-48ec-85ff-bc44d731a82f",
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "DirRX.Solution.Module.Company",
+  "ResourcesKeys": [],
+  "SpecialFolders": [],
+  "Version": "3.3.25.1",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "LayerModuleMetadata",
+      "Number": 6
+    },
+    {
+      "Type": "ModuleMetadata",
+      "Number": 6
+    }
+  ]
+}

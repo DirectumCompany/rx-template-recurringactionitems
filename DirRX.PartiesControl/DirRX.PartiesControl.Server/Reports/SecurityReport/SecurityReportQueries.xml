@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="SelectDataTable">
+    <default><![CDATA[select *
+from Sungero_Reports_SecurityReport temp
+where ReportSessionId = @ReportSessionId
+order by RequestId]]></default>
+  </query>
+  <query key="CreateDataTable">
+    <mssql><![CDATA[create table {0}
+ ([ReportSessionId] varchar(256) NOT NULL,
+  [RequestId] int NULL,
+  [CounterpartyName] nvarchar(max) NULL,
+  [CounterpartyReqs] nvarchar(max) NULL,
+  [MainDocumentName] nvarchar(max) NULL,
+  [CheckingDate] nvarchar(max) NULL,
+  [CheckingResult] nvarchar(max) NULL,
+  [Comment] nvarchar(max) NULL,
+  [Note] nvarchar(max) NULL)]]></mssql>
+    <postgres><![CDATA[create table {0}
+ ([ReportSessionId] citext NOT NULL,
+  [RequestId] int NULL,
+  [CounterpartyName] citext NULL,
+  [CounterpartyReqs] citext NULL,
+  [MainDocumentName] citext NULL,
+  [CheckingDate] citext NULL,
+  [CheckingResult] citext NULL,
+  [Comment] citext NULL,
+  [Note] citext NULL)]]></postgres>
+  </query>
+</queries>

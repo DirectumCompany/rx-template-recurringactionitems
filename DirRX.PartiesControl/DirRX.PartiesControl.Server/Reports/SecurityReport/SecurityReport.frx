@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;PresentationCore.dll&#13;&#10;WindowsBase.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Parties.Server&#13;&#10;Sungero.CoreEntities.Server&#13;&#10;Sungero.Domain&#13;&#10;Sungero.Parties.Shared&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;DirRX.Solution.Shared&#13;&#10;DirRX.Solution.Server&#13;&#10;DirRX.PartiesControl.Shared&#13;&#10;DirRX.PartiesControl.Server" ReportInfo.CreatorVersion="2013.3.2.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using DirRX.Solution;
+using DirRX.PartiesControl;
+using Sungero.Domain.Shared;
+using Sungero.CoreEntities;
+using Sungero.Core;
+using Resources = DirRX.PartiesControl.Reports.Resources;
+
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+  }
+}
+  </ScriptText>
+  <Dictionary>
+    <SungeroSqlDataConnection Name="Sungero_Connection" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties" ConnectionStringExpression="[SungeroConnectionString]">
+      <TableDataSource Name="Table" Alias="RevisionRequestsTable" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectDataTable}">
+        <Column Name="RequestId" DataType="System.Int32" PropName="Column"/>
+        <Column Name="CounterpartyName" DataType="System.String" PropName="Column"/>
+        <Column Name="CounterpartyReqs" DataType="System.String" PropName="Column"/>
+        <Column Name="MainDocumentName" DataType="System.String" PropName="Column"/>
+        <Column Name="CheckingDate" DataType="System.String" PropName="Column"/>
+        <Column Name="CheckingResult" DataType="System.String" PropName="Column"/>
+        <Column Name="Comment" DataType="System.String" PropName="Column"/>
+        <Column Name="Note" DataType="System.String" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+    </SungeroSqlDataConnection>
+    <SungeroParameter Name="SungeroConnectionString" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties, DontShow" Id="c8565ee9-dd93-48cb-a46e-a1d260aede8e" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="PeriodFrom" Id="6af8ced0-b821-41b4-b916-aa1f0c1ee09c" IsRequired="true" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="PeriodTo" Id="a79c62a0-8ff9-4e8a-909c-ae479542bbc8" IsRequired="true" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportSessionId" Id="eddeeff0-b1c3-47f1-a9e2-ce286482d3fc" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Counterparty" Id="aa7934df-e0f0-42b0-89cc-c34e2c1eec74" IsRequired="false" IsCollection="false" InternalDataType="DirRX.Solution.ICompany, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="a969a7c4-1c09-481a-ba3a-0d0c63dff0fc"/>
+    <SungeroParameter Name="CheckingResult" Id="b490de5c-a962-4b8a-8d7f-069a757b41bf" IsRequired="false" IsCollection="false" InternalDataType="DirRX.PartiesControl.ICheckingResult, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="e2f7bb23-2e41-4478-b4f3-ff7aa014a031"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="420.1" PaperHeight="296.9" RawPaperSize="8">
+    <ReportTitleBand Name="ReportTitle1" Width="1512.38" Height="37.8">
+      <TextObject Name="Text1" Width="1512" Height="37.8" Text="[DirRX.PartiesControl.Reports.Resources.SecurityReport.HeaderTitle]&#13;&#10;[DirRX.PartiesControl.Reports.Resources.SecurityReport.HeaderPeriodFrom + [PeriodFrom].ToString(&quot;d&quot;) + DirRX.PartiesControl.Reports.Resources.SecurityReport.HeaderPeriodTo + [PeriodTo].ToString(&quot;d&quot;);]" HorzAlign="Center" Font="Arial, 11pt, style=Bold">
+        <Formats>
+          <DateFormat Format="dd.MM.yyyy"/>
+          <GeneralFormat/>
+        </Formats>
+      </TextObject>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41.65" Width="1512.38" Height="37.8">
+      <TextObject Name="Text3" Left="56.7" Width="56.7" Height="37.8" Border.Lines="All" Text="[DirRX.PartiesControl.Reports.Resources.SecurityReport.RequestIdColumnTitle]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text5" Left="113.4" Width="245.7" Height="37.8" Border.Lines="All" Text="[DirRX.PartiesControl.Reports.Resources.SecurityReport.CounterpartyNameColumnTitle]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text8" Left="359.1" Width="198.45" Height="37.8" Border.Lines="All" Text="[DirRX.PartiesControl.Reports.Resources.SecurityReport.CounterpartyReqsColumnTitle]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text9" Width="56.7" Height="37.8" Border.Lines="All" Text="[DirRX.PartiesControl.Reports.Resources.SecurityReport.RowNumberColumnTitle]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text11" Left="557.55" Width="236.25" Height="37.8" Border.Lines="All" Text="[DirRX.PartiesControl.Reports.Resources.SecurityReport.MainDocumentNameColumnTitle]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text13" Left="793.8" Width="103.95" Height="37.8" Border.Lines="All" Text="[DirRX.PartiesControl.Reports.Resources.SecurityReport.CheckingDateColumnTitle]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text15" Left="897.75" Width="217.35" Height="37.8" Border.Lines="All" Text="[DirRX.PartiesControl.Reports.Resources.SecurityReport.CheckingResultColumnTitle]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text17" Left="1115.1" Width="207.9" Height="37.8" Border.Lines="All" Text="[DirRX.PartiesControl.Reports.Resources.SecurityReport.SecurityCommentColumnTitle]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text19" Left="1323" Width="189" Height="37.8" Border.Lines="All" Text="[DirRX.PartiesControl.Reports.Resources.SecurityReport.NoteColumnTitle]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="83.29" Width="1512.38" Height="18.9" CanGrow="true" CanShrink="true" DataSource="Table">
+      <TextObject Name="Text6" Width="56.7" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" Text="[Row#]" HorzAlign="Center" Font="Arial, 11pt"/>
+      <TextObject Name="Text2" Left="113.4" Width="245.7" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[RevisionRequestsTable.CounterpartyName]" Font="Arial, 11pt"/>
+      <TextObject Name="Text4" Left="359.1" Width="198.45" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[RevisionRequestsTable.CounterpartyReqs]" Font="Arial, 11pt"/>
+      <TextObject Name="Text7" Left="557.55" Width="236.25" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[RevisionRequestsTable.MainDocumentName]" Font="Arial, 11pt"/>
+      <TextObject Name="Text10" Left="56.7" Width="56.7" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[RevisionRequestsTable.RequestId]" Font="Arial, 11pt"/>
+      <TextObject Name="Text12" Left="793.8" Width="103.95" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[RevisionRequestsTable.CheckingDate]" Font="Arial, 11pt"/>
+      <TextObject Name="Text14" Left="897.75" Width="217.35" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[RevisionRequestsTable.CheckingResult]" Font="Arial, 11pt"/>
+      <TextObject Name="Text16" Left="1115.1" Width="207.9" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[RevisionRequestsTable.Comment]" Font="Arial, 11pt"/>
+      <TextObject Name="Text18" Left="1323" Width="189" Height="18.9" Border.Lines="All" CanGrow="true" CanShrink="true" GrowToBottom="true" CanBreak="false" Text="[RevisionRequestsTable.Note]" Font="Arial, 11pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>

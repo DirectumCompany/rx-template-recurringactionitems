@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+  <ViewName>Default</ViewName>
+  <Collection FormGuid="cddd4c25-da1e-45d4-ab4b-0250a22ce940">
+    <XtraSerializer version="1.0" application="GridControl">
+      <property name="#LayoutVersion" isnull="true" />
+      <property name="$GridControl" iskey="true" value="GridControl">
+        <property name="GroupSummary" iskey="true" value="0" />
+        <property name="View" isnull="true" iskey="true">
+          <property name="ShowTotalSummary">false</property>
+          <property name="ColumnChooserState" isnull="true" iskey="true">
+            <property name="Location">844,-194</property>
+            <property name="Size">220,250</property>
+          </property>
+          <property name="AutoWidth">true</property>
+          <property name="ShowGroupPanel">false</property>
+          <property name="LinesPerRowMode">OneLineMode</property>
+          <property name="WaitIndicatorType">Panel</property>
+        </property>
+        <property name="TotalSummary" iskey="true" value="0" />
+        <property name="GroupCount">0</property>
+        <property name="Columns" iskey="true" value="18">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="MinWidth">32</property>
+            <property name="FieldName">T</property>
+            <property name="FixedWidth">true</property>
+            <property name="Visible">true</property>
+            <property name="VisibleIndex">0</property>
+            <property name="Width">32</property>
+            <property name="ActualWidth">3*</property>
+          </property>
+          <property name="Item2" isnull="true" iskey="true">
+            <property name="FieldName">Id</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="Visible">true</property>
+            <property name="Name">BrandsRegistration_Id</property>
+            <property name="ExtendedVisibleIndex">2</property>
+            <property name="VisibleIndex">1</property>
+            <property name="Width">39</property>
+            <property name="ActualWidth">4*</property>
+          </property>
+          <property name="Item3" isnull="true" iskey="true">
+            <property name="FieldName">Author.DisplayValue</property>
+            <property name="AutoFilterCondition">Contains</property>
+            <property name="Visible">false</property>
+            <property name="Name">BrandsRegistration_Author</property>
+            <property name="ExtendedVisibleIndex">17</property>
+            <property name="VisibleIndex">3</property>
+            <property name="Width">168</property>
+            <property name="ActualWidth">17*</property>
+          </property>
+          <property name="Item4" isnull="true" iskey="true">
+            <property name="FieldName">HasRelations</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="Visible">false</property>
+            <property name="Name">BrandsRegistration_HasRelations</property>
+            <property name="ExtendedVisibleIndex">3</property>
+            <property name="VisibleIndex">2</property>
+            <property name="Width">30</property>
+            <property name="ActualWidth">3*</property>
+          </property>
+          <property name="Item5" isnull="true" iskey="true">
+            <property name="FieldName">Created</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="Visible">false</property>
+            <property name="Name">BrandsRegistration_Created</property>
+            <property name="ExtendedVisibleIndex">15</property>
+            <property name="VisibleIndex">3</property>
+            <property name="Width">128</property>
+            <property name="ActualWidth">13*</property>
+          </property>
+          <property name="Item6" isnull="true" iskey="true">
+            <property name="FieldName">Modified</property>
+            <property name="AutoFilterCondition">Equals</property>
+            <property name="Visible">false</property>
+            <property name="Name">BrandsRegistration_Modified</property>
+            <property name="ExtendedVisibleIndex">16</property>
+            <property name="VisibleIndex">3</property>
+            <property name="Width">128</property>
+            <property name="ActualWidth">13*</property>
+          </property>
+          <property name="Item7" isnull="true" iskey="true">
+            <property name="FieldName">Name</property>
+            <property name="AutoFilterCondition">Contains</property>
+            <property name="Visible">false</property>
+            <property name="Name">BrandsRegistration_Name</property>
+            <property name="ExtendedVisibleIndex">14</property>
+            <property name="VisibleIndex">2</property>
+            <property name="Width">493</property>
+            <property name="ActualWidth">50*</property>
+          </property>
+          <property name="Item8" isnull="true" iskey="true">
+            <property name="FieldName">Brand.DisplayValue</property>
+            <property name="Visible">true</property>
+            <property name="Name">BrandsRegistration_Brand</property>
+            <property name="ExtendedVisibleIndex">4</property>
+            <property name="VisibleIndex">2</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item9" isnull="true" iskey="true">
+            <property name="FieldName">RegistrationNumber</property>
+            <property name="Visible">true</property>
+            <property name="Name">BrandsRegistration_RegistrationNumber</property>
+            <property name="ExtendedVisibleIndex">5</property>
+            <property name="VisibleIndex">3</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item10" isnull="true" iskey="true">
+            <property name="FieldName">RegistrationKind</property>
+            <property name="Visible">true</property>
+            <property name="Name">BrandsRegistration_RegistrationKind</property>
+            <property name="ExtendedVisibleIndex">6</property>
+            <property name="VisibleIndex">4</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item11" isnull="true" iskey="true">
+            <property name="FieldName">Country.DisplayValue</property>
+            <property name="Visible">true</property>
+            <property name="Name">BrandsRegistration_Country</property>
+            <property name="ExtendedVisibleIndex">7</property>
+            <property name="VisibleIndex">5</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item12" isnull="true" iskey="true">
+            <property name="FieldName">ICGSClass</property>
+            <property name="Visible">true</property>
+            <property name="Name">BrandsRegistration_ICGSClass</property>
+            <property name="ExtendedVisibleIndex">8</property>
+            <property name="VisibleIndex">6</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item13" isnull="true" iskey="true">
+            <property name="FieldName">ProductGroup.DisplayValue</property>
+            <property name="Visible">true</property>
+            <property name="Name">BrandsRegistration_ProductGroup</property>
+            <property name="ExtendedVisibleIndex">9</property>
+            <property name="VisibleIndex">7</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item14" isnull="true" iskey="true">
+            <property name="FieldName">RegistrationDate</property>
+            <property name="Visible">true</property>
+            <property name="Name">BrandsRegistration_RegistrationDate</property>
+            <property name="ExtendedVisibleIndex">10</property>
+            <property name="VisibleIndex">8</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item15" isnull="true" iskey="true">
+            <property name="FieldName">ValidUntil</property>
+            <property name="Visible">true</property>
+            <property name="Name">BrandsRegistration_ValidUntil</property>
+            <property name="ExtendedVisibleIndex">11</property>
+            <property name="VisibleIndex">9</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item16" isnull="true" iskey="true">
+            <property name="FieldName">Status</property>
+            <property name="Visible">true</property>
+            <property name="Name">BrandsRegistration_Status</property>
+            <property name="ExtendedVisibleIndex">12</property>
+            <property name="VisibleIndex">10</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item17" isnull="true" iskey="true">
+            <property name="FieldName">IsAppeal</property>
+            <property name="Visible">true</property>
+            <property name="Name">BrandsRegistration_IsAppeal</property>
+            <property name="ExtendedVisibleIndex">13</property>
+            <property name="VisibleIndex">11</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+          <property name="Item18" isnull="true" iskey="true">
+            <property name="FieldName">Note</property>
+            <property name="Visible">false</property>
+            <property name="Name">BrandsRegistration_Note</property>
+            <property name="ExtendedVisibleIndex">1</property>
+            <property name="ActualWidth">NaN</property>
+          </property>
+        </property>
+        <property name="SortInfo" iskey="true" value="1">
+          <property name="Item1" isnull="true" iskey="true">
+            <property name="FieldName">Created</property>
+            <property name="SortOrder">Descending</property>
+          </property>
+        </property>
+        <property name="GroupSummarySortInfo" iskey="true" value="0" />
+      </property>
+    </XtraSerializer>
+  </Collection>
+</settings>

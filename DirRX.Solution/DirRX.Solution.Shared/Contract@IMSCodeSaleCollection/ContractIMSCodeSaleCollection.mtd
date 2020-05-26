@@ -1,0 +1,60 @@
+{
+  "$type": "Sungero.Metadata.EntityMetadata, Sungero.Metadata",
+  "NameGuid": "4c7193e9-1d9a-4072-9485-a4a571eec18e",
+  "Name": "ContractIMSCodeSaleCollection",
+  "AccessRightsMode": "NoRight",
+  "BaseGuid": "a3d38bf5-0414-41f6-bb33-a4621d2e5a60",
+  "CanBeNavigationPropertyType": true,
+  "Code": "ContractIMSCo2",
+  "ExtraSearchProperties": [],
+  "IsChildEntity": true,
+  "Properties": [
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "00f226fc-505a-4f71-ac75-938b11157d00",
+      "Name": "Contract",
+      "CanBeSearch": false,
+      "Code": "EDoc",
+      "EntityGuid": "cb27ba09-db8e-48b7-877e-34e67afe4df4",
+      "IsReferenceToRootEntity": true,
+      "IsShowedInList": false
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "b69fa798-1f75-4c48-9720-609dd23116ab",
+      "Name": "IMSCode",
+      "CanBeSearch": false,
+      "Code": "IMSCode",
+      "EntityGuid": "d418a910-6a03-46a8-8ada-f3fb5c6f2674",
+      "FlatListInStandaloneLookup": true,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "00f226fc-505a-4f71-ac75-938b11157d00"
+    }
+  ],
+  "PublicStructures": [],
+  "RibbonCardMetadata": {
+    "NameGuid": "acd36461-7e5c-490b-9d5a-9139f8e3b62a",
+    "Name": "RibbonCard",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": [],
+    "RibbonKind": "Card"
+  },
+  "RibbonCollectionMetadata": {
+    "NameGuid": "cbfd6f0b-bd2b-4dbd-8376-d838ae403dbc",
+    "Name": "RibbonCollection",
+    "Categories": [],
+    "Elements": [],
+    "Groups": [],
+    "IsAncestorMetadata": true,
+    "Pages": []
+  },
+  "Versions": [
+    {
+      "Type": "EntityMetadata",
+      "Number": 9
+    }
+  ]
+}

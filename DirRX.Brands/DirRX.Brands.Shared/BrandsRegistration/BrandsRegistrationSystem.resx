@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Products and Trademarks</value>
+  </data>
+  <data name="AccusativeDisplayName" xml:space="preserve">
+    <value>Registration of Trademarks</value>
+  </data>
+  <data name="CollectionDisplayName" xml:space="preserve">
+    <value>Trademark Register</value>
+  </data>
+  <data name="Property_Brand" xml:space="preserve">
+    <value>Trademark</value>
+  </data>
+  <data name="Property_RegistrationNumber" xml:space="preserve">
+    <value>Registration No.</value>
+  </data>
+  <data name="Property_RegistrationKind" xml:space="preserve">
+    <value>Registration kind</value>
+  </data>
+  <data name="Enum_RegistrationKind_Regional" xml:space="preserve">
+    <value>Regional</value>
+  </data>
+  <data name="Enum_RegistrationKind_National" xml:space="preserve">
+    <value>National</value>
+  </data>
+  <data name="Enum_RegistrationKind_International" xml:space="preserve">
+    <value>International</value>
+  </data>
+  <data name="Property_Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Property_ICGSClass" xml:space="preserve">
+    <value>ICGS class</value>
+  </data>
+  <data name="Property_ProductGroup" xml:space="preserve">
+    <value>Product group</value>
+  </data>
+  <data name="Property_RegistrationDate" xml:space="preserve">
+    <value>Registration date</value>
+  </data>
+  <data name="Property_ValidUntil" xml:space="preserve">
+    <value>Valid till</value>
+  </data>
+  <data name="Property_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Enum_Status_Determine" xml:space="preserve">
+    <value>Status being determined</value>
+  </data>
+  <data name="Enum_Status_Request" xml:space="preserve">
+    <value>Request</value>
+  </data>
+  <data name="Enum_Status_Registered" xml:space="preserve">
+    <value>Registered</value>
+  </data>
+  <data name="Enum_Status_Refused" xml:space="preserve">
+    <value>Declined</value>
+  </data>
+  <data name="Enum_Status_Overdue" xml:space="preserve">
+    <value>Expired</value>
+  </data>
+  <data name="Property_IsAppeal" xml:space="preserve">
+    <value>Contestation</value>
+  </data>
+  <data name="Resource_a4234aaf007d40fd9b3fee5fff8313d0" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_a4234aaf007d40fd9b3fee5fff8313d0_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_dac5a094b07f407ea80d71198fff1704" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_b1e0ebd554654968823ae4e4131fa3da" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="Property_Note" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="FilterPanel_StatusGroup_f2f62dfea0fb4f5f98a0352d335942b2" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="FilterPanel_Determine_e033c4b14bb142ad83ff1ab003bd1047" xml:space="preserve">
+    <value>Status Being Determined</value>
+  </data>
+  <data name="FilterPanel_Overdue_f14c894ddedc4642acde58d781d6b7c4" xml:space="preserve">
+    <value>Expired</value>
+  </data>
+  <data name="FilterPanel_Refused_ae50d119949841a68ded4ffa82581204" xml:space="preserve">
+    <value>Declined</value>
+  </data>
+  <data name="FilterPanel_Registered_5fcf5ee15c03472dbdd36c0b5bbfbfd0" xml:space="preserve">
+    <value>Registered</value>
+  </data>
+  <data name="FilterPanel_Request_c6d03adf098240e58809003c254496f2" xml:space="preserve">
+    <value>Requested</value>
+  </data>
+  <data name="FilterPanel_AppealGroup_145fddc6981049a5bc50e69f55a86ee3" xml:space="preserve">
+    <value>Contestation</value>
+  </data>
+  <data name="FilterPanel_IsAppeal_4c22c101891e4bec844592ad1ebe5a76" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="FilterPanel_RegistrationKind_aec0addc762143848d4675337f1817d7" xml:space="preserve">
+    <value>Registration Kind</value>
+  </data>
+  <data name="FilterPanel_International_39e80fe8189f41e6acd44fa5370cf1b1" xml:space="preserve">
+    <value>International</value>
+  </data>
+  <data name="FilterPanel_National_f5a73e6fd39e4b04b160037c92697012" xml:space="preserve">
+    <value>National</value>
+  </data>
+  <data name="FilterPanel_Regional_17e0657ef6a9447fb7562f7543856d88" xml:space="preserve">
+    <value>Regional</value>
+  </data>
+  <data name="FilterPanel_CountryGroup_55e98ef1ddb748b5a2bf0b645edd6a4f" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="FilterPanel_DateGroup_2fd418a866684c388416e6c619054481" xml:space="preserve">
+    <value>Registration Period Expires</value>
+  </data>
+  <data name="FilterPanel_Month_cc836813afb64d49ab4b970bd0f3d736" xml:space="preserve">
+    <value>TODO</value>
+  </data>
+  <data name="FilterPanel_EndOfMonth_cc836813afb64d49ab4b970bd0f3d736" xml:space="preserve">
+    <value>By End of Month</value>
+  </data>
+  <data name="FilterPanel_EndOfYear_a3f0d759cd594d14923312236e42f765" xml:space="preserve">
+    <value>By End of Year</value>
+  </data>
+  <data name="FilterPanel_ManualPeriod_471d66f8d9c142438755cf3288c8712b" xml:space="preserve">
+    <value>Within Period</value>
+  </data>
+  <data name="FilterPanel_ProductKindGroup_7b584047c2104bbeb50115a838547df9" xml:space="preserve">
+    <value>Product Kind</value>
+  </data>
+  <data name="Action_DeleteRegistrations" xml:space="preserve">
+    <value>Delete Registrations</value>
+  </data>
+  <data name="Action_DeleteRegistrationsDescription" xml:space="preserve">
+    <value>Delete selected items from the list.</value>
+  </data>
+  <data name="Action_DeleteRegistrationsHint" xml:space="preserve">
+    <value>Delete Selected Registrations</value>
+  </data>
+  <data name="Action_DeleteRegistrationsConfirmationMessage" xml:space="preserve">
+    <value>Selected items will be deleted. Continue?</value>
+  </data>
+  <data name="Action_DeleteRegistrationsConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_EntitiesActions_627e247eb88c460f9b592e9c15612038" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Action_RegistrImportXlsx" xml:space="preserve">
+    <value>Import Registration Data</value>
+  </data>
+  <data name="Action_RegistrImportXlsxDescription" xml:space="preserve">
+    <value>Load data about registration of trademarks from an XLSX file.</value>
+  </data>
+  <data name="Action_RegistrImportXlsxHint" xml:space="preserve">
+    <value>Import Trademark Registrations from Excel File</value>
+  </data>
+  <data name="Action_RegistrImportXlsxConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_RegistrImportXlsxConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_RegistrCommands_f4e07056f2264c25bbc11093d4a73216" xml:space="preserve">
+    <value>Trademarks</value>
+  </data>
+</root>

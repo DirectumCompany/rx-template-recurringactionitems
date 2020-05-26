@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IncludeReasonDialogTitle" xml:space="preserve">
+    <value>Включение в стоп-лист</value>
+  </data>
+  <data name="ExcludeReasonDialogTitle" xml:space="preserve">
+    <value>Исключение из стоп-листа</value>
+  </data>
+  <data name="ReasonSelectTitle" xml:space="preserve">
+    <value>Основание</value>
+  </data>
+  <data name="CommentSelectTitle" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="SendButtonTitle" xml:space="preserve">
+    <value>Отправить</value>
+  </data>
+  <data name="IncludeStoplistTaskSubject" xml:space="preserve">
+    <value>Включить контрагента в стоп-лист</value>
+  </data>
+  <data name="IncludeStoplistTaskText" xml:space="preserve">
+    <value>Включите контрагента "{0}" в Стоп-лист.
+Комментарий:
+{1}</value>
+  </data>
+  <data name="ExcludeStoplistTaskText" xml:space="preserve">
+    <value>Исключите контрагента "{0}"из Стоп-листа.
+Комментарий:
+{1}
+</value>
+  </data>
+  <data name="ExcludeStoplistTaskSubject" xml:space="preserve">
+    <value>Исключить контрагента из стоп-листа</value>
+  </data>
+  <data name="ExcludeStoplistNoticeSubject" xml:space="preserve">
+    <value>Контрагент исключен из стоп-листа: {0}</value>
+  </data>
+  <data name="IncludeStoplistNoticeSubject" xml:space="preserve">
+    <value>Контрагент включен в стоп-лист: {0}</value>
+  </data>
+  <data name="IncludeStoplistNoticeText" xml:space="preserve">
+    <value>Контрагент включен в Стоп-лист:
+{0}</value>
+  </data>
+  <data name="ExcludeStoplistNoticeText" xml:space="preserve">
+    <value>Контрагент исключен из Стоп-листа:
+{0}</value>
+  </data>
+  <data name="ERPBlockTaskSubject" xml:space="preserve">
+    <value>Заблокировать договор с контрагентом в SAP: {0}</value>
+  </data>
+  <data name="ERPUnblockTaskSubject" xml:space="preserve">
+    <value>Разблокировать договор с контрагентом в SAP: {0}</value>
+  </data>
+  <data name="TreasuryBlockTaskSubject" xml:space="preserve">
+    <value>Заблокировать отгрузку товаров контрагенту в ИС "Кредитный менеджмент": {0}</value>
+  </data>
+  <data name="TreasuryUnblockTaskSubject" xml:space="preserve">
+    <value>Разблокировать отгрузку товаров контрагенту в ИС "Кредитный менеджмент": {0}</value>
+  </data>
+  <data name="ERPBlockTaskText" xml:space="preserve">
+    <value>Заблокируйте договор с контрагентом в SAP:
+{0}
+Причина:
+Контрагент включен в стоп-лист</value>
+  </data>
+  <data name="ERPUnblockTaskText" xml:space="preserve">
+    <value>Разблокируйте договор с контрагентом в SAP:
+{0}
+Причина:
+Контрагент исключен из стоп-листа</value>
+  </data>
+  <data name="TreasuryUnlockTaskText" xml:space="preserve">
+    <value>Разблокируйте отгрузку контрагенту в ИС «Кредитный менеджмент»:
+{0}
+Причина:
+Контрагент исключен из стоп-листа</value>
+  </data>
+  <data name="TreasuryBlockTaskText" xml:space="preserve">
+    <value>Заблокируйте отгрузку контрагенту в ИС «Кредитный менеджмент»:
+{0}
+Причина:
+Контрагент добавлен в стоп-лист</value>
+  </data>
+  <data name="StoplistRecordTheSameReasonExists" xml:space="preserve">
+    <value>Запись истории с данным основанием уже создана</value>
+  </data>
+  <data name="StoplistRecordAllreadyExclude" xml:space="preserve">
+    <value>Для выбранной записи уже зафиксированы дата и комментарий исключения из стоп-листа</value>
+  </data>
+  <data name="ReadConfigError" xml:space="preserve">
+    <value>Некорректные параметры подключения к сервису. Обратитесь к администратору системы.</value>
+  </data>
+  <data name="ParamsError" xml:space="preserve">
+    <value>Ошибка в параметрах конфигурационного файла. Обратитесь к администратору системы.</value>
+  </data>
+  <data name="ServiceError" xml:space="preserve">
+    <value>Возникла ошибка при вызове сервиса. Обратитесь к администратору системы.</value>
+  </data>
+  <data name="RequestSentSuccessfully" xml:space="preserve">
+    <value>Запрос отправлен успешно. Необходимо закрыть карточку организации для успешной обработки</value>
+  </data>
+  <data name="CodeKSSSInput" xml:space="preserve">
+    <value>Введите код КССС</value>
+  </data>
+  <data name="INNRequestInProcess" xml:space="preserve">
+    <value>Обрабатывается запрос на поиск контрагента по ИНН {0}, повторите попытку позже</value>
+  </data>
+  <data name="CodeKSSSInProcess" xml:space="preserve">
+    <value>Обрабатывается запрос на поиск контрагента по коду КССС {0}, повторите попытку позже</value>
+  </data>
+  <data name="CodeKSSSNotFound" xml:space="preserve">
+    <value>Не заполнен код КССС</value>
+  </data>
+  <data name="StoplistToSAPResponsibleTaskSubject" xml:space="preserve">
+    <value>При экспорте договоров и дополнительных соглашений в SAP возникла ошибка.</value>
+  </data>
+  <data name="StoplistToSAPWrongResponseStatusCode" xml:space="preserve">
+    <value>Неудачная отправка документа, сервис КСШ вернул код состояния: {0}
+Коды успешного приема: 200, 201, 202.
+
+Запрос:
+{1}</value>
+  </data>
+</root>

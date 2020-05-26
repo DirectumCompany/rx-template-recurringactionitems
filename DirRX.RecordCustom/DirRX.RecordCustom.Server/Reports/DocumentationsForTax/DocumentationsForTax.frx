@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;PresentationCore.dll&#13;&#10;WindowsBase.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;DirRX.RecordCustom.Shared&#13;&#10;DirRX.RecordCustom.Server" ReportInfo.CreatorVersion="2013.3.2.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using Sungero.Domain.Shared;
+using Sungero.CoreEntities;
+using Sungero.Core;
+using Resources = DirRX.RecordCustom.Reports.Resources;
+
+
+namespace FastReport
+{
+  public class ReportScript
+  {    
+  }
+}
+  </ScriptText>
+  <Dictionary>
+    <SungeroSqlDataConnection Name="Sungero_Connection" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties" ConnectionStringExpression="[SungeroConnectionString]">
+      <TableDataSource Name="Table" Alias="DataSource" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${DataSourse}">
+        <Column Name="IncomingLetterId" DataType="System.Int32" PropName="Column"/>
+        <Column Name="OutgoingLetterId" DataType="System.Int32" PropName="Column"/>
+        <Column Name="IncomingLetterHyperLink" DataType="System.String" PropName="Column"/>
+        <Column Name="OutgoingLetterHyperLink" DataType="System.String" PropName="Column"/>
+        <Column Name="Correspondent" DataType="System.String" PropName="Column"/>
+        <Column Name="RegNumber" DataType="System.String" PropName="Column"/>
+        <Column Name="DocumentDate" DataType="System.String" PropName="Column"/>
+        <Column Name="Number" DataType="System.String" PropName="Column"/>
+        <Column Name="DateOF" DataType="System.String" PropName="Column"/>
+        <Column Name="RequarimentNumber" DataType="System.String" PropName="Column"/>
+        <Column Name="Content" DataType="System.String" PropName="Column"/>
+        <Column Name="Assignee" DataType="System.String" PropName="Column"/>
+        <Column Name="CoAssignee" DataType="System.String" PropName="Column"/>
+        <Column Name="PageCountIncoming" DataType="System.String" PropName="Column"/>
+        <Column Name="DatePerformer" DataType="System.String" PropName="Column"/>
+        <Column Name="CreateDateActionItem" DataType="System.String" PropName="Column"/>
+        <Column Name="MaxDeadline" Restrictions="DontMove" DataType="System.String" PropName="Column"/>
+        <Column Name="ActualDate" DataType="System.String" PropName="Column"/>
+        <Column Name="OutgoingLetter" DataType="System.String" PropName="Column"/>
+        <Column Name="Prepared" DataType="System.String" PropName="Column"/>
+        <Column Name="PageCountOutgoingLetter" DataType="System.String" PropName="Column"/>
+        <Column Name="IsExpired" DataType="System.Int32" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+    </SungeroSqlDataConnection>
+    <SungeroParameter Name="SungeroConnectionString" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties, DontShow" Id="27ac60e4-9000-47d3-9814-6d8eba75da52" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="BeginDate" Id="63bf75bf-593d-4f1e-b378-8aefc738b544" IsRequired="true" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="EndDate" Id="77c33bf1-8c9c-4e3c-a431-ac8285c2d500" IsRequired="true" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportSessionId" Id="c5c45e7e-7fb4-441e-8dbb-e5bb3cd47b09" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportDate" Id="fb44cf6e-8183-411a-a585-1e445100f4ea" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="420.1" PaperHeight="296.9" RawPaperSize="8" Guides="75.6,28.35,226.8,302.4,368.55,859.95,992.25,765.45,491.4,538.65,670.95,916.65,1067.85,1143.45,1294.65,1398.6,1455.3,0,1512,425.25">
+    <ReportTitleBand Name="ReportTitle1" Width="1512.38" Height="75.6">
+      <TextObject Name="Text1" Width="538.65" Height="18.9" Fill.Color="92, 255, 255, 255" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.BeginDate]: [BeginDate]" VertAlign="Center"/>
+      <TextObject Name="Text2" Top="28.35" Width="538.65" Height="18.9" Fill.Color="92, 255, 255, 255" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.EndDate]: [EndDate]" VertAlign="Center"/>
+      <TextObject Name="Text5" Top="56.7" Width="1521.45" Height="18.9" Fill.Color="92, 255, 255, 255" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.ReportTitle]" HorzAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text3" Left="1143.45" Width="368.55" Height="18.9" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.DateReport]: [FormatDateTime([ReportDate], &quot;Short Date&quot;)]" HorzAlign="Right" VertAlign="Center"/>
+      <ChildBand Name="Child2" Top="80.09" Width="1512.38" Height="18.9">
+        <TextObject Name="Text6" Width="1143.45" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.IncomingLetters]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <TextObject Name="Text7" Left="1143.45" Width="368.55" Height="18.9" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.OutgoingDoc]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        <ChildBand Name="Child3" Top="103.49" Width="1512.38" Height="66.15" CanGrow="true" Guides="132.3">
+          <TextObject Name="Text10" Left="75.6" Width="151.2" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.Correspondent]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text8" Width="28.35" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.NumberPP]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text11" Left="226.8" Width="75.6" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.RegNum]" HorzAlign="Center" VertAlign="Center" Font="Arial, 11pt, style=Bold"/>
+          <TextObject Name="Text13" Left="368.55" Width="56.7" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.Number]" HorzAlign="Center" VertAlign="Center" Font="Arial, 11pt, style=Bold"/>
+          <TextObject Name="Text14" Left="425.25" Width="66.15" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.DateOf]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text15" Left="491.4" Width="47.25" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.NumberRequirement]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text16" Left="538.65" Width="132.3" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.ContentDoc]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text17" Left="670.95" Width="94.5" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.ResponcibleExecutor]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text18" Left="765.45" Width="94.5" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.CoExecuters]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text19" Left="859.95" Width="56.7" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.CountPage]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text21" Left="992.25" Width="75.6" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.TermExecution]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text22" Left="1067.85" Width="75.6" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.ActualDate]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text23" Left="1143.45" Width="151.2" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.OutgoingDoc]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text24" Left="1294.65" Width="103.95" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.Prepared]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text25" Left="1398.6" Width="56.7" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.CountPageOutgoing]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text9" Left="28.35" Width="47.25" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.IDIncomingLetter]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text12" Left="302.4" Width="66.15" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.DateDocument]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text20" Left="916.65" Width="75.6" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.CreateDateInstuctions]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+          <TextObject Name="Text26" Left="1455.3" Width="56.7" Height="66.15" Border.Lines="All" Fill.Color="White" Text="[DirRX.RecordCustom.Reports.Resources.DocumentationsForTax.IDOutgoingLetter]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+        </ChildBand>
+      </ChildBand>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="174.13" Width="1512.38" Height="66.15" CanGrow="true" DataSource="Table" KeepTogether="true" KeepDetail="true">
+      <TextObject Name="Text27" Width="28.35" Height="66.15" Border.Lines="All" Text="[Row#]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text28" Left="28.35" Width="47.25" Height="66.15" Border.Lines="All" Cursor="Hand" Hyperlink.Expression="[DataSource.IncomingLetterHyperLink]" Text="[DataSource.IncomingLetterId]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Underline" TextFill.Color="Blue"/>
+      <TextObject Name="Text29" Left="75.6" Width="151.2" Height="66.15" Border.Lines="All" Text="[DataSource.Correspondent]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text30" Left="226.8" Width="75.6" Height="66.15" Border.Lines="All" Text="[DataSource.RegNumber]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text31" Left="302.4" Width="66.15" Height="66.15" Border.Lines="All" Text="[DataSource.DocumentDate]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text32" Left="425.25" Width="66.15" Height="66.15" Border.Lines="All" Text="[DataSource.DateOF]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text33" Left="368.55" Width="56.7" Height="66.15" Border.Lines="All" Text="[DataSource.Number]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text34" Left="491.4" Width="47.25" Height="66.15" Border.Lines="All" Text="[DataSource.RequarimentNumber]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text35" Left="538.65" Width="132.3" Height="66.15" Border.Lines="All" Text="[DataSource.Content]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text36" Left="670.95" Width="94.5" Height="66.15" Border.Lines="All" Text="[DataSource.Assignee]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text37" Left="765.45" Width="94.5" Height="66.15" Border.Lines="All" Text="[DataSource.CoAssignee]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text38" Left="859.95" Width="56.7" Height="66.15" Border.Lines="All" Text="[DataSource.PageCountIncoming]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text39" Left="916.65" Width="75.6" Height="66.15" Border.Lines="All" Text="[DataSource.CreateDateActionItem]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text40" Left="992.25" Width="75.6" Height="66.15" Border.Lines="All" Text="[DataSource.MaxDeadline]" HorzAlign="Center" VertAlign="Center">
+        <Highlight>
+          <Condition Expression="[DataSource.IsExpired] &gt; 0"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text41" Left="1067.85" Width="75.6" Height="66.15" Border.Lines="All" Text="[DataSource.ActualDate]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text42" Left="1143.45" Width="151.2" Height="66.15" Border.Lines="All" Text="[DataSource.OutgoingLetter]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text43" Left="1294.65" Width="103.95" Height="66.15" Border.Lines="All" Text="[DataSource.Prepared]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text44" Left="1398.6" Width="56.7" Height="66.15" Border.Lines="All" Text="[DataSource.PageCountOutgoingLetter]" HorzAlign="Center" VertAlign="Center"/>
+      <TextObject Name="Text45" Left="1455.3" Width="56.7" Height="66.15" Border.Lines="All" Cursor="Hand" Hyperlink.Expression="[DataSource.OutgoingLetterHyperLink]" Text="[IIf([DataSource.OutgoingLetterId] &gt; 0,[DataSource.OutgoingLetterId],&quot;&quot;)]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Underline" TextFill.Color="Blue"/>
+      <Sort>
+        <Sort Expression="[DataSource.IncomingLetterId]"/>
+      </Sort>
+    </DataBand>
+  </ReportPage>
+</Report>

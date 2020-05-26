@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="IsNotValidKindDocument" xml:space="preserve">
+    <value>Условие не может быть вычислено. Отправляемый документ не того вида.</value>
+  </data>
+  <data name="CounterpartyStatusIs" xml:space="preserve">
+    <value>Статус контрагента – {0}?</value>
+  </data>
+  <data name="CounterpartyStatusOther" xml:space="preserve">
+    <value>Иной статус контрагента</value>
+  </data>
+  <data name="IsLlcGroupConditionName" xml:space="preserve">
+    <value>Контрагент входит в Группу ЛУКОЙЛ?</value>
+  </data>
+  <data name="IsLlcGroupConditionNegationName" xml:space="preserve">
+    <value>Контрагент не входит в Группу ЛУКОЙЛ</value>
+  </data>
+  <data name="UrgentContractConditionName" xml:space="preserve">
+    <value>Согласование срочное?</value>
+  </data>
+  <data name="FirstSignCPartyConditionName" xml:space="preserve">
+    <value>Первым подписывает контрагент?</value>
+  </data>
+  <data name="CPartySignsScanConditionName" xml:space="preserve">
+    <value>Контрагент подписывает скан-копию?</value>
+  </data>
+  <data name="SubcategoryConditionName" xml:space="preserve">
+    <value>Дополнительное условие документа: {0}?</value>
+  </data>
+  <data name="FunctionalityConditionName" xml:space="preserve">
+    <value>Функциональность договора: {0}?</value>
+  </data>
+  <data name="DocsProvidedConditionName" xml:space="preserve">
+    <value>Документы предоставлены?</value>
+  </data>
+  <data name="UrgentContractConditionNegationName" xml:space="preserve">
+    <value>Договор несрочный</value>
+  </data>
+  <data name="FirstSignCPartyConditionNegationName" xml:space="preserve">
+    <value>Первым подписывает не контрагент</value>
+  </data>
+  <data name="CPartySignsScanConditionNegationName" xml:space="preserve">
+    <value>Контрагент не подписывает скан-копию</value>
+  </data>
+  <data name="SubcategoryConditionNegationName" xml:space="preserve">
+    <value>Дополнительное условие документа не: {0}</value>
+  </data>
+  <data name="FunctionalityConditionNegationName" xml:space="preserve">
+    <value>Функциональность договора - не {0}</value>
+  </data>
+  <data name="DocsProvidedConditionNegationName" xml:space="preserve">
+    <value>Документы не предоставлены</value>
+  </data>
+  <data name="InvalidLeadingDocument" xml:space="preserve">
+    <value>Условие не может быть вычислено. Отсутствует документ-основание.</value>
+  </data>
+  <data name="YearCountValueCheck" xml:space="preserve">
+    <value>Значение должно быть положительным</value>
+  </data>
+  <data name="YearCountGreaterOrEqualSingleName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения не менее {0} года  (вкл. бессрочный)?</value>
+  </data>
+  <data name="YearCountGreaterOrEqualName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения не менее {0} лет (вкл. бессрочный)?</value>
+  </data>
+  <data name="YearCountGreaterThanSingleName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения более {0} года (вкл. бессрочный)?</value>
+  </data>
+  <data name="YearCountGreaterThanName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения более {0} лет (вкл. бессрочный)?</value>
+  </data>
+  <data name="YearCountLessThanSingleName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения менее {0} года (вкл. бессрочный)?</value>
+  </data>
+  <data name="YearCountLessThanName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения менее {0} лет (вкл. бессрочный)?</value>
+  </data>
+  <data name="YearCountLessOrEqualSingleName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения не более {0} года (вкл. бессрочный)?</value>
+  </data>
+  <data name="YearCountLessOrEqualName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения не более {0} лет (вкл. бессрочный)?</value>
+  </data>
+  <data name="CorpApproveName" xml:space="preserve">
+    <value>Требуется корпоративное одобрение?</value>
+  </data>
+  <data name="CopyActivationName" xml:space="preserve">
+    <value>Активация по скан-копиям?</value>
+  </data>
+  <data name="AnalysisRequiredName" xml:space="preserve">
+    <value>Требуется анализ на признак МСФО 16?</value>
+  </data>
+  <data name="YearCountGreaterOrEqualSingleNegName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения менее {0} года (вкл. бессрочный)</value>
+  </data>
+  <data name="YearCountGreaterOrEqualNegName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения менее {0} лет (вкл. бессрочный)</value>
+  </data>
+  <data name="YearCountGreaterThanSingleNegName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения не более {0} года (вкл. бессрочный)</value>
+  </data>
+  <data name="YearCountLessThanSingleNegName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения не менее {0} года (вкл. бессрочный)</value>
+  </data>
+  <data name="YearCountLessOrEqualSingleNegName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения более {0} года (вкл. бессрочный)</value>
+  </data>
+  <data name="YearCountLessOrEqualNegName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения более {0} лет (вкл. бессрочный)</value>
+  </data>
+  <data name="YearCountLessThanNegName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения не менее {0} лет (вкл. бессрочный)</value>
+  </data>
+  <data name="YearCountGreaterThanNegName" xml:space="preserve">
+    <value>Общий срок договора и доп. соглашения не более {0} лет (вкл. бессрочный)</value>
+  </data>
+  <data name="CorpApproveNegName" xml:space="preserve">
+    <value>Не требуется корпоративное одобрение</value>
+  </data>
+  <data name="CopyActivationNegName" xml:space="preserve">
+    <value>Активация по оригиналам</value>
+  </data>
+  <data name="AnalysisRequiredNegName" xml:space="preserve">
+    <value>Не требуется анализ на признак МСФО 16</value>
+  </data>
+  <data name="IsCountryDisputedConditionName" xml:space="preserve">
+    <value>Страна назначения/поставки входит в перечень спорных территорий?</value>
+  </data>
+  <data name="IsCountryDisputedNegationName" xml:space="preserve">
+    <value>Ни одна из стран назначения/поставки не входит в перечень спорных территорий</value>
+  </data>
+  <data name="IsTermlessContrConditionName" xml:space="preserve">
+    <value>Договор бессрочный?</value>
+  </data>
+  <data name="IsTermlessContrConditionNegationName" xml:space="preserve">
+    <value>Договор не бессрочный</value>
+  </data>
+  <data name="CounterpartySanctionsConditionName" xml:space="preserve">
+    <value>Контрагент под санкциями?</value>
+  </data>
+  <data name="CounterpartySanctionsNegationName" xml:space="preserve">
+    <value>Контрагент не под санкциями</value>
+  </data>
+  <data name="HolderTZThirdConditionName" xml:space="preserve">
+    <value>Правообладатель ТЗ третье лицо?</value>
+  </data>
+  <data name="HolderTZThirdNegationName" xml:space="preserve">
+    <value>Правообладатель ТЗ не третье лицо</value>
+  </data>
+  <data name="PrevStgRisksLvlNegName" xml:space="preserve">
+    <value>На предыдущем этапе не обозначены риски с уровнями: {0}</value>
+  </data>
+  <data name="PrevStgRisksLvlName" xml:space="preserve">
+    <value>На предыдущем этапе обозначены риски с уровнем {0}</value>
+  </data>
+  <data name="AdviseCountryNegationName" xml:space="preserve">
+    <value>Страны поставки не входят в перечень рекомендуемых</value>
+  </data>
+  <data name="LukoilApprovedNegationName" xml:space="preserve">
+    <value>Не требуется согласование ПАО "ЛУКОЙЛ"</value>
+  </data>
+  <data name="AdviseCountryConditionName" xml:space="preserve">
+    <value>Страны поставки входят в перечень рекомендуемых?</value>
+  </data>
+  <data name="LukoilApprovedConditionName" xml:space="preserve">
+    <value>Требуется согласование ПАО ЛУКОЙЛ?</value>
+  </data>
+  <data name="CurAmountIsMoreConditionName" xml:space="preserve">
+    <value>Сумма документа {0} {1} {2}?</value>
+  </data>
+  <data name="BalancePercentConditionName" xml:space="preserve">
+    <value>Сумма документа ≥ {0}% балансовой стоимости активов</value>
+  </data>
+  <data name="CurAmountIsMoreConditionNegationName" xml:space="preserve">
+    <value>Сумма документа не {0} {1} {2}?</value>
+  </data>
+  <data name="BalancePercentConditionNegationName" xml:space="preserve">
+    <value>Сумма документа меньше {0}% балансовой стоимости активов</value>
+  </data>
+  <data name="TenderTypeConditionName" xml:space="preserve">
+    <value>Тип тендера: {0}?</value>
+  </data>
+  <data name="TenderTypeConditionNegationName" xml:space="preserve">
+    <value>Тип тенедра - не {0}</value>
+  </data>
+  <data name="IsNotValidCounterpartyStatus" xml:space="preserve">
+    <value>Условие не может быть вычислено. Невозможно вычислить статус контрагента.</value>
+  </data>
+</root>

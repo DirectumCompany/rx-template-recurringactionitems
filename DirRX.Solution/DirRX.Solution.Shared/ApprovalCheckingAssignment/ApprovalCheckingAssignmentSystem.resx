@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Action_Recycling" xml:space="preserve">
+    <value>For Major Rework</value>
+  </data>
+  <data name="Action_RecyclingDescription" xml:space="preserve">
+    <value>Document is not approved and requires major rework.</value>
+  </data>
+  <data name="Action_RecyclingHint" xml:space="preserve">
+    <value>Send Document for Major Rework</value>
+  </data>
+  <data name="Action_RecyclingConfirmationMessage" xml:space="preserve">
+    <value>Are you sure you want to send the document for major rework?</value>
+  </data>
+  <data name="Action_RecyclingConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_ForRecycle" xml:space="preserve">
+    <value>TODO</value>
+  </data>
+  <data name="Action_ForReworkHint" xml:space="preserve">
+    <value>Send Document for Rework</value>
+  </data>
+  <data name="Action_ForReworkDescription" xml:space="preserve">
+    <value>Document is not approved and requires minor rework.</value>
+  </data>
+  <data name="Property_IsRiskConfirmation" xml:space="preserve">
+    <value>Risk confirmation stage</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Assignment</value>
+  </data>
+  <data name="Property_ApprovalStage" xml:space="preserve">
+    <value>ApprovalStage</value>
+  </data>
+  <data name="Property_IsCounterpartyApprove" xml:space="preserve">
+    <value>TODO</value>
+  </data>
+  <data name="Action_RequestInititator" xml:space="preserve">
+    <value>Send Request to Initiator</value>
+  </data>
+  <data name="Action_RequestInititatorDescription" xml:space="preserve">
+    <value>Initiator will receive an assignment in the system and will reply to a comment.</value>
+  </data>
+  <data name="Action_RequestInititatorHint" xml:space="preserve">
+    <value>Send Request to Approval Initiator</value>
+  </data>
+  <data name="Action_RequestInititatorConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_RequestInititatorConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_StageSubject" xml:space="preserve">
+    <value>Approval stage subject</value>
+  </data>
+  <data name="Property_Denied" xml:space="preserve">
+    <value>Denied</value>
+  </data>
+  <data name="Action_Deny" xml:space="preserve">
+    <value>Deny</value>
+  </data>
+  <data name="Action_DenyDescription" xml:space="preserve">
+    <value>Reject approval and signing of the document since further approval has become meaningless, or there are some insuperable obstacles, etc.</value>
+  </data>
+  <data name="Action_DenyHint" xml:space="preserve">
+    <value>Abort Document Approval</value>
+  </data>
+  <data name="Action_DenyConfirmationMessage" xml:space="preserve">
+    <value>Signatory</value>
+  </data>
+  <data name="Action_DenyConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_Signatory" xml:space="preserve">
+    <value>To sign by</value>
+  </data>
+  <data name="Resource_cf45ca53bfe446fdb398de06f4d71fad" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_cf45ca53bfe446fdb398de06f4d71fad_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_be1f292a6e7e4e769314ca57e93f9f81" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_be1f292a6e7e4e769314ca57e93f9f81_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_c30f7a151d6f4a7a89db073bc27141b4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Control_c30f7a151d6f4a7a89db073bc27141b4_EmptyText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Resource_52d7741ffda145a3a678f925c3712232" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_99078a64599f458f870281d97fd3e9b6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_4377633005284f2a8e5b6e1c8d5161c6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_527ed9d595c34acdb19a453897eea3d7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_b554f15870b94539a3cc41e20683dfaf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_1188a9ce36234676a6587d523344e538" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ControlGroup_9c0b1b4652ad47559d6859db74260d92" xml:space="preserve">
+    <value>Approval Settings</value>
+  </data>
+  <data name="Action_AcceptHint" xml:space="preserve">
+    <value>Complete Assignment</value>
+  </data>
+  <data name="Action_AcceptDescription" xml:space="preserve">
+    <value>Confirm completion of an assignment or an action item.</value>
+  </data>
+  <data name="Property_SubjectTransaction" xml:space="preserve">
+    <value>Deal subject</value>
+  </data>
+  <data name="Enum_SubjectTransaction_OCorHMA" xml:space="preserve">
+    <value>Fixed asset or intangible asset</value>
+  </data>
+  <data name="Enum_SubjectTransaction_NonCurrentAsset" xml:space="preserve">
+    <value>Noncurrent asset</value>
+  </data>
+  <data name="Enum_SubjectTransaction_Another" xml:space="preserve">
+    <value>Other</value>
+  </data>
+</root>

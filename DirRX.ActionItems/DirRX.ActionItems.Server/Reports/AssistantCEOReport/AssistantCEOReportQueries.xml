@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="CreateAssistantCEOReportSourceTable">
+    <mssql><![CDATA[IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = N'{0}')
+BEGIN
+create table {0}
+  ([Mark] nvarchar(max),
+  [Id] int,
+  [Hyperlink] nvarchar(max),
+  [DocumentInfo] nvarchar(max),
+  [ActionItemText] nvarchar(max),
+  [PlanDate] nvarchar(max),
+  [Status] nvarchar(max),
+  [Supervisor] nvarchar(max),
+  [NewPlanDate] nvarchar(max),
+  [ReportSessionId] nvarchar(max))
+END]]></mssql>
+    <postgres><![CDATA[create table if not exists {0}
+  ([Mark] citext,
+  [Id] int,
+  [Hyperlink] citext,
+  [DocumentInfo] citext,
+  [ActionItemText] citext,
+  [PlanDate] citext,
+  [Status] citext,
+  [Supervisor] citext,
+  [NewPlanDate] citext,
+  [ReportSessionId] citext)]]></postgres>
+  </query>
+  <query key="SelectDataFromTable">
+    <default><![CDATA[select *
+from  ActiomItems_Reports_AssistantCEO temp
+where ReportSessionId = @ReportSessionId
+order by Id]]></default>
+  </query>
+</queries>
