@@ -430,13 +430,15 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
 		private void SendActionItem(IRepeatSetting setting, DateTime deadline)
 		{
 			var task = Sungero.RecordManagement.ActionItemExecutionTasks.Create();
+			task.AssignedBy = setting.AssignedBy;
+			task.ActionItem = setting.ActionItem;
+			task.Supervisor = setting.Supervisor;
+			task.IsUnderControl = setting.IsUnderControl.GetValueOrDefault();
 			
 			if (setting.IsCompoundActionItem.GetValueOrDefault())
 			{
 				task.IsCompoundActionItem = true;
-				task.IsUnderControl = setting.IsUnderControl.GetValueOrDefault();
-				task.Supervisor = setting.Supervisor;
-
+				
 				foreach (var actionItemPartsSetting in setting.ActionItemsParts)
 				{
 					var actionItemParts = task.ActionItemParts.AddNew();
@@ -452,17 +454,13 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
 					var coAssignee = task.CoAssignees.AddNew();
 					coAssignee.Assignee = coAssigneeSetting.Assignee;
 				}
-				
+
 				task.Assignee = setting.Assignee;
-				task.IsUnderControl = setting.IsUnderControl.GetValueOrDefault();
-				task.Supervisor = setting.Supervisor;
-				task.Deadline = deadline.Date;
-				task.ActionItem = setting.ActionItem;
+				task.Deadline = deadline.Date;		
 			}
 			
 			var row = setting.StartedActionItemTask.AddNew();
 			row.ActionItemTask = task;
-			setting.Save();
 			
 			task.Start();
 		}
