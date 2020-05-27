@@ -319,22 +319,19 @@
     <value>числа</value>
   </data>
   <data name="DisplayName" xml:space="preserve">
-    <value>Настройка повторяющихся поручений</value>
+    <value>Настройка периодических поручений</value>
   </data>
   <data name="AccusativeDisplayName" xml:space="preserve">
-    <value>Настройку повторяющихся поручений</value>
+    <value>Настройку периодических поручений</value>
   </data>
   <data name="CollectionDisplayName" xml:space="preserve">
-    <value>Настройки повторяющихся поручений</value>
+    <value>Настройки периодических поручений</value>
   </data>
   <data name="Property_Subject" xml:space="preserve">
     <value>Тема</value>
   </data>
   <data name="Property_AssignedBy" xml:space="preserve">
-    <value>Автор</value>
-  </data>
-  <data name="Property_Initiator" xml:space="preserve">
-    <value>Постановщик</value>
+    <value>Выдал</value>
   </data>
   <data name="Property_IsUnderControl" xml:space="preserve">
     <value>На контроле</value>
@@ -351,12 +348,6 @@
   <data name="Property_FinalDeadline" xml:space="preserve">
     <value>Общий срок</value>
   </data>
-  <data name="Property_ReportDeadline" xml:space="preserve">
-    <value>Отчетный срок</value>
-  </data>
-  <data name="Property_Subscribers" xml:space="preserve">
-    <value>Подписчики</value>
-  </data>
   <data name="Property_CoAssignees" xml:space="preserve">
     <value>Соисполнители</value>
   </data>
@@ -368,9 +359,6 @@
   </data>
   <data name="Control_d91767367eac447e8dd2447199fa6e0f_EmptyText" xml:space="preserve">
     <value>Укажите соисполнителей поручения...</value>
-  </data>
-  <data name="Control_080e6ad7100f498b8955aa9ad62e5f24_EmptyText" xml:space="preserve">
-    <value>Укажите подписчиков...</value>
   </data>
   <data name="Control_274d6c81e06b4dafb66488a84b0152df_EmptyText" xml:space="preserve">
     <value>Введите текст поручения…</value>

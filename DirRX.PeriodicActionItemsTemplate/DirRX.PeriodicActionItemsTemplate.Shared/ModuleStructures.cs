@@ -8,58 +8,6 @@ namespace DirRX.PeriodicActionItemsTemplate.Structures.Module
 {
 	partial class LightActionItem
 	{
-		public int Id { get; set; }
-		
-		/// <summary>
-		/// Статус поручения.
-		/// </summary>
-		public Sungero.Core.Enumeration? Status { get; set; }
-		
-		/// <summary>
-		/// Дата завершения.
-		/// </summary>
-		public DateTime? ActualDate { get; set; }
-		
-		/// <summary>
-		/// Срок.
-		/// </summary>
-		public DateTime? Deadline { get; set; }
-		
-		/// <summary>
-		/// Автор поручения.
-		/// </summary>
-		public IUser Author { get; set; }
-		
-		/// <summary>
-		/// Исполнитель.
-		/// </summary>
-		public Sungero.Company.IEmployee Assignee { get; set; }
-		
-		/// <summary>
-		/// Текст поручения.
-		/// </summary>
-		public string ActionItem { get; set; }
-		
-		/// <summary>
-		/// Состояние.
-		/// </summary>
-		public Sungero.Core.Enumeration? ExecutionState { get; set; }
-		
-		/// <summary>
-		/// Постановщик.
-		/// </summary>
-		public Sungero.Company.IEmployee Initiator { get; set; }
-		
-		/// <summary>
-		/// Соисполнители.
-		/// </summary>
-		public List<string> CoAssigneesShortNames { get; set; }
-		
-		/// <summary>
-		/// Дата старта.
-		/// </summary>
-		public DateTime? StartedDate { get; set; }
-		
 	}
 
 }

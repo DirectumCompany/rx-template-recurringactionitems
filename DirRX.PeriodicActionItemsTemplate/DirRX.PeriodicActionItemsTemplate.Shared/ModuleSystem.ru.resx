@@ -133,9 +133,9 @@
     <value>При наступлении срока эскалации руководителю направляется уведомление с вложенным эскалируемым поручением.</value>
   </data>
   <data name="JobDescription_99f12576553b4a579c1c8c57e4d3e77a" xml:space="preserve">
-    <value>Отправка повторяющихся поручений</value>
+    <value>Отправка периодических поручений</value>
   </data>
   <data name="JobDisplayName_99f12576553b4a579c1c8c57e4d3e77a" xml:space="preserve">
-    <value>Отправка повторяющихся поручений</value>
+    <value>Отправка периодических поручений</value>
   </data>
 </root>

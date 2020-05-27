@@ -336,9 +336,6 @@
   <data name="Property_AssignedBy" xml:space="preserve">
     <value>Assigned by</value>
   </data>
-  <data name="Property_Initiator" xml:space="preserve">
-    <value>Creator</value>
-  </data>
   <data name="Property_IsUnderControl" xml:space="preserve">
     <value>Under control</value>
   </data>
@@ -354,11 +351,8 @@
   <data name="Property_FinalDeadline" xml:space="preserve">
     <value>Final deadline</value>
   </data>
-  <data name="Property_ReportDeadline" xml:space="preserve">
-    <value>Report deadline</value>
-  </data>
-  <data name="Property_Subscribers" xml:space="preserve">
-    <value>Subscribers</value>
+  <data name="Property_StartedActionItemTask" xml:space="preserve">
+    <value>Стартованные порученияв</value>
   </data>
   <data name="Property_CoAssignees" xml:space="preserve">
     <value>Co-Assignees</value>
@@ -374,9 +368,6 @@
   </data>
   <data name="Control_d91767367eac447e8dd2447199fa6e0f_EmptyText" xml:space="preserve">
     <value>Specify co-assignees of the action item...</value>
-  </data>
-  <data name="Control_080e6ad7100f498b8955aa9ad62e5f24_EmptyText" xml:space="preserve">
-    <value>Specify subscribers…</value>
   </data>
   <data name="Control_274d6c81e06b4dafb66488a84b0152df_EmptyText" xml:space="preserve">
     <value />

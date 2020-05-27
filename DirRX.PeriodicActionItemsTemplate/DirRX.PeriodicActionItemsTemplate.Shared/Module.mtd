@@ -65,16 +65,6 @@
     "Importance",
     "IsVisible"
   ],
-  "PublicConstants": [
-    {
-      "Name": "CEOAssistant",
-      "ParentClasses": [
-        "Module"
-      ],
-      "TypeName": "System.Guid",
-      "Value": "new System.Guid(\"C947DEBC-CC7F-4CD9-80F0-A0852C8281C8\")"
-    }
-  ],
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "ResourceInterfaceNamespace": "DirRX.PeriodicActionItemsTemplate",

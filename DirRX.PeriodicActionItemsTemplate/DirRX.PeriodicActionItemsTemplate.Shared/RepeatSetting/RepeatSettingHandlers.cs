@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -24,9 +24,44 @@ namespace DirRX.PeriodicActionItemsTemplate
   partial class RepeatSettingSharedHandlers
   {
 
-    public virtual void MonthTypeDayValueChanged(Sungero.Domain.Shared.IntegerPropertyChangedEventArgs e)
+    public virtual void MonthTypeDayChanged(Sungero.Domain.Shared.EnumerationPropertyChangedEventArgs e)
     {
+      if (e.NewValue == null)
+      {
+        _obj.MonthTypeDay = RepeatSetting.MonthTypeDay.Date;
+      }
+      else
+      {
+        if (e.NewValue != e.OldValue)
+        {
+          if (e.NewValue == RepeatSetting.MonthTypeDay.DayOfWeek)
+          {
+            _obj.MonthTypeDayOfWeek = RepeatSetting.MonthTypeDayOfWeek.Monday;
+            _obj.MonthTypeDayOfWeekNumber = RepeatSetting.MonthTypeDayOfWeekNumber.First;
+          }
+          else
+          {
+            _obj.MonthTypeDayOfWeek = null;
+            _obj.MonthTypeDayOfWeekNumber = null;
+          }
+          
+          if (e.NewValue == RepeatSetting.MonthTypeDay.Date)
+            _obj.MonthTypeDayValue = 1;
+          else
+            _obj.MonthTypeDayValue = null;
+          
+          Functions.RepeatSetting.SetStateproperties(_obj);
+        }
+      }
+    }
 
+    public virtual void IsUnderControlChanged(Sungero.Domain.Shared.BooleanPropertyChangedEventArgs e)
+    {
+    	if (e.NewValue != e.OldValue)
+    	{
+    		_obj.State.Properties.Supervisor.IsEnabled = e.NewValue.Value;
+    		_obj.State.Properties.Supervisor.IsRequired = e.NewValue.Value;
+    	}
     }
 
     public virtual void BeginningMonthChanged(Sungero.Domain.Shared.DateTimePropertyChangedEventArgs e)
@@ -163,37 +198,6 @@ namespace DirRX.PeriodicActionItemsTemplate
         // Заменить первый символ на прописной.
         _obj.ActionItem = _obj.ActionItem != null ? _obj.ActionItem.Trim() : string.Empty;
         _obj.ActionItem = Sungero.Docflow.PublicFunctions.Module.ReplaceFirstSymbolToUpperCase(_obj.ActionItem);
-      }
-    }
-
-    public virtual void MonthTypeDayChanged(Sungero.Domain.Shared.EnumerationPropertyChangedEventArgs e)
-    {
-      if (e.NewValue == null)
-      {
-        _obj.MonthTypeDay = RepeatSetting.MonthTypeDay.Date;
-      }
-      else
-      {
-        if (e.NewValue != e.OldValue)
-        {
-          if (e.NewValue == RepeatSetting.MonthTypeDay.DayOfWeek)
-          {
-            _obj.MonthTypeDayOfWeek = RepeatSetting.MonthTypeDayOfWeek.Monday;
-            _obj.MonthTypeDayOfWeekNumber = RepeatSetting.MonthTypeDayOfWeekNumber.First;
-          }
-          else
-          {
-            _obj.MonthTypeDayOfWeek = null;
-            _obj.MonthTypeDayOfWeekNumber = null;
-          }
-          
-          if (e.NewValue == RepeatSetting.MonthTypeDay.Date)
-            _obj.MonthTypeDayValue = 1;
-          else
-            _obj.MonthTypeDayValue = null;
-          
-          Functions.RepeatSetting.SetStateproperties(_obj);
-        }
       }
     }
 

@@ -32,7 +32,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Client
 
 		public virtual bool CanAddPerformer(Sungero.Domain.Client.CanExecuteActionArgs e)
 		{
-			return _obj.State.Properties.Initiator.IsEnabled && _obj.IsCompoundActionItem == true;
+			return _obj.IsCompoundActionItem == true;
 		}
 
 		public virtual void ChangeCompoundMode(Sungero.Domain.Client.ExecuteActionArgs e)
@@ -59,7 +59,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Client
 
 		public virtual bool CanChangeCompoundMode(Sungero.Domain.Client.CanExecuteActionArgs e)
 		{
-			return _obj.State.Properties.Initiator.IsEnabled;
+			return true;
 		}
 
 	}

@@ -32,6 +32,11 @@ namespace DirRX.PeriodicActionItemsTemplate
   partial class RepeatSettingClientHandlers
   {
 
+    public override void Showing(Sungero.Presentation.FormShowingEventArgs e)
+    {
+    	_obj.State.Pages.ActionItem.Activate();
+    }
+
     public virtual void MonthTypeDayValueValueInput(Sungero.Presentation.IntegerValueInputEventArgs e)
     {
       if (e.NewValue.HasValue && (e.NewValue <= 0 || e.NewValue > 31))
