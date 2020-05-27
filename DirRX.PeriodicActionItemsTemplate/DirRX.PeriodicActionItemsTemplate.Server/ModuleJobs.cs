@@ -85,7 +85,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
 							else
 								Logger.DebugFormat("Incorrect day. Current = {0}. Is setting (working day) = {1}", deadlineDate.Day, date.Day);
 						}
-						catch
+						catch 
 						{
 							Logger.ErrorFormat("Incorrect data for date. Year = {0}, month = {1}, day = {2}",
 							                   deadlineDate.Year, month, setting.YearTypeDayValue.GetValueOrDefault());
@@ -432,9 +432,9 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
 			var task = Sungero.RecordManagement.ActionItemExecutionTasks.Create();
 			task.AssignedBy = setting.AssignedBy;
 			task.ActionItem = setting.ActionItem;
-			task.Supervisor = setting.Supervisor;
 			task.IsUnderControl = setting.IsUnderControl.GetValueOrDefault();
-			
+			task.Supervisor = setting.Supervisor;
+
 			if (setting.IsCompoundActionItem.GetValueOrDefault())
 			{
 				task.IsCompoundActionItem = true;
