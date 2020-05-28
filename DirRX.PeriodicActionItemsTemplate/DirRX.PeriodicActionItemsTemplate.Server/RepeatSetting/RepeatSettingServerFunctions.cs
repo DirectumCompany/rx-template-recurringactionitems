@@ -21,7 +21,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
     {
       var error = string.Empty;
       var performers = new List<IRecipient> { recipient };
-      var employees = Sungero.Docflow.PublicFunctions.Module.Remote.GetEmployeesFromRecipients(performers);
+      var employees = Sungero.Docflow.PublicFunctions.Module.Remote.GetEmployeesFromRecipientsRemote(performers);
       if (employees.Count > Sungero.RecordManagement.PublicConstants.ActionItemExecutionTask.MaxCompoundGroup)
         return Sungero.RecordManagement.ActionItemExecutionTasks.Resources.BigGroupWarningFormat(Sungero.RecordManagement.PublicConstants.ActionItemExecutionTask.MaxCompoundGroup);
       
