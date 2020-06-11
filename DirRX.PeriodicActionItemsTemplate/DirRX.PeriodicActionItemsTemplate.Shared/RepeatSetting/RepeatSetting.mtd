@@ -508,10 +508,10 @@
           "Name": "TaskGroup",
           "ColumnDefinitions": [
             {
-              "Percentage": 66.06
+              "Percentage": 65.42
             },
             {
-              "Percentage": 33.94
+              "Percentage": 33.61
             }
           ]
         },
