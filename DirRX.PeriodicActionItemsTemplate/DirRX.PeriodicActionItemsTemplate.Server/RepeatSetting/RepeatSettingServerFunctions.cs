@@ -21,7 +21,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
     {
       var error = string.Empty;
       var performers = new List<IRecipient> { recipient };
-      var employees = Sungero.Docflow.PublicFunctions.Module.Remote.GetEmployeesFromRecipientsRemote(performers);
+      var employees = Sungero.Docflow.PublicFunctions.Module.Remote.GetEmployeesFromRecipients(performers);
       if (employees.Count > Sungero.RecordManagement.PublicConstants.ActionItemExecutionTask.MaxCompoundGroup)
         return Sungero.RecordManagement.ActionItemExecutionTasks.Resources.BigGroupWarningFormat(Sungero.RecordManagement.PublicConstants.ActionItemExecutionTask.MaxCompoundGroup);
       
@@ -44,6 +44,20 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
     public static DirRX.PeriodicActionItemsTemplate.IRepeatSetting CreateRepeatSetting()
     {
       return RepeatSettings.Create();
+    }
+    
+    /// <summary>
+    /// Сформировать тему для поручения.
+    /// </summary>
+    /// <returns>Тема поручения.</returns>
+    [Remote]
+    public string CreateSubject()
+    {
+      var subjectTemplate = _obj.IsCompoundActionItem == true ?
+        Sungero.RecordManagement.ActionItemExecutionTasks.Resources.ComponentActionItemExecutionSubject :
+        Sungero.RecordManagement.ActionItemExecutionTasks.Resources.TaskSubject;
+      
+      return Functions.RepeatSetting.GetActionItemExecutionSubject(_obj, subjectTemplate);
     }
   }
 }

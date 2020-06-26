@@ -9,7 +9,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
 {
   partial class RepeatSettingFunctions
   {
-    public void SetStateproperties()
+    public void SetStateProperties()
     {
       #region Ежегодно.
       
@@ -93,7 +93,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
     /// <returns>Сформированная тема поручения.</returns>
     public string GetActionItemExecutionSubject(CommonLibrary.LocalizedString beginningSubject)
     {
-      var autoSubject = Sungero.Docflow.Resources.AutoformatTaskSubject.ToString();
+      var autoSubject = Sungero.Docflow.Resources.AutoformatTaskSubject;
       
       using (TenantInfo.Culture.SwitchTo())
       {

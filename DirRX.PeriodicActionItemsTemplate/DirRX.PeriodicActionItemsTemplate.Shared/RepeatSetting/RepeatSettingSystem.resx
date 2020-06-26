@@ -124,16 +124,16 @@
     <value>Period type</value>
   </data>
   <data name="Enum_Type_Year" xml:space="preserve">
-    <value>yearly</value>
+    <value>Yearly</value>
   </data>
   <data name="Enum_Type_Month" xml:space="preserve">
-    <value>monthly</value>
+    <value>Monthly</value>
   </data>
   <data name="Enum_Type_Week" xml:space="preserve">
-    <value>weekly</value>
+    <value>Weekly</value>
   </data>
   <data name="Enum_Type_Day" xml:space="preserve">
-    <value>daily</value>
+    <value>Daily</value>
   </data>
   <data name="Property_RepeatValue" xml:space="preserve">
     <value>Repeat every</value>

@@ -124,16 +124,16 @@
     <value>Тип периода</value>
   </data>
   <data name="Enum_Type_Year" xml:space="preserve">
-    <value>ежегодно</value>
+    <value>Ежегодно</value>
   </data>
   <data name="Enum_Type_Month" xml:space="preserve">
-    <value>ежемесячно</value>
+    <value>Ежемесячно</value>
   </data>
   <data name="Enum_Type_Week" xml:space="preserve">
-    <value>еженедельно</value>
+    <value>Еженедельно</value>
   </data>
   <data name="Enum_Type_Day" xml:space="preserve">
-    <value>ежедневно</value>
+    <value>Ежедневно</value>
   </data>
   <data name="Property_RepeatValue" xml:space="preserve">
     <value>Повторять каждый</value>

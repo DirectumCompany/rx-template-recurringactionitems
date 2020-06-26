@@ -36,260 +36,303 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
 				Logger.Debug(string.Format("Setting with id = {0} processed. Type = {1}", setting.Id, setting.Type.Value.Value));
 				var date = Calendar.Today;
 				var deadlineDate = Calendar.Today.AddWorkingDays(setting.AssignedBy, setting.CreationDays.Value);
-				
-				#region Ежегодно.
-				
+
 				if (setting.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Year)
 				{
-					var beginningDate = setting.BeginningYear.Value;
-					var endDate = setting.EndYear.HasValue ? setting.EndYear.Value : Calendar.SqlMaxValue;
-					
-					if (!Calendar.Between(deadlineDate, beginningDate, endDate))
-					{
-						Logger.DebugFormat("Date misses the period. Deadline = {0}. Settings: begin = {1}, end = {2}", deadlineDate.Year, beginningDate.Year, endDate.Year);
+					if (!SendAnnualActionItem(setting, ref deadlineDate, ref date))
 						continue;
-					}
-					
-					var period = setting.RepeatValue.HasValue ? setting.RepeatValue.Value : 1;
-					
-					// Проверка соответствия года.
-					if (!IsCorrectYear(period, beginningDate.Year, deadlineDate.Year))
-					{
-						Logger.DebugFormat("Incorrect year. Current = {0}. Settings: begin = {1}, period = {2}", deadlineDate.Year, beginningDate.Year, period);
-						continue;
-					}
-					
-					// Проверка соответствия месяца.
-					var month = GetMonthValue(setting.YearTypeMonth.GetValueOrDefault());
-					if (deadlineDate.Month != month)
-					{
-						Logger.DebugFormat("Incorrect month. Current = {0}. In setting = {1}", deadlineDate.Month, month);
-						continue;
-					}
-					
-					if (setting.YearTypeDay == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDay.Date)
-					{
-						try
-						{
-							date = Calendar.GetDate(deadlineDate.Year, month, setting.YearTypeDayValue.GetValueOrDefault());
-							if (!date.IsWorkingDay(setting.AssignedBy))
-								date = date.PreviousWorkingDay(setting.AssignedBy);
-							
-							if (deadlineDate.Day == date.Day)
-							{
-								SendActionItem(setting, deadlineDate);
-								
-								if (setting.EndYear.HasValue && deadlineDate.AddYears(period).Year > setting.EndYear.Value.Year)
-									SendNotice(setting);
-							}
-							else
-								Logger.DebugFormat("Incorrect day. Current = {0}. Is setting (working day) = {1}", deadlineDate.Day, date.Day);
-						}
-						catch 
-						{
-							Logger.ErrorFormat("Incorrect data for date. Year = {0}, month = {1}, day = {2}",
-							                   deadlineDate.Year, month, setting.YearTypeDayValue.GetValueOrDefault());
-						}
-					}
-					else
-					{
-						try
-						{
-							var beginningMonth = Calendar.GetDate(deadlineDate.Year, month, 1);
-							date = GetDateTime(setting.YearTypeDayOfWeek.Value, setting.YearTypeDayOfWeekNumber.Value, beginningMonth);
-							if (!date.IsWorkingDay(setting.AssignedBy))
-								date = date.PreviousWorkingDay(setting.AssignedBy);
-							
-							if (date.Date == deadlineDate.Date)
-							{
-								SendActionItem(setting, deadlineDate);
-								
-								if (setting.EndYear.HasValue && deadlineDate.AddYears(period).Year > setting.EndYear.Value.Year)
-									SendNotice(setting);
-							}
-							else
-								Logger.DebugFormat("Incorrect day. Current = {0}. Settings: Day of week = {1}, week number = {2}. working day = {3}",
-								                   deadlineDate.Day, setting.YearTypeDayOfWeek.Value.Value, setting.YearTypeDayOfWeekNumber.Value.Value, date.Day);
-						}
-						catch
-						{
-							Logger.ErrorFormat("Incorrect data for date. Year = {0}, month = {1}, day of week = {2}, week number = {3}",
-							                   deadlineDate.Year, month, setting.YearTypeDayOfWeek.Value.Value, setting.YearTypeDayOfWeekNumber.Value.Value);
-						}
-					}
 				}
-				
-				#endregion
-				
-				#region Ежемесячно.
 				
 				if (setting.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Month)
 				{
-					var beginningDate = setting.BeginningMonth.Value;
-					var period = setting.RepeatValue.HasValue ? setting.RepeatValue.Value : 1;
-					var endDate = setting.EndMonth.HasValue ? setting.EndMonth.Value.EndOfMonth() : Calendar.SqlMaxValue;
-					
-					if (!Calendar.Between(deadlineDate, beginningDate, endDate))
-					{
-						Logger.DebugFormat("Date misses the period. Deadline = {0}. Settings: begin = {1}, end = {2}", deadlineDate, beginningDate, endDate);
+					if (!SendMonthlyActionItem(setting, ref deadlineDate, ref date))
 						continue;
-					}
-					
-					// Проверка соответствия месяца. Если year = null пропускаем вычисления.
-					if (!IsCorrectMonth(period, beginningDate, deadlineDate))
-					{
-						Logger.DebugFormat("Incorrect month. Current = {0}. Settings: begin = {1}, period = {2}", deadlineDate.Month, beginningDate, period);
-						continue;
-					}
-					
-					if (setting.MonthTypeDay == PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDay.Date)
-					{
-						try
-						{
-							var day = setting.MonthTypeDayValue.GetValueOrDefault();
-							var dateString = string.Format("{0}/{1}/{2}", day.ToString(), deadlineDate.Month.ToString(), deadlineDate.Year.ToString());
-							
-							// Обработка несуществующего числа в месяце (например 30 число в феврале).
-							while (!Calendar.TryParseDate(dateString, out date))
-							{
-								Logger.DebugFormat("Incorrect date. String = {0}", dateString);
-								day--;
-								dateString = string.Format("{0}/{1}/{2}", day.ToString(), deadlineDate.Month.ToString(), deadlineDate.Year.ToString());
-							}
-							
-							if (!date.IsWorkingDay(setting.AssignedBy))
-								date = date.PreviousWorkingDay(setting.AssignedBy);
-							
-							if (deadlineDate.Day == date.Day)
-							{
-								SendActionItem(setting, deadlineDate);
-								
-								var nextDeadline = deadlineDate.AddMonths(period);
-								if (setting.EndMonth.HasValue && nextDeadline.EndOfMonth() > setting.EndMonth.Value)
-									SendNotice(setting);
-							}
-							else
-								Logger.DebugFormat("Incorrect day. Current = {0}. Is setting (working day) = {1}", deadlineDate.Day, date.Day);
-						}
-						catch
-						{
-							Logger.ErrorFormat("Incorrect data for date. Year = {0}, month = {1}, day = {2}",
-							                   deadlineDate.Year, deadlineDate.Month, setting.MonthTypeDayValue.GetValueOrDefault());
-						}
-					}
-					else
-					{
-						try
-						{
-							var beginningMonth = Calendar.GetDate(deadlineDate.Year, deadlineDate.Month, 1);
-							date = GetDateTime(setting.MonthTypeDayOfWeek.Value, setting.MonthTypeDayOfWeekNumber.Value, beginningMonth);
-							if (!date.IsWorkingDay(setting.AssignedBy))
-								date = date.PreviousWorkingDay(setting.AssignedBy);
-							
-							if (date.Date == deadlineDate.Date)
-							{
-								SendActionItem(setting, deadlineDate);
-								
-								var nextDeadline = deadlineDate.AddMonths(period);
-								if (setting.EndMonth.HasValue && nextDeadline.EndOfMonth() > setting.EndMonth.Value)
-									SendNotice(setting);
-							}
-							else
-								Logger.DebugFormat("Incorrect day. Current = {0}. Settings: Day of week = {1}, week number = {2}. working day = {3}",
-								                   deadlineDate.Day, setting.MonthTypeDayOfWeek.Value.Value, setting.MonthTypeDayOfWeekNumber.Value.Value, date.Day);
-						}
-						catch
-						{
-							Logger.ErrorFormat("Incorrect data for date. Year = {0}, month = {1}, day of week = {2}, week number = {3}",
-							                   deadlineDate.Year, deadlineDate.Month, setting.MonthTypeDayOfWeek.Value.Value, setting.MonthTypeDayOfWeekNumber.Value.Value);
-						}
-					}
 				}
-				
-				#endregion
-				
-				#region Еженедельно.
-				
+
 				if (setting.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Week)
 				{
-					var beginningDate = setting.BeginningDate.Value;
-					var endDate = setting.EndDate.HasValue ? setting.EndDate.Value.EndOfDay() : Calendar.SqlMaxValue;
-					
-					if (!Calendar.Between(deadlineDate, beginningDate, endDate))
-					{
-						Logger.DebugFormat("Date misses the period. Deadline = {0}. Settings: begin = {1}, end = {2}", deadlineDate, beginningDate, endDate);
+					if (!SendWeeklyActionItem(setting, ref deadlineDate))
 						continue;
-					}
-					
-					var daysOfWeek = new List<DayOfWeek>();
-					
-					if (setting.WeekTypeMonday.Value)
-						daysOfWeek.Add(DayOfWeek.Monday);
-					if (setting.WeekTypeTuesday.Value)
-						daysOfWeek.Add(DayOfWeek.Tuesday);
-					if (setting.WeekTypeWednesday.Value)
-						daysOfWeek.Add(DayOfWeek.Wednesday);
-					if (setting.WeekTypeThursday.Value)
-						daysOfWeek.Add(DayOfWeek.Thursday);
-					if (setting.WeekTypeFriday.Value)
-						daysOfWeek.Add(DayOfWeek.Friday);
-					
-					// Вычисляем количество дней между неделями и вычитаем 6, чтобы учесть первую неделю периода.
-					// Если количество дней целочисленно делится на период, то неделя в него попадает.
-					TimeSpan timeSpan = deadlineDate.EndOfWeek() - beginningDate.BeginningOfWeek();
-					var daysCount = timeSpan.Days - 6;
-					var periodDays = 7 * (setting.RepeatValue.HasValue ? setting.RepeatValue.Value : 1);
-					
-					if (daysCount % periodDays == 0 && daysOfWeek.Contains(deadlineDate.DayOfWeek))
-					{
-						SendActionItem(setting, deadlineDate);
-						
-						if (setting.EndDate.HasValue && !daysOfWeek.Any(d => d > deadlineDate.DayOfWeek) &&
-						    deadlineDate.EndOfWeek().AddDays(periodDays) > setting.EndDate.Value)
-							SendNotice(setting);
-					}
 				}
-				
-				#endregion
-				
-				#region Ежедневно.
 				
 				if (setting.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Day)
 				{
-					var beginningDate = setting.BeginningDate.Value;
-					var endDate = setting.EndDate.HasValue ? setting.EndDate.Value.EndOfDay() : Calendar.SqlMaxValue;
-					
-					if (!Calendar.Between(deadlineDate, beginningDate, endDate))
-					{
-						Logger.DebugFormat("Date misses the period. Deadline = {0}. Settings: begin = {1}, end = {2}", deadlineDate, beginningDate, endDate);
+					if (!SendDailyActionItem(setting, ref deadlineDate))
 						continue;
-					}
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Отправка ежегодных поручений.
+		/// </summary>
+		/// <param name="setting">Настройка.</param>
+		/// <param name="deadlineDate">Срок выполнения.</param>
+		/// <param name="date">Текущая дата.</param>
+		/// <returns>True - если попытались отправить, False - если неподходящая дата</returns>
+		private bool SendAnnualActionItem(IRepeatSetting setting, ref DateTime deadlineDate, ref DateTime date)
+		{
+			var beginningDate = setting.BeginningYear.Value;
+			var endDate = setting.EndYear.HasValue ? setting.EndYear.Value : Calendar.SqlMaxValue;
+			
+			if (!Calendar.Between(deadlineDate, beginningDate, endDate))
+			{
+				Logger.DebugFormat("Date misses the period. Deadline = {0}. Settings: begin = {1}, end = {2}", deadlineDate.Year, beginningDate.Year, endDate.Year);
+				return false;
+			}
+			
+			var period = setting.RepeatValue.HasValue ? setting.RepeatValue.Value : 1;
+			
+			// Проверка соответствия года.
+			if (!IsCorrectYear(period, beginningDate.Year, deadlineDate.Year))
+			{
+				Logger.DebugFormat("Incorrect year. Current = {0}. Settings: begin = {1}, period = {2}", deadlineDate.Year, beginningDate.Year, period);
+				return false;
+			}
+			
+			// Проверка соответствия месяца.
+			var month = GetMonthValue(setting.YearTypeMonth.GetValueOrDefault());
+			if (deadlineDate.Month != month)
+			{
+				Logger.DebugFormat("Incorrect month. Current = {0}. In setting = {1}", deadlineDate.Month, month);
+				return false;
+			}
+			
+			if (setting.YearTypeDay == PeriodicActionItemsTemplate.RepeatSetting.YearTypeDay.Date)
+			{
+				try
+				{
+					date = Calendar.GetDate(deadlineDate.Year, month, setting.YearTypeDayValue.GetValueOrDefault());
+					if (!date.IsWorkingDay(setting.AssignedBy))
+						date = date.PreviousWorkingDay(setting.AssignedBy);
 					
-					var periodValue = setting.RepeatValue.HasValue ? setting.RepeatValue.Value : 1;
-					if (periodValue == 1)
+					if (deadlineDate.Day == date.Day)
 					{
 						SendActionItem(setting, deadlineDate);
 						
-						if (setting.EndDate.HasValue && deadlineDate.AddWorkingDays(setting.AssignedBy, periodValue) > setting.EndDate.Value)
+						if (setting.EndYear.HasValue && deadlineDate.AddYears(period).Year > setting.EndYear.Value.Year)
 							SendNotice(setting);
 					}
 					else
-					{
-						// Прибавляем 1, чтобы учесть первый день в периоде.
-						var daysCount = WorkingTime.GetDurationInWorkingDays(beginningDate, deadlineDate, setting.AssignedBy) + 1;
-						
-						if (daysCount % periodValue == 0)
-						{
-							SendActionItem(setting, deadlineDate);
-							
-							if (setting.EndDate.HasValue && deadlineDate.AddWorkingDays(setting.AssignedBy, periodValue) > setting.EndDate.Value)
-								SendNotice(setting);
-						}
-					}
+						Logger.DebugFormat("Incorrect day. Current = {0}. Is setting (working day) = {1}", deadlineDate.Day, date.Day);
 				}
-				
-				#endregion
+				catch
+				{
+					Logger.ErrorFormat("Incorrect data for date. Year = {0}, month = {1}, day = {2}",
+					                   deadlineDate.Year, month, setting.YearTypeDayValue.GetValueOrDefault());
+				}
 			}
+			else
+			{
+				try
+				{
+					var beginningMonth = Calendar.GetDate(deadlineDate.Year, month, 1);
+					date = GetDateTime(setting.YearTypeDayOfWeek.Value, setting.YearTypeDayOfWeekNumber.Value, beginningMonth);
+					if (!date.IsWorkingDay(setting.AssignedBy))
+						date = date.PreviousWorkingDay(setting.AssignedBy);
+					
+					if (date.Date == deadlineDate.Date)
+					{
+						SendActionItem(setting, deadlineDate);
+						
+						if (setting.EndYear.HasValue && deadlineDate.AddYears(period).Year > setting.EndYear.Value.Year)
+							SendNotice(setting);
+					}
+					else
+						Logger.DebugFormat("Incorrect day. Current = {0}. Settings: Day of week = {1}, week number = {2}. working day = {3}",
+						                   deadlineDate.Day, setting.YearTypeDayOfWeek.Value.Value, setting.YearTypeDayOfWeekNumber.Value.Value, date.Day);
+				}
+				catch
+				{
+					Logger.ErrorFormat("Incorrect data for date. Year = {0}, month = {1}, day of week = {2}, week number = {3}",
+					                   deadlineDate.Year, month, setting.YearTypeDayOfWeek.Value.Value, setting.YearTypeDayOfWeekNumber.Value.Value);
+				}
+			}
+			
+			return true;
+		}
+		
+		/// <summary>
+		/// Отправка ежемесячных поручений.
+		/// </summary>
+		/// <param name="setting">Настройка.</param>
+		/// <param name="deadlineDate">Срок выполнения.</param>
+		/// <param name="date">Текущая дата.</param>
+		/// <returns>True - если попытались отправить, False - если неподходящая дата</returns>
+		private bool SendMonthlyActionItem(IRepeatSetting setting, ref DateTime deadlineDate, ref DateTime date)
+		{
+			var beginningDate = setting.BeginningMonth.Value;
+			var period = setting.RepeatValue.HasValue ? setting.RepeatValue.Value : 1;
+			var endDate = setting.EndMonth.HasValue ? setting.EndMonth.Value.EndOfMonth() : Calendar.SqlMaxValue;
+			
+			if (!Calendar.Between(deadlineDate, beginningDate, endDate))
+			{
+				Logger.DebugFormat("Date misses the period. Deadline = {0}. Settings: begin = {1}, end = {2}", deadlineDate, beginningDate, endDate);
+				return false;
+			}
+			
+			// Проверка соответствия месяца. Если year = null пропускаем вычисления.
+			if (!IsCorrectMonth(period, beginningDate, deadlineDate))
+			{
+				Logger.DebugFormat("Incorrect month. Current = {0}. Settings: begin = {1}, period = {2}", deadlineDate.Month, beginningDate, period);
+				return false;
+			}
+			
+			if (setting.MonthTypeDay == PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDay.Date)
+			{
+				try
+				{
+					var day = setting.MonthTypeDayValue.GetValueOrDefault();
+					var dateString = string.Format("{0}/{1}/{2}", day.ToString(), deadlineDate.Month.ToString(), deadlineDate.Year.ToString());
+					
+					// Обработка несуществующего числа в месяце (например 30 число в феврале).
+					while (!Calendar.TryParseDate(dateString, out date))
+					{
+						Logger.DebugFormat("Incorrect date. String = {0}", dateString);
+						day--;
+						dateString = string.Format("{0}/{1}/{2}", day.ToString(), deadlineDate.Month.ToString(), deadlineDate.Year.ToString());
+					}
+					
+					if (!date.IsWorkingDay(setting.AssignedBy))
+						date = date.PreviousWorkingDay(setting.AssignedBy);
+					
+					if (deadlineDate.Day == date.Day)
+					{
+						SendActionItem(setting, deadlineDate);
+						
+						var nextDeadline = deadlineDate.AddMonths(period);
+						if (setting.EndMonth.HasValue && nextDeadline.EndOfMonth() > setting.EndMonth.Value)
+							SendNotice(setting);
+					}
+					else
+						Logger.DebugFormat("Incorrect day. Current = {0}. Is setting (working day) = {1}", deadlineDate.Day, date.Day);
+				}
+				catch
+				{
+					Logger.ErrorFormat("Incorrect data for date. Year = {0}, month = {1}, day = {2}",
+					                   deadlineDate.Year, deadlineDate.Month, setting.MonthTypeDayValue.GetValueOrDefault());
+				}
+			}
+			else
+			{
+				try
+				{
+					var beginningMonth = Calendar.GetDate(deadlineDate.Year, deadlineDate.Month, 1);
+					date = GetDateTime(setting.MonthTypeDayOfWeek.Value, setting.MonthTypeDayOfWeekNumber.Value, beginningMonth);
+					if (!date.IsWorkingDay(setting.AssignedBy))
+						date = date.PreviousWorkingDay(setting.AssignedBy);
+					
+					if (date.Date == deadlineDate.Date)
+					{
+						SendActionItem(setting, deadlineDate);
+						
+						var nextDeadline = deadlineDate.AddMonths(period);
+						if (setting.EndMonth.HasValue && nextDeadline.EndOfMonth() > setting.EndMonth.Value)
+							SendNotice(setting);
+					}
+					else
+						Logger.DebugFormat("Incorrect day. Current = {0}. Settings: Day of week = {1}, week number = {2}. working day = {3}",
+						                   deadlineDate.Day, setting.MonthTypeDayOfWeek.Value.Value, setting.MonthTypeDayOfWeekNumber.Value.Value, date.Day);
+				}
+				catch
+				{
+					Logger.ErrorFormat("Incorrect data for date. Year = {0}, month = {1}, day of week = {2}, week number = {3}",
+					                   deadlineDate.Year, deadlineDate.Month, setting.MonthTypeDayOfWeek.Value.Value, setting.MonthTypeDayOfWeekNumber.Value.Value);
+				}
+			}
+			
+			return true;
+		}
+		
+		/// <summary>
+		/// Отправка еженедельных поручений.
+		/// </summary>
+		/// <param name="setting">Настройка.</param>
+		/// <param name="deadlineDate">Срок выполнения.</param>
+		/// <returns>True - если попытались отправить, False - если неподходящая дата</returns>
+		private bool SendWeeklyActionItem(IRepeatSetting setting, ref DateTime deadlineDate)
+		{
+			var beginningDate = setting.BeginningDate.Value;
+			var endDate = setting.EndDate.HasValue ? setting.EndDate.Value.EndOfDay() : Calendar.SqlMaxValue;
+			
+			if (!Calendar.Between(deadlineDate, beginningDate, endDate))
+			{
+				Logger.DebugFormat("Date misses the period. Deadline = {0}. Settings: begin = {1}, end = {2}", deadlineDate, beginningDate, endDate);
+				return false;
+			}
+			
+			var daysOfWeek = new List<DayOfWeek>();
+			
+			if (setting.WeekTypeMonday.Value)
+				daysOfWeek.Add(DayOfWeek.Monday);
+			if (setting.WeekTypeTuesday.Value)
+				daysOfWeek.Add(DayOfWeek.Tuesday);
+			if (setting.WeekTypeWednesday.Value)
+				daysOfWeek.Add(DayOfWeek.Wednesday);
+			if (setting.WeekTypeThursday.Value)
+				daysOfWeek.Add(DayOfWeek.Thursday);
+			if (setting.WeekTypeFriday.Value)
+				daysOfWeek.Add(DayOfWeek.Friday);
+			
+			// Вычисляем количество дней между неделями и вычитаем 6, чтобы учесть первую неделю периода.
+			// Если количество дней целочисленно делится на период, то неделя в него попадает.
+			TimeSpan timeSpan = deadlineDate.EndOfWeek() - beginningDate.BeginningOfWeek();
+			var daysCount = timeSpan.Days - 6;
+			var periodDays = 7 * (setting.RepeatValue.HasValue ? setting.RepeatValue.Value : 1);
+			
+			if (daysCount % periodDays == 0 && daysOfWeek.Contains(deadlineDate.DayOfWeek))
+			{
+				SendActionItem(setting, deadlineDate);
+				
+				var deadline = deadlineDate;
+				if (setting.EndDate.HasValue && !daysOfWeek.Any(d => d > deadline.DayOfWeek) &&
+				    deadline.EndOfWeek().AddDays(periodDays) > setting.EndDate.Value)
+					SendNotice(setting);
+			}
+			
+			return true;
+		}
+		
+		/// <summary>
+		/// Отправка ежедневных поручений.
+		/// </summary>
+		/// <param name="setting">Настройка.</param>
+		/// <param name="deadlineDate">Срок выполнения.</param>
+		/// <returns>True - если попытались отправить, False - если неподходящая дата</returns>
+		private bool SendDailyActionItem(IRepeatSetting setting, ref DateTime deadlineDate)
+		{
+			var beginningDate = setting.BeginningDate.Value;
+			var endDate = setting.EndDate.HasValue ? setting.EndDate.Value.EndOfDay() : Calendar.SqlMaxValue;
+			
+			if (!Calendar.Between(deadlineDate, beginningDate, endDate))
+			{
+				Logger.DebugFormat("Date misses the period. Deadline = {0}. Settings: begin = {1}, end = {2}", deadlineDate, beginningDate, endDate);
+				return false;
+			}
+			
+			var periodValue = setting.RepeatValue.HasValue ? setting.RepeatValue.Value : 1;
+			if (periodValue == 1)
+			{
+				SendActionItem(setting, deadlineDate);
+				
+				if (setting.EndDate.HasValue && deadlineDate.AddWorkingDays(setting.AssignedBy, periodValue) > setting.EndDate.Value)
+					SendNotice(setting);
+			}
+			else
+			{
+				// Прибавляем 1, чтобы учесть первый день в периоде.
+				var daysCount = WorkingTime.GetDurationInWorkingDays(beginningDate, deadlineDate, setting.AssignedBy) + 1;
+				
+				if (daysCount % periodValue == 0)
+				{
+					SendActionItem(setting, deadlineDate);
+					
+					if (setting.EndDate.HasValue && deadlineDate.AddWorkingDays(setting.AssignedBy, periodValue) > setting.EndDate.Value)
+						SendNotice(setting);
+				}
+			}
+			
+			return true;
 		}
 		
 		/// <summary>
@@ -456,7 +499,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
 				}
 
 				task.Assignee = setting.Assignee;
-				task.Deadline = deadline.Date;		
+				task.Deadline = deadline.Date;
 			}
 			
 			var row = setting.StartedActionItemTask.AddNew();

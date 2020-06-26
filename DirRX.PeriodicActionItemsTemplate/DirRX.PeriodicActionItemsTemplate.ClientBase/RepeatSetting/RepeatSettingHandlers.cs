@@ -64,6 +64,7 @@ namespace DirRX.PeriodicActionItemsTemplate
             (e.NewValue <= 0 || e.NewValue > 30))
           e.AddError(RepeatSettings.Resources.IncorrectDayValueFormat(30));
         
+      	// Игнорируем високосные годы
         if (_obj.YearTypeMonth == RepeatSetting.YearTypeMonth.February && (e.NewValue <= 0 || e.NewValue > 28))
           e.AddError(RepeatSettings.Resources.IncorrectDayValueFormat(28));
       }
@@ -83,7 +84,7 @@ namespace DirRX.PeriodicActionItemsTemplate
 
     public override void Refresh(Sungero.Presentation.FormRefreshEventArgs e)
     {
-      Functions.RepeatSetting.SetStateproperties(_obj);
+      Functions.RepeatSetting.SetStateProperties(_obj);
 
       if (_obj.Type == DirRX.PeriodicActionItemsTemplate.RepeatSetting.Type.Month && _obj.MonthTypeDayValue.HasValue && _obj.MonthTypeDayValue.Value > 28 && _obj.MonthTypeDayValue.Value <= 31)
         e.AddInformation(RepeatSettings.Resources.IncorrectDaysOfMonthFormat(_obj.MonthTypeDayValue.Value));

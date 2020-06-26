@@ -14,7 +14,7 @@ namespace DirRX.PeriodicActionItemsTemplate
     {
       // Задать порядковый номер для пункта поручения.
       var lastNumber = _obj.ActionItemsParts.OrderBy(j => j.Number).LastOrDefault();
-      if (lastNumber.Number.HasValue)
+      if (lastNumber != null && lastNumber.Number.HasValue)
         _added.Number = lastNumber.Number + 1;
       else
         _added.Number = 1;
@@ -50,18 +50,18 @@ namespace DirRX.PeriodicActionItemsTemplate
           else
             _obj.MonthTypeDayValue = null;
           
-          Functions.RepeatSetting.SetStateproperties(_obj);
+          Functions.RepeatSetting.SetStateProperties(_obj);
         }
       }
     }
 
     public virtual void IsUnderControlChanged(Sungero.Domain.Shared.BooleanPropertyChangedEventArgs e)
     {
-    	if (e.NewValue != e.OldValue)
-    	{
-    		_obj.State.Properties.Supervisor.IsEnabled = e.NewValue.Value;
-    		_obj.State.Properties.Supervisor.IsRequired = e.NewValue.Value;
-    	}
+      if (e.NewValue != e.OldValue)
+      {
+        _obj.State.Properties.Supervisor.IsEnabled = e.NewValue.Value;
+        _obj.State.Properties.Supervisor.IsRequired = e.NewValue.Value;
+      }
     }
 
     public virtual void BeginningMonthChanged(Sungero.Domain.Shared.DateTimePropertyChangedEventArgs e)
@@ -81,7 +81,7 @@ namespace DirRX.PeriodicActionItemsTemplate
       if ((e.NewValue == null || e.NewValue == 1) && _obj.Type.HasValue && _obj.Type.Value == DirRX.PeriodicActionItemsTemplate.RepeatSetting.Type.Day)
         _obj.CreationDays = 0;
       
-      Functions.RepeatSetting.SetStateproperties(_obj);
+      Functions.RepeatSetting.SetStateProperties(_obj);
     }
 
     public virtual void BeginningDateChanged(Sungero.Domain.Shared.DateTimePropertyChangedEventArgs e)
@@ -176,24 +176,16 @@ namespace DirRX.PeriodicActionItemsTemplate
           _obj.ActionItemsParts.Clear();
         }
         
-        // Установить тему.
-        var subjectTemplate = _obj.IsCompoundActionItem == true ?
-          Sungero.RecordManagement.ActionItemExecutionTasks.Resources.ComponentActionItemExecutionSubject :
-          Sungero.RecordManagement.ActionItemExecutionTasks.Resources.TaskSubject;
-        _obj.Subject = Functions.RepeatSetting.GetActionItemExecutionSubject(_obj, subjectTemplate);
+        _obj.Subject = Functions.RepeatSetting.Remote.CreateSubject(_obj);;
       }
-      Functions.RepeatSetting.SetStateproperties(_obj);
+      Functions.RepeatSetting.SetStateProperties(_obj);
     }
 
     public virtual void ActionItemChanged(Sungero.Domain.Shared.StringPropertyChangedEventArgs e)
     {
       if (!Equals(e.NewValue, e.OldValue))
       {
-        // Установить тему.
-        var subjectTemplate = _obj.IsCompoundActionItem == true ?
-          Sungero.RecordManagement.ActionItemExecutionTasks.Resources.ComponentActionItemExecutionSubject :
-          Sungero.RecordManagement.ActionItemExecutionTasks.Resources.TaskSubject;
-        _obj.Subject = Functions.RepeatSetting.GetActionItemExecutionSubject(_obj, subjectTemplate);
+        _obj.Subject = Functions.RepeatSetting.Remote.CreateSubject(_obj);
         
         // Заменить первый символ на прописной.
         _obj.ActionItem = _obj.ActionItem != null ? _obj.ActionItem.Trim() : string.Empty;
@@ -227,7 +219,7 @@ namespace DirRX.PeriodicActionItemsTemplate
           else
             _obj.YearTypeDayValue = null;
           
-          Functions.RepeatSetting.SetStateproperties(_obj);
+          Functions.RepeatSetting.SetStateProperties(_obj);
         }
       }
     }
@@ -289,7 +281,7 @@ namespace DirRX.PeriodicActionItemsTemplate
           _obj.BeginningDate = null;
         }
         
-        Functions.RepeatSetting.SetStateproperties(_obj);
+        Functions.RepeatSetting.SetStateProperties(_obj);
       }
     }
 
