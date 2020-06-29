@@ -39,25 +39,25 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
 
 				if (setting.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Year)
 				{
-					if (!SendAnnualActionItem(setting, ref deadlineDate, ref date))
+					if (!SendAnnualActionItem(setting, deadlineDate, date))
 						continue;
 				}
 				
 				if (setting.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Month)
 				{
-					if (!SendMonthlyActionItem(setting, ref deadlineDate, ref date))
+					if (!SendMonthlyActionItem(setting, deadlineDate, date))
 						continue;
 				}
 
 				if (setting.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Week)
 				{
-					if (!SendWeeklyActionItem(setting, ref deadlineDate))
+					if (!SendWeeklyActionItem(setting, deadlineDate))
 						continue;
 				}
 				
 				if (setting.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Day)
 				{
-					if (!SendDailyActionItem(setting, ref deadlineDate))
+					if (!SendDailyActionItem(setting, deadlineDate))
 						continue;
 				}
 			}
@@ -70,7 +70,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
 		/// <param name="deadlineDate">Срок выполнения.</param>
 		/// <param name="date">Текущая дата.</param>
 		/// <returns>True - если попытались отправить, False - если неподходящая дата</returns>
-		private bool SendAnnualActionItem(IRepeatSetting setting, ref DateTime deadlineDate, ref DateTime date)
+		private bool SendAnnualActionItem(IRepeatSetting setting, DateTime deadlineDate, DateTime date)
 		{
 			var beginningDate = setting.BeginningYear.Value;
 			var endDate = setting.EndYear.HasValue ? setting.EndYear.Value : Calendar.SqlMaxValue;
@@ -159,7 +159,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
 		/// <param name="deadlineDate">Срок выполнения.</param>
 		/// <param name="date">Текущая дата.</param>
 		/// <returns>True - если попытались отправить, False - если неподходящая дата</returns>
-		private bool SendMonthlyActionItem(IRepeatSetting setting, ref DateTime deadlineDate, ref DateTime date)
+		private bool SendMonthlyActionItem(IRepeatSetting setting, DateTime deadlineDate, DateTime date)
 		{
 			var beginningDate = setting.BeginningMonth.Value;
 			var period = setting.RepeatValue.HasValue ? setting.RepeatValue.Value : 1;
@@ -250,7 +250,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
 		/// <param name="setting">Настройка.</param>
 		/// <param name="deadlineDate">Срок выполнения.</param>
 		/// <returns>True - если попытались отправить, False - если неподходящая дата</returns>
-		private bool SendWeeklyActionItem(IRepeatSetting setting, ref DateTime deadlineDate)
+		private bool SendWeeklyActionItem(IRepeatSetting setting, DateTime deadlineDate)
 		{
 			var beginningDate = setting.BeginningDate.Value;
 			var endDate = setting.EndDate.HasValue ? setting.EndDate.Value.EndOfDay() : Calendar.SqlMaxValue;
@@ -299,7 +299,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
 		/// <param name="setting">Настройка.</param>
 		/// <param name="deadlineDate">Срок выполнения.</param>
 		/// <returns>True - если попытались отправить, False - если неподходящая дата</returns>
-		private bool SendDailyActionItem(IRepeatSetting setting, ref DateTime deadlineDate)
+		private bool SendDailyActionItem(IRepeatSetting setting, DateTime deadlineDate)
 		{
 			var beginningDate = setting.BeginningDate.Value;
 			var endDate = setting.EndDate.HasValue ? setting.EndDate.Value.EndOfDay() : Calendar.SqlMaxValue;
