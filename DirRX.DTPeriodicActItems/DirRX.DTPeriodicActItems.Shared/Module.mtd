@@ -1,13 +1,13 @@
 {
   "$type": "Sungero.Metadata.SolutionMetadata, Sungero.Metadata",
   "NameGuid": "d67b58ac-520d-424c-87b1-6b6778c2030a",
-  "Name": "Solution",
+  "Name": "DTPeriodicActItems",
   "AsyncHandlers": [],
-  "ClientAssemblyName": "DirRX.Solution.Client",
-  "ClientBaseAssemblyName": "DirRX.Solution.ClientBase",
-  "ClientBaseNamespace": "DirRX.Solution.ClientBase",
-  "ClientNamespace": "DirRX.Solution.Client",
-  "Code": "Solutio",
+  "ClientAssemblyName": "DirRX.DTPeriodicActItems.Client",
+  "ClientBaseAssemblyName": "DirRX.DTPeriodicActItems.ClientBase",
+  "ClientBaseNamespace": "DirRX.DTPeriodicActItems.ClientBase",
+  "ClientNamespace": "DirRX.DTPeriodicActItems.Client",
+  "Code": "DTPerio",
   "CompanyCode": "DirRX",
   "Cover": {
     "NameGuid": "e5ef7de2-0e1e-4ad8-8659-2d5b065afd5c",
@@ -48,7 +48,7 @@
   "IconResourcesKeys": [],
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
-  "InterfaceNamespace": "DirRX.Solution",
+  "InterfaceNamespace": "DirRX.DTPeriodicActItems",
   "OrderedSpecialFolders": [],
   "PublicConstants": [
     {
@@ -156,7 +156,7 @@
   ],
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
-  "ResourceInterfaceNamespace": "DirRX.Solution",
+  "ResourceInterfaceNamespace": "DirRX.DTPeriodicActItems",
   "ResourcesKeys": [
     "ActiveTextEmpty",
     "DocSignAssigmentNotFound",
@@ -184,10 +184,10 @@
     "CounterpartyNotSigned",
     "SubjectNoticeDeniedSign"
   ],
-  "ServerAssemblyName": "DirRX.Solution.Server",
-  "ServerNamespace": "DirRX.Solution.Server",
-  "SharedAssemblyName": "DirRX.Solution.Shared",
-  "SharedNamespace": "DirRX.Solution.Shared",
+  "ServerAssemblyName": "DirRX.DTPeriodicActItems.Server",
+  "ServerNamespace": "DirRX.DTPeriodicActItems.Server",
+  "SharedAssemblyName": "DirRX.DTPeriodicActItems.Shared",
+  "SharedNamespace": "DirRX.DTPeriodicActItems.Shared",
   "SpecialFolders": [],
   "Version": "0.0.1.57",
   "Widgets": [],

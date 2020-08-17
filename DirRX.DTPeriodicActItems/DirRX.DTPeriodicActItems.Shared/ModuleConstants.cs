@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using Sungero.Core;
 
-namespace DirRX.Solution.Constants
+namespace DirRX.DTPeriodicActItems.Constants
 {
   public static class Module
   {

@@ -4,10 +4,9 @@ using System.Linq;
 using Sungero.Core;
 using Sungero.CoreEntities;
 
-namespace DirRX.Solution.Server
+namespace DirRX.DTPeriodicActItems.Server
 {
-  public class ModuleAsyncHandlers
+  partial class DTPeriodicActItemsHandlers
   {
-
   }
 }

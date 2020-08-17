@@ -4,10 +4,7 @@ using System.Linq;
 using Sungero.Core;
 using Sungero.CoreEntities;
 
-namespace DirRX.Solution.Server
+namespace DirRX.DTPeriodicActItems.Client
 {
-  public class ModuleJobs
-  {
 
-  }
 }
