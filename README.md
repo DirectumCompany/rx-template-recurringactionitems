@@ -20,7 +20,7 @@
 
 ## Порядок установки
 1. Для работы требуется установленный Directum RX версии 3.4 (разработка для версии 3.3 в ветке "3.3"). 
-2. Склонировать репозиторий с rx-prototypes-bulkexchange в папку.
+2. Склонировать репозиторий с rx-template-recurringactionitems в папку.
 3. Указать в _ConfigSettings.xml DDS:
 ```xml
 <block name="REPOSITORIES">
