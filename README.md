@@ -22,7 +22,7 @@
 Для работы требуется установленный Directum RX версии 3.4 (разработка для версии 3.3 в ветке "3.3"). 
 
 ### Установка для ознакомления
-1. Склонировать репозиторий с rx-template-recurringactionitems в папку.
+1. Склонировать репозиторий rx-template-recurringactionitems в папку.
 2. Указать в _ConfigSettings.xml DDS:
 ```xml
 <block name="REPOSITORIES">
