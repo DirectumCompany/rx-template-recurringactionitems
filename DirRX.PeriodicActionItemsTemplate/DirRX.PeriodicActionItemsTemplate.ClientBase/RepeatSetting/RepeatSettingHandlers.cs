@@ -25,7 +25,7 @@ namespace DirRX.PeriodicActionItemsTemplate
       var resolutionPoint = e.NewValue;
       var allowableResolutionLength = RepeatSettings.Info.Properties.ActionItem.Length;
       if (!string.IsNullOrEmpty(resolutionPoint) && resolutionPoint.Length > allowableResolutionLength)
-        e.AddError(Sungero.RecordManagement.ActionItemExecutionTasks.Resources.AllowableLengthAssignmentsCharactersFormat(allowableResolutionLength));
+        e.AddError(DirRX.PeriodicActionItemsTemplate.RepeatSettings.Resources.AllowableLengthAssignmentsCharactersFormat(allowableResolutionLength));
     }
   }
 

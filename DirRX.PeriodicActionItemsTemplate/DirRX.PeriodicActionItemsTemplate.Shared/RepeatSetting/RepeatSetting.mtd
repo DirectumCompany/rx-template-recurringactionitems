@@ -1410,7 +1410,8 @@
     "IncorrectValidDate",
     "IncorrectValue",
     "IncorrectDayValue",
-    "IncorrectDaysOfMonth"
+    "IncorrectDaysOfMonth",
+    "AllowableLengthAssignmentsCharacters"
   ],
   "RibbonCardMetadata": {
     "NameGuid": "5751342a-cdd2-49e7-bb61-73925787659d",
