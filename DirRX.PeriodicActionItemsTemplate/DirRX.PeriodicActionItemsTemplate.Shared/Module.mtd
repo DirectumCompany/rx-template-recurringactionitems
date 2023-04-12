@@ -51,6 +51,8 @@
   "Importance": "High",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.PeriodicActionItemsTemplate",
+  "IsolatedAssemblyName": "DirRX.PeriodicActionItemsTemplate.Isolated",
+  "IsolatedNamespace": "DirRX.PeriodicActionItemsTemplate.Isolated",
   "IsVisible": false,
   "Jobs": [
     {

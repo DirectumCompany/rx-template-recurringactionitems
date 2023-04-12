@@ -50,6 +50,8 @@
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.DTPeriodicActItems",
+  "IsolatedAssemblyName": "DirRX.DTPeriodicActItems.Isolated",
+  "IsolatedNamespace": "DirRX.DTPeriodicActItems.Isolated",
   "OrderedSpecialFolders": [],
   "PublicConstants": [
     {
