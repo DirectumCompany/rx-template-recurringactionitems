@@ -474,7 +474,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
 		{
 			var task = Sungero.RecordManagement.ActionItemExecutionTasks.Create();
 			task.AssignedBy = setting.AssignedBy;
-			task.ActionItem = setting.ActionItem;
+			task.ActiveText = setting.ActionItem;
 			task.IsUnderControl = setting.IsUnderControl.GetValueOrDefault();
 			task.Supervisor = setting.Supervisor;
 

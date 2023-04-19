@@ -21,7 +21,8 @@
     "Header": {
       "NameGuid": "4beb4f3e-48b0-4f56-9805-cc8ccd9a93a2",
       "BackgroundPosition": "Stretch"
-    }
+    },
+    "Tabs": []
   },
   "Dependencies": [
     {
@@ -50,6 +51,8 @@
   "Importance": "High",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.PeriodicActionItemsTemplate",
+  "IsolatedAssemblyName": "DirRX.PeriodicActionItemsTemplate.Isolated",
+  "IsolatedNamespace": "DirRX.PeriodicActionItemsTemplate.Isolated",
   "IsVisible": false,
   "Jobs": [
     {
@@ -112,7 +115,7 @@
   "Versions": [
     {
       "Type": "ModuleMetadata",
-      "Number": 6
+      "Number": 8
     },
     {
       "Type": "DomainApi",
