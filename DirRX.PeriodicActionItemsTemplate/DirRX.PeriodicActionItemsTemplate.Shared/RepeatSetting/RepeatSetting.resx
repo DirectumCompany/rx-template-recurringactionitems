@@ -82,7 +82,70 @@
   <data name="IncorrectDaysOfMonth" xml:space="preserve">
     <value>Some months have less than {0} days. In this case, the action item will be repeated on the last day of the month.</value>
   </data>
-  <data name="AllowableLengthAssignmentsCharacters" xml:space="preserve">
-    <value>Name of an action item can be {0} characters long.</value>
+  <data name="ChooseCoAssigneesToAdd" xml:space="preserve">
+    <value>Select Co-Assignees to Add</value>
+  </data>
+  <data name="ChooseCoAssigneesForDelete" xml:space="preserve">
+    <value>Select Co-Assignees to Remove</value>
+  </data>
+  <data name="BeginningDateLessThanToday" xml:space="preserve">
+    <value>The beginning date cannot be less than the current date</value>
+  </data>
+  <data name="SelectActionForActiveScheduleItemsDialogText" xml:space="preserve">
+    <value>Close old posts?</value>
+  </data>
+  <data name="SelectActionForActiveScheduleItemsDialogDescription" xml:space="preserve">
+    <value>The schedule has already been set.</value>
+  </data>
+  <data name="KeepActive" xml:space="preserve">
+    <value>Keep active</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close records</value>
+  </data>
+  <data name="ArbitraryScheduleCreationDialogText" xml:space="preserve">
+    <value>Set a schedule</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="RequiredPropertyIsEmpty" xml:space="preserve">
+    <value>Required property "{0}" not filled</value>
+  </data>
+  <data name="StartDateCannotBeLessThanToday" xml:space="preserve">
+    <value>The start date cannot be less than the current date</value>
+  </data>
+  <data name="SchedulingStarted" xml:space="preserve">
+    <value>Scheduling Started</value>
+  </data>
+  <data name="Sent" xml:space="preserve">
+    <value>SENT</value>
+  </data>
+  <data name="SentDate" xml:space="preserve">
+    <value>Sent: {0}</value>
+  </data>
+  <data name="PlannedForTheNextYear" xml:space="preserve">
+    <value>PLANNED FOR THE NEXT YEAR</value>
+  </data>
+  <data name="Deadline" xml:space="preserve">
+    <value> Deadline: {0}</value>
+  </data>
+  <data name="PlannedStartDate" xml:space="preserve">
+    <value>Planned start date: {0}</value>
+  </data>
+  <data name="PlannedDeadline" xml:space="preserve">
+    <value>Planned deadline: {0}</value>
+  </data>
+  <data name="ChangedParticipantsHistoryComment" xml:space="preserve">
+    <value>Old performers {0} changed to {1}</value>
+  </data>
+  <data name="Enum_Operation_ChangeUsers" xml:space="preserve">
+    <value>Changing participants</value>
+  </data>
+  <data name="EmptyActionItem" xml:space="preserve">
+    <value>Fill in the text in the action item or in the table.</value>
+  </data>
+  <data name="DefaultActionItem" xml:space="preserve">
+    <value>Complete the action item.</value>
   </data>
 </root>

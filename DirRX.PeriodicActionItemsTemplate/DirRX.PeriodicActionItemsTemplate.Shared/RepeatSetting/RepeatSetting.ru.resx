@@ -82,7 +82,70 @@
   <data name="IncorrectDaysOfMonth" xml:space="preserve">
     <value>В некоторых месяцах меньше {0} дней. В этих случаях повторение будет приходиться на последний день месяца.</value>
   </data>
-  <data name="AllowableLengthAssignmentsCharacters" xml:space="preserve">
-    <value>Допустимая длина одного пункта поручения {0} символов.</value>
+  <data name="ChooseCoAssigneesToAdd" xml:space="preserve">
+    <value>Выберите соисполнителей для добавления</value>
+  </data>
+  <data name="ChooseCoAssigneesForDelete" xml:space="preserve">
+    <value>Выберите соисполнителей для исключения</value>
+  </data>
+  <data name="BeginningDateLessThanToday" xml:space="preserve">
+    <value>Дата начала не может быть меньше текущей даты</value>
+  </data>
+  <data name="SelectActionForActiveScheduleItemsDialogText" xml:space="preserve">
+    <value>Закрыть старые записи?</value>
+  </data>
+  <data name="SelectActionForActiveScheduleItemsDialogDescription" xml:space="preserve">
+    <value>Расписание уже сформировано.</value>
+  </data>
+  <data name="KeepActive" xml:space="preserve">
+    <value>Оставить записи</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Закрыть записи</value>
+  </data>
+  <data name="ArbitraryScheduleCreationDialogText" xml:space="preserve">
+    <value>Задайте расписание</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Далее</value>
+  </data>
+  <data name="RequiredPropertyIsEmpty" xml:space="preserve">
+    <value>Не заполнено обязательное свойство "{0}"</value>
+  </data>
+  <data name="StartDateCannotBeLessThanToday" xml:space="preserve">
+    <value>Дата старта не может быть меньше текущей даты</value>
+  </data>
+  <data name="SchedulingStarted" xml:space="preserve">
+    <value>Началось составление расписания</value>
+  </data>
+  <data name="Sent" xml:space="preserve">
+    <value>ОТПРАВЛЕННЫЕ</value>
+  </data>
+  <data name="SentDate" xml:space="preserve">
+    <value>Отправлено: {0}</value>
+  </data>
+  <data name="PlannedForTheNextYear" xml:space="preserve">
+    <value>ПЛАНОВЫЕ НА БЛИЖАЙШИЙ ГОД</value>
+  </data>
+  <data name="Deadline" xml:space="preserve">
+    <value> Срок: {0}</value>
+  </data>
+  <data name="PlannedStartDate" xml:space="preserve">
+    <value>Плановая дата старта: {0}</value>
+  </data>
+  <data name="PlannedDeadline" xml:space="preserve">
+    <value>Плановый срок: {0}</value>
+  </data>
+  <data name="ChangedParticipantsHistoryComment" xml:space="preserve">
+    <value>Старые исполнители {0} изменены на {1}</value>
+  </data>
+  <data name="Enum_Operation_ChangeUsers" xml:space="preserve">
+    <value>Изменение участников</value>
+  </data>
+  <data name="EmptyActionItem" xml:space="preserve">
+    <value>Заполните текст в поручении или в табличной части</value>
+  </data>
+  <data name="DefaultActionItem" xml:space="preserve">
+    <value>В работу.</value>
   </data>
 </root>
