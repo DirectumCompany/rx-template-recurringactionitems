@@ -1,64 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
-    Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
-    associated with the data types.
-    
-    Example:
-    
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-                
-    There are any number of "resheader" rows that contain simple 
-    name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
-    mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
-    extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
-    read any of the formats listed below.
-    
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -304,7 +245,7 @@
     <value>Repeat Limits</value>
   </data>
   <data name="ControlGroup_9d05cd5211394597a3a573c5102b9d3f" xml:space="preserve">
-    <value>Action Item Deadline</value>
+    <value>Execution deadline</value>
   </data>
   <data name="ControlGroup_d0300866d178416e87a4fd85cd8435e2" xml:space="preserve">
     <value>Properties</value>
@@ -322,13 +263,13 @@
     <value />
   </data>
   <data name="DisplayName" xml:space="preserve">
-    <value>Repeating Action Item Settings</value>
+    <value>Action Item Execution Schedule</value>
   </data>
   <data name="AccusativeDisplayName" xml:space="preserve">
-    <value>Repeating Action Item Settings</value>
+    <value>Action Item Execution Schedule</value>
   </data>
   <data name="CollectionDisplayName" xml:space="preserve">
-    <value>Repeating Action Item Settings</value>
+    <value>Action Items Execution Schedules</value>
   </data>
   <data name="Property_Subject" xml:space="preserve">
     <value>Subject</value>
@@ -352,7 +293,7 @@
     <value>Final deadline</value>
   </data>
   <data name="Property_StartedActionItemTask" xml:space="preserve">
-    <value>Стартованные порученияв</value>
+    <value>Стартованные поручения</value>
   </data>
   <data name="Property_CoAssignees" xml:space="preserve">
     <value>Co-Assignees</value>
@@ -440,5 +381,86 @@ Click again to bring the card back to the simple action mode.</value>
   </data>
   <data name="Property_EndMonth" xml:space="preserve">
     <value>End</value>
+  </data>
+  <data name="Property_MainActionItem" xml:space="preserve">
+    <value>Action Item Foundation</value>
+  </data>
+  <data name="Property_MainDocument" xml:space="preserve">
+    <value>Document Foundation</value>
+  </data>
+  <data name="Property_TransferFromHoliday" xml:space="preserve">
+    <value>Transfer from holiday</value>
+  </data>
+  <data name="Enum_TransferFromHoliday_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Enum_TransferFromHoliday_Ahead" xml:space="preserve">
+    <value>Ahead</value>
+  </data>
+  <data name="Enum_TransferFromHoliday_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Enum_Type_Arbitrary" xml:space="preserve">
+    <value>Arbitrary</value>
+  </data>
+  <data name="Property_PartsCoAssignees" xml:space="preserve">
+    <value>Co-assignees of action item parts</value>
+  </data>
+  <data name="Action_FillPartCoAssignees" xml:space="preserve">
+    <value>Fill Co-assignees</value>
+  </data>
+  <data name="Action_FillPartCoAssigneesDescription" xml:space="preserve">
+    <value>Fill Co-assignees</value>
+  </data>
+  <data name="Action_FillPartCoAssigneesHint" xml:space="preserve">
+    <value>Fill Co-assignees</value>
+  </data>
+  <data name="Action_FillPartCoAssigneesConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_FillPartCoAssigneesConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ClearCoAssignees" xml:space="preserve">
+    <value>Clear co-assignees</value>
+  </data>
+  <data name="Action_ClearCoAssigneesDescription" xml:space="preserve">
+    <value>Clear co-assignees</value>
+  </data>
+  <data name="Action_ClearCoAssigneesHint" xml:space="preserve">
+    <value>Clear co-assignees</value>
+  </data>
+  <data name="Action_ClearCoAssigneesConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_ClearCoAssigneesConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Property_HasIndefiniteDeadline" xml:space="preserve">
+    <value>No deadline</value>
+  </data>
+  <data name="Action_CreateSchedule" xml:space="preserve">
+    <value>Make a schedule</value>
+  </data>
+  <data name="Action_CreateScheduleDescription" xml:space="preserve">
+    <value>Make a schedule</value>
+  </data>
+  <data name="Action_CreateScheduleHint" xml:space="preserve">
+    <value>Make a schedule</value>
+  </data>
+  <data name="Action_CreateScheduleConfirmationMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Action_CreateScheduleConfirmationDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Ribbon_ScheduleGroup_beae8658061d483da3fefd86dbeb726d" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="Form_dce55a98f02d4362a5afbba070702757" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="ControlGroup_5a8fd309bfa64260ade31f873116b175" xml:space="preserve">
+    <value />
   </data>
 </root>
