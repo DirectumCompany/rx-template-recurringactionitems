@@ -21,20 +21,24 @@ namespace DirRX.PeriodicActionItemsTemplate
     {
       if (!string.IsNullOrEmpty(e.NewValue))
         e.NewValue = e.NewValue.Trim();
-      
-      var resolutionPoint = e.NewValue;
-      var allowableResolutionLength = RepeatSettings.Info.Properties.ActionItem.Length;
-      if (!string.IsNullOrEmpty(resolutionPoint) && resolutionPoint.Length > allowableResolutionLength)
-        e.AddError(DirRX.PeriodicActionItemsTemplate.RepeatSettings.Resources.AllowableLengthAssignmentsCharactersFormat(allowableResolutionLength));
     }
   }
 
   partial class RepeatSettingClientHandlers
   {
 
+    public virtual void BeginningDateValueInput(Sungero.Presentation.DateTimeValueInputEventArgs e)
+    {
+      if (e.NewValue == null || e.NewValue == e.OldValue)
+        return;
+      
+      if (e.NewValue < Calendar.Today)
+        e.AddError(DirRX.PeriodicActionItemsTemplate.RepeatSettings.Resources.BeginningDateLessThanToday);
+    }
+
     public override void Showing(Sungero.Presentation.FormShowingEventArgs e)
     {
-    	_obj.State.Pages.ActionItem.Activate();
+      _obj.State.Pages.ActionItem.Activate();
     }
 
     public virtual void MonthTypeDayValueValueInput(Sungero.Presentation.IntegerValueInputEventArgs e)
@@ -64,7 +68,7 @@ namespace DirRX.PeriodicActionItemsTemplate
             (e.NewValue <= 0 || e.NewValue > 30))
           e.AddError(RepeatSettings.Resources.IncorrectDayValueFormat(30));
         
-      	// Игнорируем високосные годы
+        // Игнорируем високосные годы
         if (_obj.YearTypeMonth == RepeatSetting.YearTypeMonth.February && (e.NewValue <= 0 || e.NewValue > 28))
           e.AddError(RepeatSettings.Resources.IncorrectDayValueFormat(28));
       }
@@ -84,6 +88,11 @@ namespace DirRX.PeriodicActionItemsTemplate
 
     public override void Refresh(Sungero.Presentation.FormRefreshEventArgs e)
     {
+      if (!e.Params.Contains(Constants.RepeatSetting.HasIndefiniteDeadline))
+        e.Params.AddOrUpdate(Constants.RepeatSetting.HasIndefiniteDeadline,
+                             Sungero.RecordManagement.PublicFunctions.Module.AllowActionItemsWithIndefiniteDeadline() || _obj.HasIndefiniteDeadline == true);
+      
+      
       Functions.RepeatSetting.SetStateProperties(_obj);
 
       if (_obj.Type == DirRX.PeriodicActionItemsTemplate.RepeatSetting.Type.Month && _obj.MonthTypeDayValue.HasValue && _obj.MonthTypeDayValue.Value > 28 && _obj.MonthTypeDayValue.Value <= 31)
@@ -100,7 +109,12 @@ namespace DirRX.PeriodicActionItemsTemplate
       properties.Assignee.IsVisible = !isComponentResolution;
       properties.CoAssignees.IsVisible = !isComponentResolution;
 
-      properties.Supervisor.IsEnabled = (_obj.IsUnderControl ?? false) && _obj.State.Properties.Assignee.IsEnabled;
+      properties.Supervisor.IsEnabled = _obj.IsUnderControl ?? false;
+      properties.ActionItemsParts.Properties.Supervisor.IsEnabled = properties.Supervisor.IsEnabled;
+      
+      var hasIndefiniteDeadline = false;
+      e.Params.TryGetValue(Constants.RepeatSetting.HasIndefiniteDeadline, out hasIndefiniteDeadline);
+      properties.HasIndefiniteDeadline.IsVisible = hasIndefiniteDeadline;
       
       e.Title = (_obj.Subject == Sungero.Docflow.Resources.AutoformatTaskSubject) ? null : _obj.Subject;
       

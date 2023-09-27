@@ -71,10 +71,22 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
 
       #endregion
       
+      #region Произвольный.
+      
+      var isArbitrary = _obj.Type == PeriodicActionItemsTemplate.RepeatSetting.Type.Arbitrary;
+      
+      _obj.State.Properties.RepeatValue.IsVisible = !isArbitrary;
+      _obj.State.Properties.LabelType.IsVisible = !isArbitrary;
+      
+      #endregion
+      
       _obj.State.Properties.BeginningDate.IsVisible = isWeek || isDay;
       _obj.State.Properties.EndDate.IsVisible = isWeek || isDay;
       
-      _obj.State.Properties.CreationDays.IsEnabled = _obj.Type != DirRX.PeriodicActionItemsTemplate.RepeatSetting.Type.Day || !(!_obj.RepeatValue.HasValue || _obj.RepeatValue.Value == 1);
+      _obj.State.Properties.CreationDays.IsVisible = !isDay && !isArbitrary;
+      _obj.State.Properties.LabelCreationsDays.IsVisible = _obj.State.Properties.CreationDays.IsVisible;
+      _obj.State.Properties.CreationDays.IsEnabled = !isDay || !(!_obj.RepeatValue.HasValue || _obj.RepeatValue.Value == 1);
+      _obj.State.Properties.CreationDays.IsRequired = !isArbitrary;
       
       var isComponentResolution = _obj.IsCompoundActionItem ?? false;
 
@@ -83,6 +95,8 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
       
       // Проверить заполненность контролера, если поручение на контроле.
       _obj.State.Properties.Supervisor.IsRequired = _obj.Info.Properties.Supervisor.IsRequired || _obj.IsUnderControl == true;
+      
+      _obj.State.Pages.Schedule.IsVisible = !_obj.State.IsInserted;
     }
     
     /// <summary>

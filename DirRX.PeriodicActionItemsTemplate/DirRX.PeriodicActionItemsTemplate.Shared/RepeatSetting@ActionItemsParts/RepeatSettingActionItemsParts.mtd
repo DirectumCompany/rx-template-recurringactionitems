@@ -67,6 +67,40 @@
       "IsRequired": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.NumericEditorToIntAndDoubleBinder",
       "PreviousPropertyGuid": "c7593b74-7caf-4db2-a354-ec19c6b9808c"
+    },
+    {
+      "$type": "Sungero.Metadata.NavigationPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "25c5e875-f03b-4a08-a791-92915ff0783a",
+      "Name": "Supervisor",
+      "CanBeSearch": false,
+      "Code": "Supervisor",
+      "EntityGuid": "b7905516-2be5-4931-961c-cb38d5677565",
+      "IsEnabled": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
+      "PreviousPropertyGuid": "0d9027b2-fe2d-42e0-943f-51f31d6017d5"
+    },
+    {
+      "$type": "Sungero.Metadata.TextPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "2e57591c-ae62-41f2-ad22-1be58055b532",
+      "Name": "CoAssignees",
+      "CanBeSearch": false,
+      "Code": "CoAssignees",
+      "IsEnabled": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.MultilineStringEditorToTextBinder",
+      "PreviousPropertyGuid": "25c5e875-f03b-4a08-a791-92915ff0783a"
+    },
+    {
+      "$type": "Sungero.Metadata.StringPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "540f2e3a-174f-4900-88c1-80918be3bae9",
+      "Name": "PartGuid",
+      "CanBeSearch": false,
+      "Code": "PartGuid",
+      "IsEnabled": false,
+      "IsShowedInList": false,
+      "IsVisibility": false,
+      "Length": 36,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.StringEditorToStringBinder",
+      "PreviousPropertyGuid": "2e57591c-ae62-41f2-ad22-1be58055b532"
     }
   ],
   "PublicStructures": [],

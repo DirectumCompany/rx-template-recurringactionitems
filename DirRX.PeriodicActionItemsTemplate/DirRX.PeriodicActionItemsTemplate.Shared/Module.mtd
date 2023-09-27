@@ -2,7 +2,60 @@
   "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
   "NameGuid": "361e1a1d-0bce-41ea-b507-f4dbed1cc173",
   "Name": "PeriodicActionItemsTemplate",
-  "AsyncHandlers": [],
+  "AsyncHandlers": [
+    {
+      "NameGuid": "f82cc726-8bd5-40fd-9a0d-387aa00a39df",
+      "Name": "CloseScheduleItem",
+      "DelayPeriod": 15,
+      "DelayStrategy": "ExponentialDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": [
+        {
+          "NameGuid": "10027f7f-5781-46d0-8818-5f0ad6c2e098",
+          "Name": "ScheduleItemId",
+          "ParameterType": "LongInteger"
+        }
+      ]
+    },
+    {
+      "NameGuid": "56b3aba0-8af5-4cb0-872b-0fdd22bd42f0",
+      "Name": "CreateSchedule",
+      "DelayPeriod": 5,
+      "DelayStrategy": "RegularDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": [
+        {
+          "NameGuid": "e3d51a1f-7ddf-4a8d-a388-3f4a48f18967",
+          "Name": "RepeatSettingId",
+          "ParameterType": "LongInteger"
+        },
+        {
+          "NameGuid": "e6d85a53-1d10-40ed-a68c-9a442c3eb6dd",
+          "Name": "CheckDuplicates",
+          "ParameterType": "Boolean"
+        }
+      ]
+    },
+    {
+      "NameGuid": "d0a4bc4c-6795-407f-a64d-bef3912244d0",
+      "Name": "StartPeriodicActionItem",
+      "DelayPeriod": 1,
+      "DelayStrategy": "RegularDelayStrategy",
+      "IsHandlerGenerated": true,
+      "Parameters": [
+        {
+          "NameGuid": "4187da95-3024-4ae8-9d2c-4ed83ada16ac",
+          "Name": "ScheduleItemId",
+          "ParameterType": "LongInteger"
+        },
+        {
+          "NameGuid": "9e50991b-506b-451b-a88b-30626feed636",
+          "Name": "ErrorMessage",
+          "ParameterType": "String"
+        }
+      ]
+    }
+  ],
   "ClientAssemblyName": "DirRX.PeriodicActionItemsTemplate.Client",
   "ClientBaseAssemblyName": "DirRX.PeriodicActionItemsTemplate.ClientBase",
   "ClientBaseNamespace": "DirRX.PeriodicActionItemsTemplate.ClientBase",
@@ -45,7 +98,14 @@
     {
       "ItemId": "fe981103-d7c9-4c93-9a93-c40ce2dca103",
       "PreviousItemId": "c290b098-12c7-487d-bb38-73e2c98f9789"
+    },
+    {
+      "ItemId": "8463afd1-298d-43bc-b8fe-8ff4a51abf27",
+      "PreviousItemId": "fe981103-d7c9-4c93-9a93-c40ce2dca103"
     }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
   ],
   "IconResourcesKeys": [],
   "Importance": "High",
@@ -62,11 +122,100 @@
       "Monthly": "WorkingDays",
       "MonthSchedule": "Monthly",
       "StartAt": "1753-01-01T08:30:00"
+    },
+    {
+      "NameGuid": "259103fb-1953-417f-80d2-a13bc3481b54",
+      "Name": "UpdatingScheduleForPeriodicActionItems",
+      "DaysOfMonthSchedule": "1",
+      "GenerateHandler": true,
+      "Monthly": "DaysOfMonth",
+      "MonthSchedule": "January, April, July, October",
+      "StartAt": "1753-01-01T21:00:00"
     }
   ],
   "Overridden": [
     "Importance",
     "IsVisible"
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "CanCreatePeriodicScheduleForDocument",
+      "Parameters": [
+        {
+          "Name": "document",
+          "ParameterType": "global::Sungero.Docflow.IOfficialDocument",
+          "ParameterTypeFullName": "Sungero.Docflow.IOfficialDocument, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "CanShowPeriodicScheduleForDocument",
+      "Parameters": [
+        {
+          "Name": "document",
+          "ParameterType": "global::Sungero.Docflow.IOfficialDocument",
+          "ParameterTypeFullName": "Sungero.Docflow.IOfficialDocument, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "CreateScheduleFromActionItem",
+      "Parameters": [
+        {
+          "Name": "actionItem",
+          "ParameterType": "global::Sungero.RecordManagement.IActionItemExecutionTask",
+          "ParameterTypeFullName": "Sungero.RecordManagement.IActionItemExecutionTask, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::DirRX.PeriodicActionItemsTemplate.IRepeatSetting",
+      "ReturnTypeFullName": "DirRX.PeriodicActionItemsTemplate.IRepeatSetting, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "CreateScheduleFromDocument",
+      "Parameters": [
+        {
+          "Name": "document",
+          "ParameterType": "global::Sungero.Docflow.IOfficialDocument",
+          "ParameterTypeFullName": "Sungero.Docflow.IOfficialDocument, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::DirRX.PeriodicActionItemsTemplate.IRepeatSetting",
+      "ReturnTypeFullName": "DirRX.PeriodicActionItemsTemplate.IRepeatSetting, Sungero.Domain.Interfaces"
+    },
+    {
+      "Name": "ShowScheduleForActionItem",
+      "Parameters": [
+        {
+          "Name": "actionItem",
+          "ParameterType": "global::Sungero.RecordManagement.IActionItemExecutionTask",
+          "ParameterTypeFullName": "Sungero.RecordManagement.IActionItemExecutionTask, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "ShowSchedulesForDocument",
+      "Parameters": [
+        {
+          "Name": "document",
+          "ParameterType": "global::Sungero.Docflow.IOfficialDocument",
+          "ParameterTypeFullName": "Sungero.Docflow.IOfficialDocument, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Client",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    }
   ],
   "PublicStructures": [],
   "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
@@ -103,14 +252,17 @@
     "AssignmentIsLocked",
     "ActionItemOnControl",
     "CEOAssistantRoleName",
-    "CEOAssistantRoleDescription"
+    "CEOAssistantRoleDescription",
+    "AdminSubjectForClosedParticipantsError",
+    "AdminErrorTaskSubject",
+    "AdminErrorTaskActiveText"
   ],
   "ServerAssemblyName": "DirRX.PeriodicActionItemsTemplate.Server",
   "ServerNamespace": "DirRX.PeriodicActionItemsTemplate.Server",
   "SharedAssemblyName": "DirRX.PeriodicActionItemsTemplate.Shared",
   "SharedNamespace": "DirRX.PeriodicActionItemsTemplate.Shared",
   "SpecialFolders": [],
-  "Version": "0.0.1.59",
+  "Version": "0.0.1.58",
   "Widgets": [],
   "Versions": [
     {

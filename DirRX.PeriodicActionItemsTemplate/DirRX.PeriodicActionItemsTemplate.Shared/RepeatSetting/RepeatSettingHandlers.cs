@@ -10,6 +10,16 @@ namespace DirRX.PeriodicActionItemsTemplate
   partial class RepeatSettingActionItemsPartsSharedCollectionHandlers
   {
 
+    public virtual void ActionItemsPartsDeleted(Sungero.Domain.Shared.CollectionPropertyDeletedEventArgs e)
+    {
+      var partsCoAssignees = _obj.PartsCoAssignees.Where(p => p.PartGuid == _deleted.PartGuid).ToList();
+      
+      foreach (var partCoAssignees in partsCoAssignees)
+      {
+        _obj.PartsCoAssignees.Remove(partCoAssignees);
+      }
+    }
+
     public virtual void ActionItemsPartsAdded(Sungero.Domain.Shared.CollectionPropertyAddedEventArgs e)
     {
       // Задать порядковый номер для пункта поручения.
@@ -18,6 +28,8 @@ namespace DirRX.PeriodicActionItemsTemplate
         _added.Number = lastNumber.Number + 1;
       else
         _added.Number = 1;
+      
+      _added.PartGuid = Guid.NewGuid().ToString();
     }
   }
 
@@ -142,6 +154,7 @@ namespace DirRX.PeriodicActionItemsTemplate
             var newJob = _obj.ActionItemsParts.AddNew();
             newJob.Assignee = job.Assignee;
           }
+          _obj.CoAssignees.Clear();
         }
         else
         {
@@ -181,16 +194,15 @@ namespace DirRX.PeriodicActionItemsTemplate
       Functions.RepeatSetting.SetStateProperties(_obj);
     }
 
-    public virtual void ActionItemChanged(Sungero.Domain.Shared.StringPropertyChangedEventArgs e)
+    public virtual void ActionItemChanged(Sungero.Domain.Shared.TextPropertyChangedEventArgs e)
     {
-      if (!Equals(e.NewValue, e.OldValue))
-      {
-        _obj.Subject = Functions.RepeatSetting.Remote.CreateSubject(_obj);
-        
-        // Заменить первый символ на прописной.
-        _obj.ActionItem = _obj.ActionItem != null ? _obj.ActionItem.Trim() : string.Empty;
-        _obj.ActionItem = Sungero.Docflow.PublicFunctions.Module.ReplaceFirstSymbolToUpperCase(_obj.ActionItem);
-      }
+      _obj.Subject = Functions.RepeatSetting.Remote.CreateSubject(_obj);
+      
+      // Заменить первый символ на прописной.
+      var actionItem = _obj.ActionItem != null ? _obj.ActionItem.Trim() : string.Empty;
+      actionItem = Sungero.Docflow.PublicFunctions.Module.ReplaceFirstSymbolToUpperCase(actionItem);
+      if (_obj.ActionItem != actionItem)
+        _obj.ActionItem = actionItem;
     }
 
     public virtual void YearTypeDayChanged(Sungero.Domain.Shared.EnumerationPropertyChangedEventArgs e)
@@ -265,12 +277,24 @@ namespace DirRX.PeriodicActionItemsTemplate
           _obj.MonthTypeDay = null;
           _obj.MonthTypeDayValue = null;
         }
+        
+        if (e.NewValue == RepeatSetting.Type.Arbitrary)
+        {
+          _obj.CreationDays = null;
+          _obj.EndDate = null;
+        }
 
         if (e.NewValue == RepeatSetting.Type.Day)
+        {
           _obj.LabelType = DirRX.PeriodicActionItemsTemplate.RepeatSettings.Resources.LabelDay;
+          _obj.CreationDays = null;
+        }
         
         if (e.NewValue == RepeatSetting.Type.Week)
+        {
           _obj.LabelType = DirRX.PeriodicActionItemsTemplate.RepeatSettings.Resources.LabelWeek;
+          _obj.EndDate = null;
+        }
         
         if (e.NewValue == RepeatSetting.Type.Week || e.NewValue == RepeatSetting.Type.Day)
         {
