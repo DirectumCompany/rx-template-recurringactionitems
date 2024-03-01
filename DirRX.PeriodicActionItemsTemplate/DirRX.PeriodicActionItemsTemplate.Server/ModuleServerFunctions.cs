@@ -114,7 +114,6 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
       
       var task = Sungero.RecordManagement.ActionItemExecutionTasks.Create();
       
-      // Добавить документ-основание
       var mainDocument = scheduleItem.RepeatSetting.MainDocument;
       if (mainDocument != null)
         task.DocumentsGroup.OfficialDocuments.Add(mainDocument);
