@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -113,6 +113,11 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
       var setting = scheduleItem.RepeatSetting;
       
       var task = Sungero.RecordManagement.ActionItemExecutionTasks.Create();
+      
+      var mainDocument = scheduleItem.RepeatSetting.MainDocument;
+      if (mainDocument != null)
+        task.DocumentsGroup.OfficialDocuments.Add(mainDocument);
+      
       task.AssignedBy = setting.AssignedBy;
       task.ActiveText = setting.ActionItem;
       task.IsUnderControl = setting.IsUnderControl == true;
