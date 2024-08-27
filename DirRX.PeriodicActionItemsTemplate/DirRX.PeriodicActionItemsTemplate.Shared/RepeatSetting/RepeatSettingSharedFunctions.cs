@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -86,7 +86,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
       _obj.State.Properties.CreationDays.IsVisible = !isDay && !isArbitrary;
       _obj.State.Properties.LabelCreationsDays.IsVisible = _obj.State.Properties.CreationDays.IsVisible;
       _obj.State.Properties.CreationDays.IsEnabled = !isDay || !(!_obj.RepeatValue.HasValue || _obj.RepeatValue.Value == 1);
-      _obj.State.Properties.CreationDays.IsRequired = !isArbitrary;
+      _obj.State.Properties.CreationDays.IsRequired = !isDay && !isArbitrary;
       
       var isComponentResolution = _obj.IsCompoundActionItem ?? false;
 
