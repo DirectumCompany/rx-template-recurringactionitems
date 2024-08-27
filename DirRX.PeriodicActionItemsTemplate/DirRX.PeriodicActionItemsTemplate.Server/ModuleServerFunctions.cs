@@ -108,7 +108,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
     /// Получить сотрудника или его руководителя.
     /// </summary>
     /// <param name="employee">Сотрудник.</param>
-    /// <returns>Сотрудник, либо руководитель его подразделения, если сотрудник закрыт.</returns>
+    /// <returns>Сотрудник либо руководитель его подразделения, если сотрудник закрыт.</returns>
     public Sungero.Company.IEmployee GetEmployeeOrManager(Sungero.Company.IEmployee employee)
     {
       if (employee == null)

@@ -85,14 +85,14 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
             adminTask.Attachments.Add(employee);
           
           adminTask.Start();
+          
+          if (startActionItem != true)
+            continue;
         }
         
-        if (startActionItem == true)
-        {
-          var asyncHandler = AsyncHandlers.StartPeriodicActionItem.Create();
-          asyncHandler.ScheduleItemId = scheduleItem.Id;
-          asyncHandler.ExecuteAsync();
-        }
+        var asyncHandler = AsyncHandlers.StartPeriodicActionItem.Create();
+        asyncHandler.ScheduleItemId = scheduleItem.Id;
+        asyncHandler.ExecuteAsync();
       }
       
       logger.Debug("Finish");
