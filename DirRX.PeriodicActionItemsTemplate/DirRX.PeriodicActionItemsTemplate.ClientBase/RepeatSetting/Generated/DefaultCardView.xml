@@ -36,7 +36,7 @@
             <property name="Name">RepeatSetting_ActionItemsParts_ActionItemPart</property>
             <property name="FieldName">ActionItemPart</property>
             <property name="VisibleIndex">2</property>
-            <property name="Width">265</property>
+            <property name="Width">254</property>
             <property name="ActualWidth">26*</property>
           </property>
           <property name="Item2" isnull="true" iskey="true">
@@ -45,7 +45,7 @@
             <property name="Name">RepeatSetting_ActionItemsParts_Assignee</property>
             <property name="FieldName">Assignee</property>
             <property name="VisibleIndex">1</property>
-            <property name="Width">245</property>
+            <property name="Width">234</property>
             <property name="ActualWidth">24*</property>
           </property>
           <property name="Item3" isnull="true" iskey="true">
@@ -62,7 +62,7 @@
             <property name="Name">RepeatSetting_ActionItemsParts_Supervisor</property>
             <property name="FieldName">Supervisor</property>
             <property name="VisibleIndex">4</property>
-            <property name="Width">204</property>
+            <property name="Width">195</property>
             <property name="ActualWidth">20*</property>
           </property>
           <property name="Item5" isnull="true" iskey="true">
@@ -71,7 +71,7 @@
             <property name="Name">RepeatSetting_ActionItemsParts_CoAssignees</property>
             <property name="FieldName">CoAssignees</property>
             <property name="VisibleIndex">3</property>
-            <property name="Width">224</property>
+            <property name="Width">215</property>
             <property name="ActualWidth">22*</property>
           </property>
         </property>

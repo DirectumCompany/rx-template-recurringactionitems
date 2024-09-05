@@ -1642,7 +1642,8 @@
     "ChangedParticipantsHistoryComment",
     "Enum_Operation_ChangeUsers",
     "EmptyActionItem",
-    "DefaultActionItem"
+    "DefaultActionItem",
+    "NoAssigneeActionItem"
   ],
   "RibbonCardMetadata": {
     "NameGuid": "5751342a-cdd2-49e7-bb61-73925787659d",

@@ -148,4 +148,7 @@
   <data name="DefaultActionItem" xml:space="preserve">
     <value>Complete the action item.</value>
   </data>
+  <data name="NoAssigneeActionItem" xml:space="preserve">
+    <value>Specify the assignee of the action item.</value>
+  </data>
 </root>
