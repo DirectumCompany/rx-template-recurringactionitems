@@ -155,7 +155,7 @@
     <value>Employees authorized to run the CEO assistant's report in the "Action Items" module.</value>
   </data>
   <data name="AdminSubjectForClosedParticipantsError" xml:space="preserve">
-    <value>Among the assignees of the periodic action item there are employees with closed records. It is necessary to correct the schedule</value>
+    <value>Among the assignees of the periodic action item there are employees with closed records. It is necessary to correct the schedule.</value>
   </data>
   <data name="AdminErrorTaskSubject" xml:space="preserve">
     <value>Failed to send periodic action item</value>
