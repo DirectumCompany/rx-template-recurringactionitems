@@ -28,6 +28,12 @@ namespace DirRX.PeriodicActionItemsTemplate
         isError = true;
       }
       
+      if (_obj.Assignee == null && !_obj.ActionItemsParts.Any())
+      {
+        e.AddError(DirRX.PeriodicActionItemsTemplate.RepeatSettings.Resources.NoAssigneeActionItem);
+        isError = true;
+      }
+      
       if (isCompoundActionItem && string.IsNullOrWhiteSpace(_obj.ActionItem) && _obj.ActionItemsParts.Any(i => string.IsNullOrEmpty(i.ActionItemPart)))
       {
         e.AddError(DirRX.PeriodicActionItemsTemplate.RepeatSettings.Resources.EmptyActionItem);

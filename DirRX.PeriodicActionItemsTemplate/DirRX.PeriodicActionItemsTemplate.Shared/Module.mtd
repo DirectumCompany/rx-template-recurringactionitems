@@ -256,7 +256,8 @@
     "CEOAssistantRoleDescription",
     "AdminSubjectForClosedParticipantsError",
     "AdminErrorTaskSubject",
-    "AdminErrorTaskActiveText"
+    "AdminErrorTaskActiveText",
+    "ClosedEmployeesTaskActiveText"
   ],
   "ServerAssemblyName": "DirRX.PeriodicActionItemsTemplate.Server",
   "ServerNamespace": "DirRX.PeriodicActionItemsTemplate.Server",

@@ -155,12 +155,19 @@
     <value>Employees authorized to run the CEO assistant's report in the "Action Items" module.</value>
   </data>
   <data name="AdminSubjectForClosedParticipantsError" xml:space="preserve">
-    <value>Failed to send periodic action items. Among the participants in the order there are employees with closed records</value>
+    <value>Among the assignees of the periodic action item there are employees with closed records. It is necessary to correct the schedule.</value>
   </data>
   <data name="AdminErrorTaskSubject" xml:space="preserve">
     <value>Failed to send periodic action item</value>
   </data>
   <data name="AdminErrorTaskActiveText" xml:space="preserve">
     <value>Error message: {0}</value>
+  </data>
+  <data name="ClosedEmployeesTaskActiveText" xml:space="preserve">
+    <value>Failed to send a periodic action item. Among participants there are employees with closed records.
+It is necessary to make adjustments to the schedule:
+1. Go to the assignment execution schedule card in the attachment.
+2. Remove the executor with the closed record from the schedule or replace them with another executor. Save the schedule.
+3. Perform the assignment by clicking the "Execute" button.</value>
   </data>
 </root>

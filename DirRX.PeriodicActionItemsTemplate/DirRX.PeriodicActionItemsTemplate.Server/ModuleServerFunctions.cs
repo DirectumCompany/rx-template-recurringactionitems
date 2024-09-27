@@ -105,6 +105,18 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
     }
     
     /// <summary>
+    /// Получить сотрудника или его руководителя.
+    /// </summary>
+    /// <param name="employee">Сотрудник.</param>
+    /// <returns>Сотрудник либо руководитель его подразделения, если сотрудник закрыт.</returns>
+    public Sungero.Company.IEmployee GetEmployeeOrManager(Sungero.Company.IEmployee employee)
+    {
+      if (employee == null)
+        return employee;
+      return employee.Status == Sungero.CoreEntities.DatabookEntry.Status.Active ? employee : employee.Department.Manager;
+    }
+    
+    /// <summary>
     /// Создать и отправить поручение по расписанию отправки.
     /// </summary>
     /// <param name="scheduleItem">Расписание отправки.</param>
@@ -118,10 +130,10 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
       if (mainDocument != null)
         task.DocumentsGroup.OfficialDocuments.Add(mainDocument);
       
-      task.AssignedBy = setting.AssignedBy;
+      task.AssignedBy = GetEmployeeOrManager(setting.AssignedBy);
       task.ActiveText = setting.ActionItem;
       task.IsUnderControl = setting.IsUnderControl == true;
-      task.Supervisor = setting.Supervisor;
+      task.Supervisor = GetEmployeeOrManager(setting.Supervisor);
       
       // FIXME: На реальных проектах переделать на заполнение свойств из перекрытий.
       ((Sungero.Domain.Shared.IExtendedEntity)task).Params.Add("CreatedAsPeriodic", true);
@@ -134,38 +146,38 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         foreach (var actionItemPartsSetting in setting.ActionItemsParts)
         {
           var actionItemParts = task.ActionItemParts.AddNew();
-          actionItemParts.Assignee = actionItemPartsSetting.Assignee;
+          actionItemParts.Assignee = GetEmployeeOrManager(actionItemPartsSetting.Assignee);
           actionItemParts.ActionItemPart = actionItemPartsSetting.ActionItemPart;
-          actionItemParts.Supervisor = actionItemPartsSetting.Supervisor;
-          actionItemParts.CoAssignees = actionItemPartsSetting.CoAssignees;
-          
+          actionItemParts.Supervisor = GetEmployeeOrManager(actionItemPartsSetting.Supervisor);
           
           foreach (var partsCoAssigneeSetting in setting.PartsCoAssignees.Where(pca => pca.PartGuid == actionItemPartsSetting.PartGuid))
           {
             var partCoAssignee = task.PartsCoAssignees.AddNew();
             partCoAssignee.PartGuid = actionItemParts.PartGuid;
-            partCoAssignee.CoAssignee = partsCoAssigneeSetting.CoAssignee;
+            partCoAssignee.CoAssignee = GetEmployeeOrManager(partsCoAssigneeSetting.CoAssignee);
           }
           
           if (setting.HasIndefiniteDeadline != true && task.PartsCoAssignees.Any(pca => pca.PartGuid == actionItemParts.PartGuid))
             actionItemParts.CoAssigneesDeadline = scheduleItem.Deadline.Value.AddWorkingDays(-coAssigneesDeadlineOffset).Date;
+          
+          actionItemParts.CoAssignees = string.Join("; ", task.PartsCoAssignees
+                                                    .Where(pca => pca.PartGuid == actionItemParts.PartGuid)
+                                                    .Select(x => x.CoAssignee.Person.ShortName));
         }
         
         if (setting.HasIndefiniteDeadline == true)
           task.HasIndefiniteDeadline = true;
         else
-        {
           task.FinalDeadline = scheduleItem.Deadline;
-        }
       }
       else
       {
-        task.Assignee = setting.Assignee;
+        task.Assignee = GetEmployeeOrManager(setting.Assignee);
         
         foreach (var coAssigneeSetting in setting.CoAssignees)
         {
           var coAssignee = task.CoAssignees.AddNew();
-          coAssignee.Assignee = coAssigneeSetting.Assignee;
+          coAssignee.Assignee = GetEmployeeOrManager(coAssigneeSetting.Assignee);
         }
         
         if (setting.HasIndefiniteDeadline == true)
