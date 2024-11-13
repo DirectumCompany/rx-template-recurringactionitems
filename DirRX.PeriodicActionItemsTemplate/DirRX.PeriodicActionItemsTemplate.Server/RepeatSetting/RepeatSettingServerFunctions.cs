@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sungero.Core;
@@ -239,7 +239,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
       var sendedActionItemsBlock = AddParticipantsBlockAndLabel(stateView);
       
       
-      foreach (var sendedScheduleItem in ScheduleItems.GetAll(si => Equals(si.RepeatSetting, _obj) && si.ActionItemExecutionTask != null))
+      foreach (var sendedScheduleItem in ScheduleItems.GetAll(si => Equals(si.RepeatSetting, _obj) && si.ActionItemExecutionTask != null).OrderBy(x => x.StartDate))
       {
         var actionItem = sendedScheduleItem.ActionItemExecutionTask;
         
@@ -282,7 +282,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
       foreach (var awaitingScheduleItem in ScheduleItems.GetAll(si => Equals(si.RepeatSetting, _obj) &&
                                                                 si.ActionItemExecutionTask == null &&
                                                                 si.Status == DirRX.PeriodicActionItemsTemplate.ScheduleItem.Status.Active &&
-                                                                si.StartDate <= oneYearAhead))
+                                                                si.StartDate <= oneYearAhead).OrderBy(x => x.StartDate))
       {
         var scheduleItemBlock = awaitingScheduleItemsBlock.AddChildBlock();
         scheduleItemBlock.Entity = awaitingScheduleItem;
