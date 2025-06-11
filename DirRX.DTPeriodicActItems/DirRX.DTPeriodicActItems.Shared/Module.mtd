@@ -193,16 +193,16 @@
   "SharedAssemblyName": "DirRX.DTPeriodicActItems.Shared",
   "SharedNamespace": "DirRX.DTPeriodicActItems.Shared",
   "SpecialFolders": [],
-  "Version": "0.0.1.60",
+  "Version": "0.0.1.61",
   "Widgets": [],
   "Versions": [
     {
       "Type": "SolutionMetadata",
-      "Number": 8
+      "Number": 9
     },
     {
       "Type": "ModuleMetadata",
-      "Number": 8
+      "Number": 9
     },
     {
       "Type": "DomainApi",
