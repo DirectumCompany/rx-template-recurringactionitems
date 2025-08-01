@@ -107,6 +107,7 @@
       ]
     }
   ],
+  "FormViewUuid": "61b99619-5ea4-4c75-93e7-f6c11cae4dac",
   "HandledEvents": [
     "RefreshClient",
     "CreatedServer",

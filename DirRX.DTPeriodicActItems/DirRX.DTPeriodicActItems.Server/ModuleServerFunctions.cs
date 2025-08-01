@@ -11,7 +11,7 @@ using Sungero.Metadata;
 
 namespace DirRX.DTPeriodicActItems.Server
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {
   }
 }

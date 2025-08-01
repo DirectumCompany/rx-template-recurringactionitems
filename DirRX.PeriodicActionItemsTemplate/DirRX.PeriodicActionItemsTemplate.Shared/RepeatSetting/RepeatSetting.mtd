@@ -781,6 +781,7 @@
       "PreviousInplaceFormGuid": "4d4ac9a3-989b-430e-acec-9f32b023e1d7"
     }
   ],
+  "FormViewUuid": "12d1c523-1ebe-4a91-90f1-b713b346329d",
   "HandledEvents": [
     "CreatedServer",
     "RefreshClient",

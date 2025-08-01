@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace DirRX.PeriodicActionItemsTemplate.Server
 {
-  public class ModuleAsyncHandlers
+  public partial class ModuleAsyncHandlers
   {
 
     public virtual void StartPeriodicActionItem(DirRX.PeriodicActionItemsTemplate.Server.AsyncHandlerInvokeArgs.StartPeriodicActionItemInvokeArgs args)
@@ -25,7 +25,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
       
       if (args.RetryIteration > 3)
       {
-        // Отправляем уведомление администратору.
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
         var adminTask = Sungero.Workflow.SimpleTasks.CreateWithNotices(DirRX.PeriodicActionItemsTemplate.Resources.AdminErrorTaskSubject,
                                                                        Functions.Module.GetResponsibleForPeriodic());
         adminTask.Attachments.Add(scheduleItem);

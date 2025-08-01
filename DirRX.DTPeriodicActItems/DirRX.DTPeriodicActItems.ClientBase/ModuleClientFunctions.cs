@@ -7,7 +7,7 @@ using System.IO;
 
 namespace DirRX.DTPeriodicActItems.Client
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {
   }
 }

@@ -6,7 +6,7 @@ using Sungero.CoreEntities;
 
 namespace DirRX.DTPeriodicActItems.Shared
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {
   }
 }

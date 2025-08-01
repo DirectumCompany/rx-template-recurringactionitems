@@ -9,7 +9,7 @@ using Sungero.Domain.Shared;
 
 namespace DirRX.PeriodicActionItemsTemplate.Server
 {
-  public class ModuleJobs
+  public partial class ModuleJobs
   {
 
     /// <summary>

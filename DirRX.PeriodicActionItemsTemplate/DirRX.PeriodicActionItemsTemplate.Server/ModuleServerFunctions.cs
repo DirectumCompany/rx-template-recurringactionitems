@@ -7,7 +7,7 @@ using Sungero.Domain;
 
 namespace DirRX.PeriodicActionItemsTemplate.Server
 {
-  public class ModuleFunctions
+  public partial class ModuleFunctions
   {
     
     #region ФП по актуализации расписания
