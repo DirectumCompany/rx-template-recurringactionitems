@@ -1,0 +1,1 @@
+i.Discriminator in ({0}) and i.IsRead = 1 and i.Status in ({1}) and i.Created < @date
