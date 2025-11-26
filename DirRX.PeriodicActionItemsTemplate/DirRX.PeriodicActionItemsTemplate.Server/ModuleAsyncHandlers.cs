@@ -25,7 +25,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
       
       if (args.RetryIteration > 3)
       {
-        // ���������� ����������� ��������������.
+        // Отправляем уведомление администратору.
         var adminTask = Sungero.Workflow.SimpleTasks.CreateWithNotices(DirRX.PeriodicActionItemsTemplate.Resources.AdminErrorTaskSubject,
                                                                        Functions.Module.GetResponsibleForPeriodic());
         adminTask.Attachments.Add(scheduleItem);
