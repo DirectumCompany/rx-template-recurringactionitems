@@ -33,3 +33,6 @@ log
 node_modules
 
 _ConfigSettings.xml
+
+
+Libraries.json

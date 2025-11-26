@@ -47,7 +47,6 @@
       "PreviousItemId": "67be76f0-e21c-494b-a7fd-d3be738f7016"
     }
   ],
-  "IconResourcesKeys": [],
   "Importance": "Medium",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.DTPeriodicActItems",
@@ -193,16 +192,16 @@
   "SharedAssemblyName": "DirRX.DTPeriodicActItems.Shared",
   "SharedNamespace": "DirRX.DTPeriodicActItems.Shared",
   "SpecialFolders": [],
-  "Version": "0.0.1.61",
+  "Version": "0.0.1.62",
   "Widgets": [],
   "Versions": [
     {
       "Type": "SolutionMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "ModuleMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "DomainApi",

@@ -108,7 +108,6 @@
   "HandledEvents": [
     "InitializingServer"
   ],
-  "IconResourcesKeys": [],
   "Importance": "High",
   "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
   "InterfaceNamespace": "DirRX.PeriodicActionItemsTemplate",
@@ -264,12 +263,12 @@
   "SharedAssemblyName": "DirRX.PeriodicActionItemsTemplate.Shared",
   "SharedNamespace": "DirRX.PeriodicActionItemsTemplate.Shared",
   "SpecialFolders": [],
-  "Version": "0.0.1.62",
+  "Version": "0.0.1.63",
   "Widgets": [],
   "Versions": [
     {
       "Type": "ModuleMetadata",
-      "Number": 9
+      "Number": 11
     },
     {
       "Type": "DomainApi",
