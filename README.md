@@ -112,7 +112,7 @@ return DirRX.PeriodicActionItemsTemplate.PublicFunctions.Module.CanShowPeriodicS
       repository:
       -   '@folderName': 'work'
           '@solutionType': 'Work'
-          '@url': 'https://github.com/DirectumCompany/rx-template-recurringactionitems'
+          '@url': 'https://github.com/DirectumCompany/rx-template-recurringactionitems.git'
       -   '@folderName': 'base'
           '@solutionType': 'Base'
           '@url': ''
@@ -131,7 +131,7 @@ return DirRX.PeriodicActionItemsTemplate.PublicFunctions.Module.CanShowPeriodicS
       repository:
       -   '@folderName': 'work'
           '@solutionType': 'Work'
-          '@url': https://github.com/DirectumCompany/rx-template-recurringactionitems'
+          '@url': https://github.com/DirectumCompany/rx-template-recurringactionitems.git'
       -   '@folderName': 'base'
           '@solutionType': 'Base'
           '@url': ''
@@ -154,7 +154,7 @@ return DirRX.PeriodicActionItemsTemplate.PublicFunctions.Module.CanShowPeriodicS
           '@url': ''
       -   '@folderName': 'base'
           '@solutionType': 'Base'
-          '@url': 'https://github.com/DirectumCompany/rx-template-recurringactionitems'
+          '@url': 'https://github.com/DirectumCompany/rx-template-recurringactionitems.git'
 
 ```
 
@@ -167,4 +167,5 @@ return DirRX.PeriodicActionItemsTemplate.PublicFunctions.Module.CanShowPeriodicS
 4. Импортировать клонированный репозиторий в систему контроля версий командой:
 
 `git push –mirror <Адрес репозитория из п. 1>`
+
 
