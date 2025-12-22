@@ -149,7 +149,7 @@ return DirRX.PeriodicActionItemsTemplate.PublicFunctions.Module.CanShowPeriodicS
       -   '@folderName': 'work'
           '@solutionType': 'Work'
           '@url': '<Адрес репозитория для рабочего слоя>'
--   '@folderName': 'base'
+      -   '@folderName': 'base'
           '@solutionType': 'Base'
           '@url': ''
       -   '@folderName': 'base'
@@ -167,5 +167,6 @@ return DirRX.PeriodicActionItemsTemplate.PublicFunctions.Module.CanShowPeriodicS
 4. Импортировать клонированный репозиторий в систему контроля версий командой:
 
 `git push –mirror <Адрес репозитория из п. 1>`
+
 
 
