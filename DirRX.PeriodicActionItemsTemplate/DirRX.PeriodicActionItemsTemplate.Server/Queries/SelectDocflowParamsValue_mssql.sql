@@ -1,0 +1,1 @@
+SELECT Value FROM Sungero_Docflow_Params WHERE ([Key] = '{0}')
