@@ -356,7 +356,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
                                                                        schedule.MonthTypeDayOfWeekNumber != DirRX.PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeekNumber.Last),
                                                   schedule.TransferFromHoliday).Date;
           var startDate = deadline.AddWorkingDays(-(schedule.CreationDays ?? 0)).Date;
-          if (startDate < schedule.BeginningMonth.Value.Date)
+          if (deadline < schedule.BeginningMonth.Value.Date)
           {
             iterationDate = iterationDate.AddMonths(schedule.RepeatValue ?? 1).Date;
             continue;
@@ -456,7 +456,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
                                                                        schedule.YearTypeDayOfWeekNumber != DirRX.PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeekNumber.Last),
                                                   schedule.TransferFromHoliday).Date;
           var startDate = deadline.AddWorkingDays(-(schedule.CreationDays ?? 0)).Date;
-          if (startDate < schedule.BeginningYear.Value.Date)
+          if (deadline < schedule.BeginningYear.Value.Date)
           {
             iterationDate = iterationDate.AddYears(schedule.RepeatValue ?? 1).Date;
             continue;
