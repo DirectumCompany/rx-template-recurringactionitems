@@ -274,7 +274,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
           var iterationDateWithWeekDay = iterationDate.AddDays(dayOfWeek);
           var deadline = TransferDateFromHolidays(iterationDateWithWeekDay, schedule.TransferFromHoliday).Date;
           var startDate = deadline.AddWorkingDays(-(schedule.CreationDays ?? 0)).Date;
-          if (startDate < schedule.BeginningDate.Value.Date)
+          if (deadline < schedule.BeginningDate.Value.Date)
             continue;
           if (deadline <= maxDate || schedule.HasIndefiniteDeadline == true)
           {
@@ -313,7 +313,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         { DirRX.PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeek.Friday, DayOfWeek.Friday }
       };
       
-      var weeksNumbers = new Dictionary<Enumeration?, int>(4)
+      var weeksNumbers = new Dictionary<Enumeration?, int>(5)
       {
         { DirRX.PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeekNumber.First, 1 },
         { DirRX.PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeekNumber.Second, 2 },
@@ -333,7 +333,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
           var monthDay = (schedule.MonthTypeDayValue ?? 1) > iterationDate.EndOfMonth().Day ? iterationDate.EndOfMonth().Day : (schedule.MonthTypeDayValue ?? 1);
           var deadline = TransferDateFromHolidays(Calendar.GetDate(iterationDate.Year, iterationDate.Month, monthDay), schedule.TransferFromHoliday).Date;
           var startDate = deadline.AddWorkingDays(-(schedule.CreationDays ?? 0)).Date;
-          if (startDate < schedule.BeginningMonth.Value.Date)
+          if (deadline < schedule.BeginningMonth.Value.Date)
           {
             iterationDate = iterationDate.AddMonths(schedule.RepeatValue ?? 1).Date;
             continue;
@@ -356,7 +356,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
                                                                        schedule.MonthTypeDayOfWeekNumber != DirRX.PeriodicActionItemsTemplate.RepeatSetting.MonthTypeDayOfWeekNumber.Last),
                                                   schedule.TransferFromHoliday).Date;
           var startDate = deadline.AddWorkingDays(-(schedule.CreationDays ?? 0)).Date;
-          if (startDate < schedule.BeginningMonth.Value.Date)
+          if (deadline < schedule.BeginningMonth.Value.Date)
           {
             iterationDate = iterationDate.AddMonths(schedule.RepeatValue ?? 1).Date;
             continue;
@@ -405,7 +405,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         { DirRX.PeriodicActionItemsTemplate.RepeatSetting.YearTypeMonth.December, 12 }
       };
       
-      var weeksNumbers = new Dictionary<Enumeration?, int>(4)
+      var weeksNumbers = new Dictionary<Enumeration?, int>(5)
       {
         { DirRX.PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeekNumber.First, 1 },
         { DirRX.PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeekNumber.Second, 2 },
@@ -434,7 +434,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
           var monthDay = (schedule.YearTypeDayValue ?? 1) > month.EndOfMonth().Day ? month.EndOfMonth().Day : (schedule.YearTypeDayValue ?? 1);
           var deadline = TransferDateFromHolidays(Calendar.GetDate(iterationDate.Year, monthsNumbers[schedule.YearTypeMonth], monthDay), schedule.TransferFromHoliday).Date;
           var startDate = deadline.AddWorkingDays(-(schedule.CreationDays ?? 0)).Date;
-          if (startDate < schedule.BeginningYear.Value.Date)
+          if (deadline < schedule.BeginningYear.Value.Date)
           {
             iterationDate = iterationDate.AddYears(schedule.RepeatValue ?? 1).Date;
             continue;
@@ -456,7 +456,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
                                                                        schedule.YearTypeDayOfWeekNumber != DirRX.PeriodicActionItemsTemplate.RepeatSetting.YearTypeDayOfWeekNumber.Last),
                                                   schedule.TransferFromHoliday).Date;
           var startDate = deadline.AddWorkingDays(-(schedule.CreationDays ?? 0)).Date;
-          if (startDate < schedule.BeginningYear.Value.Date)
+          if (deadline < schedule.BeginningYear.Value.Date)
           {
             iterationDate = iterationDate.AddYears(schedule.RepeatValue ?? 1).Date;
             continue;
