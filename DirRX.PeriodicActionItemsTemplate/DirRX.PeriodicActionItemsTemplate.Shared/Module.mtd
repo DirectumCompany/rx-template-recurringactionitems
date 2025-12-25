@@ -191,6 +191,32 @@
       "ReturnTypeFullName": "DirRX.PeriodicActionItemsTemplate.IRepeatSetting, Sungero.Domain.Interfaces"
     },
     {
+      "Name": "SendNotifyInitiatorByActionItem",
+      "Parameters": [
+        {
+          "Name": "actionItem",
+          "ParameterType": "global::Sungero.RecordManagement.IActionItemExecutionTask",
+          "ParameterTypeFullName": "Sungero.RecordManagement.IActionItemExecutionTask, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
+      "Name": "SendNotifyInitiatorByDocument",
+      "Parameters": [
+        {
+          "Name": "document",
+          "ParameterType": "global::Sungero.Docflow.IOfficialDocument",
+          "ParameterTypeFullName": "Sungero.Docflow.IOfficialDocument, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "void",
+      "ReturnTypeFullName": "System.Void"
+    },
+    {
       "Name": "ShowScheduleForActionItem",
       "Parameters": [
         {
@@ -256,7 +282,8 @@
     "AdminSubjectForClosedParticipantsError",
     "AdminErrorTaskSubject",
     "AdminErrorTaskActiveText",
-    "ClosedEmployeesTaskActiveText"
+    "ClosedEmployeesTaskActiveText",
+    "SendNotifyArticle"
   ],
   "ServerAssemblyName": "DirRX.PeriodicActionItemsTemplate.Server",
   "ServerNamespace": "DirRX.PeriodicActionItemsTemplate.Server",

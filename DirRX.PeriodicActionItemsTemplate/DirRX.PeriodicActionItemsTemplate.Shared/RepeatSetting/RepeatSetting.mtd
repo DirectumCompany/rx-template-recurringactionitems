@@ -559,6 +559,24 @@
           "RowNumber": 2,
           "RowSpan": 1,
           "Settings": []
+        },
+        {
+          "$type": "Sungero.Metadata.ControlGroupMetadata, Sungero.Metadata",
+          "NameGuid": "05783673-ba02-49cc-9b59-f1cd5be06be7",
+          "Name": "GeneralProperties"
+        },
+        {
+          "$type": "Sungero.Metadata.ControlMetadata, Sungero.Metadata",
+          "NameGuid": "bb385f83-ae36-4557-abd9-fbb989a5dcc1",
+          "Name": "Control",
+          "ColumnNumber": 0,
+          "ColumnSpan": 1,
+          "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+          "ParentGuid": "05783673-ba02-49cc-9b59-f1cd5be06be7",
+          "PropertyGuid": "16add10b-af2e-43ed-9d44-2b36b00b54bd",
+          "RowNumber": 0,
+          "RowSpan": 1,
+          "Settings": []
         }
       ]
     },
@@ -791,7 +809,6 @@
   "IconResourcesKeys": [],
   "IsStatusEnabled": true,
   "IsVisible": false,
-  "ListViewUuid": "102a2119-8705-43af-b991-dd9f62cd78ac",
   "OperationsClass": "",
   "Overridden": [
     "AccessRightsMode",
@@ -1555,6 +1572,16 @@
       "Code": "HasIndefinitDL",
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
       "PreviousPropertyGuid": "d58d183f-5e26-4a46-88ed-1cb003de5e52"
+    },
+    {
+      "$type": "Sungero.Metadata.BooleanPropertyMetadata, Sungero.Metadata",
+      "NameGuid": "16add10b-af2e-43ed-9d44-2b36b00b54bd",
+      "Name": "SendNotify",
+      "CanBeSearch": false,
+      "Code": "SendNotify",
+      "IsShowedInList": false,
+      "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
+      "PreviousPropertyGuid": "b63d5ecc-f438-4a76-8206-8fc486b186ea"
     }
   ],
   "PublicFunctions": [
