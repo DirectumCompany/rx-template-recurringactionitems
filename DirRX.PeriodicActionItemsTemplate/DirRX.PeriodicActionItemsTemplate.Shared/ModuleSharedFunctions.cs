@@ -71,45 +71,5 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
       
       return schedule;
     }
-    
-    /// <summary>
-    /// Отправка уведомления по поручению для графика.
-    /// </summary>
-    /// <param name="actionItem">Поручение.</param>
-    [Public]
-    public virtual void SendNotifyInitiatorByActionItem(Sungero.RecordManagement.IActionItemExecutionTask actionItem)
-    {
-      var schedule = Functions.RepeatSetting.Remote.GetSettingByActionItem(actionItem);
-            
-      if (schedule?.SendNotify == true)
-      {
-        var article = DirRX.PeriodicActionItemsTemplate.Resources.SendNotifyArticleFormat(schedule.Name ?? schedule.Subject);
-        var task = Sungero.Workflow.SimpleTasks.CreateWithNotices(article, schedule.AssignedBy);
-        task.Attachments.Add(actionItem);
-        task.Attachments.Add(schedule);
-        
-        task.Start();
-      }
-    }
-    
-    /// <summary>
-    /// Отправка уведомления по документу-основанию для графика.
-    /// </summary>
-    /// <param name="actionItem">Документ-основание.</param>
-    [Public]
-    public virtual void SendNotifyInitiatorByDocument(Sungero.Docflow.IOfficialDocument document)
-    {
-      var schedule = Functions.RepeatSetting.Remote.GetSettingsByDocument(document)?.FirstOrDefault();
-            
-      if (schedule?.SendNotify == true)
-      {
-        var article = DirRX.PeriodicActionItemsTemplate.Resources.SendNotifyArticleFormat(schedule.Name ?? schedule.Subject);
-        var task = Sungero.Workflow.SimpleTasks.CreateWithNotices(article, schedule.AssignedBy);
-        task.Attachments.Add(document);
-        task.Attachments.Add(schedule);
-        
-        task.Start();
-      }
-    }
   }
 }

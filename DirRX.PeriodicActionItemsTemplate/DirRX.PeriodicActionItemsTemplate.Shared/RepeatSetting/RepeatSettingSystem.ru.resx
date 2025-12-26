@@ -416,7 +416,7 @@
   <data name="Form_dce55a98f02d4362a5afbba070702757" xml:space="preserve">
     <value>График</value>
   </data>
-  <data name="Property_SendNotify" xml:space="preserve">
+  <data name="Property_NotifyInitiator" xml:space="preserve">
     <value>Уведомлять инициатора о запуске</value>
   </data>
 </root>

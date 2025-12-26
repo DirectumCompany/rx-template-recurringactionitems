@@ -89,7 +89,7 @@ namespace DirRX.PeriodicActionItemsTemplate
       _obj.Type = DirRX.PeriodicActionItemsTemplate.RepeatSetting.Type.Day;
       _obj.TransferFromHoliday = DirRX.PeriodicActionItemsTemplate.RepeatSetting.TransferFromHoliday.No;
       _obj.RepeatValue = 1;
-      _obj.SendNotify = false;
+      _obj.NotifyInitiator = false;
       
       if (!_obj.State.IsCopied)
       {

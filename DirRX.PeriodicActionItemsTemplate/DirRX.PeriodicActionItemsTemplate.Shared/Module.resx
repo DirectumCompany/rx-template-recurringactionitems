@@ -171,6 +171,6 @@ It is necessary to make adjustments to the schedule:
 3. Perform the assignment by clicking the "Execute" button.</value>
   </data>
   <data name="SendNotifyArticle" xml:space="preserve">
-    <value>A new periodic order has been generated for schedule {0}</value>
+    <value>Action Item has been created for schedule {0}</value>
   </data>
 </root>
