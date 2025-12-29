@@ -464,6 +464,6 @@ Click again to bring the card back to the simple action mode.</value>
     <value />
   </data>
   <data name="Property_NotifyInitiator" xml:space="preserve">
-    <value>Notify initiator about schedule starting</value>
+    <value>Notify initiator about starting</value>
   </data>
 </root>

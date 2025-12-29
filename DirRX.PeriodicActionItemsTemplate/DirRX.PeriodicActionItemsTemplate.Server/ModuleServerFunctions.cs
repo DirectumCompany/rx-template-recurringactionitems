@@ -213,6 +213,15 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         notice.Attachments.Add(setting);
         notice.Start();
       }
+           
+      if (setting.NotifyInitiator == true)
+      {
+        var article = DirRX.PeriodicActionItemsTemplate.Resources.SendNotifyArticleFormat(setting.Name ?? setting.DisplayValue);
+        var notice = Sungero.Workflow.SimpleTasks.CreateWithNotices(article, setting.AssignedBy);
+        notice.Attachments.Add(task);
+        notice.Attachments.Add(setting);
+        notice.Start();
+      }    
     }
     
     /// <summary>
@@ -578,26 +587,6 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         scheduleItem.Deadline = deadline;
       
       scheduleItem.Save();
-    }
-    
-    
-    /// <summary>
-    /// Отправка уведомления по поручению для графика.
-    /// </summary>
-    /// <param name="actionItem">Поручение.</param>
-    public virtual void SendNotifyInitiatorByActionItem(Sungero.RecordManagement.IActionItemExecutionTask actionItem)
-    {
-      var schedule = Functions.RepeatSetting.GetSettingByActionItem(actionItem);
-      
-      if (schedule?.NotifyInitiator == true)
-      {
-        var article = DirRX.PeriodicActionItemsTemplate.Resources.SendNotifyArticleFormat(schedule.Name ?? schedule.Subject);
-        var task = Sungero.Workflow.SimpleTasks.CreateWithNotices(article, schedule.AssignedBy);
-        task.Attachments.Add(actionItem);
-        task.Attachments.Add(schedule);
-        
-        task.Start();
-      }
     }
   }
 }

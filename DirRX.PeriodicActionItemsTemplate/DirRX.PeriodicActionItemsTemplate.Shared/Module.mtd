@@ -257,7 +257,7 @@
     "AdminErrorTaskSubject",
     "AdminErrorTaskActiveText",
     "ClosedEmployeesTaskActiveText",
-    "SendNotifyArticle"
+    "InitiatorNotificationSubject"
   ],
   "ServerAssemblyName": "DirRX.PeriodicActionItemsTemplate.Server",
   "ServerNamespace": "DirRX.PeriodicActionItemsTemplate.Server",

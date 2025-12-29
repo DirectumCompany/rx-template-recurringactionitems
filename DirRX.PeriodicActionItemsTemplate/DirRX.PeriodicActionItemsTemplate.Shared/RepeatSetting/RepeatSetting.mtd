@@ -565,7 +565,7 @@
           "NameGuid": "bb385f83-ae36-4557-abd9-fbb989a5dcc1",
           "Name": "NotifyInitiator",
           "ColumnNumber": 0,
-          "ColumnSpan": 1,
+          "ColumnSpan": 2,
           "DataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
           "ParentGuid": "d0300866-d178-416e-87a4-fd85cd8435e2",
           "PropertyGuid": "16add10b-af2e-43ed-9d44-2b36b00b54bd",
@@ -1574,7 +1574,7 @@
       "NameGuid": "16add10b-af2e-43ed-9d44-2b36b00b54bd",
       "Name": "NotifyInitiator",
       "CanBeSearch": false,
-      "Code": "NotifyInitiato",
+      "Code": "NotifInitiator",
       "IsShowedInList": false,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.BooleanEditorToBooleanBinder",
       "PreviousPropertyGuid": "b63d5ecc-f438-4a76-8206-8fc486b186ea"
