@@ -213,11 +213,12 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         notice.Attachments.Add(setting);
         notice.Start();
       }
-           
+      
+      // Отправка уведомления инициатору о запуске очередного периодического поручения по графику. 
       if (setting.NotifyInitiator == true)
       {
-        var article = DirRX.PeriodicActionItemsTemplate.Resources.SendNotifyArticleFormat(setting.Name ?? setting.DisplayValue);
-        var notice = Sungero.Workflow.SimpleTasks.CreateWithNotices(article, setting.AssignedBy);
+        var subject = DirRX.PeriodicActionItemsTemplate.Resources.InitiatorNotificationSubjectFormat(setting.DisplayValue);
+        var notice = Sungero.Workflow.SimpleTasks.CreateWithNotices(subject, setting.AssignedBy);
         notice.Attachments.Add(task);
         notice.Attachments.Add(setting);
         notice.Start();
