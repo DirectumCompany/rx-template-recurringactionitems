@@ -256,7 +256,8 @@
     "AdminSubjectForClosedParticipantsError",
     "AdminErrorTaskSubject",
     "AdminErrorTaskActiveText",
-    "ClosedEmployeesTaskActiveText"
+    "ClosedEmployeesTaskActiveText",
+    "InitiatorNotificationSubject"
   ],
   "ServerAssemblyName": "DirRX.PeriodicActionItemsTemplate.Server",
   "ServerNamespace": "DirRX.PeriodicActionItemsTemplate.Server",
