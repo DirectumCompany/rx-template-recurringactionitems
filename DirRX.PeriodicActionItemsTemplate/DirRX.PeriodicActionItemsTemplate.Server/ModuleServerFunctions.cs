@@ -214,7 +214,7 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         notice.Start();
       }
       
-      // Отправка уведомления инициатору о запуске очередного периодического поручения по графику. 
+      // Отправить уведомление инициатору о запуске очередного периодического поручения по графику. 
       if (setting.NotifyInitiator == true)
       {
         var subject = DirRX.PeriodicActionItemsTemplate.Resources.InitiatorNotificationSubjectFormat(setting.DisplayValue);
