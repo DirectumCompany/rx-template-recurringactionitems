@@ -213,6 +213,16 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         notice.Attachments.Add(setting);
         notice.Start();
       }
+      
+      // Отправить уведомление инициатору о запуске очередного периодического поручения по графику. 
+      if (setting.NotifyInitiator == true)
+      {
+        var subject = DirRX.PeriodicActionItemsTemplate.Resources.InitiatorNotificationSubjectFormat(setting.DisplayValue);
+        var notice = Sungero.Workflow.SimpleTasks.CreateWithNotices(subject, setting.AssignedBy);
+        notice.Attachments.Add(task);
+        notice.Attachments.Add(setting);
+        notice.Start();
+      }    
     }
     
     /// <summary>
@@ -579,6 +589,5 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
       
       scheduleItem.Save();
     }
-    
   }
 }

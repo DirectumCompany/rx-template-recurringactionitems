@@ -463,4 +463,7 @@ Click again to bring the card back to the simple action mode.</value>
   <data name="ControlGroup_5a8fd309bfa64260ade31f873116b175" xml:space="preserve">
     <value />
   </data>
+  <data name="Property_NotifyInitiator" xml:space="preserve">
+    <value>Notify initiator about starting</value>
+  </data>
 </root>

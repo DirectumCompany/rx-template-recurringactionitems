@@ -170,4 +170,7 @@ It is necessary to make adjustments to the schedule:
 2. Remove the executor with the closed record from the schedule or replace them with another executor. Save the schedule.
 3. Perform the assignment by clicking the "Execute" button.</value>
   </data>
+  <data name="InitiatorNotificationSubject" xml:space="preserve">
+    <value>A new periodic action item has been created for schedule {0}</value>
+  </data>
 </root>
