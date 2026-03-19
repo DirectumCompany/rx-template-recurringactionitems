@@ -29,10 +29,18 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
       logger.Debug("Start");
       
       var scheduleItemsToProcess = ScheduleItems.GetAll(si => si.StartDate <= Calendar.Today &&
+                                                        si.Deadline >= Calendar.Today &&
                                                         si.ActionItemExecutionTask == null &&
                                                         si.Status == DirRX.PeriodicActionItemsTemplate.ScheduleItem.Status.Active);
+      
       foreach (var scheduleItem in scheduleItemsToProcess)
       {
+        if (scheduleItem.RepeatSetting.MainActionItem != null &&
+            (scheduleItem.RepeatSetting.MainActionItem.Status == GD.GovernmentSolution.ActionItemExecutionTask.Status.Draft ||
+             (scheduleItem.RepeatSetting.MainActionItem.Status == GD.GovernmentSolution.ActionItemExecutionTask.Status.InProcess &&
+              scheduleItem.StartDate < scheduleItem.RepeatSetting.MainActionItem.Started)))
+          continue;
+        
         var startActionItem = true;
         var closedEmployees = GetAllClosedParticipantsFromSetting(scheduleItem.RepeatSetting);
         if (closedEmployees.Any())
