@@ -52,6 +52,15 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
         
         if (scheduleItem != null)
         {
+          // Закрываем просроченные неотправленные поручения.
+          if (scheduleItem.Deadline.HasValue && scheduleItem.Deadline.Value < Calendar.Today)
+          {
+            logger.Debug("Daily schedule item with id = {id} out of date, closed", scheduleItem.Id);
+            scheduleItem.Status = DirRX.PeriodicActionItemsTemplate.ScheduleItem.Status.Closed;
+            scheduleItem.Save();
+            continue;
+          }
+          
           // Ежедневные поручения с шагом в 1 день, переносить не надо, т.к. на соседних рабочих датах уже должны быть другие поручения. Их надо закрывать.
           if (scheduleItem.RepeatSetting.Type == DirRX.PeriodicActionItemsTemplate.RepeatSetting.Type.Day &&
               (scheduleItem.RepeatSetting.RepeatValue ?? 1) == 1)
