@@ -284,13 +284,6 @@ namespace DirRX.PeriodicActionItemsTemplate.Server
                                                                 si.Status == DirRX.PeriodicActionItemsTemplate.ScheduleItem.Status.Active &&
                                                                 si.StartDate <= oneYearAhead).OrderBy(x => x.StartDate))
       {
-        var mainActionItem = awaitingScheduleItem.RepeatSetting.MainActionItem;
-        
-        if (mainActionItem != null &&
-            mainActionItem.Status == GD.GovernmentSolution.ActionItemExecutionTask.Status.InProcess &&
-            awaitingScheduleItem.StartDate < mainActionItem.Started)
-          continue;
-        
         var scheduleItemBlock = awaitingScheduleItemsBlock.AddChildBlock();
         scheduleItemBlock.Entity = awaitingScheduleItem;
         scheduleItemBlock.AssignIcon(StateBlockIconType.OfEntity, StateBlockIconSize.Small);
