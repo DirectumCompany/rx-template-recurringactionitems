@@ -808,8 +808,8 @@
   "OperationsClass": "",
   "Overridden": [
     "AccessRightsMode",
-    "IsStatusEnabled",
     "CanBeSearch",
+    "IsStatusEnabled",
     "IsVisible"
   ],
   "Properties": [
@@ -819,9 +819,9 @@
       "Name": "Status",
       "IsAncestorMetadata": true,
       "Overridden": [
+        "CanBeSearch",
         "IsShowedInList",
-        "IsVisibility",
-        "CanBeSearch"
+        "IsVisibility"
       ]
     },
     {
@@ -1614,7 +1614,7 @@
       ],
       "Placement": "Shared",
       "ReturnType": "global::System.Linq.IQueryable<global::DirRX.PeriodicActionItemsTemplate.IRepeatSetting>",
-      "ReturnTypeFullName": "System.Linq.IQueryable"
+      "ReturnTypeFullName": "System.Linq.IQueryable`1[[DirRX.PeriodicActionItemsTemplate.IRepeatSetting, Sungero.Domain.Interfaces]]"
     },
     {
       "Name": "SetRecipientsToAssignees",

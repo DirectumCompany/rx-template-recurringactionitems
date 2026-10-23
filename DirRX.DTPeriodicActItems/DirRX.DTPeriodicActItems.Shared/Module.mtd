@@ -53,6 +53,7 @@
   "IsolatedAssemblyName": "DirRX.DTPeriodicActItems.Isolated",
   "IsolatedNamespace": "DirRX.DTPeriodicActItems.Isolated",
   "OrderedSpecialFolders": [],
+  "OverrideSuffix": "DirRX",
   "PublicConstants": [
     {
       "Name": "AddendumRelationName",
@@ -192,12 +193,12 @@
   "SharedAssemblyName": "DirRX.DTPeriodicActItems.Shared",
   "SharedNamespace": "DirRX.DTPeriodicActItems.Shared",
   "SpecialFolders": [],
-  "Version": "0.0.1.64",
+  "Version": "0.0.1.65",
   "Widgets": [],
   "Versions": [
     {
       "Type": "SolutionMetadata",
-      "Number": 12
+      "Number": 13
     },
     {
       "Type": "ModuleMetadata",
