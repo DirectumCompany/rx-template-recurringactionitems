@@ -124,14 +124,14 @@
   "LookupMode": "Standalone",
   "OperationsClass": "",
   "Overridden": [
-    "IsVisible",
     "CanBeSearch",
+    "CanBeUsedInIntegration",
     "HideFromCreationArea",
     "HideFromNavigationEditorCreationArea",
+    "IsAutoCreated",
     "IsStatusEnabled",
-    "CanBeUsedInIntegration",
-    "LookupMode",
-    "IsAutoCreated"
+    "IsVisible",
+    "LookupMode"
   ],
   "Properties": [
     {
