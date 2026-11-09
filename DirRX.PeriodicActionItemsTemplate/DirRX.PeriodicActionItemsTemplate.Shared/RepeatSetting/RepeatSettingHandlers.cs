@@ -36,6 +36,12 @@ namespace DirRX.PeriodicActionItemsTemplate
   partial class RepeatSettingSharedHandlers
   {
 
+    public virtual void MainActionItemChanged(DirRX.PeriodicActionItemsTemplate.Shared.RepeatSettingMainActionItemChangedEventArgs e)
+    {
+      if (!Equals(e.NewValue, e.OldValue) && e.NewValue != null)
+        Functions.RepeatSetting.CopyActionItemToRepeatSetting(_obj, e.NewValue);
+    }
+
     public virtual void MonthTypeDayChanged(Sungero.Domain.Shared.EnumerationPropertyChangedEventArgs e)
     {
       if (e.NewValue == null)
