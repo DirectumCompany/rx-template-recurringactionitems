@@ -65,10 +65,10 @@ namespace DirRX.PeriodicActionItemsTemplate.Client
   {
     public virtual void CreateSchedule(Sungero.Domain.Client.ExecuteActionArgs e)
     {
-      // Проверить, есть ли активные записи расписания отправки.
+      // РџСЂРѕРІРµСЂРёС‚СЊ, РµСЃС‚СЊ Р»Рё Р°РєС‚РёРІРЅС‹Рµ Р·Р°РїРёСЃРё СЂР°СЃРїРёСЃР°РЅРёСЏ РѕС‚РїСЂР°РІРєРё.
       var activeScheduleItems = Functions.RepeatSetting.Remote.GetActiveAwaitingScheduleItemsForSetting(_obj);
       
-      // По умолчанию true, чтобы не запускать проверку дублей, если действующий записей расписания этой настройки еще нет.
+      // РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ true, С‡С‚РѕР±С‹ РЅРµ Р·Р°РїСѓСЃРєР°С‚СЊ РїСЂРѕРІРµСЂРєСѓ РґСѓР±Р»РµР№, РµСЃР»Рё РґРµР№СЃС‚РІСѓСЋС‰РёР№ Р·Р°РїРёСЃРµР№ СЂР°СЃРїРёСЃР°РЅРёСЏ СЌС‚РѕР№ РЅР°СЃС‚СЂРѕР№РєРё РµС‰Рµ РЅРµС‚.
       bool? needClose = true;
       
       if (activeScheduleItems.Any())

@@ -1507,7 +1507,9 @@
       "Code": "MainActionItem",
       "EntityGuid": "c290b098-12c7-487d-bb38-73e2c98f9789",
       "FlatListInStandaloneLookup": true,
-      "IsEnabled": false,
+      "HandledEvents": [
+        "ChangedShared"
+      ],
       "IsQuickSearchAllowed": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
       "PreviousPropertyGuid": "d0367bd5-dfab-4905-bd6c-86a8a2574057"
@@ -1519,7 +1521,6 @@
       "Code": "MainDocument",
       "EntityGuid": "58cca102-1e97-4f07-b6ac-fd866a8b7cb1",
       "FlatListInStandaloneLookup": true,
-      "IsEnabled": false,
       "IsQuickSearchAllowed": true,
       "ListDataBinderTypeName": "Sungero.Presentation.CommonDataBinders.DropDownEditorToNavigationBinder",
       "PreviousPropertyGuid": "3c9722de-3d59-4d61-abaf-7501352a9996"

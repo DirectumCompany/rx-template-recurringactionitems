@@ -9,6 +9,48 @@ namespace DirRX.PeriodicActionItemsTemplate.Shared
 {
   partial class RepeatSettingFunctions
   {
+    /// <summary>
+    /// Синхронизировать поручение в график отправки.
+    /// </summary>
+    /// <param name="actionItem">Поручение.</param>
+    public virtual void CopyActionItemToRepeatSetting(Sungero.RecordManagement.IActionItemExecutionTask actionItem)
+    {
+      _obj.MainActionItem = actionItem;
+      _obj.MainDocument = actionItem.DocumentsGroup.OfficialDocuments.FirstOrDefault();
+
+      _obj.AssignedBy = actionItem.AssignedBy;
+      _obj.IsUnderControl = actionItem.IsUnderControl;
+      _obj.Supervisor = actionItem.Supervisor;
+      _obj.HasIndefiniteDeadline = actionItem.HasIndefiniteDeadline == true;
+      _obj.ActionItem = actionItem.ActiveText;
+      _obj.IsCompoundActionItem = actionItem.IsCompoundActionItem == true;
+
+      if (_obj.IsCompoundActionItem == true)
+      {
+        foreach (var part in actionItem.ActionItemParts)
+        {
+          var partRow = _obj.ActionItemsParts.AddNew();
+          partRow.Assignee = part.Assignee;
+          partRow.ActionItemPart = part.ActionItemPart;
+          partRow.CoAssignees = part.CoAssignees;
+          partRow.Supervisor = part.Supervisor;
+
+          foreach (var coAssigneePart in actionItem.PartsCoAssignees.Where(pca => pca.PartGuid == part.PartGuid))
+          {
+            var _objCoAssigneePartRow = _obj.PartsCoAssignees.AddNew();
+            _objCoAssigneePartRow.PartGuid = partRow.PartGuid;
+            _objCoAssigneePartRow.CoAssignee = coAssigneePart.CoAssignee;
+          }
+        }
+      }
+      else
+      {
+        _obj.Assignee = actionItem.Assignee;
+        foreach (var coAssigneeRow in actionItem.CoAssignees)
+          _obj.CoAssignees.AddNew().Assignee = coAssigneeRow.Assignee;
+      }
+    }
+
     public void SetStateProperties()
     {
       #region Ежегодно.
